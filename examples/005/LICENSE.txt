@@ -1,0 +1,4 @@
+Global regularity and infinite Prandtl-number limit for 2D Boussinesq temperature patches in W^{k,infinity} and C^{k,gamma}: lower-order case
+https://arxiv.org/abs/2610.12253v1
+CC BY-NC-ND 4.0
+http://creativecommons.org/licenses/by-nc-nd/4.0/

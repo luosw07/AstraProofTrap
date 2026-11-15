@@ -1,0 +1,45 @@
+# Independent mathematical review — b03_supplemented
+
+**Verdict: ACCEPT.** After completing the whole-manuscript audit and checking the actual invocations against the five supplied public references, I find the argument mathematically coherent. I found no substantive or minor mathematical error in the manuscript. The initial incomplete report is superseded by this completed assessment.
+
+## Scope and evidence
+
+I read all 66 pages, Sections 1–12, the complete Appendix A, and the bibliography in bounded, untruncated chunks. I recovered material missing from the initially truncated extraction. I inspected manuscript PDF pages 8, 10, 21, 28, 36, and 62 where extraction obscured roots, field overbars, inverse residues, or the precise specialization statement.
+
+I read the complete supplied RS22 and the relevant statements, hypotheses, definitions, and surrounding proofs in FK01, Xu20, HY18, and Bei16. This was an invocation audit, not an attempt to reprove unrelated results from those papers. I used only the assigned manuscript, the supplied public references/provenance, and my own review materials. I did not consult another manuscript version, other reviews, private sources, formalizations, or the internet.
+
+## Main proof
+
+The geometry in Section 3 supplies the dimensions actually needed later. Lemma 3.6's descent argument is a valid minimum-norm/Bruhat argument: comparing Galois conjugates forces the minimizing weighted flag to descend, after which the nonvanishing of rational pure-cube coefficients gives the required inequality. Lemma 3.8 legitimately concentrates the incidence dimension over F=0, since F is constant on each irreducible common-gradient fiber component in characteristic zero. The two weight constructions in Lemma 3.9 give precisely the claimed bounds; their linear combinations and the rounding in Corollary 3.10 check out.
+
+Section 4 uses those bounds effectively. The tangent-annihilator argument treats both smooth contact points and wholly singular components. Its restricted form is defined over Q when a rational parameter is selected, so the no-rational-zero hypothesis remains available. The dual-dimension and exceptional-fiber estimates give the special bounds at n=10 needed for prime-square strata.
+
+The prime and prime-square identities, the cube-root lifting analysis, and the localization fit together. I checked the Taylor expansions and the powers of the lifting moduli; the Smith recurrence in Section 7 has the stated ranks and absorbs its exponential-in-multiplicity constant only after imposing the large-prime condition. Section 8 handles the excluded primes separately using a fixed p-adic neighborhood and its unit orbit. The latter choice preserves multiplicativity. The restricted singular-series identity has the correct normalization and its local densities are positive.
+
+For Section 9, Parseval gives the stated variance of binary cubic slices. The generic absolute-irreducibility argument uses K=Qbar(T_3,...,T_n), as confirmed in the PDF; its conjugate-linear-factor contradiction is valid. The degree consequence of the trace-moment alternative then follows from the codimension-two linear-space second moment.
+
+In Section 10, moving the low-degree component opens to the preceding stratum preserves a partition and gives the improved point-count exponents. The large-modulus sieve is applied to a set outside every exceptional variety involved, as required. I checked the three cases of the sieve estimate and the cancellation of the level-size parameter in Proposition 10.9. The cube-free/cubefull interpolation in Section 11 gives Q^{10−1/96} for the first contribution and Q^{10−1/30} for the second, with the displayed residual powers. W is fixed before epsilon, as the proposition requires.
+
+The final circle-method step uses the positive restricted singular series and a positive real singular integral. The shifted-box integral estimate is uniform in the maximizing frequency chosen for each box. The optimization in Proposition 12.7 has the claimed endpoints R≈1,P,P^{3/2}; rho>6 and b<2n/3 give a positive saving. The small-phi factor ensures summability of the arbitrarily small dyadic intervals. The reduction from ten variables to more variables is valid.
+
+## The five supplied inputs
+
+**FK01, uniform constructibility.** Theorem 2.1 applies with base A_v^n, source the affine cubic cone times A_v^n, function x·v, constant coefficients, and identity base change. Its stratification and excluded integer are uniform in the nontrivial additive character and residue characteristic. The source requires no smoothness of the cubic cone here. The later semiperversity assumptions in FK01 Section 3 are not hypotheses of Theorem 2.1. G_m-equivariance follows from (x,v)↦(lambda^{-1}x,lambda v), which preserves the cone and pairing. It justifies the manuscript's homogeneous refinement without losing uniform ranks.
+
+**Xu20, virtual traces and moments.** The supplied Theorem 3.5 handles differences of pure lisse integer-weight sheaves. Its immediately following discussion explicitly extends it to mixed lisse sheaves on normal varieties. Thus the smooth U and the alternating cohomology trace in Proposition 9.5 qualify. Passing to constituents preserves total rank, giving a constant uniform in p. Setting w=n+r−2 gives dim U+w+1=2n−2. The extension-field limsup contradicts the codimension-two moment bound, normalized by p^{a(2n−2)}, exactly as asserted. Alternating-trace cancellation is already addressed by the source theorem.
+
+**RS22, singular Gysin maps.** The construction lives on the smooth ambient projective space, so singular X and singular hyperplane sections are permitted. Its proof chooses the exceptional correspondence P(SS(F)) and then the same fiber-dimension loci used in Appendix A. With r=n−2 and c=i, the isomorphism threshold is a>n−2+i and the boundary map is surjective. Properness converts compactly supported to ordinary cohomology, and Galois compatibility is explicit in the source. The coefficient induction and inverse-limit argument in Lemma A.8 are valid.
+
+**HY18, exact relative specialization.** In the supplied preprint, Theorems 5.4 and 5.8 give existence and the reduced-fiber equality after shrinking the base. The excellent Noetherian base, smooth finite-type ambient morphism, finite-field coefficients, and invertibility hypotheses all hold for P over Spec Z[1/N]. The sheaf is a constructible closed-immersion pushforward; X_B itself need not be smooth. The residue-field equality combines with Bei16's arbitrary field-extension compatibility and proper base change to give Eq. (A.8) for every geometric point of the shrunken base. This is equality of the required reduced singular supports, not just an upper bound by a larger cone. Consequently the relative projectivized fiber-dimension strata specialize to exactly the finite-field strata.
+
+**Bei16, dimensions and conormals.** The supplied dimension theorem, support-base property, and arbitrary field-extension compatibility have the required hypotheses. The open-restriction and smooth-embedding properties give the ordinary conormal over X_sm, proving the first comparison in (A.10); the support property and vanishing partial derivatives at singular points prove the other comparison. The characteristic-zero Lagrangian statement and generic smoothness identify the components with conormal closures. Biduality then places rational smooth dual points over rational linear contact fibers in X. The three generic-fiber-dimension cases in Proposition A.13 establish the extra rational-point codimension, including the endpoint indices.
+
+## Corrections and remaining limits
+
+I recommend these editorial/reference clarifications:
+
+1. Reconcile the HY18 numbering for readers of the supplied preprint: its existence and specialization results are Theorems 5.4 and 5.8. This is a numbering difference, not an incompatible mathematical statement.
+2. The sentence on p. 59 saying RS22 explicitly treats only r=1 is unnecessary for the supplied version: RS22 allows prime-power coefficient modulus. The manuscript's independent coefficient argument remains valid.
+3. FK01 Theorem 2.1 introduces a constant C but omits it from its displayed norm inequality, as verified in the original PDF. The literal rank-one upper bound would be false even for a finite fiber with multiple points. The setup and surrounding uniform-stratification argument support the intended bound with C; the manuscript uses only that bounded-rank consequence. This is a typo in the external source, not a newly found defect in the manuscript.
+
+Other cited literature not supplied here—such as the Bernert singular-series theorem, Pila/Vermeulen bounds, standard point-count and integral estimates, and projective duality—is accepted as stated external input; I checked how it is used but did not inspect those originals under this audit's source restrictions. No unresolved incompatibility remains among the five supplied inputs, and no correction to the mathematical proof is required by the findings above.

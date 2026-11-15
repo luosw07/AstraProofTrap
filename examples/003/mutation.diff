@@ -1,0 +1,11 @@
+--- original/paper.tex
++++ modified/paper.tex
+@@ -8691,7 +8691,7 @@
+ form as a groupoid action, including its automorphisms.  Put \(Z=Z_G\).
+ For a \(Z\)-torsor \(Q\) on \(X\), let \(\tau_Q\) be central
+ translation on \(Y_G\), with contracted-product convention
+-\([qz,x]=[q,zx]\).  It canonically preserves the twisting: the
++\([qz,x]=[q,z^{-1}x]\).  It canonically preserves the twisting: the
+ adjoint bundle of the translated bundle is canonically unchanged.
+ Use the same notation for the corresponding operation for
+ \(Z_{G^\vee}\)-torsors on \(Y_{G^\vee}\).

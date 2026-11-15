@@ -1,0 +1,37 @@
+--- original/paper.tex
++++ paper/paper.tex
+@@ -4215,11 +4215,9 @@
+ 
+ Fix some $0<\gd\le 1/m$ and let 
+  $\cN_\gd$ and $\hcN_\gd$ be as in the proof of \refT{Tinv}.
+-Let
+-$B$ be the block in \eqref{tb4}, 
+-where we choose all $\rho_{ij}$ as in \refL{LTB} and so
+-small that $B$ is a subset of the neighbourhood
+-$\cN_\gd$  of $0$ in $\Ho$. 
++Choose $N$ as in \eqref{tinv5a}, and then choose any block $B$ of the form
++\eqref{tb4} contained in $\cN_\gd$ such that $T^nB$ is a finite union of
++good blocks for $0\le n\le N$. Such blocks exist by \refL{LTB}.
+ Let $\Bo$ be the interior of $B$, and let
+ $\hB:=\pi(B)$ and 
+ $\hBo:=\pi(\Bo)$ be their projections in $\hHo$. 
+@@ -4231,7 +4229,7 @@
+ $\hvu\in R_\vp^{k}(\hBo)$.
+ Hence, $\hHo=\bigcup_{k=0}^\infty R_\vp^k(\hBo)$.
+ Since $\hBo$ is open, so is every $R_\vp^k(\hBo)$,
+-and thus there exists a finite $N$ such that
++and thus, increasing $N$ if necessary,
+ $\hHo=\bigcup_{k=0}^N R_\vp^k(\hBo)$.
+ 
+ Let $\vu\in \Kx$. Then $\hvu:=\pi(\vu)\in\hHo$, 
+@@ -4256,8 +4254,8 @@
+ \begin{align}
+   \Kx=\bigcup_{n=0}^N T^n B.
+ \end{align}
+-By \refL{LTB}, each $T^nB$ is a finite union of good blocks, and the result
+-follows.  
++By the choice of $B$, each set $T^nB$ in this union is a finite union of
++good blocks, and the result follows.
+ \end{proof}
+ 
+ \begin{remark}

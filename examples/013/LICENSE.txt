@@ -1,0 +1,5 @@
+Source: Dmitry Pasechnyuk-Vilensky, Martin Takáč, Exact (Non-)Accelerations of Heavy-Ball Discretizations, arXiv:2611.13584v1.
+https://arxiv.org/abs/2611.13584v1
+Source terms: arXiv non-exclusive distribution license; original rights remain with the authors.
+https://arxiv.org/licenses/nonexclusive-distrib/1.0/
+Changes: standalone-source preparation; synthetic G2 proof defect documented in mutation.diff. Original rights and attribution are retained. The artificial defect is not attributed to the source authors.

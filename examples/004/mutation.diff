@@ -1,0 +1,28 @@
+--- original/paper.tex
++++ modified/paper.tex
+@@ -3203,11 +3203,13 @@
+ using $K'$.  Its acting algebra is
+ \begin{equation}\label{local:eq-dual-algebra}
+  B^0=A_0\otimes\Sym\bigl(W[-1]\oplus W[-2]\bigr),
+- \qquad d\eta=J_u^{\mathrm t}\beta,
++ \qquad d\eta=J_u\beta,
+ \end{equation}
+ where $\eta$ has degree $1$ and $\beta$ degree $2$, both of
+-$m$-weight $-2$.  To verify the algebra structure, let the generators
+-act on $K'$ by the derivative operators in $p$ and $l$.  Choosing
++$m$-weight $-2$.  In this covariant presentation the same operator
++$J_u$ acts on the two pairs of generators.  To verify the algebra
++structure, let the generators act on $K'$ by the derivative operators
++in $p$ and $l$.  Choosing
+ the sign of the derivative in $p$ gives precisely the differential
+ in \eqref{local:eq-dual-algebra}.  These operators graded commute.
+ Composition with $K'\to A_0$ identifies the resulting map from
+@@ -3220,7 +3222,7 @@
+ modules.
+ 
+ After shear, the generators $\beta$ and $\eta$ have degrees $0$ and
+-$-1$.  Under $W^*=E_+$ the transpose equation is the fixed-vector
++$-1$.  Under $W^*=E_+$ the displayed equation is the fixed-vector
+ equation for $u^{-1}$ on $E_+$.  Multiplication by the invertible
+ operator $-\Ad(u)$ changes it to the fixed-vector equation for $u$.
+ Consequently the shear $B$ of $B^0$ is an equation algebra for $Y$,

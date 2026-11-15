@@ -1,0 +1,5 @@
+Source: Dante Bonolis, Tim Browning, Jakob Glas and Victor Y. Wang, The Artin-Davenport conjecture on cubic forms.
+https://arxiv.org/abs/2610.08226v2
+The arXiv record links to Creative Commons Attribution 4.0 International:
+https://creativecommons.org/licenses/by/4.0/
+The paper and its authors are attributed above. The current manuscript is an intentionally modified benchmark derivative; mutation.diff identifies the change. The source authors did not introduce this benchmark error. Original and supporting-reference rights remain with their respective holders. Supporting references are identified in paper/references/README.md.

@@ -1,0 +1,20 @@
+--- original/paper.tex
++++ modified/paper.tex
+@@ -350,7 +350,7 @@
+ \nabla u\in
+ \begin{cases}
+   L^\infty([0,T],L^2)
+-  \cap\widetilde L^1([0,T],B^{2\alpha-1}_{\infty,\infty}),
++  \cap L^1([0,T],B^{2\alpha-1}_{\infty,\infty}),
+   & \text{if }\frac12<\alpha<1,\quad p=2,\\
+   \widetilde L^1([0,T],B^1_{\infty,\infty}),
+   & \text{if }\alpha=1,\quad p=2,\\
+@@ -4745,7 +4745,7 @@
+ \begin{align}\label{eq:u-Gam-es2}
+   \Vert \nabla u\Vert _{L^\infty_T(L^2)} +  \Vert \Gamma\Vert _{L^\infty_T(L^2)}+ \Vert \Gamma\Vert _{L^1_T(B^1_{2,1})}
+   + \left\Vert \Gamma\right\Vert _{\widetilde{L}_T^1 (B_{2, \infty}^{2\alpha})}
+-  + \Vert \nabla u\Vert _{\widetilde{L}^1_T(C^{2\alpha-1})} 
++  + \Vert \nabla u\Vert _{L^1_T(C^{2\alpha-1})} 
+   \leq C e^{C T} .
+ \end{align}
+ \item 

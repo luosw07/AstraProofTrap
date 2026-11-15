@@ -1,0 +1,11 @@
+--- original/paper.tex
++++ modified/paper.tex
+@@ -366,7 +366,7 @@
+   q>\gamma_d(p),
+   \qquad
+   \gamma_d(p)\ce
+-  \frac{16+d^2+6d-pd(d+2)}{d\bigl(d+2-(d-2)p\bigr)};
++  \frac{30+d^2+15d-p(d^2+7d-2)}{d^2+7d-2-(d+1)(d-2)p};
+ \end{equation}
+ see Figures~\ref{fig:1} and \ref{fig:sharp}.
+ %%

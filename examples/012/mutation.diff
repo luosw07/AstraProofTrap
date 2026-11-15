@@ -1,0 +1,41 @@
+--- original/paper.tex
++++ paper/paper.tex
+@@ -1303,7 +1303,7 @@
+ such an increase.
+ This graph is a forest. A maximum matching pairs cuts that can be
+ handled together; each unmatched cut is handled by increasing one
+-connector.}
++of its boundary edges.}
+ 
+ Appendix~\ref{sec:quartic-framework-2} shows that the increases
+ on removable tree edges, together with at most $(n-2)/5$ paid
+@@ -4261,23 +4261,16 @@
+ we satisfy both demands by choosing an edge in
+ $\mathcal E_u\cap\mathcal E_{u'}$ and increasing its value
+ from $1/4$ to $1/2$. For every demand $u$ not covered by
+-$M$, we increase $c_{S_u}$ to $1/2$. If an edge is chosen more
+-than once, we increase its value only once. \\
++$M$, we choose an arbitrary edge of $\mathcal E_u$ and increase
++its value to $1/2$. If an edge is chosen more than once,
++we increase its value only once. \\
+ Let $\bar x$ denote
+ the vector obtained from $x^{\mathrm{init}}$ after all
+ objective-preserving and paid increases.
+ 
+-An edge of $N_H$ is increased only when it belongs to the
+-boundaries of two matched vertex demands. Both endpoints of such
+-an edge must therefore lie in $\mathcal U$.
+-
+-Now consider a nonroot vertex $v$ of $G$ with one DFS child. Since every
+-vertex in $\mathcal U$ has two DFS children, $v\notin\mathcal U$.
+-Its parent edge cannot therefore join two vertex demands
+-and is not chosen for such an increase. All other paid
+-increases are on connectors, so the value on
+-$\rep{\operatorname{par}(v)v}$ remains unchanged. We will use this observation
+-later when verifying the Blossom inequalities.
++Each edge in a demand boundary is a nonroot connector or belongs
++to $N_H$, so its increase has cost $1/4$ in
++\eqref{eq:quartic-objective}.
+ 
+ We use one increase for each edge of $M$ and at most one
+ for each of the $|V(K)|-2|M|$ unmatched demands.

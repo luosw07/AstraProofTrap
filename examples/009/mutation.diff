@@ -1,0 +1,15 @@
+--- original/paper.tex
++++ paper/paper.tex
+@@ -3746,9 +3746,9 @@
+ \end{eqnarray*}
+ 
+ \noindent
+-On the other hand, the equation for $\dd_{\Sigma}\fra_t$ in \eqref{eq:susyevol} gives $\dd_{\Sigma}(\Theta_t(e_{tu})) = \frac{1}{2}\dd_{\Sigma}(\widehat{c}_t (e_{tu}))$, and expanding $\dd_{\Sigma}(\Theta_t(e_{tu}))$ in terms of $\nabla^{h_t}\Theta_t$ and $\nabla^{h_t}e_{tu}$ we obtain:
+-\begin{equation*}
+-(\nabla^{h_t}_{e^{\sharp}_{tu}}\Theta_t)(e_{tu},e_{tl}) - (\nabla^{h_t}_{e^{\sharp}_{tl}}\Theta_t)(e_{tu},e_{tu}) = \frac{1}{2}\dd_{\Sigma}(\widehat{c}_t (e_{tu}))(e^{\sharp}_{tu},e^{\sharp}_{tl}) + \frac{1}{2}\Theta_t(\widehat{c}_t (e_{tu})^{\sharp},e^{\sharp}_{tl})
++On the other hand, the equation for $\dd_{\Sigma}\fra_t$ in \eqref{eq:susyevol} gives $\dd_{\Sigma}(\Theta_t(e_{tu})) = \frac{1}{2}\dd_{\Sigma}(\widehat{c}_t (e_{tu}))$. Taking its $(e^{\sharp}_{tu},e^{\sharp}_{tl})$ component and using the symmetry of $\Theta_t$, we obtain:
++\begin{equation*}
++(\nabla^{h_t}_{e^{\sharp}_{tu}}\Theta_t)(e_{tu},e_{tl}) - (\nabla^{h_t}_{e^{\sharp}_{tl}}\Theta_t)(e_{tu},e_{tu}) = \frac{1}{2}\dd_{\Sigma}(\widehat{c}_t (e_{tu}))(e^{\sharp}_{tu},e^{\sharp}_{tl})
+ \end{equation*}
+ 
+ \noindent

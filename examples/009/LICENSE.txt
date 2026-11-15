@@ -1,0 +1,14 @@
+Source: C. S. Shahbazi, The Cauchy problem for skew-torsion-parallel spinors
+with applications to supergravity, arXiv:2611.17319v1 (12 November 2026).
+Source URL: https://arxiv.org/abs/2611.17319v1
+
+The supplied arXiv metadata links to Creative Commons Attribution 4.0:
+https://creativecommons.org/licenses/by/4.0/
+Original rights remain with their holders. The author is credited above.
+
+Benchmark changes: comment/line-ending normalization in original/paper.tex;
+one deliberately incorrect covariant-derivative identity and its justification
+in paper/paper.tex, lines 3749-3752, rendered on page 46 of paper/paper.pdf.
+The exact mathematical change is recorded in mutation.diff. These changes
+and the benchmark's error are not attributed to the source author.
+The original manuscript and PDF are in original/.

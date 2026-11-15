@@ -1,0 +1,19 @@
+--- original/paper.tex
++++ modified/paper.tex
+@@ -5151,11 +5151,11 @@
+ \end{lemma}
+ 
+ \begin{proof}
+-Normalize the derivative to the identity.  If a volume-preserving
+-polynomial automorphism agrees with the required jet through degree
+-$m-1$, the first discrepancy is a homogeneous vector polynomial $X_m$
+-of degree $m$ with $\operatorname{div}X_m=0$: this is the degree $m-1$
+-part of the Jacobian determinant condition.
++Normalize the derivative to the identity.  Write its formal logarithm as
++$X=\sum_{m=2}^dX_m$ through degree $d$, with $X_m$ homogeneous
++of degree $m$.  Since the normalized jet preserves volume,
++$\operatorname{div}X=0$ through degree $d-1$, and hence
++$\operatorname{div}X_m=0$ for every $2\le m\le d$.
+ 
+ The space of such fields is spanned by
+ \begin{equation}

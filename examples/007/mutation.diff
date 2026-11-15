@@ -1,0 +1,30 @@
+--- baseline/paper.tex
++++ output/paper.tex
+@@ -3884,6 +3884,11 @@
+ \[
+                  u=P(z)=\prod_l(z-x_l).
+ \]
++On jets of order $n$ we use the monic coefficient presentation
++$\sum_{0\leq r<m,\,0\leq j<n}a_{rj}z^ru^j$, where $m=\deg P$.
++After pullback to a common infinitesimal comparison base, coefficient
++transport is base-linear: it retains the $a_{rj}$ and uses the lifted
++divisor equation for $u$.  We use this convention on finite jets.
+ Only the formal neighborhood of the marked points in this coordinate
+ chart is used.  Write $LG$ and $H=L^+G$ for the resulting relative loop and
+ arc groups.  The groups are twisted by $P_0$; the displayed coordinates
+@@ -4328,9 +4333,12 @@
+ These identifications are independent of the common depth, because
+ passing to a deeper one is fully faithful.  On multiple
+ infinitesimal diagonals choose a single common deeper level for
+-all lifts.  All identifications are then restrictions of the same
+-full Laurent algebra, and their compositions agree there.  This
+-supplies the higher cocycle compatibilities, not just transport on
++all lifts.  Obtain the lifted inducing representations in \eqref{eq:L2}
++by retaining their jet-current action matrices in the monic
++coefficient bases, and then restrict to the common depth.  The PBW and group-cobar
++constructions therefore use identical coefficient diagrams, so
++the resulting comparisons intertwine induction and their compositions
++agree there.  This supplies the higher cocycle compatibilities, not just transport on
+ first-order tangent vectors.  Smooth descent and the formal
+ diagonal description of crystals give the claim.  The base-change
+ mapping calculations in Proposition~\ref{loop:hc-renormalization}

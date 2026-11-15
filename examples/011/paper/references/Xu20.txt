@@ -1,0 +1,1758 @@
+                                           STRATIFICATION FOR MULTIPLICATIVE CHARACTER SUMS
+
+                                                                                  JUNYAN XU
+
+
+
+
+arXiv:1709.01663v1 [math.NT] 6 Sep 2017
+                                                  Abstract. We prove a stratification result for certain families of n-dimensional
+                                                  (complete algebraic) multiplicative character sums. The character sums we
+                                                  consider are sums of products of r multiplicative characters evaluated at ratio-
+                                                  nal functions, and the families (with nr parameters) are obtained by allowing
+                                                  each of the r rational functions to be replaced by an “offset”, i.e. a trans-
+                                                  late, of itself. For very general such families, we show that the stratum of the
+                                                  parameter space on which the character sum has maximum weight n + j has
+                                                  codimension at least j⌊(r − 1)/2(n − 1)⌋ for 1 ≤ j ≤ n − 1 and ⌈nr/2⌉ for
+                                                  j = n.
+
+
+
+
+                                                                              1. Introduction
+
+                                            In this paper we are interested in multiplicative character sums of the following
+                                          form:
+                                                                     X
+                                                             S :=          χ1 (F1 (m))χ2 (F2 (m)) . . . χr (Fr (m)),
+                                                                    m∈κn
+
+                                          where κ is a finite field, Fi ∈ κ[x1 , . . . , xn ], and χi : κ× → C× is a multiplicative
+                                          character (extended to κ by stipulating χi (0) = 0), for each 1 ≤ i ≤ r.
+                                            It is reasonable to expect square root cancellation for generic polynomials Fi ,
+                                          namely, that |S| ≤ C(#κ)n/2 for some constant C = C(n, r, {deg Fi }) independent
+                                          of κ for generic choices of the Fi ’s (with respect to the χi ’s). However, character
+                                          sums of this form seem difficult to deal with, especially if square root cancellation is
+                                          desired. One can certainly find a multiplicative character χ and integers ei ≥ 0 to
+                                          write χi = χei , so that S = m∈κn χ(F1 (m)e1 F2 (m)e2 . . . Fr (m)er ). But the square
+                                                                      P
+                                                                                                          P
+                                          root cancellation result of Katz [10] about sums of the form m χ(F (m)) requires
+                                          that the homogeneous part of highest degree (the “leading form”) of F defines a
+                                          nonsingular projective variety, which is obviously not the case for our sums as soon
+                                          as r > 1 or some ei > 1. A generalization of Katz’s result by Rojas-León [12] allows
+                                          singular leading forms, but the ability to establish square root cancellation is lost
+                                          with the presence of a single singular point. A subsequent paper of Rojas-León
+                                          [13] allows the leading form to be a product of polynomials, but the result applies
+                                                                                         1
+2                                        JUNYAN XU
+
+
+to additive characters only, and also requires that the factors of the leading form
+together define a nonsingular variety, among other conditions.
+    The present paper confirms that if the Fi ’s are each allowed to vary independently
+within an “offset family” (the family of polynomials Fi ( · +x(i) ) parametrized by the
+“offset” x(i) ∈ κn ), then for generic members of this family, square root cancellation
+indeed holds as long as r ≥ 2n − 1. In fact we are able to obtain a stratification
+result in the sense of Fouvry and Katz [3], i.e. to bound the dimensions of the
+subscheme (the stratum) on which the character sum has maximum weight n + j,
+for each 1 ≤ j ≤ n. Having maximum weight w means being a sum of a bounded
+number of complex numbers of absolute values ≤ (#κ)w/2 , so maximum weight n
+leads to square root cancellation. To formulate the precise statement of our results,
+we first introduce the following
+    Notations, Conventions, and Definitions. If χ is a multiplicative character,
+let ord χ denote its order. A rational function F ∈ κ(x1 , . . . , xn ) is called dth-
+power-free if each irreducible factor of F has multiplicity strictly between −d and
+d. We think of a rational function F ∈ κ(x1 , . . . , xn ) as the quotient of two fixed
+polynomials G, H ∈ κ[x1 , . . . , xn ], define its degree deg F as max{deg G, deg H},
+and stipulate that χ(F (x)) = 0 if G(x) = 0 or H(x) = 0, where x is the n-tuple
+                                                                    (i)        (i)
+(x1 , . . . , xn ). Similarly, we use x(i) to denote an n-tuple (x1 , . . . , xn ).
+    For a subscheme X ⊂ Anr
+                         κ , define its degree deg X to be the degree of its closure
+
+in Pnr
+    κ .
+
+    Define the constants
+                              
+                              ja + max{0, b + j − (n − 1)}
+                              
+                                                                   if 0 ≤ j ≤ n − 1,
+          θj = θj (n, r) :=
+                              ⌈nr/2⌉
+                              
+                                                                   if j = n,
+
+if we write ⌊ r−1 ⌋ = (n − 1)a + b with a ∈ N and 0 ≤ b < n − 1. In particular,
+             j2      k                                        j       k
+θ0 = 0, θ1 = 2(n−1) , θn−1 = ⌊ r−1
+                r−1
+                                 2  ⌋, and in general θ j ≥ j    r−1
+                                                                2(n−1) if n ≥ 2.
+    A variety in this paper is an integral separated scheme of finite type over a base
+field, not necessarily algebraically closed.
+    We now state the main theorem of this paper.
+
+Theorem 1.1. There exist integers C, C ′ ∈ N and a finite set S (whose elements
+are called exceptional primes) that depend on four parameters n, r, d, D such that
+the following holds.
+    For each 1 ≤ i ≤ r, assume that di := ord χi | d > 0, let Fi ∈ κ(x1 , . . . , xn ) be a
+di th-power-free rational function of degree at most D such that TFi := {m ∈ κn |
+               STRATIFICATION FOR MULTIPLICATIVE CHARACTER SUMS                            3
+
+
+Fi (x) ≡ Fi (x + m)} is finite for each 1 ≤ i ≤ r, and consider the following family
+of character sums parametrized by (x(1) , . . . , x(r) ) ∈ κnr :
+                                                    r
+                                                  X Y
+                     S(x(1) , . . . , x(r) ) :=              χi (Fi (m + x(i) )).
+                                                  m∈κn i=1
+
+                     / S, there exist subschemes Anr
+Then whenever char κ ∈                            κ = X0 ⊃ X1 ⊃ X2 ⊃ · · · ⊃
+
+Xn , such that the sum of degrees of irreducible components of each Xj is at most
+C ′ , and such that codim Xj ≥ θj (i.e. dim Xj ≤ nr − θj ) and
+
+                           |S(x(1) , . . . , x(r) )| ≤ C(#κ)(n+j−1)/2
+
+for each 1 ≤ j ≤ n and (x(1) , . . . , x(r) ) ∈ Anr (κ) \ Xj (κ).
+
+   The theorem says that square root cancellation holds outside of X1 , so X1 is
+                                                                         j       k
+                                                                           r−1
+“the stratum of all exceptional (non-generic) parameter values”, and θ1 = 2(n−1)
+is a lower bound for codim X1 . In particular, we need r ≥ 2n − 1 (i.e. an offset
+family with at least (2n − 1)n parameters) to show that square root cancellation
+holds for generic parameter values (i.e. codim X1 > 0). We shall call a parameter
+value (x(1) , . . . , x(r) ) j-exceptional if it lies in Xj (κ), so that “exceptional” is the
+same as “1-exceptional”.
+   Notice that our assumptions on Fi are very general: they need not actually be
+polynomials, only rational functions, and no nonsingularity conditions or relations
+among the Fi ’s are assumed. This is due to the generality of the argument: it relies
+on the general formalism of ℓ-adic sheaves and weights as in Weil II [5] but requires
+no explicit cohomological computations. In particular, square root cancellation is
+not established in the usual way by showing that the middle cohomology is pure of
+weight n and that the higher cohomology groups vanish.
+   An explicit value of the constant C has been obtained by Katz [9, Theorem 11]
+and it does not actually depend on d, but we do not know a procedure to explicitly
+determine C ′ and S. It is not clear whether one should expect that better θj ’s can
+be obtained for general Fi ’s, but there should certainly be room for improvement if
+the Fi ’s are nice. A naı̈ve linear interpolation between θn = ⌈ nr
+                                                                 2 ⌉ and θ0 = 0 yields
+                            jθ
+θj ≈ jr                  j
+     2 , so that limr→∞ r = 2 ; this may be a natural goal to aim for. In contrast,
+                                       j
+with our current θj ’s the limit is 2(n−1) ; in the case n = 2, this suggests that our
+result is asymptotically optimal for general Fi , though for specific Fi ’s the situation
+may be better: in fact, if the Fi ’s are pairwise non-associate irreducible polynomials
+and some χi is nontrivial, then codim Xn = nr + 1, i.e. there is no n-exceptional
+4                                                       JUNYAN XU
+
+
+parameter value at all. If we are able to obtain a bound on codim Xn−1 for the Ti ’s
+(see below) that is better than θn−1 = s − 1, a better bound on codim X1 for S will
+follow.
+
+Outline of the proof. There are three key ingredients of the proof. The first is an
+elementary transformation which allows us to express the moments over the family
+of character sums S in terms of r other families of character sums Ti , 1 ≤ i ≤ r. It
+is a special case of Lemma 3.1.
+
+Proposition 1.2. For s ∈ N, let Mκ (r, s) denote the 2s-th moment of the character
+sum S(x(1) , . . . , x(r) ) over the parameter space κnr . We have
+(1.1)
+                                                                                                 r
+                                                                   2s
+                         X                                                           X           Y
+Mκ (r, s) :=                          |S(x(1) , . . . , x(r) )|         =                               Ti (m(1) , . . . , m(2s) )
+                 x(1) ,...,x(r) ∈κn                                         m(1) ,...,m(2s) ∈κn i=1
+
+where
+                                       s
+                                     X Y                                      2s
+                                                                              Y                                    X
+Ti (m   (1)
+              ,...,m   (2s)
+                              ) :=               χi (Fi (m   (j)
+                                                                   +x))               χ−1      (j)
+                                                                                       i (Fi (m +x)) =                    χi (Fm (x))
+                                     x∈κn j=1                               j=s+1                                  x∈κn
+
+                         Qs                             Q2s                    (j)
+where Fm (x) :=                j=1 Fi (m
+                                           (j)
+                                                 + x)    j=s+1 Fi (m                 + x)−1 .
+
+    Normally, Mκ (r, s)/(#κ)nr is what is called the moment, but in this paper we
+call Mκ (r, s) the moment for simplicity (to avoid the phrase “power sum of absolute
+values”). With this terminology, the moments over a subscheme (such as Xj ) do
+not exceed the moment Mκ (r, s) over the whole parameter space.
+    Notice that the Ti ’s are families of character sums of the same form as S but
+with 2sn parameters, so whatever stratification result we prove for general S (as in
+Theorem 1.1) can also be applied to the Ti ’s, with r replaced by 2s.
+    Recall that the family of character sums S has a naturally associated family Sk
+for each finite extension k/κ, given by
+
+                                                               X r
+                                                                 Y
+                Sk (x) = Sk (x(1) , . . . , x(r) ) :=                          χi (Nk/κ (Fi (m + x(i) )))
+                                                              m∈kn i=1
+
+                                                                                                   2s
+for x = (x(1) , . . . , x(r) ) ∈ k nr . Let Mk (r, s) :=
+                                                                              P
+                                                                                  x∈knr |Sk (x)|         denote the 2s-th
+moment of Sk . If we replace κ by k and χi by χi ◦ Nk/κ in Proposition 1.2, we get
+
+                                                   X                r
+                                                                    Y
+(1.2)                   Mk (r, s) :=                                        Ti;k (m(1) , . . . , m(2s) )
+                                           m(1) ,...,m(2s) ∈kn i=1
+                  STRATIFICATION FOR MULTIPLICATIVE CHARACTER SUMS                                    5
+
+
+where
+                                    s
+                                  X Y                                     2s
+                                                                          Y
+Ti;k (m(1) , . . . , m(2s) ) :=              χi ◦ Nk/κ (Fi (m(j) + x))           (χi ◦ Nk/κ )−1 (Fi (m(j) + x))
+                                  x∈kn j=1                               j=s+1
+                                  X
+                           =          χi ◦ Nk/κ (Fm (x)).
+                               x∈κn
+
+
+
+
+   The second ingredient connects the moments Mk (r, s) over finite extensions of
+k/κ to the dimensions of the Xj ’s.
+
+Proposition 1.3. Let C, C ′ , S be as in Theorem 1.1 and assume that deg Fi ≤ D,
+ord χi | d > 0 and char κ ∈
+                          / S.
+     (a) If Y be a smooth subvariety of Anr
+                                         κ on which the families of character sums
+
+          Sk are a virtual lisse trace function (see Remark 3.6), then for each integer
+          j, either
+           (1) |Sk (x)| ≤ C(#k)(n+j−1)/2 for any finite extension k/κ and x ∈ Y (k),
+                or                                   P                  2s
+                           Mk (r, s)                   x∈Y (k) |Sk (x)|
+           (2) lim sup    dim Y (#k)(n+j)s
+                                           ≥ lim sup    dim Y (#k)(n+j)s
+                                                                           ≥ 1 for
+                #k→∞ (#k)                     #k→∞ (#k)
+               all s ∈ N.
+    (b) There exists a decomposition of Anr
+                                         κ into smooth varieties Y such that the
+
+          sum of their degrees does not exceed C ′ and the restrictions of Sk (x) to
+          each Y is a virtual lisse trace function.
+
+   Therefore, for 0 ≤ j ≤ n we may take Xj to be the union of those Y on which
+the alternative (2) holds, which implies that
+
+ dim Xj ≤ max{dim Y : Y satisfies (2)} ≤ inf lim sup(log#k Mk (r, s) − (n + j)s).
+                                                        s∈N #k→∞
+
+Upper bounds on Mk (r, s) for all finite extensions k/κ thus yield upper bounds on
+dim Xj (i.e. lower bounds on codim Xj ).
+   Proposition 1.3(a) follows from Theorem 3.5, and (b) is shown in §2.1 using
+Lemma 3.26 and Lemma 3.27.
+   The above two ingredients together allow the following bootstrapping process:
+Starting from bounds on the moments (for all s and all k/κ), Propsosition 1.3
+yields a stratification result (a lower bound on codim Xj for each j). If the bounds
+are proved for general S, we may also apply them to the Ti ’s. A stratification
+result for the Ti ’s in turn yield bounds on the moments of S in the following
+6                                              JUNYAN XU
+
+                                                                                   Sn
+manner, and the process can then be repeated: write Anr =                           j=0 Xj \ Xj+1
+(with Xn+1 = ∅), apply the respective bounds on Ti,k (x) (in place of Sk (x)) for
+x ∈ Xj (k) \ Xj+1 (k) ⊂ Anr (k) \ Xj+1 (k), and notice that #Xj (k) ≤ C ′ (#k)dim Xj
+(see Lemma 1.5). This way we obtain new bounds on the right-hand side of (1.2)
+and hence on the left-hand side Mk (r, s). For details about this process, see §2.2.
+Starting from the initial input below, each time we run the process, the bounds
+on the codim Xj ’s will be improved, and they tend to certain limits which we call
+θj , and these are the best codimension bounds obtainable by iterated improvement
+(see §2.3).
+
+
+    The initial input to the iterative bootstrapping process is supplied by the fol-
+lowing proposition, the last ingredient of the proof:
+
+Proposition 1.4. In the setting of Theorem 1.1:
+     (a) The number of parameter values m = (m(1) , . . . , m(2s) ) ∈ k n·2s such that
+                                   s
+                                   Y                      2s
+                                                          Y
+                     Fm (x) :=          Fi (m(j) + x)            Fi (m(j) + x)−1
+                                  j=1                    j=s+1
+
+         is a perfect di th power in k(x) = k(x1 , . . . , xn ), is O((#k)ns ) as k varies
+         over finite extensions of κ.
+     (b) (multivariate Weil bound) If Fm ∈ k(x1 , . . . , xn ) is not a perfect di th power
+         in k(x1 , . . . , xn ), then
+                                             X
+           Ti,k (m(1) , . . . , m(2s) ) :=          χi ◦ Nk/κ (Fm (x)) = O((#k)n−1/2 )
+                                             x∈kn
+
+         as k varies over finite extensions of κ.
+
+    Proposition 1.4 can be seen to be equivalent to the equality codim Xn = ns
+for the sums Ti . It was the insight of Michael Larsen that, via the elementary
+transformation, this rather weak input, the weakest nontrivial bound O((#k)n−1/2 )
+(maximum weight 2n − 1), with square root many exceptions (codim Xn = ns), can
+be bootstrapped to yield the strongest, square root cancellation bound O((#k)n/2 )
+(maximum weight n) for generic parameter values (codim X1 > 0). This would not
+work if the exponent in Proposition 1.3(a)(2) were (n + j − 1)s instead of (n + j)s,
+so the integrality of the weights is crucial, since it is exactly the integrality that
+allows the contrast between (n + j − 1)s in (1) and (n + j)s in (2) of 1.3(a).
+    Proposition 1.4(a) follows from Corollary 3.18, and (b) is proved in Remark 3.8.
+                STRATIFICATION FOR MULTIPLICATIVE CHARACTER SUMS                                       7
+
+
+Number of exceptional values in a box. Although we are unable to determine
+explicitly the subschemes of Anr
+                              κ of exceptional parameter values, we obtain uniform
+
+bounds on the sums of the degrees of their irreducible components, and hence are
+able to bound the number of exceptional values in any box in κnr , thanks to the
+following lemma. This is crucial for our intended application in analytic number
+theory, which will appear in joint work with Lillian Pierce.
+
+Lemma 1.5. Let X ⊂ AN
+                    κ be a subscheme of codimension θ and let d be the sum
+
+of the degrees of its irreducible components. If {Bi }N
+                                                      i=1 are subsets of κ, the “box”
+      QN                                 N
+B := i=1 Bi is naturally a subset of A (κ). If 1 ≤ #B1 ≤ #B2 ≤ · · · ≤ #Bn <
+∞, we have
+                              N                    N                    θ
+                                         !
+                              Y                    Y                    Y
+                # X(κ) ∩            Bi       ≤d           #Bi = d(#B)         (#Bi )−1 .
+                              i=1                 i=θ+1                 i=1
+
+   For the proof, see Remark 3.25. The following is an easy corollary of Theorem
+1.1 and Lemma 1.5 with N = nr.
+
+Corollary 1.6. In the setting of Theorem 1.1, if {Bi }ni=1 are subsets of κ such that
+                                                  Qn
+1 ≤ #B1 ≤ #B2 ≤ · · · ≤ #Bn < ∞, and let B := i=1 Bi ⊂ κn , then
+
+#{(x(1) , . . . , x(r) ) ∈ B r : |S(x(1) , . . . , x(r) )| > C(#κ)(n+j−1)/2 }      ≤       C ′ (#B)r b−θj ,
+
+where b−θ denotes (#B1 #B2 . . . #Bn0 )−r (#Bn0 +1 )−η if we write θ = n0 r + η with
+n0 ∈ N and 0 ≤ η < r, so that b−θj = (#B1 )−θj for 0 ≤ j ≤ n − 1, and
+              
+              (#B1 #B2 . . . #Bn/2 )−r
+              
+                                                               if n is even,
+        −θn
+      b     =
+              (#B1 #B2 . . . #B(n−1)/2 )−r (#B(n+1)/2 )−⌈r/2⌉ if n is odd.
+              
+
+
+   Now suppose instead that Fi is a di th-power-free polynomial in Z[x1 , . . . , xn ] such
+that Fi (x + m) 6≡ Fi (x) for all m ∈ Zn , or equivalently (Lemma 3.20), Fi cannot
+be made independent of x1 by a linear change of coordinates, for each 1 ≤ i ≤ r.
+By Lemma 3.22, the reductions of Fi modulo almost all (all but finitely many)
+primes remain di th-power-free in Fp [x1 , . . . , xn ] and satisfy TFi = {0}. Therefore,
+if χi : F×    ×
+         p → C is a multiplicative character of order dividing di for each 1 ≤ i ≤ r,
+
+{Bi }ni=1 are subsets of Fp such that 1 ≤ #B1 ≤ #B2 ≤ · · · ≤ #Bn < ∞, and
+       Qn
+B := i=1 Bi , then by the above corollary,
+
+#{(x(1) , . . . , x(r) ) ∈ B r : |S(x(1) , . . . , x(r) )| > C(#κ)(n+j−1)/2 }      ≤       C ′ (#B)r b−θj
+8                                            JUNYAN XU
+
+
+for almost all primes p (the finitely many primes in S also needs to be excluded).
+A similar result holds when Fi = Gi /Hi ∈ Q(x1 , . . . , xn ) is di th-power-free with
+gcd(Gi , Hi ) = 1 and Gi , Hi ∈ Z[x1 , . . . , xn ] are not invariant under any translations.
+
+
+                             2. Proof of the Main Theorem
+
+    This section presents a complete proof of Theorem 1.1 following the outline given
+in §1. It relies on some additional lemmas stated and proved in §3.
+
+2.1. Construction of the stratification (the Xj ’s). Fix D, d, n, r ∈ N where D
+will be an upper bound for all deg Fi ’s and d > 0 will be a common multiple of all
+di = ord χi . Let P0 be the arithmetic scheme that parametrizes all finite fields κ and
+pairs of polynomials (G1 , H1 ), . . . , (Gr , Hr ) of degrees ≤ D with Hi 6≡ 0, which is
+an open subvariety of the affine space over Z of relative dimension 2r D+n
+                                                                                
+                                                                             n   . Let ζd
+be a primitive dth root of unity and let R := Rd = Z[1/d, ζd ]. Then Gm,R → Gm,R
+defined by x 7→ xd is a cyclic étale covering of degree d, hence induces a continuous
+surjective homomorphism π1 (Gm,R ) → Z/dZ. If we let ℓ be a prime dividing d
+                                                                    ×
+and compose this with a homomorphism Z/dZ → Qℓ                          sending 1 to ζd ∈ Qℓ , we
+get a 1-dimensional continuous Qℓ -representation of π1 (Gm,R ), and hence a pure
+lisse Qℓ -sheaf of weight 0 and rank 1 on Gm,R , denoted Ld . For every p ∈ Spec R,
+the trace function of Ld |Gm,k(p) is a multiplicative character χd of degree d of the
+residue field k(p).
+    If κ is a finite field that admits multiplicative characters χ1 , . . . , χr of orders
+d1 , . . . , dr respectively, and di | d for all i, then κ is a finite extension of k(p) for
+any p ∈ Spec R lying above (char κ) ∈ Spec Z, and χd ◦ Nκ/k(p) is a multiplicative
+character of order d of κ, so χ1 , . . . , χr are all powers of χd ◦ Nκ/k(p) . Let P be
+the disjoint union of Pd,e1 ,...,er over all 0 ≤ ei < d, where Pd,e1 ,...,er is a copy of
+P0 ×Spec Z Spec Rd for each e1 , . . . , er . For each 1 ≤ i ≤ r, consider the “translate
+and evaluate” maps gi and hi which are morphisms An+nr
+                                                  P    = An+nr
+                                                          Z    ×Spec Z P → A1Z
+defined by
+
+     ((m, x(1) , . . . , x(r) ), (G1 , H1 , . . . , Gr , Hr )) 7→ Gi (m + x(i) ) and Hi (m + x(i) )
+
+respectively on An+nr             n+nr
+                 Pd,e1 ,...,er ⊂ AP    . Consider Gm,Z ⊂ A1Z and its inverse im-
+                                                    Tr
+ages under the evaluation maps, and define U := i=1 gi−1 (Gm,Z ) ∩ h−1 i (Gm,Z ),
+
+an open dense subscheme of An+nr
+                            P    . On the connected component Ud,e1 ,...,er :=
+U ∩ An+nr
+     Pd,e ,...,e of U , the maps gi and hi factor through Gm,Rd , and we define a
+            1    r
+                STRATIFICATION FOR MULTIPLICATIVE CHARACTER SUMS                                  9
+
+
+sheaf L on U by specifying
+                                                r
+                                                O
+                           L|Ud,e1 ,...,er :=         gi∗ Ld⊗ei ⊗ h∗i L⊗−e
+                                                                       d
+                                                                          i
+                                                                            .
+                                                i=1
+
+Then for any finite field κ and multiplicative characters χi : κ× → C× with ord χi | d
+and rational functions Fi ∈ κ(x1 , . . . , xn ) of degrees ≤ D, if we write χi = χedi ,
+then there exists a closed point P = (F1 , . . . , Fr ) ∈ Pd,e1 ,...,er ⊂ P such that the
+trace function of L on the fiber U ∩ An+nr
+                                       P     at a point (m, x(1) , . . . , x(r) ) equals
+Qr                 (i)                                                    nr
+  i=1 χi (Fi (m + x )). If we now consider the projection π : U → AP , then the
+trace function of the complex K := Rπ! L on Anr
+                                             P gives rise to the family of character
+
+sums that we are interested in:
+                                                            r
+                                                          X Y
+       Tr(Frobk | Kx ) = Sk (x(1) , . . . , x(r) ) =                χi (Nk/κ (Fi (m + x(i) )))
+                                                         m∈kn i=1
+
+
+for any finite extension k/κ and x = (x(1) , . . . , x(r) ) ∈ Anr    ∼ nr
+                                                               P (k) = k .
+
+   The trace function of K is the same as that of the alternating sum of its co-
+homology sheaves Rj π! L, which are constructible mixed sheaves of integer weights
+(possibly away from finitely many primes), since L is mixed of integer weights and
+constructible (in fact pure of weight 0 and lisse); see [11, Theorem I.9.3], [5, Lemme
+6.1.3], and [4, Th. finitude, Corollarie 1.5]. Mixed sheaves are iterated extensions
+of pure sheaves, and the trace function of the mixed sheaf is simply the sum of the
+trace functions of its pure factors. There exists a decomposition of Anr
+                                                                      P into finitely
+many (locally closed) subschemes: Anr
+                                             S
+                                       P =      X∈X X, such that the restrictions of
+these constructible pure factors to each X ∈ X are lisse, so that Sk (x) is a virtual
+lisse trace function on each X (see Remark 3.6). Moreover, using Lemma 3.27,
+we may assume that πP |X : X → πP (X), where πP : Anr
+                                                   P → P is the structural
+morphism, is smooth for each X if we work away from finitely many primes, so that
+every fiber of π0 |X is smooth over the residue field (a finite field). We may also
+assume that each X ∈ X is connected. By Lemma 3.26 applied to X, the closure of
+X in Pπnr (X) , the geometric fibers of πP |X are equidimensional of degree no more
+        P
+
+than deg X := deg X. We then define C ′ := X∈X deg X.
+                                               P
+
+   Once we obtain the uniform stratification, we now work one fiber at a time,
+i.e. we restrict to a closed point P ∈ P parametrizing a particular choice of
+F1 , . . . , Fr , χ1 , . . . , χr such that Fi ∈ κ(x1 , . . . , xn ) is di th-power-free, where κ :=
+k(P ). For every X ∈ X , every connected component Y of the fiber XP of X over
+P is a smooth variety over κ, and Sk (x), the trace function of K on Y , is a virtual
+10                                       JUNYAN XU
+
+
+lisse trace function (see Theorem 3.5). Let Xj be the union of all Y on which
+Sk (x) satisfies the alternative (2) in Proposition 1.3(a) (i.e. has maximum weight
+≥ n + j). Then on the other Y , the Sk (x) satisfies the alternative (1) (i.e. has
+maximum weight ≤ n + j − 1), and the union of these Y contains Anr
+                                                                P \ Xj , so
+
+ |S(x(1) , . . . , x(r) )| ≤ C(#k)(n+j−1)/2    for all (x(1) , . . . , x(r) ) ∈ Anr (κ) \ Xj (κ),
+
+where C is the sum of the ranks of the lisse sheaves (which is bounded by the sum of
+the maximal ranks of the cohomology sheaves Rj π! L, which is bounded by Katz’s
+constant). It is clear the sum of the degrees of the irreducible components of Xj
+does not exceed C ′ . We have thus proved Proposition 1.3(b).
+
+2.2. The bootstrapping process. The setting of the bootstrapping process is
+as follows. We have a family S of character sums, and for each s ∈ N and each
+1 ≤ i ≤ r we have the family Ti of character sums obtained from the elementary
+transformation (1.1). For the family S, we consider the filtration Anr = X0 ⊃ X1 ⊃
+X2 ⊃ · · · ⊃ Xn , where Xj , 1 ≤ j ≤ n, is the union of smooth varieties on which
+the maximum weight of S is at least n + j. The stratification associated to the
+filtration consists of the Xj \ Xj+1 (on which Sk (x) has maximum weight exactly
+n + j). Similarly, let An·2s ⊃ Y1 ⊃ Y2 ⊃ · · · ⊃ Yn be the combined stratification
+of the Ti ’s, so that Yj , 1 ≤ j ≤ n, is the union of smooth varieties on which the
+maximum weight of some Ti is at least n + j. Define
+
+                                c(r, j) := codim Xj = nr − dim Xj ,
+
+                    and       c′ (2s, j) := codim Yj = n · 2s − dim Yj .
+
+     Denote the 2s-th moment of Sk by Mk (r, s), and define
+
+                     m(r, s) := lim sup (log#k Mk (r, s) − nr − ns).
+                                  #k→∞
+
+     The bootstrapping process relies on following three inequalities:
+
+Lemma 2.1.           (1) c(r, j) ≥ maxs∈N (js − ⌊m(r, s)⌋) ;
+      (2) m(r, s) ≤ max0≤j≤n (js − c(r, j)) ;
+      (3) m(r, s) ≤ ns − nr/2 + max0≤j≤n (jr/2 − c′ (2s, j)).
+
+Remark 2.2. It can be shown using Theorem 3.5 that we actually have equality in
+(2). Therefore, m(r, −) can be seen as a “discrete Legendre transform” of c(r, −),
+so m(r, s) is a convex function of s. (We do not know whether c(r, j) = codim Xj
+is a convex function of j, but the bounds we get from inequality (1) will always
+                STRATIFICATION FOR MULTIPLICATIVE CHARACTER SUMS                    11
+
+
+be convex.) Applying (1) and then (2) (or vice versa) is an (idempotent) closure
+operator coming from a Galois connection specified by the right-hand sides of both
+inequalities.
+  Inequality (3) is a version of (2) with the role of r and 2s switched (together
+with Xj and Yj ). Since the Ti ’s are also of the form of S, any universal bound on
+c(r, j) = codim Xj , in the sense that it holds for all sums of the form S in Theorem
+1.1 (for fixed n), also applies to c′ (2s, j) = codim Yj if we simply replace r by 2s.
+Thus we can apply (1) and (3) alternately and repeatedly, which is what we refer
+to as bootstrapping and what we do in the next subsection.
+  The crucial point is that (3) has the power of breaking convexity and idempo-
+tency, because r and 2s are switched: the bounds on m(r, s) that we get from (1),
+which are convex in r, are usually not convex in s, and exactly this gives room for
+improvement. In fact the iterated improvement process goes on forever; see Lemma
+2.4. The limit bound for c(r, j) = codim Xj will turn out to be θj = θj (n, r).
+  In reality, we do not actually compute the intermediate bounds we get during
+the iterative bootstrapping process, but instead use (1) and (3) repeatedly to first
+obtain the limiting bound on c(r, n − 1), and then show that the bounds on all
+c(r, j) we get after bootstrapping one more time is the best we can get. For details,
+see §2.3.
+
+Proof. (1) Since Xj is the union of smooth varieties on which the alternative (2)
+in Proposition 1.3(a) holds, and since dim Xj is the maximum of the dimensions of
+these smooth varieties, we have
+                                            P                   2s
+                   Mk (r, s)                  x∈Xj (k) |Sk (x)|
+       lim sup   dim X (#k)(n+j)s
+                                  ≥ lim sup    dim X (#k)(n+j)s
+                                                                   ≥ 1 > 0.
+        #k→∞ (#k)                    #k→∞ (#k)
+
+Taking the logarithm, we see that
+                                                              
+                            log Mk (r, s)
+          lim sup (log #k)                − (dim Xj + (n + j)s) > −∞.
+           #k→∞                log #k
+Since log #k → ∞ as #k → ∞, we must have
+                                                               
+                  lim sup log#k Mk (r, s) − (dim Xj + (n + j)s) ≥ 0
+                  #k→∞
+
+and hence
+
+                     m(r, s) = lim sup (log#k Mk (r, s) − nr − ns)
+                               #k→∞
+
+                            ≥ dim Xj + (n + j)s − nr − ns
+12                                           JUNYAN XU
+
+
+                                  = js − codim Xj .
+
+Thus c(r, j) = codim Xj ≥ js − m(r, s) after rearranging, so c(r, j) ≥ js − ⌊m(r, s)⌋
+because c(r, j) is an integer.
+     (2) Consider the decomposition Anr =
+                                                             S
+                                                                0≤j≤n Xj \ Xj+1 ,        with Xn+1 = ∅,
+                                          (n+j)/2
+and recall that Sk (x) = O((#k)                         ) as k varies for x ∈ Xj (k) \ Xj+1 (k) ⊂
+A (k) \ Xj+1 (k). Moreover, #Xj (k) = O((#k)dim Xj ) as k varies. Therefore
+ nr
+
+                                                            n
+                                                   2s                                           2s
+                               X                            X           X
+             Mk (r, s) =                |Sk (x)|        =                            |Sk (x)|
+                            x∈Anr (k)                       j=0 x∈Xj (k)\Xj+1 (k)
+                            n
+                            X
+                        =         O((#k)dim Xj )O((#k)(n+j)s ),
+                            j=0
+
+so
+
+       m(r, s) ≤ max (dim Xj + (n + j)s − nr − ns) = max (js − codim Xj ).
+                0≤j≤n                                                      0≤j≤n
+
+     (3) Consider the decomposition An·2s =
+                                                            S
+                                                              0≤j≤n Yj \ Yj+1 , with Yn+1 = ∅, then
+Ti;k (m) = O((#k)(n+j)/2 ) as k varies for all 1 ≤ i ≤ r and m ∈ Yj (k) \ Yj+1 (k) =
+An·2s (k) \ Yj+1 (k). Moreover, #Yj (k) = O((#k)dim Yj ) as k varies. Therefore
+
+                            X         r
+                                      Y                      n
+                                                             X            X           r
+                                                                                      Y
+          Mk (r, s) =                     Ti;k (m) =                                       Ti;k (m)
+                        m∈An·2s (k) i=1                      j=0 m∈Yj (k)\Yj+1 (k) i=1
+                        n
+                        X
+                    =         O((#k)dim Yj )O((#k)(n+j)r/2 ),
+                        j=0
+
+which yields
+
+                    m(r, s) ≤ max (dim Yj + (n + j)r/2 − nr − ns)
+                                  0≤j≤n
+
+                              = max (ns − (n − j)r/2 − c′ (2s, j))
+                                  0≤j≤n
+
+                              = ns − nr/2 + max (jr/2 − c′ (2s, j)).
+                                                        0≤j≤n
+
+                                                                                                      
+
+2.3. The initial bound and iterated improvement. In this section we aim to
+obtain initial bounds for the moments Mk (r, s) to start the bootstrapping process.
+Recall from (1.2)
+                                          X                 r
+                                                            Y
+                 Mk (r, s) :=                                   Ti;k (m(1) , . . . , m(2s) )
+                                   m(1) ,...,m(2s) ∈kn i=1
+                STRATIFICATION FOR MULTIPLICATIVE CHARACTER SUMS                      13
+
+
+and from Proposition 1.4 the Weil bound Ti;k (m(1) , . . . , m(2s) ) = O((#k)n−1/2 ) for
+all but O((#k)ns ) parameter values (m(1) , . . . , m(2s) ). We apply the trivial bound
+(#k)n to these O((#k)ns ) parameter values, which yields
+
+             Mk (r, s) = ((#k)n )r O((#k)ns ) + O((#k)n−1/2 )r ((#k)n )2s
+                         
+                         O((#k)ns+nr )
+                         
+                                                  if s ≤ r/2n,
+                       =
+                         O((#k)n·2s+(n−1/2)r ) if s ≥ r/2n.
+                         
+
+and therefore
+                                      
+                                      0
+                                      
+                                                  if s ≤ r/2n,
+(2.1)                    m(r, s) ≤
+                                      ns − r/2
+                                      
+                                                  if s ≥ r/2n.
+
+  Taking s = ⌊r/2n⌋ in inequality (1) in Lemma 2.1, we have
+
+                      c(r, j) ≥ max (js − ⌊m(r, s)⌋) ≥ j⌊r/2n⌋,
+                                s∈N
+
+so c′ (2s, j) ≥ j⌊s/n⌋. Now take s ≥ n⌈r/2⌉, so that max0≤j≤n (jr/2 − c′ (2s, j)) is
+achieved at j = 0, and hence m(r, s) ≤ ns − nr/2 by inequality (3). By inequal-
+ity (1), we then obtain c(r, j) ≥ ⌈js − (ns − nr/2)⌉. For j < n, this bound
+is trivial as −s + nr/2 ≤ 0, but when j = n we do get a nontrivial bound
+c(r, n) ≥ ⌈nr/2⌉, so θn = ⌈nr/2⌉ is indeed a lower bound for codim Xn , and we
+have c′ (2s, n) ≥ ⌈n · 2s/2⌉ = ns.
+
+
+  We first aim to iteratively improve the bound on c(r, n − 1). This relies on the
+following lemma:
+
+Lemma 2.3. For any function θ of the variable r ∈ N, let θ+ be the function of r
+defined by
+
+              θ+ (r) = max min{ (n − 1)s, ⌈r/2⌉ − s + θ(2s), −s + r }.
+                        s∈N
+
+If θ(r) is a universal lower bound for c(r, n − 1) for all r, then θ+ (r) is also.
+
+Proof. Suppose that we have a universal bound c(r, n−1) ≥ θ(r), then c′ (2s, n−1) ≥
+θ(2s). Therefore, by inequality (3) in Lemma 2.1,
+
+m(r, s) ≤ ns − nr/2 + max{ nr/2 − ns, (n − 1)r/2 − θ(2s), (n − 2)r/2, . . . , 0r/2 }
+
+        = max{0, −r/2 + ns − θ(2s), ns − r}
+14                                      JUNYAN XU
+
+
+where we used the bounds c′ (2s, n) ≥ ns and the trivial bounds c′ (2s, j) ≥ 0 for
+j < n − 1. By inequality (1),
+
+         c(r, n − 1) ≥ max ((n − 1)s − ⌊m(r, s)⌋)
+                        s∈N
+
+                     ≥ max min{ (n − 1)s, ⌈r/2⌉ − s + θ(2s), −s + r } = θ+ (r),
+                        s∈N
+
+so θ+ (r) is also a universal lower bound for c(r, n − 1).                                
+
+Lemma 2.4. Let θ(0) (r) := 0 for all r, and define θ(i) inductively by θ(i+1) =
+(θ(i) )+ , so that
+
+             θ(i+1) (r) = max min{ (n − 1)s, ⌈r/2⌉ − s + θ(i) (2s), −s + r }.
+                           s∈N
+
+Then θ(i) (r) ր θ(∞) (r) := ⌊(r − 1)/2⌋ = ⌈r/2⌉ − 1 as i → ∞, for any r ≥ 1 and
+n ≥ 2.
+
+Proof. We prove that θ(i) (r) ≤ ⌈r/2⌉ − 1 inductively. Consider the second term
+⌈r/2⌉−s+θ(i) (2s) in the definition of θ(i+1) (r). By induction hypothesis, θ(i) (2s) ≤
+⌈2s/2⌉ − 1 = s − 1 and hence ⌈r/2⌉ − s + θ(i) (2s) ≤ ⌈r/2⌉ − 1 for all s ∈ N, thus
+θ(i+1) (r) ≤ ⌈r/2⌉ − 1.
+     If θ(i) (r) ≥ θ(j) (r) for all r ∈ N, then θ(i) (2s) ≥ θ(j) (2s) for all s ∈ N, so
+from the definition of θ(i+1) it is clear that θ(i+1) (r) ≥ θ(j+1) (r). Since clearly
+θ(1) (r) ≥ θ(0) (r) for all r ∈ N, we see that θ(i+1) (r) ≥ θ(i) (r) for all i by induction.
+     It remains to show that limi→∞ θ(i) (r) ≥ ⌈r/2⌉ − 1. It suffices to deal with the
+case n = 2, since the θ(i) (r) for n > 2 is no smaller than the θ(i) (r) for n = 2, as is
+clear from the inductive definition. When n = 2, we shall show that
+                                                
+                              (i)      r       1
+                             θ (r) ≥     1−
+                                       2     i+1
+by induction. (In fact equality holds if r is even.) This inequality clearly holds for
+i = 0. Assuming that it holds for θ(i) , then
+                                                lrm              
+                                                               s
+                     θ(i+1) (r) ≥ max min{ s,         −            , −s + r }.
+                                 s∈N             2            i+1
+If we plot s, ⌈ r2 ⌉ − i+1
+                        s
+                           and −s + r as functions of s, it is clear that we should look at
+                                                                                    1
+the intersection of the first two lines, which corresponds to s = s0 := ⌈ 2r ⌉(1 − i+2 ),
+                                          s0
+or rather s = ⌊s0 ⌋. Since s0 = ⌈ 2r ⌉ − i+1 , we have
+                     l m            l m              l m        
+                       r      s0           r       s0     r    ⌊s0 ⌋
+            ⌊s0 ⌋ =       −            =       −        ≤   −          .
+                       2     i+1           2      i+1     2    i+1
+               STRATIFICATION FOR MULTIPLICATIVE CHARACTER SUMS                            15
+
+
+Since s0 < ⌈ 2r ⌉, we have ⌊s0 ⌋ < 2r , so ⌊s0 ⌋ < −⌊s0 ⌋ + r. Therefore at s = ⌊s0 ⌋, the
+                                      j              k
+                                                  1
+minimum of three terms is ⌊s0 ⌋ = ⌈ r2 ⌉(1 − i+2    ) , which is no less than ⌊ 2r (1− i+2
+                                                                                        1
+                                                                                           )⌋,
+                           1
+so θ(i+1) (r) ≥ ⌊ 2r (1 − i+2 )⌋. Now
+                                                                
+                         (i)         (r−1)         r     1     r−1
+                   lim θ (r) ≥ θ             (r) ≥   (1 − ) =       .
+                  i→∞                              2     r      2
+                                                                                           
+
+   The function θ(i+1) is obtained from θ(i) by applying a functional (·)+ , and θ(∞) is
+a fixed point of this functional. This functional is monotonic, and this lemma shows
+that θ(∞) is the limiting function obtained from applying the functional repeatedly.
+It is interesting to note that n does not affect the limiting value (though for n ≥ 3
+the convergence becomes exponential), and that we are unable to improve from
+⌈r/2⌉ − 1 to ⌈r/2⌉.
+   Since all θ(i) (r) are universal lower bounds for c(r, n−1), supi∈N θ(i) (r) = ⌈r/2⌉−
+1 is also a universal lower bound for c(r, n − 1). We now use c(r, n) ≥ ⌈nr/2⌉ and
+c(r, n − 1) ≥ ⌈(r − 1)/2⌉ to get bounds for all the other c(r, j) (1 ≤ j ≤ n − 2). With
+this improved bound for c(r, n − 1), the bound for m(r, s) in the proof of Lemma
+2.3 becomes
+
+(2.2)               m(r, s) ≤ max{ 0, (n − 1)s − r/2 + 1, ns − r },
+
+hence by inequality (1)
+
+           c(r, j) ≥ max min{ js, (j − n + 1)s + ⌈r/2⌉ − 1, (j − n)s + r }.
+                      s∈N
+
+Again, we look at s = s0 := (⌈ r2 ⌉ − 1)/(n − 1) where the first two terms are equal.
+Clearly, the maximum
+
+                        max min{ js, (j − n + 1)s + ⌈r/2⌉ − 1 }
+                         s∈N
+
+is achieved at s = ⌊s0 ⌋ or s = ⌈s0 ⌉ if j < n, and hence it is equal to max{ j⌊s0 ⌋, −(n−
+j − 1)⌈s0 ⌉ + ⌈ r2 ⌉ − 1 }. The third term (j − n)s + r is greater than the first two
+terms both at ⌊s0 ⌋ and at ⌈s0 ⌉, so it does not play a role: indeed, (j − n)⌈s0 ⌉ + r >
+(j − n + 1)⌈s0 ⌉ + ⌈ 2r ⌉ − 1 because ⌈s0 ⌉ ≤ ⌈ r2 ⌉ − 1 < ⌊ 2r ⌋ + 1 = r − (⌈ r2 ⌉ + 1), so
+(j − n)⌊s0 ⌋ + r > (j − n + 1)⌊s0 ⌋ + ⌈ 2r ⌉ − 1 ≥ j⌊s0 ⌋. Writing ⌊ r−1     r
+                                                                      2 ⌋ = ⌈2⌉ − 1 =
+(n − 1)a + b with a ∈ N and 0 ≤ b < n − 1, it is then easy to work out
+                                                                    
+                                                                 r−1
+            θj = θj (n, r) := max{ j⌊s0 ⌋, −(n − j − 1)⌈s0 ⌉ +         }
+                                                                  2
+                               = ja + max{0, b + j − (n − 1)}
+16                                                 JUNYAN XU
+
+
+for all 0 ≤ j ≤ n − 1. Combined with the bound c(r, n) ≥ θn := ⌈nr/2⌉ which we
+proved before, this is exactly what is claimed in Theorem 1.1.
+     If we just apply the bootstrapping process once, we actually already get bounds
+                               ϑ
+ϑj such that limr→∞ rj = nj ; with all this complicated iterated improvement busi-
+                                     j
+ness, we only improve this limit to n−1 , and the improvement becomes less and
+less significant as n increases. However, we really cannot do better than our θj ’s
+using the bootstrapping method alone: even if we use c(r, n) = θn = ⌈nr/2⌉ and
+the better bounds c(r, j) ≥ ⌈r/2⌉ − 1 ≥ θj for all 1 ≤ j ≤ n − 1 as input, the only
+effect is to improve (2.2) to
+
+                      m(r, s) ≤ max{0, (n − 1)s − r/2 + 1, ns − nr/2},
+
+i.e. to replace the third term ns − r by the smaller ns − nr/2. But for j < n,
+the arguments above has shown that we get the same result even without the third
+term, so θj is not improved using this bound for m(r, s). For j = n, we still get
+c(r, n) ≥ maxs∈N min{ns, s + ⌈r/2⌉ − 1, ⌈nr/2⌉} = ⌈nr/2⌉ = θn .
+
+
+                                    3. Lemmas and their proofs
+
+3.1. An elementary transformation. Burgess [1, Lemma 2] used a transforma-
+tion to express moments over a complete family of incomplete character sums in
+terms of an incomplete family of complete character sums. It has since been used
+as a routine to obtain Burgess type bounds. A simpler form of the transformation
+appeared already in [2]. We generalize this transformation to the situation where
+the summand is a product of r factors; in our setting, it is used to express the mo-
+ments of a complete family of complete character sums in terms of r other complete
+families of complete character sums.
+
+Lemma 3.1. Let R be a commutative ring and let σ1 , . . . , σs be automorphisms
+of R. Let M and X be sets, and let f1 , . . . , fr : M × X → R be functions. Let
+S : X r → R be the function defined by
+                                                               r
+                                                             X Y
+                                S(x(1) , . . . , x(r) ) :=             fi (m, x(i) ).
+                                                             m∈M i=1
+
+Then
+            X          s
+                       Y                                           X          r
+                                                                              Y
+                               S(x(1) , . . . , x(r) )σj =                           Ti (m(1) , . . . , m(s) ),
+       x(1) ,...,x(r) ∈X j=1                                 m(1) ,...,m(s) ∈M i=1
+                 STRATIFICATION FOR MULTIPLICATIVE CHARACTER SUMS                                          17
+
+
+where
+                                                                s
+                                                               XY
+                         Ti (m     (1)
+                                         ,...,m   (s)
+                                                        ) :=             fi (m(j) , x)σj .
+                                                               x∈X j=1
+
+Remark 3.2. In the case X = M = κn , R = C, if we replace s by 2s in this lemma,
+define σj to be the trivial automorphism for 1 ≤ j ≤ s and complex conjugation
+for s + 1 ≤ j ≤ 2s, and let fi (m, x) = χi (Fi (m + x)), we get Proposition 1.2. If
+moreover S is of the more specific form of Ti , this is an equality between the 2sth
+moment of the 2r-parameter sum and the 2rth moment of the 2s-parameter sum.
+
+Proof.
+              X          s
+                         Y
+                                 S(m, x(1) , . . . , x(r) )σj
+         x(1) ,...,x(r) ∈X j=1
+
+              X              r
+                         s X Y
+                         Y
+     =                                      fi (m, x(i) )σj
+         x(1) ,...,x(r) ∈X j=1 m∈M i=1
+
+              X                    X          s Y
+                                              Y r
+     =                                                     fi (m(j) , x(i) )σj        (distributive law)
+         x(1) ,...,x(r) ∈X m(1) ,...,m(s) ∈M j=1 i=1
+
+               X                   X          r Y
+                                              Y s
+     =                                                     fi (m(j) , x(i) )σj
+         m(1) ,...,m(s) ∈M x(1) ,...,x(r) ∈X i=1 j=1
+
+               X           YX s
+                           r Y
+     =                                       fi (m(j) , x)σj                          (distributive law)
+         m(1) ,...,m(s) ∈M i=1 x∈X j=1
+
+               X           r
+                           Y
+     =                            Ti (m(1) , . . . , m(s) ).
+         m(1) ,...,m(s) ∈M i=1
+
+                                                                                                           
+
+3.2. Geometric connected components. In this section we review some facts
+about geometric connectedness, in preparation for the proof of Theorem 3.5. If κ is
+a field, let κs denote its separable algebraic closure and κ its algebraic closure. Let
+X be a connected scheme of finite type over κ. For any extension k/κ, let Xk denote
+X ×κ k. For any extension k ′ /k, Xk′ → Xk induces a surjection π0 (Xk′ ) → π0 (Xk )
+on the sets of connected components.
+  G := Gal(κs /κ) acts on π0 (Xκs ), which is identified with π0 (Xκ ) via the bijection
+π0 (Xκ ) → π0 (Xκs ) [15, Tag 0363]. Let G0 E G denote the kernel of the action, and
+let k0 denote the subfield of κs fixed by G0 . Since X is of finite type over κ, Xκs is
+noetherian, so π0 (Xκs ) is finite. Therefore, the connected components are clopen,
+G0 is a subgroup of finite index of G, and k0 /κ is a finite extension. We call k0
+18                                      JUNYAN XU
+
+
+the splitting field of X/κ, since it is the smallest extension of κ that “splits” the
+geometric connected components of X/κ completely. If f ∈ κ[x] is an irreducible
+polynomial and X = Spec κ[x]/(f ) then k0 is the splitting field of f .
+     The action of G on π0 (Xκs ) is transitive: by [15, Tag 038B], the union of each
+orbit is the inverse image of a closed subset of X under Xκs → X. A partition
+of π0 (Xκs ) into orbits then yields a partition of X into finitely many nonempty
+disjoint closed subsets. Since X is connected, there can only be one orbit.
+
+Lemma 3.3. Let k be an intermediate field of κs /κ. The following are equivalent:
+
+      (1) every connected component of Xk is geometrically connected;
+      (2) π0 (Xκs ) → π0 (Xk ) is injective (hence bijective);
+      (3) Gal(κs /k) acts trivially on π0 (Xκs );
+      (4) Gal(κs /k) ≤ G0 ;
+      (5) k0 ⊂ k.
+
+If k/κ is Galois, they are also equivalent to
+
+      (6) some connected component of Xk is geometrically connected;
+      (7) some fiber of π0 (Xκs ) → π0 (Xk ) is a singleton;
+      (8) the action of Gal(κs /k) on π0 (Xκs ) has a fixed point.
+
+Remark 3.4. Since (5) =⇒ (1), that every connected component of Xk0 is geomet-
+rically connected. Now suppose that κ is a finite field, so any algebraic extension of
+κ is Galois. If k0 6⊂ k, no connected component of Xk is geometrically connected,
+since (6) =⇒ (5); by [15, Tag 04KV], Xk has no rational points.
+
+Proof. (1) ⇐⇒ (2) and (6) ⇐⇒ (7): if Y ∈ π0 (Xk ), the inverse image of Y in
+π0 (Xκs ) consists of the connected components of Yκs , so it is a singleton iff Y is
+geometrically connected.
+     (2) ⇐⇒ (3) and (7) ⇐⇒ (8) follow from [15, Tag 038D (1)].
+     (3) ⇐⇒ (4) by definition of G0 . (4) ⇐⇒ (5) by Galois theory. (3) =⇒ (8) is
+trivial.
+     Now assume that k/κ is Galois, so H := Gal(κs /k) is normal in G.
+     (8) =⇒ (3): if (8) holds, the stabilizer of some element Y ∈ π0 (Xκs ) in G
+contains H. Since the stabilizers of elements in the same G-orbit are conjugate in
+G, and since H E G, we see that H fixes the G-orbit of Y . Since G acts transitively,
+H fixes π0 (Xκs ), i.e. (3) holds.                                                  
+                 STRATIFICATION FOR MULTIPLICATIVE CHARACTER SUMS                      19
+
+
+3.3. Moments of virtual lisse trace functions. For an Qℓ -sheaf F on a scheme
+X over a finite field κ and any finite extension k/κ, let fk : X(k) → C of F be
+defined by
+                              fk (x) := ι(Tr(Frobk | Fx ))
+
+where ι is a fixed isomorphism from Qℓ to C, and x is a geometric point over
+x ∈ X(k). We call the collection {fk }k/κ finite ’s for all finite extensions k/κ the
+trace function of F , thought of as a function in variables k and x.
+  All Qℓ -sheaves appearing in this paper will be pure or mixed with integer weights
+with respect to any isomorphism Qℓ → C, but all the arguments go through if we
+just fix one isomorphism. For simplicity, we shall talk about purity and mixedness
+without specifying the isomorphism.
+
+Theorem 3.5. Let X be a smooth variety over a finite field κ, and let {Fi }N
+                                                                           i=1
+             ′
+and {Gi }N
+         i=1 be pure lisse Qℓ -sheaves on X (of integer weights). For every finite
+
+extension k/κ, let (fi )k , (gi )k : X(k) → C denote the trace functions of Fi and Gi
+                                               PN ′
+respectively, and let tk = N
+                              P
+                                  i=1 (fi )k −  i=1 (gi )k . Then for each integer w ∈ Z,
+either
+   (1) |tk (x)| ≤ C(#k)w/2 for every finite extension k/κ and x ∈ X(k), where
+     PN               PN ′
+C = i=1 rank(Fi ) + i=1 rank(Gi ), or
+                 P                 2s
+                   x∈X(k) |tk (x)|
+   (2) lim sup     dim X (#k)(w+1)s
+                                      ≥ 1 for all s ≥ 1 or s = 0, in particular for all
+        #k→∞ (#k)
+s ∈ N.
+
+Remark 3.6. Since the trace functions tk (x) in the statement of the theorem comes
+from a formal difference of lisse sheaves, we say that tk (x) is a “virtual lisse trace
+function”.
+  The two alternatives (1) and (2) are clearly mutually exclusive since #X(k) ≤
+(deg X)(#k)dim X (see Remark 3.25). We call the smallest w that makes (1) true
+the maximum weight of the virtual trace function {tk }k/κ , which is also the largest
+w such that the irreducible constituents of weight w among the sheaves Fi and Gi
+do not all cancel out.
+  The theorem relates the cumulative and the pointwise behavior of a virtual lisse
+trace function. It shows that, although one cannot expect a trace function with
+maximum weight > w has magnitude exceeding (#k)w+1 at every k-point, it indeed
+has such magnitude on average in terms of its 2s-moments (s ≥ 1), if the variety is
+smooth and the sheaves are lisse. A result like this may be well-known to experts,
+20                                         JUNYAN XU
+
+
+but I cannot find a reference. It is easier to prove if the virtual trace function is an
+actual trace function, so that no cancellation is possible. The s = 0 case (with the
+convention 00 = 1) of (2) can alternatively be obtained by applying the theorem to
+the constantly 1 trace function, or directly from the Lang–Weil bound.
+     This lemma can be extended to the case where all Fi , Gi are lisse and mixed
+and X is normal: an irreducible mixed lisse sheaf on a normal variety is pure
+and remains irreducible when restricted to a dense open smooth subvariety, and
+moreover its isomorphism class is determined by the restriction [11, Lemma I.2.7
+and Theorem I.2.8(3)].
+
+Proof. We first reduce to the case that X is geometrically connected. Let k0 be
+the splitting field (see §3.2) of X/κ. Let {Xj }Jj=1 be the connected components of
+X ×κ k0 , and consider the restrictions of Fi and Gi to the Xj ’s. Suppose that the
+lemma is true for these Xj ’s, which are geometrically connected (Remark 3.4). If
+                                                            SJ
+(1) holds for all of the Xj ’s, then (1) holds for X ×κ k0 = j=1 Xj , so (1) holds for
+X if k0 ⊂ k. If k0 6⊂ k, (1) is vacuously true, since in that case X(k) = ∅ (Remark
+3.4). On the other hand, if (2) holds for some Xj , then (2) holds for X ×κ k0 since
+Xj ⊂ X ×κ k0 , hence it holds for X since finite extensions of k0 are also finite
+extensions of κ.
+     Thus we may assume that X is geometrically connected. We then have #X(k) =
+(#k)dim X + o((#k)dim X ) as #k → ∞ (Lang–Weil), so we can substitute #X(k)
+for (#k)dim X in the limsup. Since x 7→ xs is convex for s ≥ 1 or s = 0, by Jensen’s
+inequality,
+                                           !s                                    s
+                                      2                                       2
+               1       X        |tk (x)|               1       X        |tk (x)| 
+                                                ≥ 
+              #X(k)            (#k)w+1                #X(k)            (#k)w+1
+                      x∈X(k)                                  x∈X(k)
+                                                                                   ,
+
+thus we see that the s = 1 case of (2) implies (2) for arbitrary s ≥ 1 or s = 0. We
+now focus on the case s = 1.
+     Since the trace functions of a lisse sheaf are the sums of the trace functions of
+its irreducible constituents (with multiplicities), we may assume that all Fi , Gi are
+irreducible. Furthermore, we can assume that no Fi is isomorphic to any Gj , since
+isomorphic sheaves give rise to identical trace functions which cancel each other.
+Let w0 be the maximum weight that appears among the Fi and Gi . If w0 ≤ w, (1)
+is true, so we assume that w0 > w, and aim to prove the stronger version of (2)
+with w + 1 replaced by w0 . For this purpose, those Fi and Gi with weights ≤ w0
+                                                                                       2
+become irrelevant, since their contribution to the limsup is zero. (When |tk (x)| is
+                   STRATIFICATION FOR MULTIPLICATIVE CHARACTER SUMS                        21
+
+
+expanded, any term that involves a pure lisse sheaf of weight < w0 contributes at
+                                                    1
+most C 2 (#k)w0 /2 (#k)(w0 −1)/2 = O((#k)w0 − 2 ), and #X(k) = O((#k)dim X ).)
+   Thus we further assume that all Fi , Gi are of weight w0 . Notice that fk :=
+PN                      PN ′
+  i=1 (fi )k and gk :=    i=1 (gi )k are the trace functions of the semisimple lisse
+                LN                    LN ′
+sheaves F :=      i=1 Fi and G :=       i=1 Gi respectively. Since F , G have weight
+w0 , the trace functions of the duals F ∨ and G ∨ are fk /(#k)w0 and gk /(#k)w0
+respectively, so
+          2                      2
+    |tk | /(#k)w0 = |fk − gk | /(#k)w0 = (fk fk − fk gk − gk fk + gk gk )/(#k)w0
+
+is the trace function of A := F ⊗ F ∨ ⊕ G ⊗ G ∨ minus that of B := F ⊗ G ∨ ⊕ G ⊗ F ∨ .
+  By the Grothendieck–Lefschetz trace formula,
+                              2 dim
+                                XX                                                           
+               2
+ X
+         |tk (x)| /(#k)w0 =           Tr Frobκ[k:κ] | Hcj (Xκ , A) −Tr Frobκ[k:κ] | Hcj (Xκ , B)
+x∈X(k)                         j=0
+
+where Xκ := X ×κ κ. Since A and B are pure of weight 0, the eigenvalues of Frobκ[k:κ]
+acting on both Hcj have modulus ≤ ((#κ)j/2 )[k:κ] = (#k)j/2 ([5, Theorem 3.3.1],
+[11, Theorem I.7.1]), so Hjc contributes zero to the limsup unless j = 2 dim X. Since
+X is smooth and geometrically connected, if H is a lisse Qℓ -sheaf on X, Poincaré
+duality yields
+
+      Hc2 dim X (Xκ , H) ∼
+                         = H 0 (Xκ , H∨ )∨ (− dim X) ∼
+                                                     = ((H∨ )π1 (Xκ ) )∨ (− dim X)
+
+as representations of π1 (X)/π1 (Xκ ) ∼ = Ẑ = hFrobκ i, so
+                                                          X −[k:κ]
+             Tr Frobκ[k:κ] | Hc2 dim X (Xκ , H) = (#k)dim X  λi      ,
+                                                                    i
+
+where the λi are the Frobenius eigenvalues (each appearing as many times as its
+algebraic multiplicity) on the space of geometric invariants (H∨ )π1 (Xκ ) . Therefore,
+if the Frobenius eigenvalues on (A∨ )π1 (Xκ ) ∼
+                                              = Aπ1 (Xκ ) and (B ∨ )π1 (Xκ ) ∼
+                                                                             = B π1 (Xκ )
+are the multi-sets A and B respectively, we have
+                  P                 2                                 !
+                    x∈X(k) |tk (x)|
+                                                X           X
+                                                   −[k:κ]      −[k:κ]
+         lim sup      dim X (#k)w0
+                                      = lim sup   λ       −   λ        .
+          #k→∞ (#k)                      #k→∞
+                                                        λ∈A         λ∈B
+
+Notice that all these eigenvalues λ have modulus 1, since A and B are pure of weight
+0. Therefore, by [8, Lemme 2.2.2.2], the limsup is at least 1 if A 6= B. (In fact,
+Katz showed that the limsup is at least the square root of the cardinality of the
+symmetric difference A△B of the multisets A and B.)
+  We now show that 1 ∈ A but 1 ∈
+                               / B. Recall we assumed that the sheaves
+(representations) F and G are sums of irreducibles, i.e. semisimple. Since duals,
+22                                     JUNYAN XU
+
+
+tensor products (over the field Qℓ of characteristic 0), and quotients of semisimple
+representations are semisimple, we find that Aπ1 (Xκ ) and B π1 (Xκ ) are semisimple
+π1 (X)-representations, and since the actions of π1 (X) factor through Ẑ = hFrobκ i,
+they are semisimple as Ẑ-representations. Since Z = hFrobκ i is dense in Ẑ and
+the action is continuous, Ẑ-irreducibles remain irreducible under the Z-action, so
+Aπ1 (Xκ ) and B π1 (Xκ ) are semisimple Z-representations, which just means that the
+action of Frob is diagonalizable. Therefore, the (algebraic) multiplicities of the
+eigenvalue 1 equal the dimensions of the eigenspaces (the geometric multiplicities).
+But the eigenspaces associated with eigenvalue 1 simply consist of the elements
+fixed by Frobκ . Again, since hFrobκ i is dense in Ẑ through which the actions of
+π1 (X) factor, these eigenspaces are just Aπ1 (X) and B π1 (X) . Since
+
+                     A = F ⊗ F ∨ ⊕ G ⊗ G∨ ∼
+                                          = Hom(F , F ) ⊕ Hom(G, G)
+
+             and     B = F ⊗ G∨ ⊕ G ⊗ F ∨ ∼
+                                          = Hom(G, F ) ⊕ Hom(F , G),
+
+we have Aπ1 (X) ∼
+                = Homπ1 (X) (F , F ) ⊕ Homπ1 (X) (G, G) 6= 0 (since we assumed that
+the weight w0 appears in F or in G, F and G cannot both be trivial) and B π1 (X) =
+Homπ1 (X) (G, F ) ⊕ Homπ1 (X) (F , G) = 0 (since we assumed that F and G have no
+common irreducible constituents). Thus 1 ∈ A but 1 ∈
+                                                   / B, hence A 6= B, which
+completes the proof.                                                                    
+
+3.4. The multivariate Weil bound.
+
+Lemma 3.7. If k is a finite field, χ : k × → C× is a multiplicative character of
+order d, and F ∈ k(x1 , . . . , xn ) is not a perfect dth power over k (equivalently, F is
+not of the form aGd with a ∈ k × and G ∈ k(x1 , . . . , xn ); see Lemma 3.15), then
+
+                              X
+                                    χ(F( x)) ≤ C(#k)n−1/2 ,
+                             x∈kn
+
+where C depends only on n and deg F .
+
+Remark 3.8. This lemma was proved for polynomial F in [14, Lemma 6] without
+using ℓ-adic sheaves. We use the machinery of Weil II to obtain a proof for rational
+functions that is more conceptual. Applying the lemma to χi ◦ Nk/κ which has
+order equal to di = ord χi , we get Proposition 1.4(b).
+
+Proof. Let d := ord χ and let ℓ be a prime other than char k. Let Ld be the lisse
+Qℓ -sheaf of weight 0 on Gm,k associated to the ℓ-adic representation π1 (Gm,k ) →
+               STRATIFICATION FOR MULTIPLICATIVE CHARACTER SUMS                       23
+
+                   ×
+Z/dZ ∼
+     = µd ⊂ Q ℓ        where the first map is associated to the cyclic étale covering
+Gm,k → Gm,k defined by x 7→ xd .
+  Let V be the open subvariety of Ank on which both the numerator and the
+denominator of F is nonzero, and let f : V → Gm,k be defined by F . By the
+Grothendieck–Lefschetz trace formula,
+                    X                   2n
+                                        X
+                                              Tr Frobk | Hcj (Vk , f ∗ Ld ) .
+                                                                           
+                           χ(F (x)) =
+                    x∈kn                j=0
+
+If F is not a perfect di th power over k, f ∗ Ld is not geometrically constant (see 3.10
+below), and since it is of rank 1, it has no geometric invariants, thus H 2n ∼   c= H0
+vanishes.   Moreover, Hcj with j < 2n has weights ≤ j ≤ 2n − 1 [5, Theorem 3.3.1]
+since f ∗ Ld is pure of weight 0. Therefore,
+
+              Tr Frobk | Hcj (Vk , f ∗ Ld ) ≤ rank(Hcj (Vk )) · (#k)(2n−1)/2 .
+                                           
+
+
+Since the ranks of the Hcj are bounded by Katz’s constant C which depends only
+                                                    n−1/2
+                            P
+on n and deg F , we obtain     x∈kn χ(F (x)) ≤ C(#k)      .                 
+
+Lemma 3.9. Let X and Z be connected schemes, let G be a finite group, and
+let π1 (X) → Gal(Y /X) ∼
+                       = G be a surjective homomorphism associated to a Galois
+étale covering ϕ : Y → X. Let G → GLN (Qℓ ) be a faithful representation and let
+L denote the Qℓ -sheaf associated to its composition with π1 (X) → G. Then for
+any morphism f : Z → X, f factors through ϕ iff f ∗ L is constant.
+
+Remark 3.10. If X = Y = Gm,k , ϕ is the dth power map, Z = Vk , and f : Z →
+X is defined by F , then by the lemma we see that F is a perfect dth power in
+k(x1 , . . . , xn ) ⇐⇒ f factors through ϕ ⇐⇒ f ∗ L is constant.
+
+Proof. ( =⇒ ) Notice that π(Y ) is exactly the kernel of π1 (X) → G. If f factors
+through ϕ, the representation associated to f ∗ L, which is π1 (Z) → π1 (X) → G →
+GLN (Qℓ ), factors through π1 (Y ) and hence is trivial.
+  ( ⇐= ) Consider the following commutative diagram
+
+                                   Y ×X Z                 Y
+
+
+                                         Z               X
+π1 (Z) acts on Y ×X Z via the action of π1 (X) on Y . If f ∗ L is trivial, π1 (Z) →
+π1 (X) → G ∼ = Gal(Y /X) is trivial because G → GLN (Qℓ ) is faithful, so π1 (Z) acts
+trivially on Y and hence on Y ×X Z. Since Y ×X Z → Z is an étale covering,
+24                                     JUNYAN XU
+
+
+it must be an isomorphism on every connected component, so in particular it has
+a section Z → Y ×X Z. Composing this section with Y ×X Z → Y yields a lift
+Z → Y of f : Z → X.                                                                   
+
+3.5. Mutual transversality of subspaces of a vector space.
+
+Lemma 3.11. If k is a field and {Vj }N
+                                     j=1 are k-subspaces of a vector spaces V over
+
+k, then there exists a basis E of V and pairwise disjoint subsets {Ej }N
+                                                                       j=1 of E such
+     TN                    SN
+that j=1 Vj = span(E \ j=1 Ej ) and Vj ⊂ span(E \ Ej ) for 1 ≤ j ≤ N .
+
+     In other words, the Vj ’s can each be replaced by a larger subspace such that their
+intersection remain unchanged, so that they are now determined by the vanishing
+of respective sets of coordinates that are disjoint from each other. The ability to
+treat these disjoint coordinates separately is important in the proof of Lemma 3.16.
+
+Proof. This lemma follows from Lemma 3.12 and Lemma 3.13 ((1) =⇒ (3)) below.
+                                                                                      
+
+Lemma 3.12. If {Vj }N j=1 are subspaces of a k-vector space V , then there exist
+               N
+                                                   Tn
+subspaces {Wj }j=1 of V such that Vj ⊂ Wj and ( j=1 Wj ) + Wn+1 = V for
+               TN        TN
+1 ≤ n < N and j=1 Vj = j=1 Wj .
+
+     This lemma fails if Vj are finite abelian groups instead of vector spaces, which is
+the main reason why we cannot extend Lemma 3.16 to the situation of an abelian
+group variety acting on another variety, the original situation being a vector space
+acting simply transitively on the affine space.
+
+Proof. We proceed by induction. If N = 0, there is nothing to prove (the empty
+intersection is always V ). If N > 0, given {Vj }N
+                                                 j=1 , apply the induction hypothesis
+        N −1             N −1                               TN −1
+to {Vj }j=1 to get {Wj }j=1 . Let U be a complement of ( j=1 Wj ) + VN in V , and
+let WN := VN + U ⊃ VN , then clearly ( N
+                                          T −1
+                                           j=1 Wj ) + WN = V . If A, B, C ⊂ V are
+subspaces satisfying (A+ B)∩C = {0}, it is easy to show that A∩(B + C) = A∩B.
+Taking A = N
+            T −1
+              j=1 Wj , B = VN and C = U , we see that
+TN                                      TN −1                TN −1           TN
+     j=1 Wj = A ∩ (B + C) = A ∩ B = (     j=1   Wj ) ∩ VN = ( j=1 Vj ) ∩ VN = j=1 Vj .
+
+                                                                                      
+
+Lemma 3.13. If {Wj }N
+                    j=1 are subspaces of a k-vector space V , the following are
+
+equivalent:
+         Tn
+    (1) ( j=1 Wj ) + Wn+1 = V for 1 ≤ n < N ;
+              STRATIFICATION FOR MULTIPLICATIVE CHARACTER SUMS                        25
+
+                                               TN           LN
+    (2) The natural injective linear map V /     j=1 Wj →      j=1 V /Wj is an isomor-
+        phism;
+    (3) There exists a basis E of V and pairwise disjoint subsets {Ej }N
+                                                                       j=1 of E such
+
+        that Wj = span(E \ Ej ) for 1 ≤ j ≤ N ;
+    (4) There exist linearly independent subspaces {Uj }N
+                                                        j=1 of V such that V =
+         TN         LN                  TN         L
+        ( i=1 Wi ) ⊕ i=1 Ui and Wj = ( i=1 Wi ) ⊕ 1≤i≤N,i6=j Ui for 1 ≤ j ≤ N ;
+         T
+    (5) ( 1≤j≤N,j6=n Wj ) + Wn = V for 1 ≤ n ≤ N ;
+    (6) In the dual space V ∗ , the subspaces {Wj⊥ }N
+                                                    j=1 are linearly independent.
+
+If codim Wj < ∞ for all 1 ≤ j ≤ N , they are also equivalent to:
+    (7) codim( N
+              T            PN
+                j=1 Wj ) =   j=1 codim Wj .
+
+
+Remark 3.14. If {Wj }N
+                     j=1 satisfy the equivalent conditions listed in this lemma,
+
+they are called mutually transverse. The Chinese Remainder Theorem says that
+comaximal ideals in a k-algebra are mutually transverse. Condition (6) shows
+that mutual transversality is a notion dual to linear independence. In fact, one
+way to prove the equivalence is passing to the dual space using the identifications
+ Tn           Pn
+( j=1 Wj )⊥ = j=1 Wj⊥ , (W + W ′ )⊥ = W ⊥ ∩ W ′⊥ and (V /W )∗ = W ⊥ , and then
+taking advantage of the familiar equivalent characterizations of linear independence.
+  Although V is finite-dimensional in our intended application, the proof works
+for any V . If we consider infinitely many subspaces, the obvious generalizations of
+the conditions in the lemma are no longer equivalent.
+
+Proof. (1) =⇒ (2): If A, B ⊂ V are subspaces, then the natural injective linear
+map V /(A ∩ B) → V /A ⊕ V /B is an isomorphism iff V = A + B. Thus if (1) holds,
+then (2) can be obtained by induction.
+    (2) =⇒ (3): Assume (2). For 1 ≤ j ≤ N , let Ej′ be the image of a basis of V /Wj
+                             LN           ∼      TN              `N      ′
+under the map V /Wj →           j=1 V /Wj = V / j=1 Wj , then       j=1 Ej is a basis of
+    TN                                                                     N
+V / j=1 Wj . Let Ej be a lift of Ej′ to V , and let E0 be a basis of j=1 Wj , then
+                                                                         T
+
+E := N
+       `
+         j=0 Ej is a basis of V . By definition of Ej , the image of Ej in V /Wn is {0}
+                                         S
+(i.e. Ej ⊂ Wn ) if n 6= j, so E \ En = n6=j En ⊂ Wn . Since En is a basis both for
+V / span(E \ En ) (since E is a basis of V ) and for V /Wn (by definition of Ej ), we
+conclude that Wn = span(E \ En ).
+  (3) =⇒ (4): Take Uj = span(Ej ).
+                               T          TN
+  (4) =⇒ (5): Assume (4). Then j6=n Wj = ( i=1 Wj ) ⊕ Un , so
+                  T                  TN              L
+                 ( j6=n Wj ) + Wn = ( i=1 Wi ) ⊕ Un + i6=n Ui = V.
+26                                        JUNYAN XU
+
+                                    Tn          T
+     (5) =⇒ (1): Notice that              1≤j≤N,j6=n+1 Wj for 1 ≤ n < N .
+                                     j=1 Wj ⊃
+                                                        TN          LN
+  (2) ⇐⇒ (6): The dual of the injective linear map V / j=1 Wj → j=1 V /Wj is
+                                                       LN           PN
+canonically identified with the natural surjective map j=1 Wj⊥ → j=1 Wj⊥ .
+     (2) ⇐⇒ (7): Clear.                                                                    
+
+3.6. Bound on the number of perfect powers in certain offset families of
+rational functions.
+
+Lemma 3.15. Let k be a field and k s its separable algebraic closure, so k s = k.
+      (1) If A is a reduced k-algebra, then A ⊗k k s is reduced.
+      (2) If F ∈ k[x1 , . . . , xn ] is irreducible, then F is square-free as a polynomial in
+          k s [x1 , . . . , xn ].
+      (3) If F, G ∈ k[x1 , . . . , xn ] are non-associate irreducible polynomials, then F
+          and G have no common factors in k s [x1 , . . . , xn ].
+
+Proof. (1) This follows from [15, Tag 030U].
+     (2) If F is irreducible over k, then k[x1 , . . . , xn ]/(F ) is reduced, so by (1),
+k [x1 , . . . , xn ]/(F ) is reduced, so F is square-free over k s .
+ s
+
+     (3) If F, G are irreducible over k and non-associate, then k[x1 , . . . , xn ]/(F G) is
+reduced, so by (1), k s [x1 , . . . , xn ]/(F G) is reduced, so F and G have no common
+factors over k s .
+                                                                                           
+
+Lemma 3.16. Let κ be a finite field and κ0 its prime field. Let F ∈ κ(x1 , . . . , xn ) be
+dth-power-free, let T = TF := {m ∈ κn | F (x) ≡ F (x + m)} be the κ0 -subspace of
+κn of translations that leave F invariant, and assume that #T < ∞. For any finite
+extension k/κ, r ∈ N and {ai }ri=1 ⊂ Z such that gcd(d, ai ) = 1, let P be the col-
+lection of tuples (m(1) , . . . , m(r) ) ∈ k nr such that the rational function ri=1 F (x +
+                                                                               Q
+
+m(i) )ai is a perfect dth power over κ. Then #P ≤ C(#k)n⌊r/2⌋ (#T )⌈r/2⌉ , where
+the constant C only depends on r and the degree of F and not on k.
+
+Remark 3.17. We will not try to optimize the constant C. Notice that if d ∤
+( ai )( bj ) (with bj ’s introduced in the proof below), then ri=1 F (x + m(i) ) is
+ P     P                                                     Q
+
+never a perfect dth power. However, in the case we are interested in (in the corollary
+                            P
+that follows), ai = ±1, and   ai = 0.
+
+Proof. By Lemma 3.15, an irreducible polynomial in κ[x1 , . . . , xn ] remains square-
+free over κ = κs , and that different irreducible polynomials remain relatively prime
+                STRATIFICATION FOR MULTIPLICATIVE CHARACTER SUMS                                               27
+
+                                                                                     QN       bj
+over κ. Since F ∈ κ(x1 , . . . , xn ) is dth-power-free, if F =                          j=1 fj is the factoriza-
+tion of F into irreducible factors over κ, we still have 0 < |bj | < d, and in particular
+d ∤ bj . For every i, j, the irreducible factor fj (x + m(i) ) appears in F (x + m(i) )ai
+with multiplicity ai bj . Since gcd(d, ai ) = 1 and d ∤ bj , we have d ∤ ai bj . Thus,
+in order for ri=1 F (x + m(i) )ai to be a perfect dth power, fj (x + m(i) ) must also
+            Q
+                                ′                                                                        ′
+appear in F (x + m(i ) ) for some i′ 6= i, so cfj (x + m(i) ) ≡ fj ′ (x + m(i ) ) (i.e.
+                                    ′
+fj ′ (x) ≡ fj (x + m(i) − m(i ) )) for some 1 ≤ j ′ ≤ N and c ∈ κ× .
+   Now, for each j and each tuple m = (m(1) , . . . , m(r) ) ∈ k nr , define an undirected
+graph Gm,j with vertex set {1, . . . , r} such that there is an edge between i and i′ iff
+                                        ′                   ′
+fj ′ (x) ≡ cfj (x + m(i) − m(i ) ) or cfj (x + m(i ) − m(i) ) for some j ′ and c. If m ∈ P ,
+then Gm,j has no isolated point by the last paragraph, and it is then easy to see
+that it has at most ⌊r/2⌋ components. Clearly, the number of undirected graphs
+on {1, . . . , r} is 2( 2 ) . Given N such graphs G , . . . , G , we want to bound the
+                       r+1
+                                                                       1             N
+
+number of tuples m ∈ P such that Gm,j = Gj for all 1 ≤ j ≤ N .
+   Let Vj be the κ0 -subspace of V := k n of translations that leave fj invariant,
+     TN
+then j=1 Vj ⊂ T . Choose a basis E of V and subsets {Ej }N j=1 as in Lemma 3.11,
+                                             TN                   SN
+so that Vj ⊂ span(E \ Ej ) for 1 ≤ j ≤ N and j=1 Vj = span(E \ j=1 Ej ), hence
+PN                         TN                                                    ′
+  j=1 #Ej = dim V − dim j=1 Vj ≥ dim V − dim T . An edge connecting i and i
+                                                                                                    ′
+in Gm,j poses a constraint between the Ej -coordinates of m(i) and m(i ) under this
+basis; more precisely, for each 1 ≤ j ′ ≤ N there are at most two possibilities for the
+                                        ′                                                       ′
+Ej -coordinates of m(i) −m(i ) . Indeed, if fj ′ (x) ≡ cfj (x±(m(i) −m(i ) )) and fj ′ (x) ≡
+                            ′                                                               ′
+c′ fj (x ± (m′ (i) − m′ (i ) )), then fj (x) ≡ (c′ /c)fj (x ± (m′ (i) − m′ (i ) ) ∓ (m(i) − m′ (i) )),
+                      (i)           (i′ )                  (i)
+so c′ = c and (m′           − m′            ) ± (m(i) − m′ ) leaves fj invariant, hence it lies in
+                                                                 (i)         (i′ )                            (i)
+Vj ⊂ span(E \Ej ), so the Ej -coordinates of m′                        −m′           are ± those of m(i) −m′ .
+   By induction, if i and i′ lie in the same component of Gm,j , say with distance
+D, then there are at most (2N )D ≤ (2N )r possibilities for the Ej -coordinates
+                ′
+of m(i) − m(i ) . Therefore, if H ⊂ Gm,j is a connected component, there are at
+most (#κ0 )#Ej (2N )r(#H−1) possibilities for the Ej -coordinates of the m(i) ’s with
+i ∈ H. If m ∈ P , Gm,j has at most ⌊r/2⌋ components, so there are at most
+                            2
+(#κ0 )#Ej ⌊r/2⌋ (2N )r possibilities for all the Ej -coordinates of m, and hence at
+most
+
+
+                    PN                            2                                                 2
+            (#κ0 )    j=1 #Ej ⌊r/2⌋         (2N )r N ≤ (#κ0 )(dim V −dim T )⌊r/2⌋ (2N )r N
+                                                                  2
+                                                      = (2N )r N ((#k)n /#T )⌊r/2⌋
+28                                       JUNYAN XU
+
+                         SN                                                  SN
+possibilities for the     j=1 Ej -coordinates.
+                                            The possibilities for the E \ j=1 Ej -
+                                                           r+1
+coordinates amount to (#T ) . Therefore, if we take C = 2( 2 ) deg F (2 deg F )r deg F ,
+                                                                                2
+                               r
+
+then #P ≤ C(#k)n⌊r/2⌋ (#T )⌈r/2⌉ , since N ≤ deg F .                                      
+
+Corollary 3.18. Fix a dth-power-free rational function F ∈ κ(x1 , . . . , xn ) satisfy-
+ing #TF < ∞, and fix r ∈ N. For each finite extension k/κ, let Pk be the collection
+                                                   Qr               Q2r
+of tuples (m(1) , . . . , m(2r) ) ∈ k n2r such that i=1 F (x+ m(i) ) i=r+1 F (x+ m(i) )−1
+is a perfect dth power over κ. Then #Pk = O((#k)nr ) as k varies.
+
+Remark 3.19. In this case, the exponent is sharp: for any bijection ϕ : {1, . . . , r} →
+                                                          Qr              Q2r
+{r+1, . . . , 2r}, if m(r+i) = m(ϕ(i)) for 1 ≤ i ≤ r, then i=1 F (x+m(i) ) i=r+1 F (x+
+m(i) )−1 = 1. The number of such tuples (m(1) , . . . , m(2r) ) is asymptotic to r! (#k)nr
+as #k → ∞.
+
+3.7. Reductions of a polynomial with integer coefficients.
+
+Lemma 3.20. Let F ∈ Z[x1 , . . . , xn ] be a polynomial, and let x be the row vector
+(x1 , . . . , xn ) of indeterminates. Then the following are equivalent:
+                                                                      n
+     (1) F is invariant under some nontrivial translation in Q , i.e. there exists
+                     n
+         0 6= m ∈ Q such that F (x) ≡ F (x + m);
+     (2) F is invariant under some nontrivial translation in Zn ;
+     (3) F can be made independent of one of the indeterminates by a linear change
+         of coordinates, i.e. there exists A ∈ GL(n, Z) such that F (xA) ∈ Z[x2 , . . . , xn ];
+     (4) When viewed as a morphism AnZ → A1Z , F factors through a linear map
+         AnZ → AZn−1 , i.e. there exists a integral n × (n − 1) matrix B and f ∈
+         Z[x2 , . . . , xn ] such that F (x) ≡ f (xB);
+     (5) For almost all prime numbers p, the reduction of F modulo p is invariant
+                                                         n
+         under some nontrivial translation in Fp .
+     (6) For infinitely many prime numbers p, the reduction of F modulo p is in-
+                                                             n
+         variant under some nontrivial translation in Fp .
+
+Remark 3.21. If the conditions are violated, (3) or (4) shows that we can reduce
+to a lower dimension. In fact, if we start with a homogeneous polynomial F we
+can reduce to a homogeneous polynomial in lower dimension. The lemma can be
+shown to hold for F ∈ Q(x1 , . . . , xn ) as well. The implication (2) =⇒ (3) fails if Z
+is replaced by a Dedekind domain that is not a PID.
+                                                                           n
+Proof. (1) =⇒ (2): Assume (1). Let 0 6= m = (m1 , . . . , mn ) ∈ Q be such that
+F (x) ≡ F (x + m), we assume without loss of generality that m1 6= 0. Now consider
+                   STRATIFICATION FOR MULTIPLICATIVE CHARACTER SUMS                               29
+
+
+F (x + tm) − F (x) as a polynomial in the single indeterminate t. Since F (x) ≡
+F (x + m), by induction, every t ∈ Z is a root of F (x + tm) − F (x), so F (x) ≡ F (x +
+tm) since a nonzero polynomial cannot have infinitely many roots. In particular,
+F (x) ≡ F (x + m/m1 ), so we may assume that m1 = 1 by replacing m with m/m1 .
+   Let E be a number field containing all the mi ’s. Since F has coefficients in Z, for
+any σ ∈ Gal(E/Q), we have F (x) ≡ F (x + σ(m)), hence F (x) ≡ F (x + TrE/Q (m)).
+Since m1 = 1, the first coordinate of TrE/Q (m) is [E : Q] 6= 0, so we may assume
+that 0 6= m ∈ Qn by replacing m with TrE/Q (m). Let d be a common denominator
+of the mi ’s, then F (x) ≡ F (x + dm) and dm ∈ Zn .
+   (2) =⇒ (3): Suppose that F is invariant under 0 6= m ∈ Zn . We showed that
+F (x) ≡ F (x + m) =⇒ F (x) ≡ F (x + tm) for all t ∈ Q, so dividing m by the
+gcd(m1 , . . . , mn ), we may assume that gcd(m1 , . . . , mn ) = 1, which means that
+Zn /Z · m is torsion free, hence free. Therefore Zn ։ Zn /Z · m splits, and if A
+is the image of the splitting, we have Zn = Z · m ⊕ A ∼ = Z ⊕ Zn−1 ∼   = Zn , so
+there exists A ∈ GL(n, Z) such that m = (1, 0, . . . , 0)A. We then have F (xA) ≡
+F (xA + m) ≡ F ((x + (1, 0, . . . , 0))A), so the polynomial G(x) := F (xA) is invariant
+under translation by (1, 0, . . . , 0), so G(x1 , x2 , . . . , xn ) − G(0, x2 , . . . , xn ) regarded
+as a polynomial in x1 has all integers as its roots, and therefore must be zero. We
+conclude that F (xA) ≡ G(x) ≡ G(0, x2 , . . . , xn ) ∈ Z[x2 , . . . , xn ].
+   (3) =⇒ (4): Suppose that F (xA) ≡ f (x2 , . . . , xn ) for some f ∈ Z[x2 , . . . , xn ], so
+F (x) ≡ F ((xA−1 )A) ≡ f ((xA−1 )2 , . . . , (xA−1 )n ), so we can take B to be the last
+n − 1 columns of A−1 .
+   (4) =⇒ (5): Suppose that there exists an integral n × (n − 1) matrix B and f ∈
+Z[x2 , . . . , xn ] such that F (x) ≡ f (xB). Since B is a linear map from Qn → Qn−1 ,
+the null space of B is nontrivial, so one can find 0 6= m ∈ Zn such that mB = 0,
+so F (x) ≡ f (xB) ≡ f (xB + mB) ≡ f ((x + m)B) ≡ F (x + m). Since m 6= 0, the
+reduction of m modulo p is zero only for finitely many p (the reductions actually
+lie in (Fp )n ).
+   (5) =⇒ (6): Obvious.
+   (6) =⇒ (1): The conditions F (x) ≡ F (x + m) and m 6= 0 defines a subscheme
+S ⊂ AnZ over Spec Z, such that the closed points in the geometric fibers SFp or
+                                                    n        n
+SQ correspond to the tuples 0 6= m ∈ Fp                 or Q such that F (x) ≡ F (x + m).
+By Chevalley’s theorem, the image of the structural morphism S → Spec Z is
+constructible, but a constructible subset of Spec Z either is finite or contains the
+generic point (and hence is cofinite). Condition (5) says that infinitely many fibers
+30                                      JUNYAN XU
+
+
+of S are nonempty, hence the image of the structural morphism contains the generic
+point Spec Q. Therefore, SQ is a non-empty affine scheme and hence contains a
+closed point, which gives a nontrivial translation in Q under which F is invariant.
+                                                                                           
+
+Lemma 3.22. Let F ∈ Z[x1 , . . . , xn ] be a dth-power-free polynomial. Then the
+reduction of F modulo p is dth-power-free for almost all primes p.
+
+Proof. F fails to be dth-power-free if and only if F can be written as f d g such that
+f is not constant. The coefficients of f and g can each be encoded in an N -tuple,
+where N is the number of monomials of degrees ≤ deg F in n indeterminates. The
+conditions f d g = F and that at least one of the nonconstant terms of f is nonzero
+define a subscheme S ⊂ A2N
+                        Z . If F fails to be dth-power-free modulo infinitely many
+primes p, then SFp is nonempty for infinitely many primes, hence SQ is nonempty
+(cf. proof of (6) =⇒ (1) in the previous lemma) and thus F fails to be dth-power-
+free in Q[x1 , . . . , xn ], hence in Q[x1 , . . . , xn ] (cf. proof of Lemma 3.16), hence in
+Z[x1 , . . . , xn ].                                                                       
+
+     Combining the previous two lemmas, we get
+
+Corollary 3.23. Let F ∈ Z[x1 , . . . , xn ] be a dth-power-free polynomial not invari-
+                                                 n
+ant under any nontrivial translations (in Q or in Zn ), then for almost all primes p,
+the reduction of F modulo p satisfies the hypothesis in Lemma 3.16 and Corollary
+3.18 (with T = {0}).
+
+3.8. Degree of a projective variety and its number of points in a box. For
+applications in analytic number theory, we are interested in bounding the number
+of points of a quasi-affine variety X in a box with coordinates in a finite field.
+We obtain below a bound depending only on dim X, deg X and the lengths of the
+(dim X) longest sides of the box, which is a trivial generalization of what Tao called
+a Schwarz–Zippel type bound in his blog post [16].
+
+Lemma 3.24. Let k be an algebraically closed field, and let X be a closed subva-
+riety of Pnk of codimension θ and degree d. If {Bi }ni=1 are subsets of k, we identify
+      Qn                                                   Qn
+B = i=1 Bi with a subset of Pn (k) via the inclusions i=1 Bi ⊂ k n = An (k) ⊂
+Pn (k). If 1 ≤ #B1 ≤ #B2 ≤ · · · ≤ #Bn < ∞, we have
+                       n             n              θ
+                             !
+                       Y             Y              Y
+              # X(k) ∩    Bi ≤ d        #Bi = d(#B) (#Bi )−1 .
+                           i=1           i=θ+1                  i=1
+               STRATIFICATION FOR MULTIPLICATIVE CHARACTER SUMS                                         31
+
+
+Remark 3.25. In typical applications in analytic number theory, one usually takes
+the Bi ’s to be intervals in some finite prime field, but it can also be applied with
+Bi being the whole underlying set of a finite field, for example in Remark 3.6.
+   If k is not necessarily algebraically closed, and X is instead a (locally closed)
+subscheme of Ank whose irreducible components have sum of degrees d, the lemma
+still holds because we may apply the lemma to the irreducible components of the
+closure of X ×k k in Pnk and add up the bounds. This yields Lemma 1.5.
+
+Proof. We proceed by induction on n. If n = 0, then D = 0 and X must be
+the single point in A0 = P0 , so d = 1 and both sides of the inequality are 1. If
+n > 0, for each x ∈ Bn , let Xx be the closed subvariety X ∩ Hx , where Hx is the
+hyperplane {xn = xx0 } in Pnk (here we use (x1 , . . . , xn ) as the coordinates of Ank
+and [x0 : x1 : · · · : xn ] as the homogeneous coordinates of Pnk ).
+   If X ⊂ Hx for some x ∈ Bn , then X has the same degree d as a subvariety in
+Hx = Pkn−1 . Therefore
+                  n                               n−1                  n−1              n
+                             !                                !
+                  Y                               Y                    Y                Y
+      # X(k) ∩          Bi       = # Xx (k) ∩            Bi       ≤d         #Bi ≤ d           #Bi ,
+                  i=1                              i=1                 i=θ             i=θ+1
+
+where the first inequality is by the induction hypothesis.
+   If X 6⊂ Hx for all x ∈ Bn , then each Xx is a proper closed subset of the
+irreducible space X, so it has dimension < dim X, hence has codimension at least
+θ in Hx = Pkn−1 .Let Z1 , . . . , Zs be the irreducible components of Xx . By Theorem
+I.7.7 in [7], sj=1 deg Zj ≤ d. Therefore
+             P
+
+                     n−1              s              n−1
+                               !                            !
+                     Y               X               Y
+         # Xx (k) ∩       Bi ≤           # Zj (k) ∩      Bi
+                        i=1             j=1                   i=1
+                                        s
+                                        X                  n−1
+                                                           Y                         n−1
+                                                                                     Y
+                                    ≤         deg Zj                   #Bi ≤ d               #Bi
+                                        j=1            i=codim Zj +1                 i=θ+1
+
+by the induction hypothesis, and hence
+            n                          n−1             n−1         n
+                 !                           !
+           Y          X                Y               Y           Y
+# X(k) ∩       Bi =       # Xx (k) ∩       Bi ≤ #Bn ·d     #Bi = d   #Bi .
+            i=1          x∈Bn                     i=1                        i=θ+1              i=θ+1
+
+                                                                                                        
+
+   If we have a connected closed subscheme X ⊂ PnY smooth over a base scheme
+Y , i.e. a family of projective schemes parametrized by Y , the following lemma
+says that all of these schemes (the fibers), possibly base extended to the algebraic
+closure (the geometric fibers), are equidimensional and have the same dimension and
+32                                   JUNYAN XU
+
+
+degree, and its degree equals the sum of the degrees of its irreducible components, so
+if the previous lemma is applied to the irreducible components (which are varieties
+if equipped the reduced induced scheme structure), uniform bounds are obtained.
+
+Lemma 3.26. Let Y be a scheme and let X be a connected closed subscheme
+of PnY smooth over Y . For y ∈ Y , let Xy be the fiber of X over Y , and let
+Xy := Xy ×k(y) k(y). Then there exist constants D, d ∈ N≥0 such that each Xy is
+equidimensional of dimension D and degree d.
+
+Proof. Since X → Y is smooth, it is flat and locally of finite presentation, and
+each fiber Xy is smooth over k(y) and hence Cohen–Macaulay. Since X is also
+connected, by [15, Tag 02NM], X → Y has relative dimension D for some D, i.e.
+Xy is equidimensional of dimension D for any y. By ibid., Tag 02NK, Xy is also
+equidimensional of dimension D. Since X → Y is flat, Xy ⊂ Pnk(y) have the same
+Hilbert polynomial for all y, and hence the same degree d, for all y. Since the
+                                                                            n
+Hilbert polynomial does not change under extension of base field, all Xy ⊂ Pk(y)
+have the same degree d.                                                             
+
+3.9. Existence of smooth decompositions. The next lemma assures that we
+can get a decomposition into smooth morphisms for very general morphisms of
+schemes (away from finitely many primes), and we can then apply the previous
+lemma to each of these smooth morphisms.
+
+Lemma 3.27. Let X be a noetherian scheme and let ϕ : X → Y be a scheme
+morphism of finite presentation. Then there exist finitely many locally closed sub-
+sets {Xi }N
+          i=1 of X such that the induced morphisms ϕ|Xi : (Xi )red → ϕ(Xi )red are
+                                                 SN
+smooth for each i, and such that the image of X \ i=1 Xi in Spec Z is finite.
+
+Remark 3.28. We call such a collection {Xi }N
+                                            i=1 a smooth decomposition of ϕ,
+
+or of X relative to Y (or relative to ϕ). As easily seen from the proof below, the
+collection can be made pairwise disjoint, but we do not need that.
+
+Proof. Using noetherian induction, we need only prove the following: if ϕ|Z : Z →
+Y admits a smooth decomposition for every proper closed subset Z ⊂ X (induction
+hypothesis), then ϕ also admits a smooth decomposition. (Notice that a closed
+subscheme Z of a noetherian scheme X is of finite presentation over X, hence over
+Y .) If X is reducible, its finitely many irreducible components Zj are proper closed
+subsets, so by the induction hypothesis each ϕ|Zj admits a smooth decomposition,
+                STRATIFICATION FOR MULTIPLICATIVE CHARACTER SUMS                               33
+
+
+which together yield a smooth decomposition for ϕ. If X is irreducible, then Xred
+and Y1 := ϕ(X)red are integral, and the induced morphism Xred → Y1 is still of
+finite presentation. Therefore, if the function field K(Y1 ) is perfect, there exists
+an open dense subset X1 ⊂ X such that ϕ|X1 : X1 → Y1 is smooth [6, Exercise
+10.40]. By the induction hypothesis, ϕ|X\X1 admits a smooth decomposition, which
+together with X1 gives a smooth decomposition for ϕ. If the function field is not
+perfect, then it has nonzero characteristic, which means that the generic point
+η ∈ X maps to a single closed point in Spec Z, so the image of X = {η} in Spec Z
+is a single point, and ∅ is a smooth decomposition of ϕ.                                       
+
+
+                                   Acknowledgements
+
+   I thank my collaborator Lillian Pierce for raising the original question that led to
+the present work. I thank my advisor Michael Larsen for his guidance, his original
+idea from which this paper stemmed, and numerous helpful discussions. I thank
+Prof. Guocan Feng, Jianxun Hu, Lixin Liu, Zheng-an Yao and especially Yen-Mei
+Julia Chen, whose reference letters and encouragement five years ago helped me out
+of the dark times when my applications to PhD programs failed for two consecutive
+years. This paper is dedicated to them.
+
+
+                                          References
+[1] Burgess, D. A. “On Character Sums and Primitive Roots.” Proceedings of the London Math-
+   ematical Society S3-12, no. 1 (1962): 179-92.
+[2] Davenport, H., and P. Erdős. “The distribution of quadratic and higher residues.” Publ. Math.
+   Debrecen 2 (1952): 252-65.
+[3] Fouvry, E., and N. Katz. “A general stratification theorem for exponential sums, and appli-
+   cations.” Journal für die reine und angewandte Mathematik (Crelles Journal) 2001, no. 540
+   (2001): 115–166.
+[4] Deligne, P. Séminaire de Géométrie Algébrique du Bois Marie - Cohomologie étale - (SGA
+   4½). Lecture notes in mathematics (in French) 569. Berlin; New York: Springer-Verlag, 1977.
+[5] Deligne, P. “La Conjecture de Weil. II.” Publications mathématiques de l’IHÉS 52, no. 1
+   (1980): 137-252.
+[6] Görtz, U., and T. Wedhorn. Algebraic Geometry I: Schemes With Examples and Exercises.
+   Wiesbaden: Vieweg + Teubner, 2010.
+[7] Hartshorne, R. Algebraic geometry. New York: Springer-Verlag New York Inc, 1977.
+[8] Katz, N. M. Sommes exponentielles. Astérisque 79. Paris: Soc. Math. De France, 1980.
+[9] Katz, N. M. “Sums of Betti Numbers in Arbitrary Characteristic.” Finite Fields and Their
+   Applications 7, no. 1 (2001): 29–44.
+34                                        JUNYAN XU
+
+
+[10] Katz, N. M. “Estimates for nonsingular multiplicative character sums.” International Math-
+     ematics Research Notices (2002) 2002 (7): 333–349.
+[11] Kiehl, R., and R. Weissauer. Weil conjectures, perverse sheaves and l’adic Fourier transform.
+     Berlin: Springer, 2001.
+[12] Rojas-León, A. “Estimates for singular multiplicative character sums.” International Math-
+     ematics Research Notices (2005) 2005 (20): 1221–1234.
+[13] Rojas-León, A. “Purity of exponential sums on An , II.” Journal für die reine und angewandte
+     Mathematik (Crelles Journal) 2007, no. 603 (2007): 35–53.
+[14] Shparlinski, I. “Distribution of polynomial discriminants modulo a prime.” Archiv der Math-
+     ematik 105, no. 3 (2015): 251-59.
+[15] Stacks Project Authors. Stacks Project. http://stacks.math.columbia.edu
+[16] Tao, T. “The Lang-Weil bound.” What’s new. November 12, 2013. Accessed May 07, 2017.
+     https://terrytao.wordpress.com/2012/08/31/the-lang-weil-bound/
+
+
+     Department of Mathematics, Indiana University, 831 E. Third St., Bloomington, IN
+47405, USA
+     E-mail address: xu56@indiana.edu
+

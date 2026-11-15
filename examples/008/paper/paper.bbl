@@ -1,0 +1,329 @@
+\providecommand{\bysame}{\leavevmode\hbox to3em{\hrulefill}\thinspace}
+\providecommand{\MR}{\relax\ifhmode\unskip\space\fi MR }
+% \MRhref is called by the amsart/book/proc definition of \MR.
+\providecommand{\MRhref}[2]{%
+  \href{http://www.ams.org/mathscinet-getitem?mr=#1}{#2}
+}
+\providecommand{\href}[2]{#2}
+\begin{thebibliography}{10}
+
+\bibitem{AKS}
+N.~Alon, J.~H. Kim, and J.~Spencer, \emph{Nearly perfect matchings in regular
+  simple hypergraphs}, Israel J. Math. \textbf{100} (1997), 171--187.
+
+\bibitem{AsratianKuzjurin}
+A.~S. Asratian and N.~N. Kuzjurin, \emph{On the number of nearly perfect
+  matchings in almost regular uniform hypergraphs}, Discrete Math. \textbf{207}
+  (1999), 1--8.
+
+\bibitem{AKPartial}
+A.~S. Asratian and N.~N. Kuzjurin, \emph{On the number of partial {Steiner}
+  systems}, J. Combin. Des. \textbf{8} (2000), no.~5, 347--352.
+
+\bibitem{BPvdP}
+N.~Bansal, R.~Pendavingh, and J.~van~der Pol, \emph{On the number of matroids},
+  Combinatorica \textbf{35} (2015), no.~3, 253--277.
+
+\bibitem{BB}
+P.~Bennett and T.~Bohman, \emph{A natural barrier in random greedy hypergraph
+  matching}, Combin. Probab. Comput. \textbf{28} (2019), no.~6, 816--825.
+
+\bibitem{BF}
+P.~Bennett and A.~Frieze, \emph{Binomial random matroids}, Preprint,
+  \href{https://arxiv.org/abs/2603.10293}{arXiv:2603.10293}, 2026.
+
+\bibitem{BFL}
+T.~Bohman, A.~Frieze, and E.~Lubetzky, \emph{Random triangle removal}, Adv.
+  Math. \textbf{280} (2015), 379--438.
+
+\bibitem{BLM}
+S.~Boucheron, G.~Lugosi, and P.~Massart, \emph{Concentration inequalities: A
+  nonasymptotic theory of independence}, Oxford University Press, 2013.
+
+\bibitem{BK}
+C.~Bowtell and P.~Keevash, \emph{The {$n$}-queens problem}, Preprint,
+  \href{https://arxiv.org/abs/2109.08083}{arXiv:2109.08083}, 2021.
+
+\bibitem{BEOVW}
+M.~Braun, T.~Etzion, P.~R.~J. {\"O}sterg{\aa}rd, A.~Vardy, and A.~Wassermann,
+  \emph{Existence of {$q$}-analogs of {Steiner} systems}, Forum Math. Pi
+  \textbf{4} (2016), e7.
+
+\bibitem{CGT}
+T.~Carroll, D.~Galvin, and P.~Tetali, \emph{Matchings and independent sets of a
+  fixed size in regular graphs}, J. Combin. Theory Ser. A \textbf{116} (2009),
+  no.~7, 1219--1227.
+
+\bibitem{CFGS}
+F.~R.~K. Chung, R.~L. Graham, P.~Frankl, and J.~B. Shearer, \emph{Some
+  intersection theorems for ordered sets and graphs}, J. Combin. Theory Ser. A
+  \textbf{43} (1986), 23--37.
+
+\bibitem{CPST}
+E.~Cohen, W.~Perkins, M.~Sarantis, and P.~Tetali, \emph{On the number of
+  independent sets in uniform, regular, linear hypergraphs}, European J.
+  Combin. \textbf{99} (2022), 103401.
+
+\bibitem{CoverThomas}
+T.~M. Cover and J.~A. Thomas, \emph{Elements of information theory}, 2nd ed.,
+  John Wiley \& Sons, 2006.
+
+\bibitem{Csikvari}
+P.~Csikv{\'a}ri, \emph{Lower matching conjecture, and a new proof of
+  {Schrijver}'s and {Gurvits}'s theorems}, J. Eur. Math. Soc. \textbf{19}
+  (2017), no.~6, 1811--1844.
+
+\bibitem{DDK}
+T.~Dai, A.~Divoux, and T.~Kelly, \emph{Entropy bounds for perfect matchings in
+  bipartite hypergraphs}, Electron. J. Combin. \textbf{33} (2026), no.~2, Paper
+  No. P2.20.
+
+\bibitem{DJPR}
+E.~Davies, M.~Jenssen, W.~Perkins, and B.~Roberts, \emph{Independent sets,
+  matchings, and occupancy fractions}, J. Lond. Math. Soc. \textbf{96} (2017),
+  no.~1, 47--66.
+
+\bibitem{DJPRStability}
+E.~Davies, M.~Jenssen, W.~Perkins, and B.~Roberts, \emph{Tight bounds on the
+  coefficients of partition functions via stability}, J. Combin. Theory Ser. A
+  \textbf{160} (2018), 1--30.
+
+\bibitem{DP}
+M.~Delcourt and L.~Postle, \emph{Finding an almost perfect matching in a
+  hypergraph avoiding forbidden submatchings}, J. Lond. Math. Soc. \textbf{114}
+  (2026), no.~2, e70660.
+
+\bibitem{EH}
+P.~Erd{\H{o}}s and H.~Hanani, \emph{On a limit theorem in combinatorical
+  analysis}, Publ. Math. Debrecen \textbf{10} (1963), 10--13.
+
+\bibitem{EKOO}
+T.~Etzion, S.~Kurz, K.~Otal, and F.~{\"O}zbudak, \emph{Subspace packings:
+  constructions and bounds}, Des. Codes Cryptogr. \textbf{88} (2020), no.~9,
+  1781--1810.
+
+\bibitem{FalconStones}
+R.~M. Falc{\'o}n and R.~J. Stones, \emph{Enumerating partial {Latin}
+  rectangles}, Electron. J. Combin. \textbf{27} (2020), no.~2, Paper No. P2.47.
+
+\bibitem{FR}
+P.~Frankl and V.~R{\"o}dl, \emph{Near perfect coverings in graphs and
+  hypergraphs}, European J. Combin. \textbf{6} (1985), 317--326.
+
+\bibitem{Freedman}
+D.~A. Freedman, \emph{On tail probabilities for martingales}, Ann. Probab.
+  \textbf{3} (1975), no.~1, 100--118.
+
+\bibitem{GHM}
+M.~Ghandehari, H.~Hatami, and E.~S. Mahmoodian, \emph{On the size of the
+  minimum critical set of a {Latin} square}, Discrete Math. \textbf{293}
+  (2005), no.~1--3, 121--127.
+
+\bibitem{GL}
+R.~Glebov and Z.~Luria, \emph{On the maximum number of {Latin} transversals},
+  J. Combin. Theory Ser. A \textbf{141} (2016), 136--146.
+
+\bibitem{GJKKL}
+S.~Glock, F.~Joos, J.~Kim, M.~K{\"u}hn, and L.~Lichev, \emph{Conflict-free
+  hypergraph matchings}, J. Lond. Math. Soc. \textbf{109} (2024), no.~5,
+  e12899.
+
+\bibitem{GKLO}
+S.~Glock, D.~K{\"u}hn, A.~Lo, and D.~Osthus, \emph{The existence of designs via
+  iterative absorption: hypergraph {$F$}-designs for arbitrary {$F$}}, Mem.
+  Amer. Math. Soc. \textbf{284} (2023), no.~1406, v+131.
+
+\bibitem{GK}
+S.~Gould and T.~Kelly, \emph{Advancing the {R{\"o}dl} nibble: New bounds on
+  matchings and the list chromatic index of hypergraphs}, Preprint,
+  \href{https://arxiv.org/abs/2511.11375}{arXiv:2511.11375}, 2025.
+
+\bibitem{Gupta}
+A.~Gupta, \emph{A rate for the average vacancy of uniformly random matchings in
+  linear hypergraphs}, Preprint,
+  \href{https://arxiv.org/abs/2609.26133}{arXiv:2609.26133}, 2026.
+
+\bibitem{HL}
+O.~J. Heilmann and E.~H. Lieb, \emph{Theory of monomer-dimer systems}, Comm.
+  Math. Phys. \textbf{25} (1972), 190--232.
+
+\bibitem{IK}
+L.~Ilinca and J.~Kahn, \emph{Asymptotics of the upper matching conjecture}, J.
+  Combin. Theory Ser. A \textbf{120} (2013), no.~5, 976--983.
+
+\bibitem{JJP}
+B.~Jany, R.~Jurrius, and R.~Pendavingh, \emph{Counting {$q$}-matroids},
+  Preprint, \href{https://arxiv.org/abs/2606.20348}{arXiv:2606.20348}, 2026.
+
+\bibitem{Kahn95}
+J.~Kahn, \emph{Asymptotics of hypergraph matching, covering and coloring
+  problems}, Proceedings of the International Congress of Mathematicians, Vol.
+  1, 2 ({Z{\"u}rich}, 1994) (Basel), Birkh{\"a}user, 1995, pp.~1353--1362.
+
+\bibitem{Kahn97}
+J.~Kahn, \emph{On some hypergraph problems of {Paul Erd{\H{o}}s} and the
+  asymptotics of matchings, covers and colorings}, The Mathematics of {Paul
+  Erd{\H{o}}s}, {I}, Algorithms Combin., vol.~13, Springer, Berlin, 1997,
+  pp.~345--371.
+
+\bibitem{KK}
+J.~Kahn and J.~H. Kim, \emph{Random matchings in regular graphs}, Combinatorica
+  \textbf{18} (1998), no.~2, 201--226.
+
+\bibitem{KKMO}
+D.~Y. Kang, D.~K{\"u}hn, A.~Methuku, and D.~Osthus, \emph{New bounds on the
+  size of nearly perfect matchings in almost regular hypergraphs}, J. Lond.
+  Math. Soc. \textbf{108} (2023), no.~5, 1701--1746.
+
+\bibitem{Keevash}
+P.~Keevash, \emph{The existence of designs}, Preprint, revised 2024,
+  \href{https://arxiv.org/abs/1401.3665}{arXiv:1401.3665}, 2014.
+
+\bibitem{KeevashCount}
+P.~Keevash, \emph{Counting designs}, J. Eur. Math. Soc. \textbf{20} (2018),
+  no.~4, 903--927.
+
+\bibitem{KeevashII}
+P.~Keevash, \emph{The existence of designs {II}}, Preprint,
+  \href{https://arxiv.org/abs/1802.05900}{arXiv:1802.05900}, 2018.
+
+\bibitem{KPSY}
+P.~Keevash, A.~Pokrovskiy, B.~Sudakov, and L.~Yepremyan, \emph{New bounds for
+  {Ryser}'s conjecture and related problems}, Trans. Amer. Math. Soc. Ser. B
+  \textbf{9} (2022), 288--321.
+
+\bibitem{KSS}
+P.~Keevash, A.~Sah, and M.~Sawhney, \emph{The existence of subspace designs},
+  Proc. Lond. Math. Soc. \textbf{131} (2025), no.~1, e70071.
+
+\bibitem{Knuth}
+D.~E. Knuth, \emph{The asymptotic number of geometries}, J. Combin. Theory Ser.
+  A \textbf{16} (1974), no.~3, 398--400.
+
+\bibitem{Kwan}
+M.~Kwan, \emph{Almost all {Steiner} triple systems have perfect matchings},
+  Proc. Lond. Math. Soc. \textbf{121} (2020), no.~6, 1468--1495.
+
+\bibitem{KSW}
+M.~Kwan, R.~Safavi, and Y.~Wang, \emph{Counting perfect matchings in {Dirac}
+  hypergraphs}, Combinatorica \textbf{46} (2026), Paper No. 5, 32.
+
+\bibitem{KSSMatroids}
+M.~Kwan, A.~Sah, and M.~Sawhney, \emph{Enumerating matroids and linear spaces},
+  C. R. Math. Acad. Sci. Paris \textbf{361} (2023), 565--575.
+
+\bibitem{Lee}
+H.~Lee, \emph{Random matchings in linear hypergraphs}, Forum Math. Sigma
+  \textbf{14} (2026), e117.
+
+\bibitem{Lelarge}
+M.~Lelarge, \emph{Counting matchings in irregular bipartite graphs and random
+  lifts}, Proceedings of the Twenty-Eighth Annual {ACM--SIAM} Symposium on
+  Discrete Algorithms, SIAM, 2017, pp.~2230--2237.
+
+\bibitem{LinialLuria}
+N.~Linial and Z.~Luria, \emph{An upper bound on the number of {Steiner} triple
+  systems}, Random Structures Algorithms \textbf{43} (2013), no.~4, 399--406.
+
+\bibitem{LinialLuriaPermutations}
+N.~Linial and Z.~Luria, \emph{An upper bound on the number of high-dimensional
+  permutations}, Combinatorica \textbf{34} (2014), no.~4, 471--486.
+
+\bibitem{Luria}
+Z.~Luria, \emph{New bounds on the number of {$n$}-queens configurations},
+  Preprint, \href{https://arxiv.org/abs/1705.05225}{arXiv:1705.05225}, 2017.
+
+\bibitem{MadimanTetali}
+M.~Madiman and P.~Tetali, \emph{Information inequalities for joint
+  distributions, with interpretations and applications}, IEEE Trans. Inform.
+  Theory \textbf{56} (2010), no.~6, 2699--2713.
+
+\bibitem{MNWW}
+D.~Mayhew, M.~Newman, D.~Welsh, and G.~Whittle, \emph{On the asymptotic
+  proportion of connected matroids}, European J. Combin. \textbf{32} (2011),
+  no.~6, 882--890.
+
+\bibitem{McKayTian}
+B.~D. McKay and F.~Tian, \emph{Asymptotic enumeration of linear hypergraphs
+  with given number of vertices and edges}, Adv. Appl. Math. \textbf{115}
+  (2020), 102000.
+
+\bibitem{McKayWanless}
+B.~D. McKay and I.~M. Wanless, \emph{On the number of {Latin} squares}, Ann.
+  Comb. \textbf{9} (2005), no.~3, 335--344.
+
+\bibitem{Montgomery}
+R.~Montgomery, \emph{A proof of the {Ryser--Brualdi--Stein} conjecture for
+  large even {$n$}}, Preprint,
+  \href{https://arxiv.org/abs/2310.19779}{arXiv:2310.19779}, 2023.
+
+\bibitem{Oxley}
+J.~Oxley, \emph{Matroid theory}, second ed., Oxford Graduate Texts in
+  Mathematics, vol.~21, Oxford University Press, Oxford, 2011.
+
+\bibitem{PvdPComparison}
+R.~Pendavingh and J.~van~der Pol, \emph{On the number of matroids compared to
+  the number of sparse paving matroids}, Electron. J. Combin. \textbf{22}
+  (2015), no.~2, Paper No. P2.51.
+
+\bibitem{PvdP}
+R.~Pendavingh and J.~van~der Pol, \emph{Enumerating matroids of fixed rank},
+  Electron. J. Combin. \textbf{24} (2017), no.~1, Paper No. P1.8, 28.
+
+\bibitem{PS}
+N.~Pippenger and J.~Spencer, \emph{Asymptotic behavior of the chromatic index
+  for hypergraphs}, J. Combin. Theory Ser. A \textbf{51} (1989), 24--42.
+
+\bibitem{Radhakrishnan}
+J.~Radhakrishnan, \emph{An entropy proof of {Bregman}'s theorem}, J. Combin.
+  Theory Ser. A \textbf{77} (1997), 161--164.
+
+\bibitem{Rodl}
+V.~R{\"o}dl, \emph{On a packing and covering problem}, European J. Combin.
+  \textbf{6} (1985), 69--78.
+
+\bibitem{RodlThoma}
+V.~R{\"o}dl and L.~Thoma, \emph{Asymptotic packing and the random greedy
+  algorithm}, Random Structures Algorithms \textbf{8} (1996), no.~3, 161--177.
+
+\bibitem{Ryser}
+H.~J. Ryser, \emph{Neuere {Probleme} der {Kombinatorik}}, Vortr{\"a}ge {\"u}ber
+  {Kombinatorik} ({Oberwolfach}, 1967), Mathematisches Forschungsinstitut
+  Oberwolfach, 1967, pp.~69--91.
+
+\bibitem{Schrijver}
+A.~Schrijver, \emph{Counting 1-factors in regular bipartite graphs}, J. Combin.
+  Theory Ser. B \textbf{72} (1998), no.~1, 122--135.
+
+\bibitem{Simkin}
+M.~Simkin, \emph{The number of $n$-queens configurations}, Adv. Math.
+  \textbf{427} (2023), 109127.
+
+\bibitem{SpencerPacking}
+J.~Spencer, \emph{Asymptotic packing via a branching process}, Random
+  Structures Algorithms \textbf{7} (1995), no.~2, 167--172.
+
+\bibitem{Stein}
+S.~K. Stein, \emph{Transversals of {Latin} squares and their generalizations},
+  Pacific J. Math. \textbf{59} (1975), 567--575.
+
+\bibitem{TZ}
+Y.~Tang and Y.~Zhao, \emph{Counting near-spanning matchings in {Latin} squares
+  and {Steiner} triple systems}, Preprint,
+  \href{https://arxiv.org/abs/2609.11006}{arXiv:2609.11006}, 2026.
+
+\bibitem{HPP}
+R.~van~der Hofstad, R.~Pendavingh, and J.~van~der Pol, \emph{The number of
+  partial {Steiner} systems and {$d$}-partitions}, Adv. Comb. (2022), Paper No.
+  2, 23.
+
+\bibitem{vanLintWilson}
+J.~H. van Lint and R.~M. Wilson, \emph{A course in combinatorics}, 2 ed.,
+  Cambridge University Press, 2001.
+
+\bibitem{WainwrightJordan}
+M.~J. Wainwright and M.~I. Jordan, \emph{Graphical models, exponential
+  families, and variational inference}, Found. Trends Mach. Learn. \textbf{1}
+  (2008), no.~1--2, 1--305.
+
+\end{thebibliography}

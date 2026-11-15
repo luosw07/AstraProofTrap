@@ -1,0 +1,642 @@
+                                          A natural barrier in random greedy hypergraph matching
+
+                                                                    Patrick Bennett∗             Tom Bohman†
+
+
+
+
+arXiv:1210.3581v2 [math.CO] 23 Aug 2018
+                                                                                      Abstract
+                                                      Let r ≥ 2 be a fixed constant and let H be an r-uniform, D-regular hy-
+                                                  pergraph on N vertices. Assume further that D → ∞ as N → ∞ and that
+                                                  degrees of pairs of vertices in H are at most L where L = D/(log N )ω(1) . We
+                                                  consider the random greedy algorithm for forming a matching in H. We choose
+                                                  a matching at random by iteratively choosing edges uniformly at random to
+                                                  be in the matching and deleting all edges that share at least one vertex with a
+                                                  chosen edge before moving on to the next choice. This process terminates when
+                                                  there are no edges remaining in the graph. We show that with high probability
+                                                  the proportion of vertices of H that are not saturated by the final matching is
+                                                                    1
+                                                  at most (L/D) 2(r−1) +o(1) . This point is a natural barrier in the analysis of the
+                                                  random greedy hypergraph matching process.
+
+
+                                          1       Introduction
+
+                                          Let r ≥ 2 be a fixed constant and let H be an r-uniform, D-regular hypergraph on
+                                          vertex set V where |V | = N and D → ∞ as N → ∞. We study the evolution of the
+                                          random greedy matching algorithm on H. This process forms a matching (i.e. a
+                                          collection of pairwise disjoint edges) in H by making a series of random choices. We
+                                          begin with M(0) = ∅, H(0) = H and V (0) = V . In iteration i an edge Ei is chosen
+                                          uniformly at random from H(i − 1) and added to M(i − 1) to form the matching
+                                          M(i). We then form H(i) by setting V (i) = V (i − 1) \ Ei and deleting from H(i − 1)
+                                          all edges that intersect Ei . The process proceeds until the step M where H(M ) is
+                                          empty. We are interested in the likely value of M ; that is, we are interested in the
+                                          number of edges in the matching produced by the random greedy process.
+                                               The random greedy packing algorithm for producing a partial Steiner system
+                                          is an important special case of this process. Let 1 < ℓ < k be fixed integers. Define
+                                                                                       [n]
+                                          Hℓ,k to be the hypergraph on vertex set ℓ with edge set consisting of all sets
+                                          of the form Aℓ where A ∈ [n]
+                                                                          
+                                                                         k . Note that a matching in Hℓ,k corresponds to a
+                                              ∗
+                                               Mathematics Department, Western Michigan University, Kalamazoo, MI 49008, USA. Email:
+                                          patrick.bennett@wmich.edu. Research supported in part by NSF grant DMS-1001638 and Simons
+                                          Foundation grant #426894.
+                                             †
+                                               Department of Mathematical Sciences, Carnegie Mellon University, Pittsburgh, PA 15213,
+                                          USA. Email: tbohman@math.cmu.edu. Research supported in part by NSF grants DMS-1001638
+                                          and DMS-1100215.
+
+
+                                                                                          1
+collection of k-element subsets of [n] with the property that the intersect of any pair
+of sets in the collection has cardinality less than ℓ; that is, a matching in Hℓ,k gives
+a partial (n, k, ℓ)-Steiner system. The random greedy matching algorithm applied
+to Hℓ,k is also known as random greedy packing. This process is related to the
+celebrated Rödl nibble [10], which is a semi-random variation on random greedy
+packing. The Rödl nibble was introduced in the solution of the Erdős and Hanani
+conjecture [6], which states  that for every fixed ℓ, k there is a matching in Hℓ,k that
+saturates (1 − o(1)) nℓ vertices.
+                        
+
+     In this paper we study the general random greedy matching algorithm by
+establishing dynamic concentration of the number of edges and the vertex degrees
+in the remaining hypergraph H(i). Let Q(i) be the number of edges in H(i) and
+let dv (i) be the degree of vertex v in H(i). We aim to show that Q(i) and dv (i),
+appropriately scaled, are tightly concentrated around expected trajectories that we
+express as smooth functions on the reals. In order to describe the trajectories we
+introduce a continuous time t which we relate to the steps of the process by setting
+                                                 i
+                                    t = t(i) =     .
+                                                 N
+Our study is guided by the following probabilistic intuition: we suspect that H(i)
+resembles a subhypergraph of H chosen uniformly at random from the collection of
+all subhypergraphs induced by N −ir vertices. So we anticipate that H(i) resembles
+a subhypergraph of H induced by a random subset of the vertices where each vertex
+is included independently with probability
+
+                               p = 1 − ir/N = 1 − rt.
+
+(Note that this probability can be viewed as either a function of either i or t; we pass
+between these interpretations without comment.) It follows from this assumption
+that the probability an edge E ∈ H is in H(i) should be about pr , and therefore we
+ought to have
+                              Q(i) ≈ |H|pr = N Dpr /r.                               (1)
+Furthermore, if a vertex v is not saturated by M(i) then we should have
+
+                                    dv (i) ≈ Dpr−1 .                                (2)
+
+Our main result (see Theorem 2.1 below) is that estimates (1) and (2) hold for most
+of the evolution of the process. This is a generalization of a result of Bohman, Frieze
+and Lubetzky [3], who proved an analogous result for the special case of H2,3 .
+     In order to discuss our main result in more detail, we define the random variable
+
+                              X = X(H) := 1 − M r/N
+
+where M is the number of steps before the random greedy matching algorithm on
+H terminates. In other words, X is the proportion of vertices left unsaturated by
+the matching produced by the random greedy algorithm. The following bound is a
+Corollary of Theorem 2.1.
+
+                                           2
+Theorem 1.1. Let r ≥ 2 and H be an r-uniform, D-regular hypergraph on N ver-
+tices. If the maximum degree L of a pair of vertices in H satisfies L = D/(log N )ω(1)
+and X(H) is the proportion of vertices that are not saturated by the matching pro-
+duced by the random greedy algorithm then with high probability we have
+                                                       1
+                                                         +o(1)
+                                            L       2(r−1)
+                               X(H) ≤                              .
+                                            D
+
+Previous analyses of the random greedy matching algorithm due to Spencer [12]
+and, independently, Rödl and Thoma [10] showed that if L = o(D) then we have
+X(H) = o(1) with high probability. Note that this result applied to the hypergraph
+Hℓ,k gives an alternate proof of the Erdős–Hanani conjecture. Wormald [15] applied
+the differential equations method for random graph processes to show that if H is
+an r-uniform, D-regular hypergraph on N vertices such that D = o(N ) but D → ∞
+                                                             1
+                                                       − 9r(r−1)+3 +o(1)
+sufficiently quickly as N → ∞ then X(H) < D                                with high probability.
+     Theorem 1.1 takes the analysis of random greedy matching up to a natural
+barrier. To describe this barrier we assume estimates (1) and (2) hold. For a fixed
+vertex v let Lv be the set of vertices u such that the degree of {u, v} in H is L. Note
+that |Lv | can be as large as (r − 1)D/L. Now early in the process (when p = 1/2,
+say) the expected number of vertices in Lv that arep    not saturated by M can be as
+large pD/L and thus can have variation as large as D/L,    p roughly speaking.
+                                                                          √           This
+yields variations in vertex degrees that are as large as D/L · L = DL.        √   If these
+early variations in vertex degree persist then at the point when Dpr−1 = DL these
+variations will be as large as the expected degree itself. So, if these variations indeed
+persist then when we reach this point vertex degrees could be zero even though the
+expected vertex degree is large. Note that this is point where Theorem 2.1 no longer
+holds. One would expect that in order to prove better bounds one would have to
+show that the variations in vertex degree decrease as the process evolves.
+     But where do we expect the random greedy matching algorithm to finally ter-
+minate? If we assume that estimates (1) and (2) hold all the way to termination
+then when N Dpr = N p the number of unsaturated vertices should be roughly the
+same as the number of remaining edges. At this stage a positive proportion of the
+unsaturated vertices should be in no remaining edges; these vertices would remain
+unsaturated to termination. Thus, it is natural to guess that random greedy match-
+ing terminates when the proportion of unsaturated vertices is roughly D −1/(r−1) .
+                                                                         1
+(We note in passing that this line of reasoning is suspect if L > D 1− r−1 . In this
+case, one suspects that we will reach a point where degrees of pairs of vertices in
+H(i) are larger than degrees of individual vertices before the supposed termination
+point.) In the context of random greedy packing, this line of reasoning leads to the
+following conjecture.
+
+Conjecture 1.2 (folklore). Let 1 < ℓ < k be fixed. With high probability
+
+                                                − kk−ℓ +o(1)
+                               X(Hℓ,k ) = n ( ℓ )−1            .
+
+                                            3
+The ℓ = 2, k = 3 case of this conjecture was recently proved by Bohman, Frieze
+and Lubetzky [4] who establish estimates for vertex degrees in H2,3 (i) with error
+bounds that decrease as the process evolves. These self-correcting estimates are
+proved using the critical interval method that is featured in this paper and was
+introduced in [3]. It should be noted that the sharp result given in [4] requires a
+large, carefully selected ensemble of random variables.
+     The related problem of proving the existence of a large matching in an r-
+uniform, D-regular hypergraph H has been widely studied (see [9] [1] [8]). The best
+known results are due to Vu [14] who used a semi-random (i.e. Rödl nibble type)
+method to show that there exists a matching in H that saturates all but at most
+                                    1 +o(1)
+                                   L r−1
+                                   D
+vertices where L is the maximum degree of pairs of vertices in H. Vu obtained
+stronger results when one adds degree assumptions for larger sets of vertices.
+     The remainder of this paper is organized as follows. In the next Section we
+give a precise statement of our dynamic concentration result. The proof follows in
+Section 3. This proof uses the critical interval method introduced by Bohman, Frieze
+and Lubetzky in [3], where they prove Theorem 1.1 for the special case H2,3 . In
+this note we show that the techniques introduced in [3] are robust enough to handle
+the general case (with the introduction of some delicate calculations necessitated
+by the large pairwise degrees).
+
+
+2    Dynamic Concentration
+
+Throughout this section we assume that H is an r-uniform, D-regular hypergraph
+on N vertices where r is a fixed constant and D → ∞ as N → ∞. We also assume
+that the maximum degree L of a pair of vertices in H satisfies L = o(D/ log 5 N ) .
+     In order to make the estimates (1) and (2) precise we introduce error bounds
+for Q and dv . Define
+
+                       eq = 90r 2 N Lp2−r log N (1 − r log p)2
+                            p
+                       ed = 6rLD log N (1 − r log p)
+
+Further define the stopping time T to be the first step i such that
+                                ND r
+                       Q(i) −      p > eq , or
+                                 r
+                      |dv (i) − Dpr−1 | > ed for some v ∈ V (i)
+
+Theorem 2.1. With high probability we have
+                                     1                  !
+                                     L 2(r−1)        5
+               N − Tr = O N ·                 log 2(r−1) N .
+                                    D
+
+                                         4
+3    Proof
+
+We begin with a brief overview of the critical interval method, which is a refine-
+ment of the differential equations method for proving dynamic concentration. In
+a standard application of the differential equations method, we have a sequence of
+random variables Z(0), Z(1), . . . that is determined by some combinatorial random
+process on n points, and our dynamic concentration statement is
+
+                Z(i) = z(i/n) ± ez (i/n)         for   i = 0, 1, . . . , M (n)     (3)
+
+with high probability. Note that we use the symbol “±” in two distinct ways:
+sometimes we write a = b ± c meaning that a is in the interval [b − c, b + c] whereas
+other times we simply use “±” as a symbol that could either be “+” or “−.”
+The meaning should be clear from context. The deterministic trajectory function
+z is usually determined by the one-step expected changes in Z(i) and the initial
+condition z(0) = Z(0). The error function ez is a carefully chosen, slowly growing,
+function. It is often convenient to introduce a continuous time variable t that we
+relate to the steps of the process by setting t = t(i) = i/n. This allows us to view
+the function z(t) as a scaling limit for the sequence Z(i).
+     In a standard application of the differential equations method we prove the
+dynamic concentration statement (3) by two applications of a martingale deviation
+inequality. We introduce a stopping time T , which is defined to be the minimum of
+M = M (n) and the first step i at which (3) fails. We then define the two sequences
+of random variables DZ + (i), DZ − (i) as follows:
+
+                DZ ± (i) = Z(i ∧ T ) − z(t ∧ (T /n)) ± ez (t ∧ (T /n)).
+
+Note that violation of the upper bound in (3) is equivalent to DZ − (T ) = DZ − (M ) >
+0 and violation of the lower bound in (3) is equivalent to DZ + (T ) = DZ + (M ) < 0.
+Note further that DZ − (0) = −ez (0) and DZ + (0) = ez (0). If DZ − is a supermartin-
+gale and DZ + is a submartingale, then violation of (3) is contained in the event that
+one of these martingales has a large deviation. We choose the error functon ez (t) so
+that DZ − is a supermartingale and DZ + is a submartingale and ez (0) is sufficiently
+large to make the probabilities of these martingale deviations small. We emphasize
+that the introduction of this stopping time T is an important detail in the proof as
+it allows us to assume the bounds in (3) when we establish the martingale condition
+and apply the martingale inequality.
+     Our proof of Theorem 2.1 requires even greater control over the random vari-
+able Z when we are establishing the martingale condition. This is what the critical
+interval method provides. For each variable Z treated by Theorem 2.1 and each
+bound (i.e. upper and lower) we introduce a critical interval IZ (t) = [aZ , bZ ] which
+has one end at the bound we are trying to establish and the other end slightly closer
+to the trajectory z(t). The upper critical interval is
+
+                      IZ (t) = [z(t) + ez (t) − fz (t), z(t) + ez (t)]
+
+
+                                             5
+where the width fz (t) will be chosen below. Simillarly, the lower critical interval is
+                       IZ (t) = [z(t) − ez (t), z(t) − ez (t) + fz (t)]
+We can view violation of the dynamic concentration statement given by Theorem 2.1
+as the event that some variable manages to cross one of its critical intervals. In order
+to bound the probability of this event we consider a large collection of martingales.
+We have one such martingale for each variable, each bound (upper and lower), and
+each step of the process that the random variable in question might enter the critical
+interval for the last time before crossing the interval.
+     Consider a random variable Z in the collection of random variables treated by
+Theorem 2.1, some step j of the process, and the upper bound on Z. We introduce a
+stopping time that is specialized to the event that variable Z enters its upper critical
+interval at step j and proceeds to cross the interval without leaving it. Define TZ,j
+to be the minimum of the global stopping time T (which is defined in Section 2
+above) and the first step i ≥ j when Z(i) is not in its upper critical interval. We
+simply have TZ,j = j if Z(j) is not in the upper critical interval. We consider the
+sequence of random variables
+    DZj− (i) = Z(i ∧ TZ,j ) − z(t ∧ (TZ,j /N )) − ez (t ∧ (TZ,j /N ))     for i = j, . . .
+Now, assuming that we have a suitable bound on the one step changes in each
+variable Z, the event T = i and Z(i) > z(t) + ez (t) is contained in the event that
+there exists a j < i such that DZj− (j) ≈ −fz (j/N ) and DZj− (i) > 0. If DZj− is a
+supermartingale then each such event is the event that this martingale has a large
+deviation. We establish bounds on these events that are small enough that a simple
+application of the union bound – taking the union over all variables, bounds and
+starting points j – shows that the probability that of any event in the collection
+occuring is small. Theorem 2.1 follows.
+      We stress that the introduction of the stopping time TZ,j allows us to assume
+that Z is in the critical interval when we are establishing the martingale condition
+for Z. (Of course the other random variables are not so constrained.) The reason
+that we focus our attention on these critical intervals is the fact that the expected
+one-step changes in the variables we consider have self-correcting terms. These
+terms introduce a drift back toward the expected trajectory when Z is far from the
+expected trajectory. By restricting our attention to the critical intervals we make
+full use of these terms. See [13] and [5] for early applications of this self-correcting
+phenomenon in applications of the differential equations method for proving dy-
+namic concentration. As we noted above, the critical interval method we use here
+was introduced in [3].
+     We close this preamble with some notation conventions and a lemma that we
+use below. For an arbitrary random variable Z we define
+                                ∆Z(i) = Z(i + 1) − Z(i).
+We let Fi be the filtration of the probability space given by the first i edges chosen
+by the random greedy matching process.
+
+                                              6
+Lemma 3.1. Suppose (xi )i∈I and (yi )i∈I are real numbers such that |xi − x| ≤ δ
+and |yi − y| < ǫ for all i ∈ I. Then we have
+                                            !     !
+                      X              1 X      X
+                           xi y i −      xi     yi ≤ 2|I|δǫ
+                                    |I|
+                            i∈I                          i∈I        i∈I
+
+Proof. The triangle inequality gives
+
+                                        X
+                                               (xi − x)(yi − y) ≤ |I|δǫ.
+                                         i∈I
+
+Rearranging this inequality gives
+ X             X        X
+    xi y i = x   yi + y    xi − |I|xy ± |I|δǫ
+ i∈I            i∈I               i∈I
+                                 !                 !                            !                  !
+              1       X                 X                       1 X                   1 X
+           =                xi                yi       − |I|        xi − x                yi − y       ± |I|δǫ.
+             |I|                                               |I|                   |I|
+                      i∈I               i∈I                        i∈I                   i∈I
+
+
+
+
+3.1     Vertex degrees
+
+Let v be a fixed vertex. As usual in applications of the differential equations method
+for establishing dynamic concentration, we begin with the expected one-step change
+in dv (i.e. we begin with the trend hypothesis). We have
+                                                                      
+                                 1    X        X                      r L
+             E [∆dv (i)|Fi ] = −                      du (i) ± dv (i)     ,         (4)
+                                 Q                                    2 Q
+                                                   E∈H(i):v∈E u∈E\{v}
+
+where Fi is the filtration defined by the random greedy matching process. We note
+that (4) does not take into account the contribution to the expected change in dv
+that comes from the selection of an edge that contains v itself. Of course, this
+event causes a rather dramatic change in dv , which could complicate our analysis.
+Furthermore, we are no longer interested in dv after v leaves V (i). This is handled
+formally by setting dv (i + 1) = dv (i) if v 6∈ V (i + 1), and (4) takes this convention
+into account.
+       We begin with the upper bound on dv . Our critical interval is
+
+                                     [Dpr−1 + ed − fd , Dpr−1 + ed ],
+
+where                   p
+                fd =         6rLD log N                    and           ed = fd (1 − r log p) .
+Note that fd does not change in time and that ed is increasing.
+
+
+
+                                                               7
+     For each step j of the process we define the sequence of random variables
+
+                       Dd+
+                         v,j (i) := dv (i) − Dp
+                                                r−1
+                                                    − ed                for i ≥ j
+
+with the stopping time Tv,j defined to be the minimum of T and the smallest index
+i ≥ j such that dv (i) is not in the critical interval or v 6∈ V (i). Note that if dv (j) is
+not in the critical interval then we simply have Tv,j = j. We prove dynamic concen-
+tration by considering the sequence of random variables Dd+                            +
+                                                                    v,j (j), . . . , Ddv,j (Tv,j ).
+We chose fd and ed (with foresight) so that this sequence is a supermartingale with
+respect to the natural filtration Fi . For j ≤ i < Tv,j we have
+ h           i    1            X            X      Dr(r − 1) r−2        1
+E ∆Dd+
+     v,j |Fi   ≤−                                    du (i) +  p   − e′d
+                  Q                                    N               N
+                         E∈H(i):v∈E u∈E\{v}
+                                                            
+                                     Ldv      D         1
+                               +O          + 2 pr−3 + 2 e′′d
+                                      Q      N         N
+                           r−1                       r−1
+                                                              
+                        Dp     + ed − fd (r − 1) Dp       − ed     Dr(r − 1) r−2
+                   ≤−                     r
+                                                                 +          p
+                                    N Dp /r + eq                        N
+                                                                     
+                                  1 ′         Ldv   D r−3        1 ′′
+                               − ed + O           + 2p      + 2 ed
+                                 N             Q   N            N
+                     r(r − 1)      1 ′
+                   ≤          fd − ed
+                       Np          N
+                                                                                   
+                                     (ed − fd )ed   eq      Ldv     D r−3      1 ′′
+                               +O                 + 2 2+          + 2p     + 2 ed
+                                       N Dpr       N p       Q      N         N
+
+Note that we use the assumption that dv (i) lies in the critical interval. Also note
+that in order to get the desired supermartingale condition it is necessary to choose
+ed and fd so that
+                                        r(r − 1)
+                                  e′d >          fd .                            (5)
+                                            p
+(Of course, this equation plays a central in our choice of the functions fd and ed .)
+     For the given error functions ed , eq , we have
+
+     (ed − fd )ed     eq      Ldv      D          1
+             r
+                   + 2 2+          + 2 pr−3 + 2 e′′d
+       N Dp          N p       Q      N          N
+                         ed p1−r
+                                                              
+                ed                    eq      L     D r−2    1
+           ≤        ·O           +         +    +     p   +              (6)
+               Np           D      ed N p ed N ed           Np
+                         √                    !         √      √     !
+                ed          L(log N )3/2 p1−r     ed      L      D 1
+           ≤        ·O           √              +    ·o √ + √ + √      .
+               Np                  D              Np      D N L    N
+
+(We note that these estimates make repeated use of the simple inequality D < N L.)
+By assuming that p is a sufficiently large constant times
+                                                 1
+                                        L       2(r−1)        5
+                                                         log 2(r−1) N
+                                        D
+
+                                                     8
+we see that the expression in (6) can be made smaller than any constant times
+ed /(N p log N ). As the error functions fd and ed satisfy (5), the supermartingale
+condition is satisfied.
+     We use a supermartingale inequality to bound the probability that the random
+variable Dd+
+           v,j (Tv,j ) is positive. We use the following Lemma (see [2] for a proof).
+
+Lemma 3.2. Let X(i) be a supermartingale, such that −Θ ≤ ∆X(i) ≤ θ for all i,
+          Θ
+where θ < 10 . Then for any a < θm we have
+
+                                                    a2
+                                                      
+                     P r(X(m) − X(0) > a) ≤ exp −        .
+                                                  3θΘm
+
+Since dv is non-increasing, Dpr−1 is decreasing and ed is increasing, the one step
+change in Dd+v,j is bounded above by the one step change in Dp
+                                                               r−1 , which is at most
+
+
+                                    D(r − 1)
+                               θ=            (1 + o(1)).
+                                      N
+For a lower bound on ∆d+v,j , note that the one step change in ed is negligible com-
+pared to the maximum possible one step change in dv , which occurs when we pick
+an edge containing a vertex that has pairwise-degree L with v. So we can set
+Θ = rL(1 + o(1)).
+     Now, if dv crosses the upper boundary of its critical interval at the stopping
+time T , then there is some step j (with T = Tv,j ) such that
+
+                                                D(r − 1)
+                     Dd+
+                       v,j (j) ≤ −fd (t(j)) +            (1 + o(1))
+                                                  N
+and d+
+     v,j (Tv,j ) > 0. Applying the lemma (and noting D/N = o(fd )) we see that the
+probability of the supermartingale d+ v,j having such a large upward deviation has
+probability at most
+                            (                              )
+                                       fd2
+                        exp − D(r−1)             (1 + o(1)) .
+                                3 N (rL)( Nrp )
+
+As there are O(N 2 ) such supermartingales, we would like the above expression to
+be o(N −2 ). Thus, it suffices to take
+                                       p
+                                  fd = 6rLD log N .
+
+Furthermore this choice also satisfies (5). (Note that, in fact, this condition together
+with (5) essentially determines the error functions ed .)
+     Thus, the probability that T is less than bound stated in Theorem 2.1 due to
+a violation of the upper bound on dv goes to zero as N tends to infinity.
+     The lower bound for dv is similar.
+
+
+                                           9
+3.2     Number of edges
+
+We again begin with the trend hypothesis. We have
+                       1 X X                        1 X 2
+     E [∆Q(i)|Fi ] = −            dv (A) + O(L) = −     dv (i) + O(L)
+                       Q                            Q
+                             A∈H(i) v∈A                              v∈V (i)
+
+For i < T we have
+                                X                (rQ)2
+                                         d2v =         ± 2N pe2d ,
+                                                  Np
+                               v∈V (i)
+
+by an application of Lemma 3.1, and therefore
+                                                 r 2 Q 2N pe2d
+                        E [∆Q(i)|Fi ] = −             ±        + O(L).
+                                                 Np      Q
+
+      We work with the upper bound on Q(i). Our critical interval is
+                                                    
+                          ND r              ND r
+                              p + eq − fq ,    p + eq ,
+                           r                 r
+where
+              fq = 6r 2 N L log N p2−r           and     eq = 15fq (1 − r log p)2 .
+Note that both fq and eq are non-decreasing in time. For each step j of the process
+we define the sequence of random variables
+                                                       ND r
+                             DQ+
+                               j (i) := Q(i) −            p − eq
+                                                        r
+with the stopping time Tj defined to be the minimum of T and the smallest index
+i ≥ j such that Q(i) is not in the critical interval.
+     We begin by showing that DQ+                      +
+                                     j (j), . . . , DQj (Tj ) is a supermartingale. For
+j ≤ i < Tj we have
+
+                     r2Q                             2N pe2d
+                                                                                     
+   h
+         +
+                i
+                                  r−1    1 ′                            D r−2    1 ′′
+ E ∆DQj (i)|Fi ≤ −        + rDp       − eq +                 +O L+ p          + 2 eq
+                     Np                  N             Q                N       N
+                      2                                       1−r  2
+                     r (eq − fq )     1         (2r + o(1))p ed
+                  ≤−              − e′q +
+                         Np          N                   D
+                                                                       
+                                                       D r−2       1 ′′
+                                        +O L+ p                + 2 eq
+                                                       N          N
+In order to get the supermartingale condition it suffices, up to constant factors, to
+take
+                                eq > e2d N p2−r /D.
+Note that this determines the main terms in the choice of eq above. As fq =
+6r 2 N L log N p2−r , we have
+             r 2 (eq − fq ) (2r + o(1))p1−r e2d
+         −                 +                    ≤ −Lp1−r (log N )(1 − r log p)2 .
+                   Np               D
+
+                                                  10
+This clearly dominates the remaining error terms (note that e′q > 0) and therefore
+the sequence DQ+ (j), . . . , DQ+ (Tj ) is a supermartingale.
+     Now we apply the Hoeffding-Azuma inequality to bound the probability that
+the random variable DQ+ (Tj ) is positive. The lemma we use is as follows:
+
+Lemma 3.3. Let Xj be a supermartingale, with |∆Xi | ≤ ci for all i. Then
+                                                     
+                                                a2 
+                      P (Xm − X0 ≥ a) ≤ exp −   X     .
+                                               2   c2i
+                                                      
+                                                    i≤m
+
+
+     Since i < T implies bounds on degrees, we have
+                                        p
+              |∆DQ+ | ≤ (1 + o(1))red ≤ 7r 3 LD log N (1 − r log p).
+
+Thus, if Q crosses its upper boundary at the stopping time T , then there is some
+step j (with T = Tj ) such that
+                                               √
+                      DQ+ (j) ≤ −fq (t(j)) + O( LD log3/2 N )
+
+and DQ+ (Tj ) > 0. Applying the Hoeffding-Azuma we see that the probability of
+the supermartingale DQ+ having such a large upward deviation has probability at
+most
+
+           [(1 + o(1))6r 2 N L log N p2−r ]2
+                                              
+  exp −
+         2(N p)[7r 3 LD log N (1 − r log p)2 ]
+                                                     p3−2r
+                                                                       
+                                       18r N L
+                 ≤ exp −(1 + o(1))           ·   ·              · log N   = o(N −1 )
+                                        7      D (1 − r log p)2
+
+where p = p(j). Note that we have used D < N L again and that the constants
+have been chosen to deal with p constant. As there are at most O(N ) such super-
+martingales, the probability that T is less than the bound stated in Theorem 2.1
+due to Q(i) breaching the upper bound tends to zero as N tends to infinity.
+     The lower bound for Q is similar.
+
+
+References
+ [1] N. Alon, J. Kim, J. Spencer, Nearly perfect matchings in regular simple hyper-
+     graphs. Israel Journal of Mathematics 100 (1997) 171–187.
+
+ [2] T. Bohman, The triangle-free process, Advances in Mathematics 221 (2009)
+     1653-1677.
+
+ [3] T. Bohman, A. Frieze, E. Lubetzky, A note on the random greedy triangle
+     packing algorithm. Journal of Combinatorics 1 (2010), 477–488.
+
+                                         11
+ [4] T. Bohman, A. Frieze, E. Lubetzky, Random triangle removal. Advances in
+     Mathematics 280 (2015), 379–438.
+
+ [5] T. Bohman, M. Picollelli, Evolution of SIR epidemics on random graphs with a
+     fixed degree sequence. Random Structures and Algorithms 41 (2012) 179–214.
+
+ [6] P. Erdős, H. Hanani, On a limit theorem in combinatorial analysis. Publica-
+     tiones Mathematicae Debrecen 10 (1963), 10–13.
+
+ [7] D. Grable, On random greedy triangle packing. Electronic Journal of Combi-
+     natorics 4 (1997), R11, 19 pp.
+
+ [8] A. Kostochka, V. Rödl, Partial Steiner systems and matchings in hypergraphs.
+     Random Structures and Algorithms 13 (1998), 335–347.
+
+ [9] N. Pippenger, J. Spencer, Asymptotic behavior of the chromatic index for
+     hypergraphs. Journal of Combinatorial Theory, Series A 51 (1989) 24–42.
+
+[10] V. Rödl, On a packing and covering problem. European Journal of Combina-
+     torics 6 (1985) 69–78.
+
+[11] V. Rödl, L. Thoma, Asymptotic packing and the random greedy algorithm.
+     Random Structures and Algorithms 8 (1996) 161–177.
+
+[12] J. Spencer, Asymptotic packing via a branching process. Random Structures
+     and Algorithms 7 (1995) 167–172.
+
+[13] A. Telcs, N. Wormald, S. Zhou, Hamiltonicity of random graphs produced by
+     2-processes. Random Structures and Algorithms 31 (2007) 450–481.
+
+[14] V. Vu, New bounds on nearly perfect matchings in hypergraphs: Higher code-
+     grees do help. Random Structures and Algorithms 17 (2000) 29–63.
+
+[15] N. Wormald, The differential equation method for random graph processes and
+     greedy algorithms, in Lectures on Approximation and Randomized Algorithms
+     (M. Karonski and H.J. Prömel, eds), pp. 73–155. PWN, Warsaw, 1999.
+
+
+
+
+                                       12
+

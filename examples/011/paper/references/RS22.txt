@@ -1,0 +1,239 @@
+                                                         EXCEPTIONAL LOCI IN LEFSCHETZ THEORY
+
+
+
+
+arXiv:2106.10332v1 [math.AG] 18 Jun 2021
+                                                                       SAM RASKIN AND GEOFFREY SMITH
+
+                                                  Abstract. Let φ : X → Pn be a morphism of varieties. Given a hyperplane H in Pn ,
+                                                  there is a Gysin map from the compactly supported cohomology of φ−1 (H) to that of
+                                                  X. We give conditions on the degree of the cohomology under which this map is an
+                                                  isomorphism for all but a low-dimensional set of hyperplanes, generalizing results due
+                                                  to Skorobogatov, Benoist, and Poonen-Slavov. Our argument is based on Beilinson’s
+                                                  theory of singular supports for étale sheaves.
+
+
+
+
+                                                               1. Introduction and statement of results
+                                             In this note, we prove a generalization of the following theorem due to Benoist and
+                                           written here in a form due to [7].
+                                           Theorem 1.1 ([2], Théorème 1.4). Let X ⊂ PN be a geometrically irreducible quasipro-
+                                           jective variety over a field k. Define Mbad ⊆ P̌N as the locus of hyperplanes H such that
+                                           XH := X ∩ H is not geometrically irreducible. Then codim Mbad ≥ dim X − 1
+                                             This result is geometric, but has a cohomological reformulation: the top degree com-
+                                           pactly supported cohomology groups of X and XH are isomorphic. In this note, we
+                                           prove a similar result for all cohomology of sufficiently high degree on X.
+                                           Theorem 1.2. Let X be a separated scheme of finite type over a separably closed field
+                                           k, let φ : X → Pn be a morphism, and let Λ = Z/ℓZ for ℓ a prime power not divisible
+                                           by the characteristic of k. Set r = dim X ×Pn X.
+                                             Then for each c ≥ 1, there is a closed subscheme Zc ⊂ P̌n of dimension at most n − c
+                                           such that for H ∈ P̌n \ Zc and q > c + r (resp. q = c + r), the Gysin map
+                                                                        Hcq−2(φ−1 (H), Λ(−1)) → Hcq (X, Λ)
+                                           is an isomorphism (resp. surjective).
+                                             In the setting of Theorem 1.1, taking q = 2 dim X, we see that Mbad ⊂ Zdim X−1 ,
+                                           which has dimension ≤ n − dim X + 1, recovering the assertion of loc. cit.
+                                             We remind the construction of Gysin maps in Section 2.
+                                           Remark. If X, φ, and H are defined over an arbitrary field k ′ with separable closure
+                                           k, then our construction shows that Zc is naturally defined over k ′ . Moreover, a Gysin
+                                           map Hcq−2 (φ−1 (H) ×Spec(k′ ) Spec(k), Λ(−1)) → Hcq (X ×Spec(k′ ) Spec(k), Λ) is compatible
+                                                                                            1
+2                           SAM RASKIN AND GEOFFREY SMITH
+
+with the action of Gal(k/k′ ), so if H 6∈ Zc is defined over k ′ and q is as in Theorem 1.2,
+the Gysin map is an isomorphism or surjection of Galois representations.
+  The main new tool in the proof of this result is Beilinson and Saito’s works [1, 8] on
+the singular support of constructible sheaves in arbitrary characteristic. In Section 2, we
+will use their work to prove a result, Theorem 2.2, that is at the core of the argument;
+we will also collect a couple lemmas we will need. In Section 3, we will use these tools
+to prove Theorem 1.2.
+1.1. Past results. Theorem 1.2 generalizes a number of results beyond Theorem 1.1.
+Poonen-Slavov [7] establish the q = 2 dim X case of Theorem 1.2 under the additional
+assumption that φ has equidimensional fibers. If φ is the immersion of a normal projec-
+tive complex variety and c = 1, Theorem 1.2 is Corollary 7.4.1 of [5], and is proven as a
+special case of the paper’s Lefschetz hyperplane theorem for intersection homology.
+   And if φ is the closed immersion of a smooth projective variety, this result is known;
+by [9, Theorem 2.1], there exists an isomorphism Hcq−2 (φ−1 (H), Λ(−1)) → Hcq (X, Λ) so
+long as q ≥ n + s + 3, where s is the dimension of the singular locus of φ−1 (H). So the
+locus where there exists no isomorphism Hcq−2 (φ−1 (H), Λ(−1)) → Hcq (X, Λ) is contained
+in the locus of hyperplanes such that φ−1 (H) is singular in dimension at least q − n − 2.
+This locus in turn has codimension at least q − n − 1.
+Acknowledgements. We would like to thank Sasha Beilinson, Robert Cass, Joe Harris,
+Bjorn Poonen, and Alexander Smith for helpful conversations.
+
+                    2. The Gysin map for bounded complexes
+2.1. Notation and the basic setup. Let k be a separably closed field, let ℓ be a prime
+power not divisible by the characteristic of k, and set Λ = Z/ℓZ. For the remainder
+of this paper, sheaves will be constructible étale sheaves of Λ-modules, and for any
+variety V we will use D(V ) to denote the bounded derived category of constructible
+sheaves of Λ-modules on V . Given a k-point H ∈ P̌n , let i : H → Pn denote the
+corresponding inclusion, and let j : Pn \ H → Pn be the inclusion of the complement.
+For the remainder of the paper, all functors will be derived; for instance, we will use
+j∗ to denote the derived pushforward associated to j. Finally, we will use the notation
+Hq (F ) to denote the hypercohomology of F ∈ D(V ) in degree q.
+   On the level of sheaves, the map in Theorem 1.2 is induced by applying RΓ to a
+composition of two arrows in D(Pn ). Given a bounded complex of sheaves F on Pn , the
+two maps we will use are:
+      • The counit map i! i! F → F , which appears in the localization triangle
+                                                       +1
+                                 i! i! F → F → j∗ j ∗ F → .
+     • The Gysin map i∗ F (−1)[−2] → i! F , as discussed in [4].
+                       EXCEPTIONAL LOCI IN LEFSCHETZ THEORY                               3
+
+  Applying RΓ to these two maps produces maps
+                                  Hq (H, i! F ) → Hq (F )
+and
+                           Hq−2 (H, i∗ F (−1)) → Hq (H, i! F )
+respectively. Our main effort will be proving that these maps are isomorphisms or
+surjections assuming certain hypotheses on F and H.
+2.2. The counit map. Of the two maps above, the counit map is the easier one to
+understand, as its cone is j∗ j ∗ F .
+Lemma 2.1. Let F ∈ D(Pn ). Fix an integer r. Suppose that for all p, the sheaf
+Hp (F ) has support of dimension at most r − p. Then the sheaf Hp (j∗ j ∗ F ) has support
+of dimension at most r − p and we have Hq (Pn , j∗ j ∗ F ) = 0 for q > r.
+Proof. Let F and r satisfy the hypotheses of the lemma. For each p, the support of
+Hp (j ∗ F ) ∼
+            = j ∗ Hp (F ) has dimension at most r − p. Since Pn \ H is affine, we then have
+that affine vanishing [6, Theorem VI.7.3] implies that Rs j∗ (Hp (j ∗ F )) is supported in
+dimension at most r − p − s and H s (Hp (j ∗ F )) = 0 if s + p > r. The results follow by
+applying a spectral sequence to the filtered complex τ ≥p F .                            
+Remark. The hypothesis of the lemma is equivalent to asking that F sit in perverse
+degrees ≤ r. From this perspective, the claim follows from right exactness of affine
+pushforwards with respect to the perverse t-structure.
+2.3. The Gysin map. The following result is the most nonstandard ingredient of the
+proof of Theorem 1.2.
+Theorem 2.2. Let F be an object of D(Pn ), let Φ ⊂ Pn × P̌n be the universal hyperplane,
+and let π1 , π2 denote the projections. Then there is a closed subscheme Z ⊂ Φ of
+dimension ≤ n − 1 such that for H ∈ P̌n , the cone of the Gysin map
+                                   i∗ F (−1)[−2] → i! F ,
+associated to i : H → Pn is supported on π1 (Z ∩ π2−1 (H)).
+  In the proof of Theorem 1.2, we will use the following corollary of this theorem.
+Corollary 2.3. With F as in Theorem 2.2, for any positive integer c there is a closed
+subscheme Zc ⊂ P̌n of dimension at most n − c such that for any H ∈ P̌n \ Zc the cone
+of the Gysin map associated to i : H → Pn is supported on a subscheme of dimension at
+most c − 2.
+Proof. Take Z as in Theorem 2.2. Let Zc ⊂ P̌n be the closed subscheme where the
+fibers of the projection Z → P̌n have dimension ≥ c − 1. As dim Z = n − 1, we have
+dim Zc ≤ n − c, and it satisfies the conclusion by definition of Z.             
+4                           SAM RASKIN AND GEOFFREY SMITH
+
+  The theory of singular support for étale sheaves was developed by Beilinson [1] and
+Saito [8]. We use it in the following form.
+Theorem 2.4 (Theorem 1.3, [1]). Let X be a smooth variety of dimension n and let F
+be a bounded constructible complex on it.
+   Then there exists a closed, conical subscheme SS(F ) ⊂ T ∗ X of dimension n such that
+for every pair h : U → X smooth and f : U → Y a morphism to a smooth variety Y
+such that df (T ∗ Y ) ∩ dh(SS(F )) is contained in the zero section U ⊂ T ∗ U, the map f is
+locally acyclic with respect to h∗ (F ) (in the sense of [3], 2.12).
+Remark. The most serious part of the theorem is the calculation of the dimension of
+SS(F ).
+Lemma 2.5. Suppose X is smooth and let i : D → X be the embedding of a smooth
+divisor. Suppose F ∈ D(X) has the property that the intersection
+                                          ∗
+                              SS(F )|D ∩ NX/D ⊂ T ∗X × D
+                                                            X
+
+is contained in the zero section.
+   Then the Gysin map
+                                     i∗ F (−1)[−2] → i! F
+is an isomorphism.
+Proof. This result is a special case of [8] Proposition 7.13. We outline a direct proof
+below.
+  The assertion is local on X, so we may assume there is a map f : X → A1 with
+D = f −1 (0).
+  By assumption, the image of P(SS(F ) ∩ df (X)) → X avoids D, so we may assume
+this intersection is zero. Then taking U = X and Y = A1 in the definition of singular
+support, we see that F is locally acyclic with respect to f by hypothesis, so its vanishing
+cycles φf (F ) are 0.
+  In general, recall that we have exact triangles
+                                                 can        +1
+                               i∗ (F ) → ψf (F ) → φf (F ) →
+                                    var                          +1
+                            φf (F ) → ψf (F )(−1) → i! (F )[2] →
+such that the composition
+                       i∗ (F )(−1)[−2] → ψf (F )(−1)[−2] → i! (F )
+is the Gysin map. As φf (F ) = 0 by the above, we obtain our claim.
+                                                                                         
+                        EXCEPTIONAL LOCI IN LEFSCHETZ THEORY                               5
+
+Proof of Theorem 2.2. Recall that Φ is canonically isomorphic to PT ∗ Pn . Let Z =
+PSS(F ) as in Theorem 2.4. By the theorem, it has dimension n − 1.
+   Fix H ∈ P̌n , and let B ⊂ H be the subscheme π1 (Z ∩ π2−1 (H)). By construction, the
+closed embedding H \ B → Pn \ B satisfies the hypotheses of Lemma 2.5, so the cone of
+the Gysin map is supported on B as desired.
+                                                                                     
+
+
+                              3. Proof of Theorem 1.2
+   In this section, we continue to use notation from the previous section.
+   Let φ : X → Pn be a morphism of separated schemes of finite type over k. In this
+section we establish Theorem 1.2 for the map φ. Let ΛX denote the constant sheaf on
+X with fiber Λ.
+   We first note that Rp φ! ΛX is supported at points over which φ has fiber dimension at
+least p2 , because the stalk of Rp φ! ΛX at a point x is just Hcp (φ−1 (X), Λ) by [10, Lemma
+0F7L]. As a consequence, if X ×Pn X has dimension r, we have that Hp (φ! ΛX ) has
+support in dimension at most r − p. So by Lemma 2.1 we have that for any inclusion
+of a hyperplane i : H → Pn , the hypercohomology groups Hq (Pn , j∗ j ∗ φ! ΛX ) vanish for
+q > r. So we have that the counit map Hq (H, i! φ! ΛX ) → Hcq (X, Λ) is an isomorphism if
+q ≥ r + 2 and is a surjection if q = r + 1.
+   We now show that the Gysin map induces an isomorphism or surjection on cohomol-
+ogy. Fixing c ≥ 1, let Zc be the exceptional set in Corollary 2.3 relative to the complex
+of sheaves φ! ΛX . Fix some k-point H ∈ P̌n \ Zc , and let Q ∈ D(H) denote the cone of
+the morphism
+                                i∗ φ! ΛX (−1)[−2] → i! φ! ΛX .
+By Corollary 2.3, Q is supported on a closed subscheme B of dimension at most c − 2.
+Moreover, Hp (j∗ j ∗ φ! ΛX ) has support of dimension at most min(r − p, n) by Lemma 2.1.
+Since we also have that Rp φ! ΛX is supported in dimension min(r−p, n), the distinguished
+triangle i! i! φ! ΛX → φ! ΛX → j∗ j ∗ φ! ΛX → gives the bound on the dimension of the
+support of Hp (i! i! φ! ΛX ),
+
+                      dim supp(Hp (i! i! φ! ΛX )) ≤ min(r − p + 1, n).
+  Likewise, Hp (i∗ φ∗ ΛX (−1)[−2]) is supported on a set of dimension at most min(r −
+p + 2, n − 1). From these two observations and the defining triangle for Q, we see
+that Hp (Q) is supported on a subscheme of dimension at most min(r − p + 1, c − 2).
+Therefore, Hq−p (H, Hp (Q)) = 0 for q − p > 2 min(r − p + 1, c − 2). Observe that if
+q − p ≤ 2 min(r − p + 1, c − 2), then 2(q − p) ≤ 2(r − p + 1) + 2(c − 2), so q ≤ r + c − 1.
+Therefore, whenever q > r + c − 1, Hq−p (H, Hp (Q)) = 0. Applying the Grothendieck
+spectral sequence, we find that Hq (H, Q) = 0 for q > r + c − 1.
+6                                SAM RASKIN AND GEOFFREY SMITH
+
+    From this, we conclude that the Gysin map
+             H q−2 (φ−1 (H), Λ(−1)) ∼
+                 c                  = Hq−2 (H, i∗ φ! ΛX (−1)) → Hq (H, i! φ! ΛX )
+is an isomorphism for q > r + c and a surjection if q = r + c. Combining this with the
+counit map above, and noting c ≥ 1, we have that the map on cohomology
+                                Hcq−2(φ−1 (H), Λ(−1)) → Hcq (X, Λ)
+is an isomorphism for q > r + c and a surjection if q = r + c, proving Theorem 1.2 for
+X.
+Remark. In the above setting, note that φ! (ΛX ) ∈ D(Pn ) is in perverse degrees ≤ r.
+The argument shows that, suitably understood, the conclusion of Theorem 1.2 holds for
+any F ∈ D(Pn ) a bounded complex of constructible sheaves in perverse degrees ≤ r.
+                                             References
+ [1] Alexander Beilinson. Constructible sheaves are holonomic. Selecta Mathematica, 22(4):1797–1819,
+     2016.
+ [2] Olivier Benoist. Le théorème de Bertini en famille. Bulletin de la Société Mathématique de France,
+     139(4):555–569, 2011.
+ [3] Pierre Deligne. Théorèmes de finitude en cohomologie ℓ-adique. In Cohomologie étale: Séminaire
+     de Géométrie Algébrique du Bois-Marie SGA 4 1/2, pages 233–251. Springer, 1977.
+ [4] Kazuhiro Fujiwara. A proof of the absolute purity conjecture (after Gabber). In Algebraic Geometry
+     2000, Azumino, pages 153–183, Tokyo, Japan, 2002. Mathematical Society of Japan.
+ [5] Mark Goresky and R MacPherson. Intersection homology II. Inventiones Mathematicae, 72:77,
+     1983.
+ [6] James S. Milne. Étale Cohomology. Princeton University Press, 1980.
+ [7] Bjorn Poonen and Kaloyan Slavov. The exceptional locus in the Bertini irreducibility theorem for
+     a morphism. arXiv preprint arXiv:2001.08672, 2020.
+ [8] Takeshi Saito. The characteristic cycle and the singular support of a constructible sheaf. Inventiones
+     Mathematicae, 207:597–695, 2017.
+ [9] Alexei N Skorobogatov. Exponential sums, the geometry of hyperplane sections, and some Dio-
+     phantine problems. Israel Journal of Mathematics, 80(3):359–379, 1992.
+[10] The Stacks Project Authors. Stacks Project. https://stacks.math.columbia.edu, 2020.
+
+  Department of Mathematics, The University of Texas at Austin, RLM 8.100, 2515
+Speedway Stop C1200, Austin, TX 78712
+  Email address: sraskin@math.utexas.edu
+
+  Department of Mathematics, Stat. and CS, University of Illinois at Chicago, Chicago,
+IL 60607
+  Email address: geoff@uic.edu
+

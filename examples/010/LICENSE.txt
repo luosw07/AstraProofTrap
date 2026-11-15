@@ -1,0 +1,14 @@
+Source: Jean-Pierre Conze, Svante Janson and Anders Öberg,
+Frege's election method: discrepancy, invariant polygons and Farey geometry,
+arXiv:2611.13996v1, submitted 10 November 2026.
+https://arxiv.org/abs/2611.13996v1
+
+The supplied arXiv metadata specifies Creative Commons Attribution 4.0:
+https://creativecommons.org/licenses/by/4.0/
+Original rights remain with their holders; attribution is given above.
+
+Benchmark changes: TeX comment and newline normalization for the baseline;
+a deliberately invalid finite-horizon witness selection and reuse in the
+proof of Theorem 7.12, PDF pages 40-41. See mutation.diff for the exact change.
+The artificial error is not attributed to the source authors.
+The original manuscript, PDF and resources are in original/.

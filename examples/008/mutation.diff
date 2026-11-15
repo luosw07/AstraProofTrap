@@ -1,0 +1,11 @@
+--- original/main.tex
++++ current/main.tex
+@@ -1863,7 +1863,7 @@
+         2^{-(k-1)}D_i\pm O_k(\ell\sqrt{D_iL_2^{(i)}}).
+     \]
+     Choosing the constant in~\eqref{eq:greedy-degree-recurrence} sufficiently large makes $D_{i+1}$ at least every such residual degree.
+-    Lemma~\ref{lem:completion} fills the deficits to this prescribed integer, so $D_{i+1}$ is the same for all good completions at stage $i$.
++    Use the construction of Lemma~\ref{lem:completion} with $Q$ the least prime power at least $\max\{D_{i+1},k-1\}$ to fill the deficits to this prescribed integer, so $D_{i+1}$ is the same for all good completions at stage $i$.
+ 
+     For the higher codegrees, Lemma~\ref{lem:short} and Claim~\ref{clm:greedy-orders} bound the three error terms by a constant multiple of
+     \[

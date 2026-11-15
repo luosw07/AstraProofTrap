@@ -1,0 +1,15 @@
+--- original/paper.tex
++++ paper/paper.tex
+@@ -4329,8 +4329,10 @@
+ 
+ \emph{The lag-one constraint.}  On \(B\), \(\Phi^{(1)}_t=-\mathfrak c H_r\ge\mathfrak c\lambda_0\varepsilon \Xi_B\), so \(\int_B\Phi^{(1)}_t\,d\nu\ge\mathfrak c\lambda_0\varepsilon \Xi_B\) for every probability measure
+ \(\nu\) on \(B\); while \(\bar g\le\max_Bg\le\mathfrak c \Xi_B\) and \(e^t\sh|t|=\frac12(1-r^2)\le c\varepsilon\).  With \(\eta=\min(\frac12,\frac{\lambda_0}{2c})\),
+-\(\eta\,e^t\sh|t|\,\bar g\le\frac12\lambda_0\varepsilon\mathfrak c \Xi_B<\mathfrak c\lambda_0\varepsilon \Xi_B\), as \(\Xi_B\ge \mathsf a\xi_{\max}/2>0\); so~\eqref{eq:spreadl1} holds.  \Cref{lem:spreadhalf} gives a
+-pair with finitely many atoms in \(B\), feasible at \(t\), with \(|C'|<\bar g'\), and \Cref{lem:startup} gives \(f\in\cF_{\varepsilon^2,1}(\C^J\oplus\R)\) and \(x_0\)
++\(\eta\,e^t\sh|t|\,\bar g\le\frac12\lambda_0\varepsilon\mathfrak c \Xi_B<\mathfrak c\lambda_0\varepsilon \Xi_B\), as \(\Xi_B\ge \mathsf a\xi_{\max}/2>0\); so~\eqref{eq:spreadl1} holds.  Fix a sufficiently fine uniform midpoint partition of \([-1,1]\) into \(2J\) cells for the finite-atom step of \Cref{lem:spreadhalf}.
++For each \(\varepsilon\), map its midpoints \(a_j\) to \(\omega_j=\omega_0+\mathsf w a_j\), assign normalized weights
++proportional to \(\mathsf k(a_j)/R(\omega_j)\), and set \(C'=-(1-\eta)\bar g'\).
++The minimizer slack is strict, and \Cref{lem:startup} gives \(f\in\cF_{\varepsilon^2,1}(\C^J\oplus\R)\) and \(x_0\)
+ with \(\norm{x_N}\ge c_0r^N\norm{x_0}\); so \(\rhoz\ge1-c\varepsilon\).
+ \end{proof}
+ 

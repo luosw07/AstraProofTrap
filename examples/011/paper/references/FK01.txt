@@ -1,0 +1,3118 @@
+J. reine angew. Math. 540 (2001), 115Ð166                                       Journal fuÈr die reine und
+                                                                                angewandte Mathematik
+                                                                                ( Walter de Gruyter
+                                                                                Berlin  New York 2001
+
+
+
+
+                A general strati®cation theorem for
+                exponential sums, and applications
+                             By E. Fouvry at Orsay and N. Katz at Princeton
+
+
+
+
+                                                1. Introduction
+
+       The use of exponential sum techniques is one of the cornerstones of modern analytic
+number theory. The proof of the Riemann hypothesis by Weil for curves, by Deligne for
+general varieties, provides fantastic tools to solve problems from number theory. However
+controlling the size of exponential sums in a large number of variables remains very di½-
+cult, since certain geometric conditions are almost impossible to check before applying the
+corresponding theorem. The work of Katz and Laumon [K-L] is very illuminating, since
+it describes how a natural exponential sum over a given variety (even very complicated)
+behaves generically. In the applications to number theory, the e¨ect of large values of the
+exponential sums can be well controlled this way. The aim of this paper is to give more
+general and more precise results than [K-L] and [Fo2] (which gave an improvement already
+implicitly contained in [K-L]). As applications we have given statements which can be
+easily applied by number theorists (Theorems 1.1 and 1.2), and we have given three appli-
+cations (Corollaries 1.3, 1.4 and 1.5) which concern divisibility properties of class numbers
+of real quadratic ®elds, the equidistribution of values of polynomials in intervals and equi-
+distribution of points of varieties in small boxes.
+
+      The following theorem is a less general statement than Corollary 3.2, from which it is
+easily deduced (see the proof after the statement of that corollary). It is written in a way
+more adapted to applications to number theory. As usual, we reserve the letter p for prime
+numbers.
+
+     Theorem 1.1. Let d and n be integers n f 1; d f 1. Let V be a locally closed sub-
+scheme of AZn , such that dim VC  e d. Let f X  be a polynomial in ZX1 ; . . . ; Xn .
+
+      Then there exists a constant C, depending only on (n, d, V, and f ), closed subschemes of
+AZn called Xj  j  1; . . . ; n of relative dimension e n ÿ j, AZn I X1 I X2 I    I Xn , such
+that for any invertible function g on V, any prime p, any h A An Fp  ÿ Xj Fp , we have
+
+                  P          ÿ     ÿ                                                   d   jÿ1
+                            w g x c f x1 ; . . . ; xn   h1 x1      hn xn  e C p 2  2 ;
+                x AV Fp 
+116                   Fouvry and Katz, Strati®cation theorem for exponential sums
+
+for every non trivial additive character c of Fp , and for every multiplicative character ( pos-
+sibly trivial ) w of F
+                      p.
+                                                   P
+      (Notice here the trivial inequality                    . . . eKV Fp  e C 0 p d , so the above state-
+                                                 x AV Fp 
+ment has only interest for j e d.) The interest of this theorem is that it requires almost
+no assumption on V. For f 1 0 and j  1, we recover the result of [K-L], and for f 1 0,
+g 1 1 and any j the result of [Fo], Prop. 1.0. The purpose of the next theorem is to decrease
+by one the dimension of the set of the h1 ; . . . ; hn  where the exponential sum in question
+has given size. It requires an extra condition on V (smoothness) and the nonvanishing of
+the ``A-number'' associated to the situation. This number will be de®ned precisely in section
+4; roughly speaking, the A-number is zero if and only if the exponential sum is generically 0
+(see Lemma 4.3). Theorem 1.2 is an easy consequence of Corollary 4.6. We have
+                                                                                           n
+      Theorem 1.2. Let d, n and D be integers f 1. Let V be a closed subscheme of AZ1=D       ,
+such that VC is irreducible and smooth of dimension d. Suppose also that A V ; k; c f 1 for
+                                                                   -valued non-trivial additive
+all ®nite ®elds k of su½ciently large characteristic and for all Q l
+characters c of k.
+
+      Then:
+                                                                                   n
+      1) There exists a constant C, depending only on V, closed subschemes of AZ1=D    called
+                       n
+Xj j  1; . . . ; n, AZ1=D I X1 I X2 I    I Xn , of relative dimension e n ÿ j, such that
+for h A An Fp  ÿ Xj Fp  we have
+
+                            P                                                   d djÿ2
+                                      c h1 x1      hn xn  e C psup 2; 2  ;
+                          x AV Fp 
+
+
+for every p a D and for every non trivial additive character c of Fp .
+
+      2) Moreover, we may choose the closed subschemes Xj to be homogeneous, i.e. de®ned
+by the vanishing of homogeneous forms.
+                                                               P
+      (Again, this is trivial for j f d  2, since                       . . . e KV Fp  e C 0 p d .) It remains
+                                                             x AV Fp 
+to give criteria to ensure that the A-number is non-zero, in order to apply Theorem 1.2.
+This question has been already partly treated in [KA-PES] and [KA-PESII]. In sections 5,
+6, 7 and 8, we give new situations where A f 1. This is done by comparison with another
+invariant, the ``B-number'', and establishing links between these two numbers for hyper-
+surfaces de®ned by F x  a, where F is a homogeneous polynomial. We give very simple
+criteria for the non vanishing of these numbers.
+
+      For the polynomial D3 x de®ned in section 6, as the discriminant of a binary cubic
+form, the A-number attached to the hypersurface de®ned by D3 x  a, a 3 0, is non-zero.
+We can then apply Theorem 1.2, from which we deduce, via the theory of Davenport-
+Heilbronn and sieve techniques, the following result concerning divisibility properties
+of class numbers of real quadratic ®elds. If D is a discriminant of a quadratic ®eld, we
+denote
+   p by h D the cardinality of the ideal class group of the ring of the integers of the ®eld
+Q D.
+                        Fouvry and Katz, Strati®cation theorem for exponential sums                   117
+
+      Corollary 1.3. There exists c0 > 0 and x0 , such that, for x > x0 we have
+
+                                                                                          x
+             Kfp e x; p 1 1 mod 4; p  4 squarefree; 3 a h p  4g f c0                      :
+                                                                                        log x
+
+      This result improves [Fo1], TheÂoreÁme, where the lower bound of Corollary 1.3 was
+proved to be true, but with the prime variable p replaced by positive fundamental dis-
+criminants D such that h D is odd. Recall that this last condition is equivalent, for positive
+D, to the fact that D has either one prime divisor or two prime divisors, one of which is
+congruent to 3 modulo 4. The fact that we gain 1 in the dimension of the Xj is crucial to
+getting Corollary 1.3 (see Lemma 9.3 below). We do not see how to use sieve techniques
+alone to a¨ect this passage from products of at most two primes to primes themselves.
+
+     Our second application concerns the equidistribution of the values of quite general
+polynomials. In section 10, we will deduce from Theorem 1.1
+
+      Corollary 1.4. Let n f 1 and r f 1 be integers. Let P1 X ; . . . ; Pr X  be r
+polynomials in ZX1 ; . . . ; Xn , such that the total degree of any linear combination
+                                                              r
+a1 P1      ar P
+                   ÿ r (with coe½cients a1 ; . . . ; ar  A Z ÿ f0g) is at least two. Let P X  be the
+vector P X   P1 X ; . . . ; Pr X  .
+                                                                         p
+     Let w: R ! R be any function of the form w x                      x  log x  f x, with f x ! y
+as x ! y.
+
+      Then, for p tending to in®nity, the sequence of vectors
+                                                                                 
+                                  P x1 ; . . . ; xn 
+                                                      ; 0 e x1 ; . . . ; xn e w p
+                                         p
+
+is equidistributed modulo 1. In other words, if we denote by ftg the fractional part of the real
+number t, we have, for every a  a1 ; . . . ; ar  A R r and every b  b 1 ; . . . ; b r  A R r satisfying
+0 e aj < b j e 1 1 e j e r,
+            
+           K x1 ; . . . ; xn  A Z n ; 0 e xi e w p 1 e i e n
+                                                                  
+                             Pj x1 ; . . . ; xn                       Qr
+                 and aj e                           e b j 1 e j e r @     b i ÿ ai w p n
+                                     p                                 i1
+
+
+for p tending to in®nity.
+
+      We wish to emphasize that no geometric hypothesis is imposed on the Pi , or on their
+linear combinations, except the degree f 2 hypothesis. Corollary 1.4 is quite standard
+for n  1: it is an easy consequence of Weyl's criterion (see section 7) and of Weil's bound
+for exponential sums of a polynomial in one variable. In the same order of ideas, it is
+now not di½cult to prove Corollary 1.4, if one makes the extra assumption that the
+projective variety de®ned by the vanishing of the homogeneous part of highest degree
+of a1 P1      ar Pr , is non singular for a1 ; . . . ; ar  3 0; . . . ; 0, because we can use
+[De-WI], TheÂoreÁme 8.4, p. 302. Finally, note that the condition concerning the degree of
+118                    Fouvry and Katz, Strati®cation theorem for exponential sums
+
+a1 P1      ar Pr cannot be avoided and that the lower bound for the growth of w x is
+almost optimal (think of the polynomial P1 X1   X12 ).
+
+      Our last application deals with another problem of equidistribution. We are con-
+cerned with the equidistribution on points of V Fp  in small boxes, where V is a closed
+subscheme of AZs . We identify Fp with the set of the integers of the interval 0; p, choose an
+integer x satisfying 1 e x e p and want to have a precise evaluation of KV Fp ; x where
+V Fp ; x is the set of points of V Fp  with all their coordinates xi (1 e i e s) satisfying
+0 e xi < x. If some natural hypotheses concerning V are satis®ed, heuristic considerations
+lead to the estimation
+
+                                                           s
+                                                           x
+       1:1                        KV Fp ; x @ KV Fp        ;
+                                                           p
+
+for p and x ! y. The question is to ®nd an inequality between p and x to ensure the
+uniformity of (1.1). In [Fo2], Theorem, for a quite general V, (1.1) was proved to be true
+uniformly for
+
+                                                 1
+       1:2                         x f p 1ÿ2 sÿd1  log p  f p;
+
+where d is the dimension of V and where f is any function tending to in®nity. This result
+was deduced from a theorem similar to Theorem 1.1.
+
+     Here we improve the lower bound (1.2), by adding extra hypotheses on V in order to
+apply Theorem 1.2.
+
+      Corollary 1.5.    Let d and s be integers s f d f 2. Let V be a closed subscheme of
+AZs . Suppose that VC is smooth and irreducible of dimension d and suppose further that VC
+does not lie in a hyperplane of ACs . Suppose also that A V ; k; c f 1 for all ®nite ®elds k of
+                                              -valued non-trivial additive characters c over k.
+su½ciently large characteristic and for all Q l
+Then for every x satisfying 1 e x e p, we have
+                                      s
+                                      x      ÿ d                    d1         
+              KV Fp ; x  KV Fp         O p 2 log p s 1  x d pÿ 2 log pÿd :
+                                      p
+
+      The proof of this corollary is given in section 11. In sections 7 and 8 we give examples
+of V satisfying the hypotheses of this corollary. For example, we can take the hypersurface
+de®ned by the equation
+
+                                            x1a1 . . . xsas  1;
+
+with a1 ; . . . ; as positive, relatively prime integers. (See also [Ka-SE], section 5.5 for a direct
+approach of this particular case.) In [Ka-PES], Corollary 6.5, one ®nds other examples of
+smooth V such that A f 1, for which this corollary applies. These examples are built with
+weighted homogeneous polynomials. All these examples deal with hypersurfaces. Also in
+section 8, we give a less obvious example of a V satisfying the hypotheses of Corollary 1.5,
+but with codimension 2.
+                      Fouvry and Katz, Strati®cation theorem for exponential sums          119
+                                                                          ÿ        
+     Let V be as in Corollary 1.5. By Lang-Weil we know that KV Fp   p d 1  o 1 .
+Corollary 1.5 implies that (1.1) holds as soon as we have
+                                                       1
+                              x f max p 1ÿ2s ; p 1ÿ2 sÿd   log p  f p
+                                              d
+      1:3
+
+with f t tending to y as t tends to y. This improves (1.1) in a very interesting manner
+particularly for hypersurfaces (s ÿ d  1). For hypersurfaces, (1.3) reduces to
+                                             1    1
+      1:4                            x f p22s  log p  f p;
+                  3
+instead of x f p 4  log p  f p as given by (1.2). By the technique described in section
+11, we would not get a better result if all the sums S V ; h; p satis®ed the optimal
+                              d
+inequality S V ; h; p  O p 2  (h 3 0). To give another illustration, we consider the variety
+V de®ned by
+
+                                            x1 . . . xs  1:
+
+The sums S V ; h; p are then Kloosterman sums, for which purity is well known. However,
+for the moment, nothing better than (1.4) can be proved even in this case. In conclusion,
+Theorem 1.2 is strong enough to annihilate the e¨ect of large values of S V ; h; p in the
+particular case of hypersurfaces.
+
+      Acknowledgement. This work was done when both authors were at the Institute for
+Advanced Study (Princeton). They thank the Institute for its hospitality and for providing a
+marvelous venue for collaboration. They also thank CeÂcile Dartyge for pointing out an
+error in an earlier version of this paper, cf. the paragraph following (9.12).
+
+
+                             2. The general strati®cation theorem
+
+     We ®rst consider the following general situation. We are given
+
+     1) an a½ne scheme T  Spec R with R a ®nitely generated Z-algebra,
+
+     2) a T-scheme p: X ! T which is separated and of ®nite type,
+
+     3) a function f on X, i.e. a T-morphism f : X ! A1T ,
+
+                                                           l .
+     4) a prime number l, and an object K in Dcb X 1=l; Q
+
+     For each ®nite ®eld k of characteristic p 3 l, we can make the base change Z ! k
+and form the k-schemes
+
+                           X n k : X nZ k;           T n k : T nZ k;
+
+and the k-morphisms
+
+                      p n k: X n k ! T n k;           f n k: X n k ! A1T nk :
+120                    Fouvry and Katz, Strati®cation theorem for exponential sums
+
+                                  l  the restriction of K to X n k.
+We denote by K n k in Dcb X n k; Q
+
+                            -valued character c of k, we have the Artin-Schreier sheaf
+     For each non trivial Q l
+Lc f nk on X n k.
+
+       The exponential sums we have in mind depend on auxiliary data k; c; t:
+
+       k: a ®nite ®eld of characteristic not l,
+
+                          -valued additive character of k,
+       c, a non trivial Q l
+
+
+       t in T k  T n k k i.e. a ring homomorphism j: R ! k.
+
+Given such auxiliary data, we form the scheme Xt =k : f n kÿ1 t. On Xt , we have
+the pullback Kt of K, and the function ft . We denote by S X =T; f ; K; k; c; t the expo-
+nential sum
+                                                    P          ÿ     
+                  S X =T; f ; K; k; c; t                    c ft x Trace Frobk; X jKt :
+                                                  x A Xt k
+
+
+The cohomological genesis of this sum is this. On X n k, we have the object
+                                      l . We form the object
+ K n k nQ l Lc f nk in Dcb X n k; Q
+                                         ÿ                     
+                                R p n k! K n k nQl Lc f nk
+
+               l . We have
+in Dcb T n k; Q
+                                     ÿ                   ÿ                     
+      S X =T; f ; K; k; c; t  Trace Frobk; t jR p n k! K n k nQl Lc f nk
+                                P              ÿ                     ÿ                     
+                           :       ÿ1 i Trace Frobk; t jR i p n k! K n k nQ l Lc f nk :
+                                i
+
+
+      In order to state the ®rst result, we need to recall the notion of a strati®cation Y of a
+scheme Y. It is simply a set-theoretic partition of Y red into ®nitely many reduced, locally
+closed subschemes Yj of Y. Given any morphism r: Z ! Y , the strati®cation r  Y of Z
+is de®ned as frÿ1 Yj red g.
+
+      If Y is a Z-scheme of ®nite type (or more generally a ``good'' scheme, cf. [K-L], 1.0),
+we say that an object L in Dcb Y 1=l; Q   l  is adapted to Y if each of its cohomology
+            i
+sheaves H L is lisse on each Yj 1=l.PWe say that L is w-adapted to Y if it is adapted to Y
+and if, in addition, the function y 7!    ÿ1 i dim H i Ly is constant on each Yj 1=l. We
+                                              i
+denote by kLk the Z-valued function on the geometric points of Y de®ned by
+                                                       P
+                                     kLk y :                dim H i Ly :
+                                                        i
+
+
+We now have the general strati®cation theorem:
+                      Fouvry and Katz, Strati®cation theorem for exponential sums              121
+
+     Theorem 2.1. Hypotheses and notations as above, suppose given a strati®cation X
+of X. There exists an integer N f 1, an integer C f 1, a strati®cation T  fTi g of
+T1=N : Spec R1=N and a map
+
+                         p; f ! : f functions f : X ! Z; constant on Xg
+                        ! f functions f : T1=N ! Z; constant on Tg
+
+with the following properties:
+
+      1) Each strat Ti is smooth and surjective over Z1=N, and all the geometric ®bres of
+Ti =Z1=N are equidimensional of some common dimension di .
+
+      2) For any ¯at morphism j: S ! T of ®nite type, put XS : X T S, pS : XS ! S
+the structural morphism, fS : XS ! A1S the function deduced from f on X. For any prime l,
+any object K in Dcb XS 1=l; Q l  which is adapted to the inverse image strati®cation XS of
+XS , any ®nite ®eld k of characteristic p not dividing lN, any direct factor L of K n k in
+Dcb XS n k; Q l  and any choice of Q  -valued non-trivial additive character c of k, the object
+                                        l
+R pS n k! L nQl Lc fS n k  on S n k is adapted to the strati®cation
+
+                                 j  T n k : fjÿ1 Ti n kg:
+
+For any geometric point s of S n k, with image t  j s in T n k, we have
+
+                      kR pS n k! L nQ l Lc fS n k k s e sup kLk x;
+                                                                  x A Xt
+
+
+the sup taken over all geometric points
+                                      ÿ                 Xt . Moreover, if L is w-adapted to
+                                            x of the ®bre
+XS n k on XS n k, then R pS n k! L nQl Lc fS nk is w-adapted to T n k on T n k, and
+their locally constant w-functions are related by
+                        ÿ                                       ÿ    
+                       w R pS n k! L nQ l Lc fS nk   p; f ! w L :
+
+     Proof. Factor p: X ! T as f : X ! A1T followed by the projection pr2 of A1T onto
+T. Then R pS n k! L nQ l Lc fS nk  is
+                                        ÿ        ÿ            
+                             R pr2 n k! Lc nQ l R fS n k! L :
+
+One ®rst applies [K-L], 3.1.2 to the morphism f : X ! A1T and the strati®cation X. This
+                                                              1
+produces an integer N1 f 1 and a strati®cation A of AT1=N        1
+                                                                     such that Rf! K is adapted
+to AS . Then R fS n k! L is a direct factor R fS n k! K n k  RfS! K n k. So we are
+                                  1
+reduced to the case when X is AT1=N   1
+                                          , with strati®cation A, and function the identity. In
+this case, we ®rst apply [K-L], 3.4.1.1 and then [K-L], 4.3.2 to produce an integer N2 f 2
+and a strati®cation T1  fTi; 1 g of T1=N1 N2  which satis®es 2), in which each strat Ti; 1 is
+normal, connected, and ¯at over Z. We then apply [Ka-PES], 1.4.4 to produce an integer
+N3 f 1 and a strati®cation T of T1=N1 N2 N3  which re®nes T1 1=N3  and which satis®es
+1), with N : N1 N2 N3 . (Since T re®nes a strati®cation which already satis®es 2), T sat-
+is®es 2) automatically.) QED
+122                      Fouvry and Katz, Strati®cation theorem for exponential sums
+
+      Remark. In the application of this theorem in the next section, the only ¯at base
+changes j: S ! T occuring will be the inclusions of open sets T1=M H T for various
+integers M f 1.
+
+
+                       3. First application to estimates for exponential sums
+
+      We ®x an integer n f 1, and work in a½ne n-space AZn over Spec Z, with coor-
+dinates x1 ; . . . ; xn . We give ourselves a locally closed subscheme V of AZn , (i.e. V is a Zariski
+open set of a closed subscheme of AZn ), and an integer d such that all geometric ®bres of
+V =Z have dimension e d. We also give ourselves a function f on V, i.e. a morphism
+f : V ! AZ1 . We further give ourselves a strati®cation V of V, a prime number l, and an
+object K in Dcb V 1=l;     Ql  which is adapted to V1=l. We make two further assumptions:
+
+       1) The object K on V 1=l is ®brewise semiperverse: for each ®nite ®eld k of charac-
+teristic p 3 l, and each integer i, the cohomology sheaf H i K n k on Vn k satis®es
+                                              ÿ          
+                                      dim Supp H i K n k e ÿi:
+
+     2) The object K on V 1=l is ®brewise mixed of weight e d: for each ®nite ®eld k of
+characteristic p 3 l, and each integer i, the cohomology sheaf H i K n k on Vn k is
+mixed of weight e d  i.
+
+       We are interested in the following exponential sums, which depend on auxiliary data
+ k; c; h:
+
+      k: a ®nite ®eld of characteristic p 3 l,
+
+                         -valued additive character of k,
+      c: a non trivial Q l
+
+
+      h: an n-tuple h1 ; . . . ; hn  in k n .
+
+Given such data, we consider the exponential sum
+                                                                                                 
+                                           P                                          P
+             S V ; f ; K; k; c; h :              Trace Frobk; v jKc       f v        hi xi v :
+                                         v AV k                                      i
+
+
+Before going on, let us give the basic example we have in mind. We take for V the strati-
+®cation fV g. We take K :    Ql d, the constant sheaf on V, placed in degree ÿd. (This
+object K is adapted to V, because the only non vanishing H i K is Hÿd K, which is the
+constant sheaf on V. It is ®brewise semiperverse and mixed of weight e d, because the only
+non vanishing H i K n k is Hÿd K n k, which is the constant sheaf on Vn k. Thus
+Hÿd K n k has support Vn k, whose dimension is ed by hypothesis, and Hÿd K n k
+is trivially mixed of weight e ÿd  d  0.) In this case, the sum we are considering is
+                                                                         
+                                                  d P          P
+                 S V ; f ; Ql d; k; c; h : ÿ1     c f v    hi xi v :
+                                                          v AV k               i
+                      Fouvry and Katz, Strati®cation theorem for exponential sums               123
+
+          Theorem 3.1. Denote by H the n-dimensional a½ne space over Z with coordinates
+h1 ; . . . ; hn . Given data n; V H AZn ; f ; V as above, there exists an integer N f 1, an integer
+C f 1, a strati®cation H of H1=N and a map
+
+                         V ; f ! : f functions f : V ! Z; constant on Vg
+                        ! f functions f : H1=N ! Z; constant on Hg
+
+with the following properties:
+
+      1) Each strat Hi is smooth and surjective over Z1=N and all the geometric ®bres of
+Hi =Z1=N are equidimensional of some common dimension hi .
+
+      2) For any integer M f 1, any prime number l, any object K in Dcb V 1=Ml;        Ql 
+which is adapted to V1=Ml, ®brewise semiperverse and ®brewise mixed of weight e d,
+any ®nite ®eld k of characteristic p not dividing lNM, any direct factor L of K n k in
+Dcb Vn k; Q  l , any choice of Q
+                                 
+                  ÿ              l -valued nontrivial additive character c of k, the Fourier
+Transform FTc i! L n Lc f   is adapted
+                                    ÿ        to the strati®cation H n k. If L is w-adapted to
+the strati®cation Vn k, then FTc i! L n Lc f   is w-adapted to the strati®cation H n k,
+and their locally constant w-functions are related by
+                            ÿ    ÿ                          ÿ     
+                           w FTc i! L n Lc f    V ; f ! w L :
+
+For any point h in H k, we have the following estimate. Suppose that h lies in the strat Hi .
+Then after any ®eld embedding of Q l into C, we have the estimate
+
+    P                                 P                           p
+            Trace Frobk; v jLc f v    hi xi v e C    sup kLk v  Kk  dnÿhi :
+  v AV k                                  i                      v AV n k
+
+
+      Proof. We wish to apply Theorem 2.1 to produce N; C; H. In that theorem, take
+the input as follows: T is H, X is the product V  H : V Spec Z H, X is the strati®ca-
+tion V  H  fVi  Hg of V  H, p is the projection
+                                              P        of V  H onto H, and f is the
+function on V  H given by F v; h : f v  hi xi v. We must explain why the output
+                                                       i
+ N; C; H of that theorem works in the theorem being proven.
+
+      The key point is this. Fix data l; K; k; L; c; h as in the assertion 1). Then the sum
+
+                          P                                  P          
+                                   Trace Frobk; v jLc f v    hi xi v
+                         v AV k                                  i
+
+
+has a simple interpretation in terms of Fourier transform on Akn , as follows.
+
+     On Vn k, we have the object L, which is semiperverse and mixed of weight e d.
+Form the tensor product L n Lc f  : L nQ l Lc f  on Vn k. It is still semiperverse of
+weight e d (because Lc f  is lisse on Vn k, and pure of weight zero). Denote by
+
+                                               i: Vn k ! Akn
+
+the inclusion. Then i! L n Lc F   is semiperverse on Akn and mixed of weight e d. Its
+124                  Fouvry and Katz, Strati®cation theorem for exponential sums
+                         ÿ              
+Fourier Transform FTc i! L n Lc f   on H n k is semiperverse, and mixed of weight
+e n  d. (That FTc preserves semiperversity results from the equality FT!; c  FT; c and
+the t-left-exactness of Rg for an a½ne morphism g, cf. [SGA 4], XIV, 3.1.) The e¨ect of
+FTc  FT!; c on weights is immediate from Deligne's main theorem in Weil II [De-WII],
+3.3.1.) By the Lefschetz trace formula, we have
+                ÿ             ÿ               
+           Trace Frobk; h jFTc i! L n Lc f  
+                            P                                        P       
+                 ÿ1 n          Trace Frobk; x ji! L n Lc f   n Lc    hi xi
+                           x A An k                                                 i
+
+                             P                                      P       
+                  ÿ1 n             Trace Frobk; v jL n Lc f  n Lc    hi xi
+                           v AV k                                           i
+                             P            ÿ                              
+                  ÿ1 n             Trace Frobk; v jL n Lc f T hi xi 
+                           v AV k                                 i
+
+
+                             P                           P         
+                  ÿ1 n       Trace Frobk; v jLc f v    hi xi v :
+                           v AV k                                     i
+
+
+How is the Fourier transform relatedÿto the function     F on V  H and the projection p of
+V  H onto H? We can describe FTc i! L n Lc f   as follows. On V  H n k, we have
+the object pr1 L n Lc f  , and it is tautological that
+
+             ÿ                                                 P      
+          FTc i! L n Lc f    R p n k! pr1 L n Lc f   n Lc    hi xi n
+                                                                                 i
+                                             ÿ                
+                                   R p n k! pr1 L n Lc F  n:
+                                                  ÿ                  
+Now consider what we know about R p n k! pr1 L n Lc F  n on H n k. Its trace
+function at h in H k is the sum we are trying to estimate. It is adapted to the strati®cation
+H n k on H nÿk. (These    results come from Theorem 2.1, applicable because pr1 L is a
+                                     
+direct factor of pr1 K n k and pr1 K ÿon V n H1=Ml          is adapted to the strati®ca-
+tion V n H1=Ml.) Being equal to FTc i! L n Lc f   , it is semiperverse, and mixed of
+weight e d  n.
+                            a      a
+                                     ÿ           ÿ                 
+      Let us denote
+                  ÿ  by  H    : H   R  p n k!  pr1 L n L c F   n the a'th cohomology
+sheaf of R p n k! pr1 L n Lc F  n. We know that H a is mixed of weight e d  n  a,
+and that the dimension of its support is at most ÿa. What about the restriction of H a to a
+strat Hi n k of H n k? Well, this restriction is a lisse sheaf on Hi n k, and Hi n k is
+equidimensional and smooth of dimension hi . So if this restriction is non-zero, then H a has
+support of dimension f hi . But H a has its support of dimension at most ÿa. Therefore
+
+                                     H a jHi n k  0     if hi > ÿa;
+
+i.e.
+
+                                     H a jHi n k 3 0 ) a e ÿhi :
+
+On the other hand, H a is mixed of weight e d  n  a. So
+                      Fouvry and Katz, Strati®cation theorem for exponential sums               125
+
+                  H a jHi n k 3 0 ) H a                is mixed of weight e d  n ÿ hi :
+
+So for h in Hi k, we have
+
+                                P                                 P         
+                                        Trace Frobk; v jLc f v    hi xi v
+                            v AV k                                       i
+
+                                         P
+                                              ÿ1 a Trace Frobk; h jH a 
+                                          a
+                                          P
+                                                ÿ1 a Trace Frobk; h jH a 
+                                         aeÿhi
+                                          P
+                                 e              jTrace Frobk; h jH a j
+                                        aeÿhi
+
+
+(since H a is mixed of weight e d  n  a)
+
+                            P                          p dna
+                    e               dim H a h         Kk
+                        aeÿhi
+                        P                 p
+                    e           dim H a h  Kk  dnÿhi
+                            a
+                               ÿ                        p
+                     R p n k! pr1 L n Lc F  n h  Kk  dnÿhi
+                                          p
+                    eC    sup kLk v  Kk dnÿhi : QED
+                                    v AVn k
+
+
+       Corollary 3.2. Hypotheses and notations as in Theorem 3.1, suppose we are given also
+an invertible function g on V. For any ®nite ®eld k of characteristic p not dividing lN, any
+                       -valued multiplicative character w of k  , any choice of Q
+( possibly trivial ) Q                                                                -valued non-
+                       l                                                              l
+trivial additive character c of k, and any point h in H k, we have the following estimate.
+Suppose that h lies in the strat Hi . Then after any ®eld embedding of Q     l into C, we have the
+estimate
+
+                    P        ÿ            P              p
+                            w g v c f v    hi xi v e C  Kk  dnÿhi :
+                  v AV k                              i
+
+
+     Proof. We take for V the strati®cation fV g consisting of V alone. Denote by M the
+order of the character w. Over Z1=M, consider the M-th power endomorphism
+
+                                         M: Gm 1=M ! Gm 1=M:
+
+It is a ®nite etale morphism, so the sheaf M 
+                                               Ql on Gm 1=Ml is lisse of rank M, and pure
+of weight zero. Form the pullback sheaf
+
+                                                                   l
+                                              L M; g : g  M Q
+
+on V 1=Ml. It is lisse, i.e. adapted to V1=M, and punctually pure of weight zero. The
+126                  Fouvry and Katz, Strati®cation theorem for exponential sums
+
+®nite ®eld k has order Kk 1 1 mod M, because k  has a character w of order M. So after
+pullback to Vn k, we have a direct sum decomposition
+                                            L
+                         L M; g n k G               Lr g nk
+                                               characters r of k 
+                                                  of orderjM
+
+
+of L M; g n k as a direct sum of Kummer sheaves.
+
+      We take for K on V 1=Ml the semiperverse object L M; gd, which is mixed
+of weight e d and adapted to V. We take the shifted Kummer sheaf Lw g nk d as the
+direct factor L of K n k. Because Lw g nk is lisse of rank one on Vn k, the function kLk
+on Vn k is identically one. So the assertion is indeed a special case of the previous
+theorem. QED
+
+      Proof of Theorem 1.1. Theorem 1.1 concerns only ®elds k with su½ciently large
+prime cardinality (what happens when p is small is absorbed by increasing the value of C ).
+Given V H AZn as in Theorem 1.1, with dim VC  e d, we have dim V nZ Fp  e d for all p
+su½ciently large, say for all p > M. So we may apply Corollary 3.2 to V 1=M! H AZn , to
+get a strati®cation of H1=N by strats Hi . We de®ne the closed subschemes Xj as follows.
+We ®rst de®ne Xj as the closure in H1=N of the (®nite) union of the strats Hi , with
+dimension hi e n ÿ j. We then de®ne Xj to be the schematic closure of Xj in H. Note that
+the Xj form a decreasing sequence of closed subschemes of relative dimension e n ÿ j.
+If p > N and if h in An Fp  does not belong to Xj , it means that it belongs to some Hi of
+dimension hi f n ÿ j  1 (because the Hi form of a partition). Corollary 3.2 at once gives
+the claimed upper bound for the trigonometric sum. QED
+
+
+      4. Second application to estimates for exponential sums: the role of A-numbers
+
+      We continue to work in the general setting of the previous section. Thus we are given
+
+                 V locally closed in AZn ; d; f ; V; l; M f 1; K on V 1=lM:
+
+As in the previous section, we denote by H the n-dimensional a½ne space over Z with co-
+ordinates h1 ; . . . ; hn . The proof of Theorem 3.1, produced an integer N f 1, a constant C
+and a strati®cation H of H1=N, which will also be used in this section.
+
+      We now impose additional conditions on this data.
+                                                                                  n
+     4.0.1. There is an integer D f 1 such that V 1=D is a closed subscheme of AZ1=D
+and V 1=D=Z1=D is smooth and surjective of relative dimension d, with geometrically
+connected ®bres.
+
+     4.0.2. The object K on V 1=lM is adapted to V, is ®brewise semiperverse, and is
+®brewise mixed of weight e d.
+
+      4.0.3. K on V 1=lMD is ®brewise perverse, geometrically irreducible, and pure
+of weight d: for every ®nite ®eld k of characteristic not dividing lMD, K n k on Vn k
+is perverse, geometrically irreducible (i.e. remains irreducible on V n k), and pure of
+weight d.
+                     Fouvry and Katz, Strati®cation theorem for exponential sums            127
+
+      For each pair k; c consisting of a ®nite ®eld k of characteristic not dividing
+DMl, and a    Ql -valued non-trivial additive character c of k, we have on Vn k the geo-
+                                                                                    n
+metrically
+  ÿ                   perverse sheaf K n k n Lc f  . Its extension by zero to A n k,
+            irreducible
+i! K n k n Lc f  , is perverse,
+                              ÿ ÿ geometrically irreducible and pure of weight d. So
+its Fourier Transform FTc i! K n k n Lc f            on H n k is perverse, geometrically
+irreducible,
+     ÿ ÿ       and   pure  of
+                            weight    n  d.  So  on   a dense open set U of H n k,
+FTc i! K n k n Lc f  is of the form Fn, for F a lisse sheaf on U which is geo-
+metrically irreducible and pure of weight d.
+
+      In what follows, the question of whether or not the sheaf F is identically zero or not
+will be essential. With that in mind, we de®ne the A-number of the data V ; f ; K; k; c to
+be the rank of F, and denote it A V ; f ; K; k; c. In the special case when the function f is
+identically zero, we write simply A V ; K; k; c. If in addition K is Q  l d, we write simply
+A V ; k; c.
+
+      Lemma 4.1 (Uniformity Lemma for A-numbers). Hypotheses and notations as in
+4.0.1±3 above, as k; c varies over all pairs with char k prime to DMNl, the A-number
+A V ; f ; K; k; c has a constant value. Moreover, this constant value depends on the object K
+only through its w-function w K on V 1=DNMl.
+                                      ÿ ÿ               
+      Proof. For any such k; c, FTc i! K n k n Lc f  is w-adapted to the strati®-
+cation H n k. On the unique strat Hmax n k which has maximal dimension n,
+                                     ÿ ÿ                 
+                                  FTc i! K n k n Lc f 
+
+is Fn for a lisse sheaf, whose rank is the A-number
+                                                    ÿ ÿA V ; f ; K; k; c. 
+                                                                           The object K is, by
+hypothesis, w-adapted to V1=l. Therefore FTc i! K n k n Lc f  is w-adapted to
+H n k, and its w-function is related to that of K by
+                       ÿ   ÿ ÿ                            ÿ    
+                      w FTc i! K n k n Lc f       V ; f ! w K :
+                                         ÿ     ÿ ÿ             
+On the strat Hmax n k the function w FTÿc i! ÿKÿn k n Lc f         is constant, with value
+                                                                     
+ ÿ1 n A V ; f ; K; k; c. But the value of w FTc i! K n k n Lc f      at any point
+                                                                                  ÿ ofany
+strat of H1=DMNl is the constant value of the H-adapted function V ; f ! w K on
+that strat. QED
+
+    Lemma 4.2. Hypotheses and notations as in 4.0.1±3 above, for a given pair k; c, the
+A-number A V ; f ; K; k; c is the common value of the Euler characteristic
+
+                                  wc V n k; K n Lc f T hi xi  
+                                                            i
+
+
+for h in a dense open set of H n k.
+
+      Proof. At every h in H n k, ÿ1 n wc V n k; K n Lc f T hi xi   is the local Euler
+                    ÿ ÿ                                      i
+characteristic
+           ÿ ÿof FTc i! K n k
+                             n Lc f  . So for h in any dense open set U of H n k on
+which FTc i! K n k n Lc f  is Fn for a lisse sheaf F, wc V n k; K n Lc f T hi xi   is
+the rank of F. QED                                                                 i
+128                   Fouvry and Katz, Strati®cation theorem for exponential sums
+
+      Lemma 4.3. Hypotheses and notations as in 4.0.1±3 above, for a given pair k; c, the
+following conditions are equivalent:
+
+      1) A V ; f ; K; k; c  0.
+
+      2) There exists a dense open set U1 in H n k such that, for any ®nite extension E of k
+and any E-valued point h in U1 E, denoting by cE the additive character c  TraceE=k of E,
+the exponential sum
+
+                         P                                   P         
+                                  Trace FrobE; v jLcE f v    hi xi v
+                       v AV E                                           i
+
+
+vanishes.
+
+                         dense open set U1 in H n k on which the trace function of
+   ÿ 3)ÿ There exists a 
+FTc i! K n k n Lc f  vanishes identically.
+
+      Proof. Assertions 2) and 3) are trivially equivalent, since the sum in 2) is the value at
+h in U1 E of the trace function. To show 1) ) 3), we argue as follows. If
+
+                                           A V ; f ; K; k; c  0;
+                                                             ÿ ÿ                 
+then there is a dense open set in U in H n k on which FTc i! K n k n Lc f  vanishes.
+If this is the case, then
+                       ÿ ÿits trace function 
+                                              vanishes on U as well. Conversely, suppose the
+trace function of FTc i! K n k n Lc f  vanishes identically on some dense open set U1
+of H n k. We know there is a dense open set U in H n k on which
+                                          ÿ ÿ                 
+                                       FTc i! K n k n Lc f 
+
+is Fn for F a single lisse sheaf. So on some dense open set U X U1 , the trace function of
+F vanishes identically. By Chebotarev, F as representation of p1 U X U1 ; base point) has
+identically vanishing trace function. But its trace at the identity is the rank of F, which is in
+turn the A-number A v; f ; K; k; c. QED
+
+      We will prove
+
+      Theorem 4.4. Hypotheses and notations as in 4.0.1±3 above, suppose in addition that
+A V ; f ; K; k; c 3 0 whenever the characteristic of the ®nite ®eld k does not divide DMNl.
+Then for any ®nite ®eld k of characteristic p not dividing lMN, any       Q
+                                                                            l -valued nontrivial
+additive character c of k, and any point h in H k, we have the following estimate. Suppose
+                                                                l into C, we have the estimate
+that h lies in the strat Hi . Then after any ®eld embedding of Q
+                            P                              P          
+                                 Trace Frobk; v jKc f v     hi xi v
+                        v AV k                                      i
+                                                 p
+                      eC              sup kKk v  Kk sup d; dnÿ1ÿhi  :
+                                      v AVn k
+
+                                                 ÿ         
+      Proof. The key point is that the object FTc i! K n k on H n k is on the one
+                      Fouvry and Katz, Strati®cation theorem for exponential sums             129
+
+hand, perverse, geometrically irreducible, pure of weight n  d, and on the other hand
+it isÿ adapted
+          ÿ ÿ to the strati®cation
+                                 H n k. Denote by H a its a'th cohomology sheaf
+   a
+H FTc i! K n k n Lc f  . Just as is the proof of the general estimate, we have
+
+                                     H a jHi n k 3 0 ) a e ÿhi :
+
+What we must show here is the extra vanishing
+
+                                Hÿhi jHi n k  0      whenever hi < n:
+
+Because Hÿhi jHi n k is lisse, and Hi n k is equidimensional of dimension hi , this vanishing
+in turn results from the following statement:
+
+                                for a < n;     dim Supp Hÿa e a ÿ 1:
+
+This support condition is satis®ed by the cohomology sheaves of any geometrically irre-
+ducible perverse object L on any geometrically connected smooth Y =k of dimension n (here
+An n k) such that L is generically non-zero. The point is that such an L has the following
+simple structure, cf. [BBD], 4.3.1. There is a dense a½ne open set U in Y, with inclusion
+map j: U ! Y , such that LjU is Fn, for a lisse, geometrically irreducible lisse sheaf F on
+U, and L is the middle extension j ! Fn. For any lisse sheaf F on a dense a½ne open U
+in Y, its middle extension j ! Fn satis®es the support condition
+                                                     ÿ          
+                        for a < n;       dim Supp Hÿa j ! Fn e a ÿ 1;
+
+cf. [BBD], 2.1.11. QED
+
+      Corollary 4.5. Hypotheses and notations as in 4.0.1±3 above, suppose in addition that
+A V ; f ; k; c 3 0 whenever the characteristic of the ®eld k does not divide DMNl. Then for
+any ®nite ®eld k of characteristic p not dividing lNM, any Q        -valued non-trivial additive
+                                                                    l
+character c of k, and any point h in H k, we have the following estimate. Suppose that h lies
+in the strat Hi . Then after any ®eld embedding of Q  l into C, we have the estimate
+
+                    P               P              p
+                            c f v    hi xi v e C  Kk sup d; dnÿ1ÿhi  :
+                  v AV k                 i
+
+
+      Proof. Take K to be 
+                          Ql d on V in Theorem 4.4. QED
+
+      Corollary 4.6. Hypotheses and notations as in 4.0.1±3 above, suppose in addition that
+A V ; k; c 3 0 whenever the characteristic of the ®eld k does not divide DMNl. Then for any
+®nite ®eld k of characteristic p not dividing lNM, any Q     -valued non-trivial additive char-
+                                                             l
+acter c of k, and any point h in H k, we have following estimate. Suppose that h lies in the
+strat Hi . Then after any ®eld embedding of Q l into C, we have the estimate
+
+                        P           P                p
+                                c        hi xi v e C  Kk sup d; dnÿ1ÿhi  :
+                      v AV k        i
+
+
+      Proof. Take f 1 0 in Corollary 4.5. QED
+130                  Fouvry and Katz, Strati®cation theorem for exponential sums
+
+     Remarks. 1) The strats Hi n k form a partition of An n k into a ®nite disjoint union
+of smooth locally closed equidimensional subschemes, so there is precisely one strat whose
+dimension hi is n. On this strat, there is no improvement in the estimate we get here over the
+general estimate obtained
+                  p  in Theorem 3.1. But on every other strat, we have an improve-
+ment by a factor Kk over the general estimate.
+
+      2) What happens in the theorem if, for a given k; c suchÿ ÿ that char(k) does  not
+divide DMNl, we have A V ; f ; K; k; c  0, i.e. when FTc !    i  K  n k n  L c f    has
+dimension of support r < n? In this case, there is a geometrically irreducible closed sub-
+scheme Z in H n k of dimension
+                         ÿ ÿ     r, and a dense
+                                              a½ne open set U in Z which is smooth
+over k and such that FTc i! K n k n Lc f  jU is of the form Fr for a geometrically
+irreducible 
+            Ql -sheaf F on U which is pure of weight ÿ ÿd  n ÿ r. Moreover,
+                                                                          denoting by
+ j: U ! Z and i: Z ! H n k the inclusions, FTc i! K n k n Lc f            is i j! Fr.
+Therefore we have
+
+                                        Hÿa  0    for a > r;
+                                         dim Supp Hÿr  r;
+
+                            dim Supp H kÿr e r ÿ 1 ÿ k          for k f 1:
+                       ÿ ÿ                   
+But nonetheless, FTc i! K n k n Lc f  is adapted to the strati®cation H n k, i.e. each
+H a jHi n k is lisse. So for h in a strat Hi n k of dimension hi > r, we have
+
+                 P                                 P         
+                         Trace Frobk; v jKc f v    hi xi v  0           if hi > r:
+               v AV k                                  i
+
+
+For h in a strat Hi n k of dimension hi e r, we have the estimate
+
+                     P                                P         
+                            Trace Frobk; v jKc f v    hi xi v
+                  v AV k                                   i
+                                               p
+                         eC         sup kKk v  Kksup dnÿr; dnÿ1ÿhi  :
+                                    v AVn k
+
+Thus on strats of dimension r, we have the general estimate
+                                                       pof Theorem 3.1, and on strats
+of dimension < r we have an improvement by a factor Kk over the general estimate.
+
+     For example, suppose V is a linear subspace of An of dimension d > 0 and codi-
+                                 
+mension r : n ÿ d. Suppose K is Q                                    ?
+                                 ÿ lÿd on V, and f 10. Denote by V the r-dimensional
+annihilator of V in H. Then FTc i! K n k n Lc f  is the constant sheaf Q     l r r ÿ n
+     ?
+on V , extended by 0.
+
+       Proof of Theorem 1.2. Because VC is smooth and irreducible of dimension d,
+there exists an integer D1 f 2 such that V 1=D1 , is smooth over Z1=DD1 , with geomet-
+rically connected ®bres of dimension d. We ®rst prove part 1) of Theorem 1.2 for
+              n
+V 1=D1  H AZ1=DD 1
+                       , deducing it from Corollary 4.6 in exactly the same way we deduced
+                                                                                    n
+Theorem 1.1 from Corollary 3.2, with the same de®nition of the closed sets Xj H AZ1=DD 1
+                                                                                           .
+
+      To prove 2), we argue as follows.
+                      Fouvry and Katz, Strati®cation theorem for exponential sums               131
+
+     For each j  1; . . . ; n; pick generators Fa; j X  for the ideals Ij de®ning Xj in
+ n
+AZ1=DD 1
+           . Write each Fa; j X  as the sum of its homogeneous part
+                                                      P
+                                        Fa; j X          Fa; j; k X ;
+                                                      k
+
+
+with Fa; j; k X  a homogeneous form of degree k.
+
+     Let K be an upper bound for the integers k, such that some Fa; j; k is non-zero. Denote
+by D2 the non-zero integer de®ned by
+
+                                               Q      ÿ                  
+                                 D2 :                    D1  a ÿ D1  b :
+                                           0ea<beK
+
+
+Denote by
+
+                                         Xjproj H Xj H AZ1=DD
+                                                        n
+                                                               1
+
+
+
+the closed subscheme of Xj de®ned by the vanishing of all the homogeneous components
+Fa; j; k of all the chosen generators Fa; j of the ideal Ij . Then extend the Xjproj to homogeneous
+closed subschemes of AZ1=D by taking schematic closure. It su½ces to show that for
+p a DD1 D2 , c any non trivial additive character of Fp , and any h B Xjproj Fp , we have
+
+                            P                                                 d djÿ2
+       j                            c h1 x1      hn xn  e C psup 2; 2  :
+                          x AV Fp 
+
+
+(Then we increase C to absorb what happens at the ®nitely many primes p a D which divide
+D1 D2 .)
+
+       To see this, we argue as follows. We know that j holds for h B Xj Fp , for any non-
+trivial c. So for any ®xed a A F  p , j holds if ah A Xj Fp  for any non-trivial c. (The point
+is that h 7! ah has the same e¨ect in the sum as c x 7! c ax.) Take a to be successively
+ D1  a for a  0; . . . ; K. Then j holds for h A An Fp  (and all non-trivial c) if there exists
+some integer a in 0; K such that D1  a h B Xj Fp . In other words, j holds for h A An Fp 
+unless h is an Fp -valued zero of all the polynomials
+                                                   ÿ        
+                                              Fa; j D1  a X ;
+
+all a, all a  0; . . . ; K. Write these in terms of homogeneous components
+
+                                    ÿ         P
+                               Fa; j D1  a X   D1  ak Fa; j; k X :
+                                                      k
+
+
+Over Z1=DD1 D2 , the linear span of these is precisely the same as the linear span of
+the homogeneous components Fa; j; k ; all a, all k, thanks to the Vandermonde determi-
+nant. And these homogeneous components de®ne Xjproj . Thus j holds for h B Xjproj , as
+required. QED
+132                   Fouvry and Katz, Strati®cation theorem for exponential sums
+
+      5. Lower bounds for A-numbers of level sets of homogeneous forms, via B-numbers
+
+      In the previous section, we worked over Z and our emphasis was on uniformity
+results for exponential sums over Fp as p varied. We needed to see if the A-number
+A V ; f ; K; k; c was non-zero for all k; c with
+                                              ÿ ÿ char(k) su½ciently
+                                                                  large. For a given
+ k; c, this A-number, the generic rank of FTc i! K n k n Lc f  is an invariant of the
+data Vn k H An n k; f n k; K n k; c.
+
+      In this section, we work over a ®nite ®eld k, and pick a prime l invertible in k. We ®x
+an integer n f 1, and a non-zero homogeneous form over k in n variables,
+
+                                 F x1 ; . . . ; xn  in kx1 ; . . . ; xn :
+
+We make the following two hypotheses:
+
+       1) The degree of F, deg F , is invertible in k.
+
+        2) For any integer r f 2 which divides deg F , F is not an r'th power in the ring
+kx1 ; . . . ; xn .
+
+       It results from these two hypotheses that for any b in k  , the hypersurface
+
+                                     Vb ;    F b        in An n k
+
+of equation F  b over k is smooth of dimension n ÿ 1 and geometrically irreducible, cf.
+[Ka-PES], proof of 6.5.
+
+      Denote by ib : Vb ! An n k the inclusion. We are interested in the A-number of Vb .
+We take K the perverse sheaf Q  l n ÿ 1 on Vb , f the function 0, c any nontrivial Q  -valued
+                                           ÿ                                            l
+additive character of k, and look at FTc ib!  Ql n ÿ 1
+                                                         ÿ on the dual a½ne space H n k. We
+know that on some dense open set U in H n k, FTc ib!        Ql n ÿ 1 is of the form Fb n for
+                                        
+Fb a lisse, geometrically irreducible Ql -sheaf on U which is pure of weight n ÿ 1, and we
+de®ne
+
+                                    A Vb  : the rank of Fb :
+
+     Lemma 5.1. Hypotheses and notations as above, for any b in k  , we have
+A Vb   A V1 .
+
+       Proof. Pick a deg F 'th root of b, say adeg F   b, with a in k  . Because F is
+homogeneous,   ÿ the homothety    x 7! ax de®nes an isomorphism from V1 to Vb . So the
+object  FT      i  
+                   Q  n
+                     l  ÿ 1  on  H n k is the pullback by the homothety       h 7! ah  of
+     ÿ      c b!                                                          ÿ
+FTc ib! Q  l n ÿ 1 . Pick a dense open set U1 in H n k on which FTc ib! Q  l ÿ 1 is
+                                                                                 n
+                                                         ÿ              
+                                               ÿ1            
+F1 n for a lisse F1 . Then on Ub : h 7! ah U1 ; FTc ib! Ql n ÿ 1 is Fb n, with Fb
+the lisse sheaf h 7! ah  F. QED
+
+        Given any hypersurface in An n k, with inclusion iX , Q       l n ÿ 1 on X is perverse
+[Ka-PESII],
+    ÿ            Lemma
+                         2.1, and mixed of weight eÿ n ÿ 1.   Its extension
+                                                                              by zero to An n k,
+iX ! Q l n ÿ 1 , is perverse on An n k. So FTc iX ! Q  l n ÿ 1 is perverse on the dual
+                      Fouvry and Katz, Strati®cation theorem for exponential sums             133
+
+a½neÿ space H n k.   Hence there is some dense open set UX in H n k on which
+FTc iX ! 
+         Ql n ÿ 1 is of the form FX n ÿ 1, for some lisse 
+                                                               Ql -sheaf FX on UX which is
+mixed of weight e n ÿ 1. We de®ne
+
+                                       B X  : the rank of FX :
+
+If X is smooth over k, and geometrically irreducible, then its B-number B X  is equal to its
+A-number A X . In [Ka-PES] and [PESII], we de®ned the A-number of X to be the rank of
+the pure of weight n ÿ 1 quotient of FX . With this de®nition of A X  for a possibly sin-
+gular hypersurface X we have an a priori inequality
+
+                                            B X  f A X :
+
+In what follows, we will apply these considerations to X : V0 ; the hypersurface of equa-
+tion F  0.
+
+     Theorem 5.2. Hypotheses and notations as above, for any b in k we have the
+inequality
+
+                                           A Vb  f B V0 :
+
+      Proof. Replacing F by b ÿ1 F , we reduce to proving
+
+                                           A V1  f B V0 :
+
+Given b in k, we say that a point h in H k computes     ÿ the A-number      of Vb if there is an
+open neighborhood of h in H n k over which FTc ib!         Ql n ÿ 1 is of the form (a lisse
+sheaf ) n. In particular,
+                  ÿ          if h computes
+                                          the A-number of Vb , then the stalks of the cohomolgy
+sheaves of FTc ib! Q    l n ÿ 1 at h vanish for a 3 ÿn:
+                            ÿ   ÿ                  
+                                       l n ÿ 1
+                         H a FTc iX ! Q                0         for a 3 ÿn:
+                                                     h
+
+
+In more down to earth terms, we have
+
+                         Hcb Vb nk b k; Lc T hi xi    0     for b 3 n ÿ 1:
+                                                    i
+
+
+
+It is proven in [Ka-PESII], 8.2 that given any ®nite set S of b's in k, we can pick an h 3 0
+in H k which computes the A-number of Vb for all b in S, and which also computes the
+A-number of Vb for all but ®nitely many values of b in k. We take for S the set f0; 1g, and
+®x a choice of h in H k which computes the A-numbers of V0 , V1 and Vb for all but ®nitely
+many b in k, say for all b outside the ®nite set T.
+
+     Now view the homogeneous form F as a map from An n k to A1 n k, and endow the
+source with the lisse sheaf Lc T hi xi  . Consider the Leray spectral sequence
+                                   i
+
+
+                E2a; b : Hca A1 n k; R b F! Lc T hi xi   ) Hcab An n k; Lc T hi xi  :
+                                                i                                 i
+
+
+
+It is proven in [Ka-PESII], 8.3 and 8.4 that
+134                   Fouvry and Katz, Strati®cation theorem for exponential sums
+
+      1) the sheaves R b F! Lc T hi xi  vanish for b 3 n ÿ 1,
+                                 i
+
+
+      2) the sheaf R : R nÿ1 F! Lc T hi xi  has Hc A1 n k; R  0,
+                                         i
+
+
+     3) for j: U ! A the inclusion of any dense open set in A1 on which
+                         1
+
+R : R nÿ1 F! Lc T hi xi  is lisse, we have R G j j  R.
+                  i
+
+
+      We claim that R : R nÿ1 F! Lc T hi xi  is lisse at the point b  1. To see this, we argue
+                                             i
+as follows. According to 3) above, R G j j  R; so the points b at which R is lisse are
+precisely the points at which the stalk Rb has maximum dimension. There are ®nitely many
+points in A1 k at which the stalk has less than the maximum dimension. So to show
+that dim R1 is the maximum, it su½ces to show that for all but ®nitely many b's in k  ,
+dim Rb  dim R1 .
+
+     For this, we use the homogeneity of F. Let us denote by d the degree of F. For t in k  ,
+the homothety x 7! tx of An induces an isomorphism
+
+                                                 V1 G Vt d :
+
+And this same isomorphism carries Lc t P hi xi  on V1 to Lc T hi xi  on Vt d . So we have an
+isomorphism                            i                     i
+
+
+
+
+                              Rt d : Hcnÿ1 Vt d nk b d  k; Lc T hi xi  
+                                                                     i
+
+
+                                      G Hcnÿ1 V1 nk k; Lc t T hi xi  :
+                                                                 i
+
+
+
+We claim that the point th in H k computes the A-number of V1 for all but ®nitely many t
+in k. (If this is true, then
+
+                                             dim Rt d  A V1 
+
+for all but ®nitely many t in k, and consequently
+                                         ÿ         R is lisse
+                                                          at t  1.) Pick an open neigh-
+borhood U of h in H n k on which FTc i1! Q    l n ÿ 1 is of the form (a lisse sheaf ) n.
+Consider the map
+
+                                     r: A1 n k ! H n k;        t 7! th:
+
+Then rÿ1 U is an open set in A1 n k, and it is nonempty because it contains the point
+t  1. Therefore rÿ1 U is a dense open set of A1 n k, so the complement of a ®nite set.
+For any t in rÿ1 U k, th computes the A-number of V1 .
+
+      Now that we know that R is lisse at t  1, we have
+
+                                      A V1   generic rank of R:
+
+On the other hand, h computes the A-number of V0 , so we have
+                     Fouvry and Katz, Strati®cation theorem for exponential sums            135
+
+                           B V0   dim Hcnÿ1 V0 nk k; Lc T hi xi  :
+                                                                  i
+
+
+
+But
+
+                   Hcnÿ1 V0 nk k; Lc t T hi xi    R0  j  j  R0 : R I 0 :
+                                           i
+
+
+
+Thus A V1  is the generic rank of R, and B V0  is the dimension of the inertial invariants at
+t  0 in R. So we have asserted inequality A V1  f B V0 . QED
+
+       Remark. In [Ka-PESII], 7.1, (1), we related the A-number of V1 to the A-number of
+V0 . In the application of Theorem 5.2 in the next section (Theorem 6.2) we cannot make do
+with [Ka-PESII], 7.1, (1) because V0 has A-number zero in that application.
+
+
+                                 6. Calculation of a B-number
+
+       In this section, we take for F the homogeneous form of degree four in four variables
+a; b; c; d
+
+      6:1        D3 a; b; c; d : b 2 c 2  18abcd ÿ 27a 2 d 2 ÿ 4b 3 d ÿ 4c 3 a;
+
+the discriminant of the binary cubic form aX 3  bX 2 Y  cXY 2  dY 3 .
+
+       Over any ®eld k in which 2 is invertible, D3 is not a square in the polynomial ring
+ka; b; c; d. Indeed, if we put b  d  0, the resulting form D3 a; 0; c; 0  ÿ4c 3 a is not a
+square. So for any b in k , the equation D3  b de®nes a smooth, geometrically irreducible
+hypersurface
+
+                                    Vb : D3  b     in A4 n k:
+
+    Theorem 6.1. Over any ®nite ®eld k of odd characteristic, B V0   1; and for any b in
+ 
+k we have A Vb  f 2.
+
+      Proof. We will show that on a dense open set U0 of H n k, the lisse sheaf F0 whose
+rank is the B-number B V0  is Q  l ÿ1. Once we have this result, then in the notation of the
+proof of Theorem 5.2, we have R I 0  Q   l ÿ1, which is pure of weight 2. But R is, on any
+dense open set where it is lisse, pure of weight 3. By [De-WII], 1.8.4, we may infer that the
+local monodromy of R at 0 contains a unipotent Jordan block of dimension two. Therefore
+R has generic rank f 2, which means precisely that A V1  f 2. Replacing D3 by b ÿ1 D3 and
+repeating the argument, we get A Vb  f 2 for any b in k  .
+                                                                         ÿ           
+     Consider now any dense open set U0 in H n k over which FT i0! Q          l 3 is of the
+                                                                      l ÿ1 on U0 , it su½ces
+form F0 4 for a lisse sheaf F0 on U0 . In order to show that F0 is Q
+to show that for some dense open set U H U0 , we have F0 jU G Q          l ÿ1 ( just because
+                                                       
+p1 U maps onto p1 U0 ). To show that F0 jU G Ql ÿ1, it su½ces, by Chebotarev, to
+show that for all ®nite extensions E=k, and for all E-valued points h in U E, we have
+Trace FrobE; h jF0   KE. At any point h in U E, we have
+136                          Fouvry and Katz, Strati®cation theorem for exponential sums
+
+
+                                       Hca V0 nk k; Lc t T hi xi    0                 for a 3 3;
+                                                                       i
+
+
+                                           Hc3 V0 nk k; Lc t T hi xi    F0 h :
+                                                                               i
+
+
+Thus we ®nd
+                                         ÿ                                  
+             Trace FrobE; h jF0   Trace FrobE jHc3 V0 nk k; Lc T hi xi  
+                                                                                                   i
+
+                                                     P             a  ÿ                                    
+                                           ÿ                ÿ1 Trace FrobE jHca V0 nk k; Lc t T hi xi  
+                                                      a                                                            i
+
+                                                     P             P              
+                                                             cE               hi xi ;
+                                                x AV0 E                   i
+
+
+for cE the nontrivial additive character c  TraceE=k of E.
+
+     So what we must show is that there exists a dense open set U in H n k such that for
+any ®nite extension E=k, and any h in U E, we have
+                               P        P       
+                                     cE     hi xi  ÿKE:
+                                                x AV0 E               i
+
+
+Because V0 is de®ned by the vanishing of a homogeneous form, V0 E is stable by E  -
+homotheties of the ambient A4 E. So the sum is independent of the nontrivial character:
+we have
+
+      P           P           
+             cE        hi xi
+  x AV0 E         i
+
+                       P                P               
+          1                      cE            hi xi
+                  x30 A V0 E               i
+
+                                   P            P               P       
+           1  1=KE                                       cE t  hi xi
+                                   t A E x30 A V0 E                   i
+
+                                           P              P    P       
+           1  1=KE                                ÿ1    cE t  hi xi
+                                   x30 A V0 E                  tAE                 i
+                                          P                                                  P
+           1 ÿ 1=KE                                1  KE 1=KE                                   1
+                                       x30 A V0 E                                       x30 A V0 E
+                                                                                          T hi xi 0
+                                                                                           i
+
+                        ÿ                              P            
+           1 ÿ 1=KE   KV0 E ÿ 1  KE=KE   K V0 E X    hi xi  0 ÿ 1 :
+                                                                                                               i
+
+                                                      proj  3
+                                P projective variety V0 in P de®ned by the vanishing of
+Let us rewrite this in terms of the
+D3 , and its hyperplane section     hi xi  0.
+                                                 i
+          P            P                                           P          
+                  cE           hi xi  1 ÿ KV0proj E  KEK V0proj X    hi xi  0   E:
+       x AV0 E          i                                                                                 i
+                     Fouvry and Katz, Strati®cation theorem for exponential sums           137
+
+So what we must show is that
+                                     P          
+               KE  1  KEK V0proj X    hi xi  0   E  KV0proj E;
+                                                  i
+
+for h in some dense open set.
+
+      Now a point of V0proj E is a nonzero binary cubic form (up to homothety) with at
+least a double root. Such a double root must be E-rational, so the form in question can be
+written
+
+                                      aX  bY  2 gX  dY ;
+
+for an ordered pair of nonzero linear forms aX  bY  and gX  dY  over E. This
+ordered pair of forms is unique up to the action of E   E  de®ned by having s; t in
+E   E  act as
+
+                  aX  bY ;      gX  dY 7! t aX  bY ;         stÿ2 gX  dY :
+
+So we may view this ordered pair as an E-valued point in P 1  P 1 . Thus we have
+
+                                     KV0proj E  KE  1 2 :
+                                                     P              
+What happens if we look at the intersection V0proj X        hi xi  0 in terms of this identi®-
+cation of V0proj with P 1  P 1 ? If we multiply out    i
+
+
+
+     aX  bY  2 gX  dY   a 2 gX 3  2abg  a 2 dX 2 Y  2abd  b 2 gXY 2  b 2 dY 3 ;
+                         P                    ÿ           
+then a point of V0proj X    hi xi  0 is a point a; b g; d in P 1  P 1 which also satis®es
+                           i
+
+                 h1 a g  h2 2abg  a 2 d  h3 2abd  b 2 g  h4 b 2 d  0:
+                     2
+
+
+For ®xed h, this is the vanishing of a bihomogeneous form of bidegree 2; 1 in P 1  P 1 ,
+namely
+
+                   g h1 a 2  2h2 ab  h3 b 2   d h2 a 2  2h3 ab  h4 b 2   0:
+
+Unless the two quadrics
+
+                     h1 a 2  2h2 ab  h3 b 2   and h2 a 2  2h3 ab  h4 b 2
+
+have a common zero in P 1 , we can solve uniquely for g; d, in which case projecting onto
+ a; b is a bijection
+                                     P          
+                             V0proj X    hi xi  0   E G P 1 E:
+                                          i
+
+
+So for h such that the two binary quadrics
+
+                     h1 a 2  2h2 ab  h3 b 2   and h2 a 2  2h3 ab  h4 b 2
+138                    Fouvry and Katz, Strati®cation theorem for exponential sums
+
+have no common zero in P 1 , we ®nd
+                             P          
+       KE  1  KEK V0proj X    hi xi  0   E  KE  1  KE KE  1
+                                              i
+
+                                                                        KE  1 2  KV0proj E
+
+as required. It remains to see that for general h, the two binary quadrics
+
+                        h1 a 2  2h2 ab  h3 b 2      and h2 a 2  2h3 ab  h4 b 2
+
+have no common zero in P 1 . This condition de®nes an open set in H n k. The particular
+point h : 1; 0; 0; 1 shows it is a non-empty and hence dense open set. QED
+
+     Remarks. This computation is already in [Be-Fo], 3.a.1±2, pp. 235±236, where we
+®nd a precise description of the closed set where the two quadrics have a common zero: it is
+de®ned by D3 h1 ; 3h2 ; 3h3 ; h4   0.
+
+
+                7. Nonvanishing of B-numbers by congruence considerations
+
+      In this section, we work over a ®nite ®eld k and pick a prime l invertible in k. We ®x
+an integer n f 1 and a non-zero homogeneous form over k in n variables,
+
+                                    F x1 ; . . . ; xn  A kx1 ; . . . ; xn ;
+
+about which we assume, for the moment, nothing.
+
+     We denote by X H An n k the a½ne hypersurface of equation F  0, and by X proj
+the projective hypersurface in P nÿ1 n k de®ned by F  0. We are interested in criteria
+which will guarantee that B X  is non-zero.
+
+                                                                   -valued character c of
+     Recall that for any ®nite extension E of k, any non-trivial Q l
+E, and any point h in H E
+
+             P         P                ÿ                   
+                      c   hi xi  1  KEK X proj X h  x  0 ÿ KX proj E:
+           x A X E       i
+
+
+On the other hand, we know that there is a dense open set U in H n k, and a lisse sheaf FX
+on U, such that for h in U E, we have
+
+                                                                    P        P      
+                       Trace FrobE; h jFX   ÿ1 nÿ1                       c   hi xi :
+                                                                 x A X E        i
+
+
+The rank of FX is the B-number B X . If B X   0, then FX is the zero sheaf, and its trace
+function vanishes. Thus we ®nd
+
+     Lemma 7.1. If B X   0, then there exists a dense open set U in H n k, such that for
+any ®nite extension E=k, and any point h in U E, we have
+                     Fouvry and Katz, Strati®cation theorem for exponential sums          139
+                                          ÿ                   
+                     KX proj E  1  KEK X proj X h  x  0 E:
+
+     Corollary 7.2. If B X   0, then for every ®nite extension E=k of su½ciently high
+degree, we have the congruence
+
+                                   KX proj E 1 1 mod KE:
+
+     Proof. The set U E is nonempty for KE su½ciently large.
+
+     Corollary 7.3. If B X   0, then for every ®nite extension E=k, we have the
+congruence
+
+                                 KX proj E 1 1 mod char k:
+
+      Proof. Let us denote by p the characteristic of k. Given a ®nite extension E=k, and
+an integer r f 1, denote by Ep r =E the extension of E of degree p r . Then for any separated
+E-scheme V =E of ®nite type, we have
+
+                                  KV Ep r  1 KV E mod p:
+
+Indeed, when Gal Ep r =E G Z=p r Z acts on V E1 , each orbit has size 1 or size p a for some
+a f 1. The orbits of size 1 are exactly the points of V E. But for r g 0, the previous
+corollary gives
+
+                             KX proj Ep r  1 1 mod KEp r :      QED
+
+     Thus we ®nd the following criterion:
+
+     Theorem 7.4. Notations as above, if for some ®nite extension E=k we have
+
+                                 KX proj E 1
+                                            j 1 mod char k
+
+then B X  3 0.
+
+     We can be slightly more precise. The trace function of the sheaf FX takes values in Z.
+For any ®nite extension E=k, and any point h in U E, the characteristic polynomial
+
+                                    det 1 ÿ T FrobE; h jFX 
+
+has coe½cients in Z. Thus it makes sense to speak of the reduction mod p of
+det 1 ÿ T FrobE; h jFX  as an element of 1  TFp T.
+
+      Fix h in U E. Denote by Er =E the extension of degree r. For each r f 1, we have the
+identity
+               ÿ                                           ÿ                   
+    ÿ1 n Trace FrobE; h  r jFX  KX proj Er  ÿ 1 ÿ KEr K X proj X h  x  0 Er :
+
+So we get an identity of power series in 1  TZT:
+140                       Fouvry and Katz, Strati®cation theorem for exponential sums
+                                                                      nÿ1
+                              det 1 ÿ T FrobE; h jFX  ÿ1
+                            ÿ                        ÿ                         
+                1 ÿ T Zeta X proj nk E=E; T =Zeta X proj X h  x  0=E; KET :
+          ÿ                        
+Since Zeta X proj X h  x  0=E; T lies in 1  TZT, we may reduce mod p and get a
+congruence
+                                      nÿ1
+      det 1 ÿ T FrobE; h jFX  ÿ1          1 1 ÿ T Zeta X proj nk E=E; T mod 1  TZT:
+
+On the other hand, there is a mod p congruence formula for the zeta function of any pro-
+jective variety, say V over a ®nite ®eld E of characteristic p, in terms of the action of the
+KE'th power map FrobE on the coherent cohomology groups H i V ; OV . One has
+
+                                             QV
+                                            dim       ÿ                          ÿ1 i1
+                     Zeta V =E; T 1               det 1 ÿ T FrobE jH i V ; OV 
+                                             i0
+
+
+in 1  TFp T, cf. [SGA 7], XXII, 3.1.1.
+
+    If V is a projective hypersurface in P nÿ1 , of degree d f 1, the cohomology groups
+  i
+H V ; OV  vanish unless i is 0 or n ÿ 2. Suppose now n f 3. Then for i  0,
+
+                                               H 0 V ; OV   E
+
+and FrobE acts as the identity. So the congruence above becomes
+                                                 ÿ                                     
+                   det 1 ÿ T FrobE; h jFX  1 det 1 ÿ T FrobE jH nÿ2 X proj ; OX proj 
+
+in Fp T. Now consider the degrees of the polynomials in this congruence. As a
+Z-polynomial det 1 ÿ T FrobE; h jFX  has degree equal to the rank of FX , i.e. equal to the
+B-number B X . The degree of its reduction mod p can only be lower, so we get
+
+        Theorem 7.5. Suppose n f 3. We have the inequality
+                                                    ÿ                                     
+         B X  f degree of the Fp T polynomial det 1 ÿ T FrobE jH nÿ2 X proj ; OX proj  :
+
+       This inequality is useless if either H nÿ2 X proj ; OX proj   0 or if FrobE is nilpotent on
+  nÿ2
+H       X proj ; OX proj . Let us discuss these questions. In homogeneous coordinates x1 ; . . . ; xn ,
+  proj
+X      is de®ned by the equation F  0, with F homogeneous of degree denoted d. On the
+ambient P : P nÿ1 , with i : X proj ! P the inclusion, we have the short exact sequence
+
+                                                    F
+                               0 ! OP ÿd ! OP ! i OX proj ! 0:
+
+Since H i P nÿ1 ; O vanishes for all i > 0, we get (remember n f 3)
+                                                               ÿ         
+                               H nÿ2 X proj ; OX proj  G H nÿ1 P; OP ÿd :
+          ÿ             
+Now H nÿ1 P;Q O P  ÿd    has a simple description. It is the k-span of those Laurent mono-
+       w           w i
+mials x :    xi       which satisfy the two conditions
+               i
+                        Fouvry and Katz, Strati®cation theorem for exponential sums                  141
+                                 P
+                                       w i  ÿd;       for all i; w i < 0:
+                                   i
+
+We view this space as the quotient space of the k-span of all Laurent polynomials of degree
+ÿd by the subspace spanned by those Laurent monomials x w of degree ÿd which, for some
+i, have w i f 0, cf. [Ha], p. 226, 2nd par. This description shows that
+
+                                   H nÿ2 X proj ; OX proj  3 0 , d f n:
+
+Using the above isomorphism, how do we describe the action of FrobE on
+
+                                            H nÿ2 X proj ; OX proj ?
+
+Write KE as p n . The p'th power map (``absolute Frobenius'') induces a p-linear endo-
+morphism Frobabs of the k-space H nÿ2 X proj ; OX proj , the Hasse-Witt map, and its n'th iter-
+ate is theÿk-linear endomorphism
+                                FrobE . The action of Frobabs becomes the p-linear action
+on H nÿ1 P; OP ÿd induced by the p-linear action
+
+                                                G 7! F pÿ1 G p
+
+on the space of all Laurent forms G of degree ÿd.
+
+     A projective hypersurface X proj of dimension n ÿ 2 f 1 and degree d is called
+ordinary if d f n and if Frobabs (or equivalently FrobE ) is an automorphism of
+H nÿ2 X proj ; OX proj , and it is called non-special if d f n and if Frobabs (or equivalently
+FrobE ) is not nilpotent on H nÿ2 X proj ; OX proj . Thus X proj is non-special if and only if for
+some (or equivalently for every) ®nite extension E=k, the polynomial
+                                   ÿ                                     
+                                det 1 ÿ T FrobE jH nÿ2 X proj ; OX proj 
+
+is not identically 1. In general (cf. [SGA 7], XXII, 1.0), there is a direct sum decomposition
+
+              H nÿ2 X proj ; OX proj   H nÿ2 X proj ; OX proj ss l H nÿ2 X proj ; OX proj nilp
+
+into Frobabs -stable summands, such that Frobabs is invertible on the ®rst summand, and
+nilpotent on the second.
+
+      The dimension of the ®rst summand is called theÿ ``stable rank'' of X proj . Thus the   
+stable rank is equal to the degree of the polynomial det 1 ÿ T FrobE jH nÿ2 X proj ; OX proj  .
+
+      Thus a restatement of the previous inequality is
+
+      Theorem 7.6. We have the inequality
+
+                                       B X  f stable rank of X proj :
+
+In particular, B X  is non-zero if X proj is non-special.
+
+      Unfortunately, given a homogeneous form F of degree d f n, there is no fast algo-
+142                    Fouvry and Katz, Strati®cation theorem for exponential sums
+
+rithm to compute the stable rank of X proj , or even to tell if the stable rank is non-zero. One
+has only
+
+      Lemma 7.7. Suppose d f n f 3.
+
+      1) If for some ®nite extension E=k, we have
+
+                                       KX proj E 1
+                                                  j 1 mod p;
+
+then X proj is non-special.
+
+      2) If d f n and dim H nÿ2 X proj ; OX proj  < p then X proj is non-special if and only if there
+exists a ®nite extension E=k for which
+
+                                      KX proj E 1
+                                                 j 1 mod p:
+
+      3) Suppose d  n. Then the following equations are equivalent:
+
+      3a) X proj is non-special.
+
+      3b) KX proj k 1
+                     j 1 mod p.
+
+      3c) The coe½cient of x1 x2 . . . xn  pÿ1 in F x1 ; . . . ; xn  pÿ1 is non-zero.
+
+      Proof. 1) Indeed the congruence formula gives
+                                               ÿ                               
+                 KX proj E ÿ 1 1 ÿ1 nÿ2 Trace FrobE jH nÿ2 X proj ; OX proj  :
+
+If the trace is non-zero, FrobE cannot be nilpotent.
+
+      2) Suppose Frobabs is not nilpotent on H nÿ2 X proj ; OX proj . Then the linear operator
+Frobk is not nilpotent so in k its eigenvalues l1 ; . . . ; ldim are not all zero. Since every non-
+zero element of k  is a root of unity, for some ®nite extension E=k the eigenvalues of
+FrobE : Frobk deg E=k are all 0 or 1, and the number of eigenvalues 1 is the stable rank,
+say s. Thus we get a congruence
+
+                               KX proj E ÿ 1 1 ÿ1 nÿ2  s mod p:
+
+Since s e dim H nÿ2 X proj ; OX proj  < p, and s 3 0 by hypothesis, we get
+
+                                       KX proj E 1
+                                                  j 1 mod p:
+
+     3) If d  n, then H nÿ2 X proj ; OX proj  is one dimensional, with basis x1 x2 . . . xn ÿ1 .
+The coe½cient, say HW, of x1 x2 . . . xn  pÿ1 in F pÿ1 is the matrix of the p-linear map
+Frobabs in this basis, the Hasse invariant, cf. [Ka-ASDE], 2.3.7.17. The matrix of the linear
+map Frobk is Normk=Fp HW. By the congruence formula, we have
+
+                       KX proj E ÿ 1 1 ÿ1 nÿ2 Normk=Fp HW: QED
+                      Fouvry and Katz, Strati®cation theorem for exponential sums             143
+
+     Examples. We will give some examples of forms F of degree n in n variables whose
+Hasse invariant
+
+                     HW : the coe½cient of x1 x2 . . . xn  pÿ1         in F pÿ1
+
+is non-zero.
+
+      1) F  x1 x2 . . . xn . Here HW 1.
+
+     2) Take any ®nite separable k-algebra E=k of degree n and any k-basis e1 ; . . . ; en .
+Take F the norm form
+                                                              P        
+                              F x1 ; . . . ; xn   NormE=k        ei xi :
+                                                               i
+
+
+Indeed over a ®nite extension E=k, E nk E becomes E  E      E and so after a linear
+change of variable over E, F becomes x1 x2 . . . xn .
+                                      P
+      3) For F the Fermat form             xi  n , HW is nonzero if and only if p 1 1 mod n, in
+                                       i
+which case, writing p ÿ 1  an, HW is an!= a! n .
+
+
+                8. Nonvanishing of A-numbers by congruence considerations
+
+      We now return to the setting of section 4. Thus V is a closed subscheme of AnZ , and
+there exists an integer D f 1 such that V 1=D=Z1=D is smooth and surjective of relative
+dimension d, with geometrically connected ®bres. We take for K the object Q             l d  on
+V 1=l. It is adapted to V (V : the strati®cation of V consisting of V alone), it is ®brewise
+semiperverse, and is ®brewise mixed of weight e d. On V 1=lD, Q       l d  is ®brewise per-
+verse, geometrically irreducible, and pure of weight d. We also take an arbitrary function f
+on V.
+
+     With this data, Theorem 3.1 produces an integer N f 1, a strati®cation H of H1=N
+and a map
+
+                         V ; f ! : ffunctions f : V ! Z; constant on Vg
+                      ! ffunctions f : H1=N ! Z; constant on Hg:
+
+For each pair k; c consisting of a ®nite ®eld k of characteristic not dividing Dl, and a
+  -valued nontrivial additive character c of k, we have the A-number A V ; f ; k:c. We
+Q l
+have seen (Lemma 4.1) that this A-number is constant as k varies over ®nite ®elds of
+characteristic prime to DNl.
+
+      Theorem 8.1. Suppose that for an in®nite set P of primes p, there exists a ®nite ®eld E
+of characteristic p such that KV E is prime to p. Then the A-number A V ; f ; k; c is non-
+zero for all ®nite ®eld k of characteristic prime to DNl.
+
+      Proof. Denote by Hmax the unique strat of H which is of relative dimension n over
+144                    Fouvry and Katz, Strati®cation theorem for exponential sums
+
+Z1=N. We know that Hmax 1=N is smooth over Z1=N with geometrically irreducible
+factors. So by Lang-Weil, for all su½ciently large primes p, Hmax Fp  is non-empty.
+
+       We know by Lemma 4.1, that as k; c varies with char(k) prime to DNl, the A-
+number A V ; f ; k; c is constant. Take a prime in our in®nite set P which is prime to
+DNl and su½ciently large that Hmax Fp  is non-empty. Pick   ÿ a point h in Hmax Fp  and a
+non-trivial additive character c on Fp . On Hmax n Fp , FTc i! Lc f  d  is Fn for a lisse
+sheaf, whose rank is the A-number A V ; f ; Fp ; c. We must show that F is non-zero. For
+this it su½ces to show that, for E=Fp the ®nite ®eldÿfor which KV
+                                                                 E is prime to p, we have
+Trace FrobE; h jF 3 0. But Fn is equal to FTc i! Lc f  d on all of Hmax , so at h we
+have
+                                                P              P          
+                  Trace FrobE; h jF  ÿ1 d         cE f v     hi xi v :
+                                                   v AV E               i
+
+
+The sum on the right hand side is ÿ1 d times a sum of p'th roots of unity in 
+                                                                              Ql . So it lies
+                                 
+in Zzp  after any embedding of Ql into C. Fix one such embedding. Modulo the unique
+maximal ideal p in Zzp  lying over p, namely p  zp ÿ 1, each p'th root of unity is 1
+mod p. Thus we obtain a congruence
+                        P             P          
+                             cE f v     hi xi v 1 KV E mod p:
+                        v AV E               i
+
+
+But E was chosen so that KV E is prime to p, so nonzero mod p. Therefore
+ P            P         
+     cE f v    hi xi v must itself be non-zero, since it is non-zero mod p. Thus
+v AV E            i
+Trace FrobE; h jF is non-zero, whence F is non-zero. QED
+
+     Examples. We give now examples of V 's in An =Z to which this theorem applies.
+The most striking is perhaps the n ÿ 1 torus, of equation
+
+                                           x1 x2 . . . xn  1:
+
+Or a translated n ÿ 1-torus
+
+                                          Ax1 x2 . . . xn  B;
+
+with A and B non-zero integers which are relatively prime, or more generally
+
+                                          Ax1a1 . . . xnan  B;
+
+with any integers ai f 1, such that gcd a1 ; . . . ; an   1. For then some ai is odd; for any p
+such that p ÿ 1 is relatively prime to this ai (e.g. p 1 2 mod ai ), X 7! X ai is a bijection on
+                                                        nÿ1
+F
+ p so we can solve for xi , and KV Fp  is p ÿ 1           .
+
+          Or we could take a number ®eld K=Q of degree n, an order O in K, a Z-basis
+e1 ; . . . ; en of O and the norm equation
+                                                  P         
+                                      NormO=Z           ei xi  1;
+                                                    i
+                      Fouvry and Katz, Strati®cation theorem for exponential sums                          145
+
+or more generally a translated norm equation
+                                                           P          
+                                   A  NormO=Z                    ei xi  B;
+                                                              i
+
+
+for A and B non-zero integers which are relatively prime.
+
+      Here is a less obvious example. Fix n f 3 odd and d f 1 odd. In AZn , consider the
+closed subscheme de®ned by the two equations
+                                  8 Q
+                                  >
+                                  >        xi  1;
+                                  <
+                                     1eien
+                                  >   P
+                                  >
+                                  :        ai xid  0
+                                              1eien
+
+
+with g.c.d. a1 ; . . . ; an   1. We claim that all geometric ®bres of V =Z have dimension
+e n ÿ 2. Indeed in the n ÿ 1-torus Gm;Z  nÿ1 over Z with coordinates x1 ; . . . ; xnÿ1 , which is
+smooth over Z, everywhere of relative dimension n ÿ 1, V is de®ned by one equation
+                                P
+                                         ai xid  an = x1 x2 . . . xnÿ1  d  0
+                            1eienÿ1
+
+
+or equivalently by one equation
+                                Q            d            P               
+                                         xi                           ai xid  ÿan :
+                               1eienÿ1                     1eienÿ1
+
+
+Because g.c.d. a1 ; . . . ; an   1, this equation is non-zero modulo every prime p. So V is ¯at
+over Z, and everywhere of relative dimension e n ÿ 2.
+                                                                         Q
+      We next claim that if we put D : n  d                                 ai , then V 1=D is smooth over
+                                                                       1eien
+Z1=D, with geometrically connected ®bres. We ®rst show that these ®bres are all geo-
+metrically irreducible. Over any algebraically closed ®eld k in which D is invertible, V n k
+is the closed subscheme of the n ÿ 1-torus Gm;k  nÿ1 de®ned by one equation
+
+                                                   F  ÿan ;
+
+for
+                                         Q             d             P             
+                            F :                   xi                          ai xid :
+                                        1eienÿ1                       1eienÿ1
+
+
+We must show that F  an is irreducible in the ring of Laurent polynomials
+
+                                 kx1 ; . . . ; xnÿ1 =1=x1 x2 . . . xnÿ1 :
+
+For this, it su½ces to show that F  an is irreducible in the polynomial ring kx1 ; . . . ; xnÿ1 .
+But F is homogeneous of degree nd, and an is non-zero. So F  an is irreducible unless F is
+146                      Fouvry and Katz, Strati®cation theorem for exponential sums
+
+an r'th power in kx1 ; . . . ; xnÿ1  for some r f 2. We claim F is not
+                                                                      Psuch ad power. This
+is obvious from the given factorization of F. For n > 3 the form          ai xi is itself irre-
+                                                                                      1eienÿ1
+ducible and F is divisible just once by it. If n  3, then F is xy d ax d  by d  with ab non-
+zero. Since abd is non-zero in k  k, ax d  by d is the product of d distinct linear forms
+involving both variables, and each of these linear forms is an irreducible which occurs in F
+to the ®rst power.
+
+     To see
+         Q that V n k is smooth over any algebraically closed          ®eld k in which
+D : d     ai is invertible, go back to viewing V as de®ned in Ank by the two equations
+            1eien
+                                           8 Q
+                                           >
+                                           >       xi  1;
+                                           <
+                                             1eien
+                                           >  P
+                                           >
+                                           :       ai xid  0:
+                                                 1eien
+
+
+A singular point in V n k with values in k is a point x in An k where the gradients of the
+two functions
+                                          Q                         P
+                                    f:           xi   and g:                 ai xid
+                                         1eien                    1eien
+
+
+are proportional, and where f  1 and g  0. The gradient of f is the vector
+ . . . ; f =xi ; . . ., that of g is the vector . . . ; ai xid =xi ; . . .. The two are proportional at points
+where for all 1 e i < j e n the determinant of the 2  2 matrix
+                                                                        
+                                                 f =xi         f =xj
+                                               ai xid =xi   aj xjd =xj
+
+vanishes. At any point of V n k, all the xi are invertible, and f  1, so Sing(V n k) is the
+intersection of V n k with the locus
+
+                                 ai xid  aj xjd ;    for all 1 e i < j e n:
+          P
+But as           ai xid  0 on V, and n is invertible in k, we infer that at any singular point of
+         1eien
+V n k, we have ai xid  0 for all i. As all ai are non-zero in k, we ®nd xi  0 in k. But the
+point 0; . . . ; 0 does not lie on V.
+
+     We next exhibit an in®nite set of primes P such that for p in P, KV Fp  is prime to p.
+We take
+
+                                     P : fp; p a D; p 1 2 mod ndg:
+
+(Remember that both n and d are odd, so P is indeed in®nite.) For p in P, p ÿ 1 is relatively
+prime to d and it is relatively prime to n. Therefore on Fp , the map X 7! X p is bijective, and
+on F                    n
+    p the map X 7! X is bijective.
+
+
+       To see that KV Fp  is prime to p for p in P, we argue as follows. Regard n and the
+                        Fouvry and Katz, Strati®cation theorem for exponential sums                   147
+
+coe½cients a1 ; . . . ; an as ®xed, and denote by Vd the subscheme of AZn we have been calling
+V. In this notation, V1 is then the closed subscheme of AZn de®ned by the two equations
+                                         8 Q
+                                         >
+                                         >       xi  1;
+                                         <
+                                           1eien
+                                         >  P
+                                         >
+                                         :       ai xi  0:
+                                               1eien
+
+
+The endomorphism
+                                                            ÿ                             
+                               d : x1 ; . . . ; xn  7!       x1  d ; . . . ; xn  d
+
+of AZn maps Vd to V1 . We claim that for p in P, this map induces a bijection from Vd Fp  to
+V1 Fp . Indeed, this map induces a bijection of An Fp  with itself, so it certainly induces an
+injective map from Vd Fp  to V1 Fp . To see that this map from Vd Fp  to V1 Fp  is surjec-
+tive, we argue as follows. Given a point y1 ; . . . ; yn  in V1 Fp , consider the unique point
+ x1 ; . . . ; xn  in An Fp  with xid  yi for every i. Because y1 ; . . . ; yn  is in V1 Fp , the point
+ x1 ; . . . ; xn  satis®es
+                                            8 Q             d
+                                            >
+                                            >           xi         1;
+                                            <
+                                                1eien
+                                            > P
+                                            >
+                                            :   ai xid  0:
+                                              1eien
+
+
+But md Fp   f1g, so from the ®rst equation we infer that
+                                                  Q
+                                                        xi  1;
+                                                1eien
+
+
+and hence the point x1 ; . . . ; xn  lies in Vd Fp .
+
+      So now, we are reduced to showing that for p in P, KV1 Fp  is prime to p. To see
+this, we consider, for each b in Fp , the closed subscheme V1; b of AFnp de®ned by the two
+equations
+                                     8 Q
+                                     >
+                                     >        xi  b;
+                                     <
+                                        1eien
+                                     >   P
+                                     >
+                                     :        ai xi  0:
+                                               1eien
+
+So V1 is V1; 1 in this notation.
+                        P         We view all the V1; b 's as subschemes of the hyperplane
+H H AFnp of equation        ai xi  0. In this hyperplane, they are exactly the ®bres over the
+                      1eien                                            Q
+Fp valued points in A1 of the map H ! A1 de®ned by the function             xi . So the V1; b Fp 
+form a partition of H Fp  and thus we have                          1eien
+
+                                  P
+                                          KV1; b Fp   KH Fp   p nÿ1 :
+                                 b A Fp
+
+
+We next claim that for any non-zero b, we have
+148                  Fouvry and Katz, Strati®cation theorem for exponential sums
+
+                                    KV1; b Fp   KV1; 1 Fp :
+
+To see this, use the fact that X 7! X n is bijective on F                             n
+                                                         p to write our non-zero b as a for
+                
+some a in Fp . Then the homothety a on the ambient space H induces an isomorphism
+V1; 1 G V1; b . So we can rewrite the above sum formula as
+
+                           KV1; 0 Fp   p ÿ 1KV1; 1 Fp   p nÿ1 :
+
+Thus we ®nd a congruence
+
+                                KV1; 0 Fp  1 KV1; 1 Fp  mod p:
+
+Recalling that V1; 1 is V1 , we see that we are reduced to proving that KV1; 0 Fp  is prime to
+p. We will show this is true for any prime p f n modulo of which all the ai are non-zero.
+
+      Now V1; 0 is de®ned over Fp by the two equations
+                                   8 Q
+                                   >
+                                   >        xi  0;
+                                   <
+                                      1eien
+                                   >   P
+                                   >
+                                   :        ai xi  0:
+                                           1eien
+
+
+Making the change of variables yi : ai xi , V1; 0 becomes the zero locus of the two equations
+                                   8 Q
+                                   >
+                                   >          xi  0;
+                                   <
+                                     1eien
+                                   >    P
+                                   >
+                                   :          xi  0:
+                                           1eien
+
+                                       P
+In the hyperplane H of equation              xi  0, with coordinates x1 ; . . . ; xnÿ1 , V1; 0 becomes
+                                    1eien
+the hypersurface in Anÿ1 over Fp of equation
+                                        P                 Q         
+                            F :                 xi                  xi  0:
+                                       1eienÿ1             1eienÿ1
+
+
+We ®rst give a cohomological proof that KV1; 0 Fp  is prime to p. Let us denote by
+X H P nÿ2 the projective hypersurface over Fp of the same equation F  0. We have
+
+                  KV1; 0 Fp   1  p ÿ 1KX Fp  1 1 ÿ KX Fp  mod p:
+
+By the congruence formula [SGA 7], XXII, 3.1.1 for the hypersurface X, we have
+                                              ÿ                      
+                   KX Fp  1 1  ÿ1 nÿ3 Trace FrobFp jH nÿ3 X ; OX  :
+
+So we have
+                                           ÿ                      
+                  KV1; 0 Fp  1 ÿ1 n Trace FrobFp jH nÿ3 X ; OX  mod p:
+
+As we have seen in section 7, in the discussion of the Hasse-Witt invariant, for X a hyper-
+                        Fouvry and Katz, Strati®cation theorem for exponential sums                                  149
+
+surface of degree n, H nÿ3 X ; OX  isP
+                                      the span of the monomials xÿw in n ÿ 1 variables xi ,
+1 e i e n ÿ 1, with all wi f 1 and      wi  n. There are precisely n ÿ 1 such monomials,
+namely                                i
+
+                                    Q         
+                      e j : 1=xj           xi ; for 1 e j e n ÿ 1:
+                                             1eienÿ1
+
+
+In this basis, the Hasse-Witt matrix, i.e. the matrix of FrobFp on H nÿ3 X ; OX  is given as
+follows:
+                                     ÿ       P
+                              FrobFp e a         HWi; j e b;
+                                                              i; j
+
+
+              HWa; b : the coefficient of e b in F pÿ1 e a p
+                                           Q           
+                       the coef: of 1=xb            xi
+                                                     1eienÿ1
+                                
+                                       P                   Q             pÿ1                 Q            p
+                           in                  xi                    xi                xap                 xi
+                                     1eienÿ1             1eienÿ1                                 1eienÿ1
+                                                                P             pÿ1
+                         the coef: of 1=xb in                            xi          =xap
+                                                             1eienÿ1
+                                                                    P          pÿ1
+                         the coef: of xap =xb in                          xi
+                                                              1eienÿ1
+
+                         da; b :
+
+Thus FrobFp on H nÿ3 X ; OX  is the identity on this n ÿ 1 dimensional space. So
+                                     ÿ                      
+                                Trace FrobFp jH nÿ3 X ; OX   n ÿ 1:
+
+Thus we get
+
+                                    KV1; 0 Fp  1 ÿ1 n n ÿ 1 mod p:
+
+Since p f n, KV1; 0 Fp  is prime to p as required.
+
+      There is an elementary way to prove this same congruence. As above, V1; 0 is the
+a½ne hypersurface F  0 in Anÿ1 , and F is the product of n linear forms, any n ÿ 1 of
+which are linearly independent. Thus V1; 0 Fp  is the union of n hyperplanes Hi Fp ,
+i  1; . . . ; n; any n ÿ 1 of which are in general position. So by inclusion-exclusion
+                         
+                 S          P          P ÿ                 
+ KV1; 0 Fp   K   Hi Fp   KHi Fp  ÿ K Hi Fp  X Hj Fp     
+                    i                    i                    i<j
+                                                                            
+                   nÿ2    n    nÿ3    n    nÿ4               n    n           n1 n
+               np     ÿ     p          p          ÿ1          1  ÿ1       1
+                          2           3                          nÿ1              n
+              1 ÿ1 n n ÿ 1 mod p:            QED
+150                  Fouvry and Katz, Strati®cation theorem for exponential sums
+
+                                   9. Proof of Corollary 1.3
+
+     This proof follows the proof of [Fo1], so we will only sketch the proof, referring to
+[Fo1] or to [Be-Fo] for details. For D a fundamental positive discriminant, we denote by
+H D the quantity
+
+                                                  3 r3 D ÿ 1
+                                       H D 
+                                                        2
+                                                                                     p
+where r3 D is the 3-rank of the ideal class group of the ring of integers of Q       D. Note the
+inequality H D f 0 and the equivalence
+
+                                    H D  0 , 3 a h D:
+
+We owe to Davenport and Heilbronn [Da-He1], 2, a complete interpretation of H D in
+terms of classes of binary cubic forms, under the action of Gl 2; Z. From their work, we
+will ®rst recall the
+
+     Lemma 9.1. Let D3 a; b; c; d be de®ned by (6.1). Then for any positive fundamental
+D, we have
+
+       1                 ~ aX 3  bX 2 Y  cXY 2  dY 3 irreducible D3 a; b; c; d  Dg;
+ H D  Kf a; b; c; d A V;
+       2
+      ~ is the subset of R 4 de®ned as the set of quadruples a; b; c; d satisfying
+where V
+                                    
+                                       either ÿA < B e A < C,
+                          a f 1 and
+                                       or         0 e B e A  C,
+
+with A, B and C de®ned by
+
+                      A  b 2 ÿ 3ac;     B  bc ÿ 9ad;          C  c 2 ÿ 3bd:
+
+     This is Proposition 3.1 of [Fo1]. We extend the de®nition of H by setting H n  0 if
+n f 1 is not a fundamental discriminant. Now we enlarge the set V ~ to the set V, where
+
+                           V  f a; b; c; d; a f 1; jBj e A e Cg:
+
+Let g n be the function
+
+                  g n  Kf a; b; c; d A V; D3 a; b; c; d  ng;        for n f 1
+                                1
+(note the inequality H n e g n). We introduce an auxiliary integer P f 3, which later
+                                2
+will be taken arbitrarily large and will be used to ensure that p  4 is squarefree. We de®ne
+the function gP n by
+
+     . g n  0 if n is not congruent to 1, 5, 8, 9, 12 or 13 modulo 16, or if n is divisible
+          P
+by the square of an odd prime number less than P,
+
+     . g n  g n otherwise.
+          P
+                         Fouvry and Katz, Strati®cation theorem for exponential sums                     151
+
+      Note that the above congruence classes modulo 16 correspond to the congruence
+classes to which a fundamental discriminant belongs and that the following inequality
+holds for every n and every P f 3:
+
+                                                     1
+       9:1                                    H n e gP n:
+                                                     2
+
+As usual the MoÈbius function is denoted by m.
+
+       Proposition 9.2. For every positive e and for every P f 3, we have the estimate
+
+                P                 P                      nP q P
+                         m 2 q          gP n  4 ÿ             g n  Oe; P X logÿ2 X 
+                   2ÿe            neX                      q neX
+               qeX 5               qjn
+
+
+with
+                                                                                       !
+                               Q r p; 4             Q                     2; q; p 4
+                       nP q                                   1 ÿ x p ÿ             ;
+                               pjq p3               peP                 r 2; q; p; 4
+                                                  paq= 2; q
+
+
+with x and r the multiplicative functions de®ned by
+
+       . x p  p2 ÿ p1 for p f 2
+                   2       4
+
+
+       . r 2; 4  10 and r p; 4  p ÿ p for p f 3.
+                                              3
+
+                                                                        1
+                                                                          ÿ e replaced
+       This is the statement of Proposition 4.1 of [Fo1] but with the exponent
+                                                                        3
+   2
+by ÿ e. This improvement of the exponent is the key point of the proof. Note that any
+   5
+          1
+exponent > would be su½cient to prove Corollary 1.3.
+          3
+      9.a. First reduction of the proof of Proposition 9.2. The ®rst reductions follow
+exactly what was done in [Fo1], 4.a and b. Recall only that we treat on average the con-
+tribution of the cusp of V, and we divide the remaining volume into a certain number of
+hypercubes Bi , with i A I. Each side of these four dimensional hypercubes has length
+                                                                1
+                                                    Q  X 4ÿ5h ;
+
+with h a small positive constant, which will be chosen to be
+                                                                e
+                                                      h           :
+                                                               100
+                                                                        S
+The contribution of points of V which are not in                             Bi is also negligible, by taking
+                                                                       iAI
+advantage of the summation over q. In other words, to prove Proposition 9.2, it is su½cient
+to prove a result of equidistribution not in V but in each Bi , of the form
+152                      Fouvry and Katz, Strati®cation theorem for exponential sums
+
+                          P                      Q r p; 4 Q        P
+        9:2                               1          4
+                                                               x p       1  Oe; r qÿ1 Q 4 logÿ3 X 
+               MA Bi ; D3 M10 mod r 2          pjq p     pjr     M A Bi
+                D3 Mÿ410 mod q
+
+                              2
+for all squarefree q e X 5ÿe , all positive e, and all squarefree r coprime with q. This is ex-
+actly [Fo1], (4.6) (however in that formula, ``D3 M  4'' should have been ``D3 M ÿ 4'').
+
+       We suppose now that Bi  B  b1 ; b1  Q      b4 ; b4  Q and we suppose also
+that
+
+        9:3                                          Q e qr 2 :
+
+The case qr 2 < Q is easier and will be treated at O9.e.
+
+     We develop in Fourier series the characteristic function of each interval bi ; bi  Q in
+terms of additive characters modulo qr 2 , which means that the sum
+                                                                         
+                                   1      P          P            h n ÿ x
+                                                          exp 2pi
+                                  qr 2 h mod qr 2 bexebQ           qr 2
+
+is 1 or 0 according to whether n mod qr 2  belongs to fx mod qr 2 ; b e x e b  Qg or not.
+
+       The left hand side of (9.2) becomes
+                                                                              
+                 1        P P                    h1 x1  h2 x2  h3 x3  h4 x4
+        9:4                            exp ÿ2pi                                S h; q; r 2 ;
+               q 4 r 8 h mod qr 2 x A B                       qr 2
+
+with h  h1 ; h2 ; h3 ; h4 , x  x1 ; x2 ; x3 ; x4  and
+                                                                              
+                                   2         P           ah1  bh2  ch3  dh4
+                       S h; q; r               exp 2pi
+                                     a; b; c; d                  qr 2
+
+where the sum is taken over the a; b; c; d modulo qr 2 such that
+
+                D3 a; b; c; d ÿ 4 1 0 mod q and                    D3 a; b; c; d 1 0 mod r 2 :
+
+This trigonometric sum satis®es a cross multiplicativity property
+
+        9:5       S h; q1 q2 ; r 2   S q1 r 2 h; q2 ; 1S q2 r 2 h; q1 ; 1S q1 q2 h; 1; r 2 ;
+
+for q1 ; q2   q1 ; r  q2 ; r  1. The notation n means that we take the multiplicative
+inverse of n modulo q2 , q1 and r 2 respectively.
+
+       Here appears the crucial roÃle of the sum
+                                                  P
+                    S h; c; p                                     c ah1  bh2  ch3  dh4 
+                                                a; b; c; d A Fp4
+                                       D3 a; b; c; dÿ410 mod p
+                        Fouvry and Katz, Strati®cation theorem for exponential sums                   153
+
+(with c a non trivial additive character of Fp ) to which we may apply Theorem 1.2. The
+fact the A-number is non-zero is proved in Theorem 6.1. The smoothness and geometric
+irreducibility were noted in section 6.
+
+      Lemma 9.3. There exists an absolute C and closed subschemes Xj j  1; 2; 3,
+X1 I X2 I X3  f0g, in A4Z of dimension e 3 ÿ j, such that, for every p, for every nontrivial
+additive character c on Fp , we have
+                                                                  3
+       9:6                                  jS h; c; pj e C p 2
+
+for h B X1 Fp ,
+
+       9:7                                 jS h; c; pj e C p 2
+
+for h B X2 Fp ,
+                                                                 5
+       9:8                                 jS h; c; pj e C p 2 ;
+
+for h B X3 Fp .
+
+     The equality X3  f0g is a consequence of homogeneity and also a consequence
+of [Fo1], Lemme 2.4.i. This lemma improves [Fo1], Lemme 2.4, by decreasing by 1 the
+dimensions of the exceptional sets Xj . The contribution to (9.4) of the term h  0 is exactly
+the main term appearing in (9.2). So to prove (9.2) for q f Qrÿ2 , it remains to prove that
+                                                                                    
+                     1        P          P             h1 x1  h2 x2  h3 x3  h4 x4
+       9:9                                   exp ÿ2pi                                S h; q; r 2 
+                   q 4 r 8 h30 mod qr 2 x A B                       qr 2
+
+                                          Oe; r qÿ1 Q 4 logÿ3 X ;
+
+                                              2
+under the condition q squarefree e X 5ÿe .
+
+      We will now follow the proof of [Fo1], Prop. 2.5. We recall the classical upper bound
+for geometric progressions
+                                                        !
+                                   P            hx        h
+                                        exp 2pi      O X     ;
+                                bexebQ          q        q
+
+valid for any b, with X a  min Q; kakÿ1 , where kak denotes the distance of a to the
+nearest integer. We see that the left hand side of (9.9) is f K Q; q:r 2 , with
+                                                                      
+                                           1        P          Q      hi
+       9:10          K Q; q; r 2  :                              X    jS h; q; r 2 j:
+                                         q 4 r 8 h30 mod qr 2 1eie4   q
+
+The proof of (9.9) is reduced to the proof of
+
+       9:11                      K Q; q; r 2   Oe; r qÿ1 Q 4 logÿ3 X ;
+154                     Fouvry and Katz, Strati®cation theorem for exponential sums
+
+                                                                                                                       2
+for any squarefree q, any integer r coprime with q, satisfying Qrÿ2 e q e X 5ÿe .
+
+      We use the multiplicativity (9.5), Lemma 9.3 (noticing that the closed subsets Xj are
+independent of the non trivial character c) and the trivial bound jS h; 1; r 2 j e r 8 to write
+the inequality
+                                          3          Q                1         Q              1         Q              1
+              jS h; q; r 2 j e C s r 8 q 2                       p2                          p2                       p2:
+                                                    pjq                         pjq                      pjq
+                                              h mod p A X1 Fp            h mod p A X2 Fp         h mod p A X3 Fp 
+
+
+In the above formula, s is the number of prime factors of q, so we have C s  O q h .
+Inserting this bound into (9.10), inverting summation and using the inclusion
+
+                                                    X3 H X2 H X1 ;
+
+we ®nally get the inequality
+                                                                       
+                            2       ÿ52   s      P       1h1 1    h2
+                                                                  1   P  h3     h4
+      9:12    K Q; q; r  e q C               d1 d2 d3 X2   2
+                                                             2
+                                                                X 2
+                                                                     2
+                                                                       X    2
+                                                                              X      ;
+                                 d3 jd2 jd1 jq         h  qr      qr     qr     qr 2
+
+where the last sum is made over the h modulo qr 2 , satisfying h 3 0 modulo qr 2 , and
+
+                    for all 1 e i e 3; for all pjdi ; we have h mod p A Xi Fp :
+
+      (Note that (9.12) is a corrected version of [Fo1], (2.1) which is incorrect (though it is
+correct when q is prime, and its right hand side contains enough of the essential terms that
+[Fo1], Prop. 2.5 remains correct). We thank CeÂcile Dartyge for pointing out a similar error
+in an earlier version of this paper.)
+
+       One of the di½culties is that q is not necessarily prime. Nevertheless we ®rst treat the
+prime case in order to give lemmas which will be useful in sections 9.c, 10 and 11 and
+illustrate the situation.
+
+     9.b. The particular case when q is prime. The ®rst lemma recalls some general facts
+about varieties. This is Lemma 2.1 of [Fo2].
+
+      Lemma 9.4. Let V a closed subscheme of AZn of relative dimension e d. Let pnÿ1 be
+the projection of AZn on AZnÿ1 de®ned by pnÿ1 z1 ; . . . ; zn   z1 ; . . . ; znÿ1 . Then
+
+      i) pnÿ1 V is contained in a closed subscheme of AZnÿ1 of relative dimension e d,
+called pnÿ1 V,
+
+      ii) the set of points M in AZnÿ1 such that the ®ber pÿ1
+                                                           nÿ1 M is contained in V (or in
+other words such that the ®ber has an in®nite number of points of intersection with V) is
+contained in a closed subscheme Fnÿ1 V of AZnÿ1 of relative dimension e d ÿ 1.
+
+      Now we deal with a more general question, already treated in [Fo2], 2.6.
+
+      Lemma 9.5. Let N be an integer f 1, x be a positive real number and let V be a
+closed subscheme of AZs of relative dimension e d. Let ` V; x; N; d; s be the sum
+                      Fouvry and Katz, Strati®cation theorem for exponential sums             155
+                                    0                      !1           0             !1
+                                                      ÿ1                           ÿ1
+                              P
+      ` V; x; N; d; s :             @min x; h1            A      @min x; hs     A:
+                            h A V Fp         Np                                Np
+
+
+Then we have the inequality
+
+
+                            ` V; x; N; d; s f Np d x sÿd log Np d
+
+for every x e Np.
+
+       Proof. The proof proceeds by induction on s. There exists an integer, say K, such
+that, for every p, every line of As Fp  which is parallel to one of the coordinate axis is either
+contained in V Fp  or has at most K points with V. Summing ®rst over hs and using the
+notations of Lemma 9.4, we get
+
+       9:13     ` V; x; N; d; s
+                                          0              !1           0               !1
+                                                      ÿ1                           ÿ1
+                                   P               h1                         hsÿ1
+                      f Kx                 @min x;        A      @min x;          A
+                           h A psÿ1 V Fp         Np                         Np
+
+                              0                                0      !1
+                                                                   ÿ1
+                                                    P           h
+                          O@Np log Np                 @min x; 1      A
+                                        h A Fsÿ1 V Fp         Np
+
+                                           0                        !1
+                                                               ÿ1
+                                                        hsÿ1         A:
+                                       @min x;
+                                                        Np
+
+
+In the right hand side of (9.13), the dimensions of both the ambient space and of the variety
+have decreased. So (9.13) gives
+
+                                       ÿ                                
+       9:14     ` V; x; N; d; s f Kx` V 0 ; x; N; min d; s ÿ 1; s ÿ 1
+
+                                         pN log pN` V 00 ; x; N; d ÿ 1; s ÿ 1;
+
+where V 0 and V 00 are the varieties in Asÿ1 given by psÿ1 V and Fsÿ1 V respectively.
+                                                                       ÿ          
+    For s  1, Lemma 9.5 is trivial, since we have ` V; x; N; 1; 1  O Np log Np and
+` V; x; N; 0; 1  O x. Also for d  s, we have
+
+                                      ÿ                  s ÿ         s
+                    ` V; x; N; s; s e ` A1 ; x; N; d; s f Np log Np ;
+
+so Lemma 9.5 is true also in that case. To pass from the value s ÿ 1 to the value s of the
+dimension of the ambient space, we use 9:14 and the hypothesis of induction, giving
+156                     Fouvry and Katz, Strati®cation theorem for exponential sums
+                                                                    ÿ      min d; sÿ1
+             ` V; x; N; d; s f Kx Npmin d; sÿ1 x sÿ1ÿmin d; sÿ1 log Np
+                                                                  ÿ        dÿ1
+                                 Np  log Np  Np dÿ1 x sÿd log Np
+                                           ÿ          d
+                              f Np d x sÿd log Np : QED
+
+      It is now easy to deduce the proof of (9.11) in the particular case q prime and r  1.
+Indeed, in this case, the values of the di¨erent sums over h, on the right hand side of (9.12)
+are respectively
+
+                            f q 4 log 4 q           when d1  d2  d3  1;
+
+                            f q 2 Q 2 log 2 q when d1  q; d2  d3  1;
+
+                            f qQ 3 log q            when d1  d2  q; d3  1;
+                            0                      when d1  d2  d3  q:
+
+Summing these upper bounds, by (9.12) we get, when q is prime
+                                                               3                1
+                                K Q; q; 1 e q h q 2  Q 2  qÿ2 Q 3 :
+
+which implies (9.11) in that particular case. The proof of (9.11) in the general case is much
+more delicate in its combinatorial aspects. However, the main ideas are the same.
+
+      9.c. A recursive bound. In this section, we give a general bound, which, when
+applied, will lead to the treatment of K Q; q; r 2 , by reducing step by step the dimension of
+the ambient space. This reduction will be made by the functions Fnÿ1 and pnÿ1 of Lemma
+9.4. In some sense, it generalizes the proof of Lemma 9.5, but for a modulus not necessarily
+prime.
+
+         Let s and n be integers with n f 1. Let d1 ; . . . ; ds be integers such that d1 . . . ds jq. Let
+V1 ; . . . ; Vs be closed subschemes of AZn , satisfying
+
+                                                    dim Vi e ai ;
+
+where the ai are given integers satisfying ÿ1 e ai e n with the convention that the empty
+set has dimension ÿ1. We consider the sum Sn de®ned by
+                                  P                 P              P
+                       Sn :                 min1                          minnÿ1
+                               h1 mod qr 2                    hnÿ1 mod qr 2
+                                ÿ                                                          
+                              S h1 ; . . . ; hnÿ1 ; V1 ; d1 ; a1 ; . . . ; Vs ; ds ; as  ;
+
+where
+                                                           !
+                                         hi            hi ÿ1
+                               mini  X       min Q;          ;
+                                        qr 2          qr 2
+
+and
+                        Fouvry and Katz, Strati®cation theorem for exponential sums                                                  157
+                       ÿ                                                           P
+                      S h1 ; . . . ; hnÿ1 ; V1 ; d1 ; a1 ; . . . ; Vs ; ds ; as   minn
+                                                                                                                     hn
+
+
+where the sum is over hn mod qr 2 satisfying the extra condition
+
+                                   E1 e i e s;                    Epjdi ; h1 ; . . . ; hn  A Vi Fp :
+
+(Note that if ai  ÿ1 and di > 1 then S  0.) Actually, we want to give an expression of Sn
+in terms of sums in spaces of lower dimension.
+
+      By Lemma 9.4 we know that the closed subscheme Fnÿ1 Vi  of AZnÿ1 has dimension
+e ai ÿ 1, and that the closed subscheme pnÿ1 Vi  of AZnÿ1 has dimension e min n ÿ 1; ai .
+We must take into account all the possibilities. So we factor di into di  gi gi0 . We see that if
+for all i
+
+      . h ; . . . ; h  A F V  F  for all pjg ,
+           1         nÿ1           nÿ1           i       p                             i
+
+      . h ; . . . ; h  A p V  F  ÿ F V  F  for all pjg ,
+           1         nÿ1           nÿ1       i          p             nÿ1      i               p
+                                                                                                              0
+                                                                                                              i
+
+
+then, by the Chinese Remainder Theorem, hn in the de®nition of S, can be written in the
+form
+                                                                                           Q 0
+       9:15                                                  hn  n  l                    gi ;
+                                                                                           i
+
+                     h                       Q 0
+where n takes O q 2  values between 0 and      gi ÿ 1 and l is any integer between 0 and
+       Q                                      i
+ qr 2 = gi0  ÿ 1. Summing the function minn over the hn of the form (9.15), we get
+      i
+                                                                                                                           Q
+                                                                                                                      n  l gi0 ÿ1
+               P             P                       P                         P                       P                     i
+                    minn f                                                Q
+               hn            n l0 or                      Y
+                                                     qr 2 = gi0   ÿ1                  n 0<l< qr 2 =   Y
+                                                                                                           gi0 ÿ1
+                                                                                                                          qr 2
+                                                                                                   !
+                               h                         qr 2P
+                        fq     2    Q                   Q 0
+                                       1eleqr 2 =2 g 0 l     gi
+                                                  Y
+                                                                          i
+
+                                     
+                          h    qr 2
+                        fq Q  Q       :
+                                  gi0
+
+      In conclusion, the sum Sn is bounded by
+                                                                      0                        1
+                                    P                    X           qr A                  2
+       9:16         Sn f q h                ...                @Q  Q
+                                g1 g10 d1             g g 0 d
+                                                                       gi0
+                                                        s s       s
+                                                                                   i
+                                     P                                        P
+                                                    min1 . . .
+                               h1 mod qr 2                            hnÿ2 mod qr 2
+                                     ÿ                                                    
+                            minnÿ2 S h1 ; . . . ; hnÿ2 ; W1 ; W10 ; . . . ; Ws ; Ws0  ;
+158                    Fouvry and Katz, Strati®cation theorem for exponential sums
+
+where Wi  and Wi0  are the triples
+                                                                ÿ                           
+            Wi   Wi ; gi ; ai ÿ 1;                    Wi0   Wi0 ; gi0 ; min ai ; n ÿ 1                            1 e i e s;
+
+with Wi and Wi0 closed subschemes of Anÿ1
+                                        Z . Note that in (9.16), the number of varieties
+has doubled, but the ambient space dimension has decreased by one.
+
+      9.d. Proof of (9.11). Let M d1 ; d2 ; d3  be the sum over h on the right hand side of
+(9.12). So this inequality can be written as
+                                                                5           P            1   1    1
+       9:17                K Q; q; r 2  e qÿ2 C s                                     d12 d22 d32 M d1 ; d2 ; d3 :
+                                                                        d3 jd2 jd1 jq
+
+
+Since we have the inclusions X3 H X2 H X1 , since q is squarefree (so the numbers d3 , d2 =d3
+and d1 =d2 are coprime) we can write M in the form
+                                        P                               P                             P
+            M d1 ; d2 ; d3                         min1                          min2                        min3
+                                 h1 mod qr 2                    h2 mod qr 2                      h3 mod qr 2
+                                    ÿ                                                               
+                                  S h1 ; h2 ; h3 ; X1 ; d1 =d2 ; 2; X2 ; d2 =d3 ; 1; X3 ; d3 ; 0 ;
+
+where we use the notations of O9.c. We factor d1 =d2 and d2 =d3 into g1 g10 and g2 g20 (it is useless
+to factorize d3 ) and use the recursive formula (9.16) to write
+
+       9:18   M d1 ; d2 ; d3 
+                                                          
+                        h    P                   P   qr 2    P                P
+                   fq                            Q 0 0               min1             min2
+                          0            0
+                      g1 g d1 =d2 g2 g d2 =d3    g g   d
+                                                    1 2 3 h1 mod qr 2      h2 mod qr 2
+                             1                  2
+
+                         ÿ                                                                                           
+                       S h1 ; h2 ; X1;1 ; g1 ; 1; X1; 2 ; g10 ; 2; X2; 1 ; g2 ; 0; X2; 2 ; g20 ; 1; X3 ; d3 ; 0 :
+
+In this expression, we put together the varieties of the same dimension to write for
+                                      P        P
+                               S2 :     min1     min2 S . . .
+                                                           h1                 h2
+
+
+the upper bound
+                       P               P            ÿ                                                          
+       9:19    S2 e        min1              min2 S h1 ; h2 ; Y0 ; g2 d3 ; 0; Y1 ; g1 g20 ; 1; Y2 ; g10 ; 2 :
+                       h1               h2
+
+
+We follow the same technique: we factor g1 g20 and g10 into b 1 b 10 and b2 b 20 and put together
+varieties of the same dimension to transform (9.19) into
+                                                                                              
+                                   h         P              P                         qr 2      P
+       9:20           S2 f q                                            Q         0 0            min1
+                                       b 1 b 10 g1 g20 b 2 b 20 g10              b1 b 2 g2 d3 h1
+                                    ÿ                                                           
+                                  S h1 ; Z0 ; b1 g2 d3 ; 0; Z1 ; b 10 b 2 ; 1; Z2 ; b 20 ; 2 :
+
+Since Z2 is of dimension at most 2 in the ambient space of dimension 2, we can drop this
+variety in S. We write for
+                        Fouvry and Katz, Strati®cation theorem for exponential sums                                             159
+                                                                     P
+                                                        S1 :                 min1 S . . .
+                                                                         h1
+
+
+the inequality
+
+                                  P               ÿ                                          
+       9:21             S1 e               min1 S h1 ; Z0 ; b1 g2 d3 ; 0; Z1 ; b 10 b2 ; 1 :
+                                  h1
+
+
+We again apply the recursive formula in (9.21) giving
+                                                                                 
+                                           P                            qr 2        ÿ                     
+       9:22          S1 f q h                          Q            0            S U0 ; a1 b1 g2 d3 ; 0 :
+                                  a1 a10 b 10 b 2                   a1 b 1 g2 d3
+
+It is easy to obtain the inequality
+                                                                                                              
+                             ÿ                                                                       qr 2
+       9:23                S U0 ; a1 b 1 g2 d3 ; 0 f q h Q                                                   :
+                                                                                                   a1 b1 g2 d3
+
+Inserting (9.23) in (9.22), and summing over a1 and a10 we get
+                                                                                              !
+                                                   3h          2qr 2 Q         q2r4
+       9:24                      S1 f q                   Q                                 :
+                                                               b 1 g2 d3 b 12 b 10 b2 g22 d32
+
+We insert (9.24) into (9.20) and sum over b1 , b 10 , b 2 and b20 to get
+                                                                                                  !
+                                   5h              qr 2 Q 2
+                                                   3           q2r4Q               q3r6
+       9:25            S2 f q                 Q                                                 :
+                                                    g2 d3     g1 g22 g20 d32 g12 g10 g23 g202 d33
+
+Inserting (9.25) into (9.18), and summing over g1 , g10 , g2 and g20 , we ®nally obtain
+                                                                                                     !
+                                              7h           4qr 2 Q 3 q 2 r 4 Q 2 q 3 r 6 Q   q4r8
+       9:26     M d1 ; d2 ; d3  f q                   Q                                          :
+                                                              d3       d2 d3      d1 d2 d3 d12 d2 d3
+
+We use (9.26) in (9.17) to produce an upper bound for K Q; q; r 2 , but we will only use it
+when d3 is not too large, d3 e D3 say. The value of D3 will be ®xed later. The remaining
+d3 > D3 will be treated trivially. We have
+                                                                                                                            !
+                 2       ÿ527h       s      P             1   1    1
+                                                                                4 qr 2 Q 3 q 2 r 4 Q 2 q 3 r 6 Q   q4r8
+      K Q; q; r  f q             C                       d1 d2 d3
+                                                           2   2    2
+                                                                              Q                                2
+                                          d3 jd2 jd1 jq                             d3       d2 d3      d1 d2 d3 d1 d2 d3
+                                           d3eD3
+                                               
+                           ÿ52    s        q            P           3           P
+                       q C                                        d32                         min1 . . . min4
+                                           D3         d3 jq              h30 mod qr 2
+                                                    d3fD3                d3 j h1 ; ...; h4 
+
+
+which gives
+160                     Fouvry and Katz, Strati®cation theorem for exponential sums
+
+                                      5                 1                 5
+      9:27 K Q; q; r 2  f qÿ28h qQ 4 D32  q 2 r 2 Q 3  q 2 r 4 Q 2  q 3 r 6 Q  q 4 r 8 
+                                      
+                               ÿ52 s  q      P 32 
+                           q C                    d M d3 ;
+                                      D3 d3 jq 3
+                                                            d3fD3
+
+say. To evaluate M3 d3 , we separate the h according to the number of the hi which are 0
+modulo qr 2 . We get
+                               2          2 2       2 3      2 4 !
+                                qr          qr           qr        qr
+               M  d3  f q h        Q3          Q2         Q
+                                 d3          d3          d3         d3
+                                      2     2 4 !
+                                 h    qr  3   qr
+                           fq            Q           :
+                                      d3      d3
+
+By inserting this bound into (9.27), we get
+                                      5                 1                 5
+      9:28 K Q; q; r 2  f qÿ28h qQ 4 D32  q 2 r 2 Q 3  q 2 r 4 Q 2  q 3 r 6 Q  q 4 r 8 
+                                          5        5                          ÿ7
+                                   qÿ22h q 2 r 2 Q 3 Dÿ1   5 8
+                                                        3  q r D3 :
+                                                                  2
+
+
+
+
+We choose now
+
+                                                       D3  q 1ÿ18h
+
+and (9.28) becomes
+                                               1                           1          3
+        K Q; q; r 2  f qÿ1ÿh Q 4  qÿ28h Q 3  q 8h Q 2  q28h Q  q28h   qÿ165h Q 3 :
+                                                                                                         2
+It is easy to see that (9.11) is proved for q squarefree, satisfying Qrÿ2 e q e X 5ÿe , if e is
+su½ciently small.
+
+      9.e. The case q e Qrÿ2 . Coming back to (9.2), we see that the length of the sides of
+Bi is larger than the modulus qr 2 . We decompose Bi into a certain 4 number of hypercubes
+                                                                 Q                 ÿ           
+with sides of length qr 2 (we call them Bi; j , their number is    2
+                                                                       ) and into O Q=qr 2  3
+                                                                qr
+incomplete hypercubes Ci; k (incomplete means that all the sides have length e qr 2 and at
+least one has length < qr 2 ). Since we have a complete set of residues we have the equality
+
+                                     P                         Q r p; 4 Q         P
+      9:29                                              1          4
+                                                                             x p          1:
+                       MA Bi; j ; D3 M10 mod r 2             pjq p     pjr      MA Bi; j
+                         D3 Mÿ410 mod q
+
+
+For the incomplete hypercubes Ci; k , we develop in Fourier series the characteristic function
+of each edge (which is of length e qr 2 ). We get
+
+                           P                           Q r p; 4 Q         P             ÿ                 
+      9:30                                    1            4
+                                                                     x p           1  O K qr 2 ; q; r 2  ;
+               M A Ci; k ; D3 M10 mod r 2            pjq p     pjr      M A Ci; k
+                  D3 Mÿ410 mod q
+                          Fouvry and Katz, Strati®cation theorem for exponential sums                    161
+
+with
+                                                                
+                            2      2  1     P          Q      0 hi
+                     K qr ; q; r  : 4 8                   X      jS h; q; r 2 j;
+                                     q r h30 mod qr 2 1eie4     q
+
+with X 0 a  min qr 2 ; kakÿ1 . We use Lemma 9.3(9.8), in the form
+
+                                                                     5            1
+                                          jS h; q; r 2 j f C s q 2 r 8 h; q 2 :
+
+We get, for any positive h
+                                                                         
+                                                  3            P         hi  Q       1
+                         K qr 2 ; q; r 2  f qÿ2h                               X0
+                                                                               h; q 2 ;
+                                                   h30 mod qr 2 1eie4     q
+                                                                               
+                                              ÿ32h P 12     P        Q      0 hi
+                                           fq          d                   X
+                                                    djq h30 mod qr 2 1eie4      q
+                                                                     djh
+
+                                               3   P 1
+                                           f qÿ22h d 2 qr 2  3 qr 2 dÿ1 :
+                                                         djq
+
+
+This gives
+                                                                         5
+       9:31                                 K qr 2 ; q; r 2  f q 23h r 8 :
+
+Summing formula (9.29) over the j and using formula (9.30) with K bounded by (9.31),
+we get
+
+                        P                      Q r p; 4 Q         P          ÿ           5   
+                                          1         4
+                                                             x p        1  O Q=q 3  q 23h :
+             M A Bi ; D3 M10 mod r 2         pjq p     pjr      M A Bi
+               D3 Mÿ410 mod q
+
+                    ÿ                
+This error term is O qÿ1 Q 4 log xÿ3 , for every q e Qrÿ2 . This ends the proof of (9.2) in all
+cases and so also ends the proof of Proposition 9.2.
+
+      9.f. End of the proof of Corollary 1.3. Let A be the set A  fa; 1 e a e xg, each a
+given the weight w a : H a  4 (recall that this weight is zero when a  4 is not a fun-
+damental discriminant). Let also P be an integer, which will be chosen larger and larger.
+Instead of sieving A, we will rather sieve A~ : fa; 1 e a e xg, each a taken with weight
+         1
+~ a : gP a  4. The relation (9.1) implies
+w
+         2
+
+       9:32                                                 ~ a:
+                                                      w a e w
+
+Let us recall the classical notations of sieve theory
+                                            P                                           P
+                     S A; P; z                      w a;           ~ P; z 
+                                                                   S A;                          ~ a:
+                                                                                                 w
+                                             aex                                         aex
+                                          pja) pfz                                    pja) pfz
+162                      Fouvry and Katz, Strati®cation theorem for exponential sums
+
+Here P is the set of all the prime numbers. Let C x be de®ned by
+           p                                                             x
+         Kf x e p e x; p 1 1 mod 4; m 2 p  4  1; 3 a h p  4g  C x       :
+                                                                          log x
+
+We intend to prove the inequality C x f c0 for x su½ciently large. Since the weight w a
+takes values either 0 or greater than 1, we have the inequality
+
+                             1                 x       p
+       9:33 S A; P; x 2   C x                  f Kf x e p e x; p 1 1 mod 4; m 2 p  4  1g:
+                                             log x
+
+By [Fo1], Lemme 5.1, we know that the right hand side of (9.31) is equal to
+                                                       
+                                                1            x
+       9:34                                       o 1 G       ;
+                                                2          log x
+                                                   Qÿ              
+where G is the in®nite product G                    1 ÿ 1=p p ÿ 1 . Now (9.32) implies the inequality
+                                               p>2
+
+       9:35
+                                                           1
+                                                             ~ P; x 2 :
+                                          S A; P; x 2  e S A;
+                                                                             1
+
+
+
+
+Proposition 9.2 says that we can write
+
+                  P                        o q Q ÿ           P      
+                         gP n  4                  1 ÿ x p      g n  r x; q
+                  nex                       q 2e peP           nex
+                   qjn
+
+
+with
+
+                                          Q 8 Q ÿ                 Q r p; 4
+                                 o q                  1 ÿ x p             ;
+                                          2jq 15 2< peP            pjq p3
+                                                       pjq
+
+
+and where the error term satis®es
+                                    P
+                                             m 2 qjr x; qj  O x logÿ2 x:
+                                       2ÿe
+                                   qex 5
+
+
+We see that o satis®es the conditions of the linear sieve, and that A~ has level of distribution
+  2
+x 5ÿe . It is time to apply the classical formula of the upper bound sieve [Iw], Thm.1. We get
+                                     
+                                 1            Q ÿ          P       
+       9:36         ~     1
+                  S A; P; x  e
+                           2
+                                          1
+                                    h V x2      1 ÿ x p      g n
+                                 2          2epeP           nex
+
+                                                            1
+                                                    log x 2
+                                           2e g           2      O x logÿ2 x;
+                                                   log x   5ÿe
+
+
+
+for any positive
+                h and x > x0 h. An easy computation shows that the Euler product
+    1      Q       o p
+V x 2  :      1ÿ        satis®es
+             1      p
+          pex 2
+                     Fouvry and Katz, Strati®cation theorem for exponential sums       163
+
+                                        1                p 2 eÿg
+      9:37                        V x 2  @ cP  G             ;
+                                                         3 log x
+
+where cP is some constant which tends to 1 as P tends to in®nity (see [Fo1], (5.6)). To
+conclude, by [Da], Lemmas 4,5 we have
+
+                                            P            p2
+      9:38                                     g n @      x:
+                                         nex             36
+
+Inserting (9.37) and (9.38) into (9.36), we get
+                                                      
+                                ~ P; x 12  e     5           x
+      9:39                  S A;                    h G       ;
+                                                  12        log x
+
+for every h > 0 and x > x0 h. Inserting now (9.39) into (9.35) and then (9.34) into (9.33)
+we see that C x satis®es the inequality
+                                                   
+                                 5            1
+                          C x      h  Gf     o 1  G;
+                                 12           2
+
+for every h under the condition x > x0 h. Hence we obtain the lower bound
+
+                                                         G
+                                             C x f
+                                                         13
+
+for x su½ciently large. QED
+
+
+                                  10. Proof of Corollary 1.4
+
+     The method is absolutely classical. By Weyl's criterion, it su½ces to prove that,
+for every non trivial additive character c of Fp and for every ®xed non-zero r-tuple
+a  a1 ; . . . ; ar , the exponential sum S de®ned by
+                                   P         ÿ                           
+      10:1               S                c a1 P1 x      ar Pr x
+                               0exi ew p
+
+
+satis®es
+                                                 ÿ       
+      10:2                                 S  o w p n
+
+for p ! y. We ®rst prove (10.2) for 1 e w p < p. On the additive group Fp , we develop
+the characteristic function C of the integers in 0; w p in a ®nite Fourier series: the
+function
+
+                                      1    P      P ÿ             
+      10:3                C n :                      c h m ÿ n
+                                      p 0emew p 0eh< p
+164                    Fouvry and Katz, Strati®cation theorem for exponential sums
+
+is equal to 1 for 0 e n e w p, and 0 if w p < n < p. Inserting (10.3) into the de®nition
+(10.1), we obtain
+
+                   1     P        Q       P                 P        ÿ                
+              S    n
+                                                c hi m             c a  P x ÿ h  x ;
+                   p h A An Fp  1eien 0emew p         x A An Fp 
+
+
+where h  x is the usual scalar product in dimension n. If c is of the form
+                                                     
+                                                 2pibt
+                                     c t  exp
+                                                   p
+
+with some b non divisible by p, we get
+
+                     1     P        Q       ÿ                  P           ÿ                
+      10:4 S f       n
+                                         min w p; kbhi =pkÿ1              c a  P x ÿ h  x :
+                     p h A An Fp  1eien                       x A An Fp 
+
+
+For any a 3 0 and for any h the function a  P x ÿ h  x is not 1 0 by assumption. So
+Weil's bound for exponential sums over polynomial in several variables implies
+                                       P           ÿ                        1
+      10:5                                       c a  P x ÿ h  x  O p nÿ2 
+                                    x A An Fp 
+
+
+where the constant depends only on the Pi . We apply Theorem 1.1 with f  a  P, g  1,
+V  AZn . So we introduce the varieties Xj of dimension e n ÿ j, and we de®ne X0  AZn .
+With these conventions and with the remark (10.5), we transforn (10.4) into
+
+                           1 Pn   n jÿ1      P         Q       ÿ                
+                    Sf      n
+                                 p2 2                      min w p; kbhi =pkÿ1 :
+                           p j1        h A Xjÿ1 Fp  1eien
+
+
+By Lemma 9.5, we have
+              P        Q           ÿ                
+                                min w p; kbhi =pkÿ1 f p nÿ jÿ1 w p jÿ1 log p nÿ jÿ1 :
+          h A Xjÿ1 Fp  1eien
+
+
+Hence we get
+                                                jÿ1
+                                         w pnP
+                                n
+                                              n           1
+      10:6           S f p log p
+                                2       p           f p 2 w p nÿ1 log p;
+                                   j1   p  log p
+
+which proves (10.2) in the case w p < p.
+
+  ÿ When nw p f p, we dissect the hypercube of summation over x1 ; . . . ; xn  into
+f w p=p      hypercubes Ci with all their sides with length < p. Let S Ci  be the
+exponential sum
+                                                  P     ÿ                           
+                            S Ci                     c a1 P1 x      ar Pr x :
+                                              x A Ci
+
+
+Proving for S Ci  a formula similar to (10.4), and using (10.5), we get
+                       Fouvry and Katz, Strati®cation theorem for exponential sums                                                       165
+                                                                   1
+                                                S Ci  f p nÿ2 log p n :
+
+Summing over all the Ci , we get also (10.2) in that case. QED
+
+
+                                        11. Proof of Corollary 1.5
+
+       As in (10.3) we develop in Fourier series the characteristic function of the interval
+0; x. We get
+                                                                        
+                          1       P             Q      P            hi m
+             KV Fp ; x  s                                exp ÿ2pi         S V ; h; p
+                          p h1 ; ...hs  A Fps 1eies 0em<x           p
+
+where
+                                                                          
+                                                  P  h1 x1      hs xs
+                        S V ; h; p         exp 2pi                        :
+                                   x AV Fp                   p
+                                                                     s
+                                                                     x
+The term corresponding to h  0 is the main term KV Fp                   . The error term comes
+                                                                     p
+from the contribution of the other terms. It is O S, with
+                                                          !
+                            1 P         Q           hi ÿ1
+                       S : s                min x;         jS V ; h; pj:
+                           p h30 A Fps 1eies        p
+
+Since VC does not lie in a hyperplane, we have for any h 3 0 the upper bound
+                                                                                  1
+        11:1                                   jS V ; h; pj e C p dÿ2 ;
+
+see [Fo2], Prop 1.2 for instance. Let X2 ; X3 ; . . . ; Xd be the closed subschemes introduced in
+Theorem 1.2 (note that (11.1) implies that Xd1 can be taken to be equal to f0g and need
+not be considered). So we have the inequality
+                0                                          !                                                                       !1
+                                                      ÿ1                                                                      ÿ1
+           1 @ d P Q                 hi                            P
+                                                                   d          d jÿ1       P     Q                       hi         A:
+     Sf       p2              min x;                                     p     2                     min x;
+           ps         s
+                 h A Fp 1eies        p                             j2                 h A Xj 1eies                      p
+
+We know that the Xj are of dimension e s ÿ j, so Lemma 9.5 gives at once
+                                                                                                                 !
+                        1       d
+                                            s         s    P
+                                                           d           d jÿ1
+                                                                                       j   sÿj            sÿ j
+                     Sf s      p  p log p 
+                                2                                  p     2      x p             log p              :
+                       p                                   j2
+
+
+Summing over j we get
+                                        (                         2          d !)
+                         d          s        1                 x           x
+                    S f p log p
+                         2              1  p           p        p           :
+                                              p             p log p     p log p
+
+This ends the proof of Corollary 1.5.
+166                       Fouvry and Katz, Strati®cation theorem for exponential sums
+
+                                                   References
+
+[BBD]      A. A. Beilinson, I. N. Bernstein and P. Deligne, Faisceaux pervers, ConfeÂrence de Luminy, juillet
+           1981, Analyse et Topologie sur les espaces singuliers, I, AsteÂrisque 100 (1982).
+[Be-Fo]    K. Belabas and E. Fouvry, Sur le 3-rang des corps quadratiques de discriminant premier ou presque
+           premier, Duke Math. J. 98 (1999), 217±268.
+[Da]       H. Davenport, On the class number of binary cubic forms, I, J. London Math. Soc. 26 (1951), 183±
+           192; erratum, ibid. 27 (1951), 512.
+[Da-He1]   H. Davenport and H. Heilbronn, On the density of discriminants of cubic ®elds, Bull. Lond. Math.
+           Soc. 1 (1969), 345±348.
+[Da-He2]   H. Davenport and H. Heilbronn, On the density of discriminants of cubic ®elds. II, Proc. Roy. Soc.
+           Lond. A 322 (1971), 405±420.
+[De-WI]    P. Deligne, La conjecture de Weil, Publ. Math. I. H. E. S. 43 (1974), 273±307.
+[De-WII]   P. Deligne, La conjecture de Weil II, Publ. Math. I. H. E. S. 52 (1980), 313±428.
+[Fo1]      E. Fouvry, Sur les proprieÂteÂs de divisibiliteÂ des nombres de classes des corps quadratiques, Bull. Soc.
+           Math. France 127 (1999), 95±113.
+[Fo2]      E. Fouvry, Consequences of a Theorem of N. Katz and G. Laumon Concerning Trigonometric
+           Sums, Israel J. Math. 120 (2000), 81±96.
+[Ha]       R. Hartshorne, Algebraic Geometry, Springer Grad. Texts Math. 52 (1977).
+[Iw]       H. Iwaniec, Rosser's Sieve, Acta Arith. 36 (1980), 171±202.
+[Ka-ASDE] N. Katz, Algebraic Solutions of Di¨erential Equations ( p-curvature and the Hodge Filtration), Inv.
+           Math. 18 (1972), 1±118.
+[Ka-SE]    N. Katz, Sommes Exponentielles, AsteÂrisque 79 (1980), SMF.
+[Ka-PES]   N. Katz, Perversity and Exponential Sums, Algebraic Number TheoryÐin honor of K. Iwasawa,
+           Adv. Stud. Pure Math. 17 (1989), 209±259.
+[Ka-PESII] N. Katz, Perversity and Exponential Sums II: Estimates for and Inequalities among A-Numbers,
+           Barsotti Symposium in Algebraic Geometry, Academic Press (1994), 205±252.
+[K-L]      N. Katz and G. Laumon, Transformation de Fourier et majoration de sommes exponentielles, Publ.
+           Math. I. H. E. S. 62 (1985), 361±418; corrigendum 69, p. 233.
+[SGA 4]    TheÂorie des topos et cohomologie eÂtale des scheÂmas, Springer Lect. Notes Math. 269, 270 and 305
+           (1972±1973).
+[SGA 7]    Groupes de monodromie en geÂomeÂtrie algeÂbrique, Springer Lect. Notes Math. 288 and 340 (1972±
+           1973).
+
+
+
+              MatheÂmatiques, BaÃtiment 425, UniversiteÂ de Paris-Sud, 91405 Orsay Cedex, France
+
+             Department of Mathematics, Princeton University, Princeton, New Jersey 08544, USA
+
+                    Eingegangen 14. Februar 2000, in revidierter Fassung 29. November 2000
+

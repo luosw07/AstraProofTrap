@@ -1,0 +1,11 @@
+--- original/paper.tex
++++ modified/paper.tex
+@@ -5543,7 +5543,7 @@
+ what was just proved.  Enlarge $D_d$ to bound the degrees and inverse
+ degrees of these models and of the regular models.
+ Let $H_k$ be the degree-$d$ truncation of the total primary change
+-followed by $h_k$.  It has the required center derivative and inverse
++preceded by $h_k$.  It has the required center derivative and inverse
+ jet, and \eqref{eq:dyn:jet-conjugacy} follows.
+ 
+ For precision, on a bad step the realized input jet has coefficient

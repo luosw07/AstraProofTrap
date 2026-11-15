@@ -1,0 +1,1145 @@
+                                                     CONSTRUCTIBLE SHEAVES ARE HOLONOMIC
+
+
+                                                                                 A. Beilinson
+
+
+
+
+arXiv:1505.06768v8 [math.AG] 30 Jan 2017
+                                                                               To Joseph Bernstein
+
+
+                                                Abstract. We develop the theory of singular support for étale sheaves on algebraic
+                                                varieties over an arbitrary base field.
+
+
+
+
+                                               In [KS] Kashiwara and Shapira, motivated by the theory of holonomic D-modules,
+                                           have shown that for any constructible sheaf F on a manifold X each component of
+                                           its singular support SS(F ) has dimension dim X. Here SS(F ) is the smallest closed
+                                           conical subset of the cotangent bundle T ∗ X, such that (locally on X) every function
+                                           f with df disjoint from SS(F ) is locally acyclic relative to F . In this article we
+                                           establish a similar result for étale constructible sheaves on algebraic varieties over
+                                           an arbitrary base field k. Our tools are Brylinski’s Radon transform [B] (which is
+                                           a global algebro-geometric version of the quantized canonical transformations from
+                                           [SKK]) and a version of the Lefschetz pencils story [Katz].
+                                               As was observed by Deligne [D2], if the characteristic of k is finite then, in con-
+                                           trast to the characteristic zero case (either for constructible sheaves or D-modules),
+                                           the components of SS(F ) need not be Lagrangian (see examples in 1.5 below).
+                                               Recently Takeshi Saito [S] defined the characteristic cycle CC(F ), i.e., equipped
+                                           the components of SS(F ) with multiplicities, and established its basic local and
+                                           global properties (the Milnor type formula for the total dimension of vanishing
+                                           cycles and the global Euler characteristic formula).
+                                               I am very grateful to Pierre Deligne, Volodya Drinfeld, Dennis Gaitsgory, Luc
+                                           Illusie, Sasha Kuznetsov, and Takeshi Saito for valuable comments, suggestions, and
+                                           corrections. I learned about the singular support and the Radon transform from
+                                           Joseph Bernstein at the end of the 1970s; this article is a small token of gratitude.
+
+                                                                               1 Main results
+                                           1.1. Conventions and notation. We fix a base field k; let p be its characteristic.
+                                           For us “variety” means “k-scheme of finite type”. A variety X is smooth if it is
+                                           smooth relative to k; for a smooth X we denote by T ∗ X = T ∗ (X/k) the cotangent
+                                           bundle relative to k. A map f : X → Y of smooth varieties yields a map of vector
+                                           bundles df : T ∗ YX := T ∗ Y ×Y X → T ∗ X. For a vector bundle V on X, we denote
+                                           by P (V) its projectivization (for x ∈ X a point of the fiber P (V)x is a line in Vx ).
+
+                                             1991 Mathematics Subject Classification. Primary 14F05; Secondary 14C21.
+                                             Key words and phrases. singular support, Radon transform.
+                                             The author was supported in part by NSF Grant DMS-1406734.
+
+                                                                                                                   Typeset by AMS-TEX
+                                                                                        1
+2                                        A. BEILINSON
+
+For a closed conical (i.e., Gm -invariant) subset C of V, we have its projectivization
+P (C) which is a closed subset of P (V). The image of C in X is called the base
+of C; this is a closed subset of X. A test pair on X is a correspondence of type
+     h      f
+X ←− U −→ Y ; we denote it by (h, f ) : X ← U → Y .
+   We fix a prime ℓ different from p; “sheaf” means “bounded constructible complex
+of étale Z/ℓn -sheaves”, D(X) is the derived category of sheaves on a variety X. A
+test pair (h, f ) as above is said to be F -acyclic for F ∈ D(X) if f is locally acyclic
+relative to h∗ F (see [D1] 2.12). Thus (idX , idX ) is F -acyclic if and only if F is
+locally constant, i.e., all the cohomology Hi F are locally constant.
+1.2. Let X be a smooth variety, and let C be a closed conical subset in T ∗ X.
+   A map h : U → X with U smooth is C-transversal at a geometric point u ∈ U
+if Ker(dhu ) ∩ Ch(u) r {0} = ∅.1 A map f : X → Y with Y smooth is C-transversal
+at a geometric point x ∈ X if (dfx )−1 (Cx ) r {0} = ∅. We say that f or h is
+C-transversal if it is C-transversal at every geometric point.
+Lemma. (i) C-transversality is an open property: for f as above the set of x ∈ X
+such that f is C-transversal at x is open; ditto for h and u ∈ U .
+(ii) If h as above is C-transversal, then the map dh|CU : CU := C ×X U → T ∗ U is
+finite. Therefore its image h◦ C is a closed conical subset of T ∗ U .
+Proof. (i) The preimage (df )−1 (C) is a closed conical subset of T ∗ YX . The image
+of P ((df )−1 (C)) is closed in X, and our set of x’s is its complement. In the case of
+h, our set of u’s is the complement to the image of P (CU ∩ Ker(dh)) in U .
+(ii) We can assume that U is affine, U = Spec A. Then CU = Spec P , T ∗ U = Spec R
+where P and R are Z-graded A-algebras (due to the Gm -actions), and A = R/I,
+I := R>0 . The map dh|CU comes from a morphism of graded algebras R → P .
+Since the gradings are nonnegative, a set of homogenous elements of P generates
+P as an R-module if (and only if) its image generates P/IP as an A-module. Thus
+the map dh|CU is finite if (and only if) it is finite over the zero section of T ∗ U ,
+which is the C-transversality condition.                                             
+   Notice that if h is smooth, then it is automatically C-transversal and h◦ C = CU .
+If f is C-transversal, then it is smooth on a neighborhood of the base of C.
+    A test pair (h, f ) as in 1.1 is said to be C-transversal at a geometric point u ∈ U
+if U and Y are smooth, h is C-transversal at u and f is h◦ Cu -transversal at u. By
+the lemma, C-transversality is an open property with respect to u ∈ U . We say
+that (h, f ) is C-transversal at a subset S of U if it is C-transversal at every u ∈ S;
+if S = U , then we simply say that (h, f ) is C-transversal (which means that h is
+C-transversal and f is h◦ C-transversal). Notice that a C-transversal test pair is
+C ′ -transversal for every C ′ ⊂ C.
+Examples. (i) If C is the zero section of the cotangent bundle of X, then (h, f ) is
+C-transversal if and only if f is smooth.
+(ii) (h, f ) is T ∗ X-transversal if and only if the map h × f : U → X × Y is smooth.
+   For a map of smooth varieties r : X → Z and a closed conical subset C of T ∗ X
+whose base is proper over Z, we denote by r◦ C the closed conical subset of T ∗ Z
+defined as the image of (dr)−1 (C) ⊂ T ∗ Z ×Z X by the projection T ∗ Z ×Z X → T ∗ Z.
+
+    1 The terminology of [KS] 5.4.12 is “h is non-characteristic for C.”
+                      CONSTRUCTIBLE SHEAVES ARE HOLONOMIC                                            3
+
+1.3. Our aim is to assign to each sheaf F on a smooth variety X a closed conical
+subset SS(F ) of T ∗ X, so that for every SS(F )-transversal h : U → X one has
+SS(h∗ F ) ⊂ h◦ SS(F ), every SS(F )-transversal f : X → Y is locally acyclic relative
+to F , and to do this in the most economic way possible. We proceed as follows:
+   Let X be a smooth variety, F ∈ D(X). We say that F is micro-supported on a
+closed conical subset C of T ∗ X if every C-transversal test pair is F -acyclic.
+   Consider the set C(F ) of all C’s such that F is micro-supported on C. If C ∈
+C(F ) and C ′ ⊃ C, then C ′ ∈ C(F ). Our C(F ) is not empty:
+Lemma. One has T ∗ X ∈ C(F ).
+Proof. Let pX , pY : X × Y → X, Y be the projections. Then pY is locally acyclic
+relative to p∗X F by [D1] 2.16. We are done, since for any test pair (h, f ) as in 1.1
+one has h∗ F = (h × f )∗ (p∗X F ), and for a T ∗ X-transversal (h, f ), the map h × f is
+smooth (see Example (ii) in 1.2).                                                     
+   We say that F has singular support if C(F ) has the smallest element. The latter
+is denoted then by SS(F ) = SS(F , X/k) and called the singular support, or micro-
+support of F .
+Theorem. (i) Every F has singular support.
+(ii) For a connected X each irreducible component of SS(F ) has dimension dim X.
+   For the proof of (ii) see 4.10; (i) and the upper bound for dim SS(F ) are in §3.
+Remark. If the characteristic p of k is zero then, by Kashiwara-Schapira [KS], every
+component of SS(F ) is a Lagrangian cone.2
+Question (Drinfeld). Which conical irreducible subsets C ⊂ T ∗ X of dimension
+dim X can be realized as components of SS(F ) for some F ∈ D(X) in case p > 0?
+   By Deligne [D3], if X is a surface, then every C can be realized in this manner.3
+Example. Set V := Spec k[x, t]; for g ∈ k[x, t] let rg : V → V be the map (x, t) 7→
+                                                                                n
+(g(x, t), t). Consider the polynomials g0 (x, t) := xp + xt2 and gn (x, t) := xp + xt,
+n ≥ 1; set Fn := rn∗ Z/ℓV ∈ D(V ) where rn := rgn . Then SS(Fn ) is the union of
+the zero section of T ∗ V and the cone Cn over the x-axis (t = 0) generated by the
+                                   n
+section dx if n = 0 and dx − x1/p dt if n ≥ 1.4 Notice that C0 is not Lagrangian
+and Cn , n ≥ 1, is a Lagrangian cone that is not conormal to its base.
+    2 Proof (Kuznetsov). (a) By Theorem 1.3(ii) it is enough to show that SS(F ) is isotropic. (b)
+
+By 1.4(ii) we can assume that F is an irreducible perverse sheaf, hence it is the middle extension
+of a local system Fη at the generic point of a closed irreducible subscheme Y of X. (c) By 1.4(ii)
+it is enough to find some F ′ ∈ D(X) supported on Y such that Fη′ is a local system that contains
+Fη and SS(F ′ ) is isotropic. (d) To that end we find, by de Jong, a proper map r : Z → X with Z
+smooth and irreducible of dimension dim Y such that r(Z) = Y and the local system r ∗ Fη on the
+generic point of Z is trivial. Let G be the constant sheaf on Z with fiber r ∗ Fη . Then F ′ := r∗ G is
+the sheaf promised in (c): indeed, SS(G) is the zero section of T ∗ Z by 2.1(iii) hence is isotropic,
+SS(G ′ ) ⊂ r◦ SS(G) by 2.2(ii), and r◦ sends isotropic cones to isotropic cones.
+    3 Deligne shows that every C that is not a conormal can be identified étale locally at the generic
+
+point with one of Cn ’s from the next example.
+    4 Proof. The map r is finite, so SS(F ) ⊂ r SS(Z/ℓ ) by 2.2(ii). Since SS(Z/ℓ ) is the
+                         n                     n       n◦        V                            V
+zero section of T ∗ V (see 2.1(iii)) and rn is étale over the complement to the x-axis, an immediate
+computation shows that rn◦ SS(Z/ℓV ) is the union of Cn and the zero section of T ∗ V . Now
+SS(Fn ) contains the zero section of T ∗ V since Fn is nonzero at the generic point of V , and
+SS(Fn ) is not equal to the zero section at the generic point ηx of the x-axis since Fn is not
+locally constant there (use 2.1(iii)). We are done since every closed subcone of Cn other than Cn
+is contained in the zero section at ηx .
+4                                        A. BEILINSON
+
+Exercise. An irreducible Lagrangian cone C ⊂ T ∗ X with smooth base Y coincides
+with the conormal bundle to Y if (and only if) the projection C → Y is smooth at
+the generic point of C.
+1.4. Here are some other useful properties of SS (to be proved in 4.10):
+Theorem. (i) For a smooth map π : Z → X one has SS(π ∗ F ) = π ◦ SS(F ).
+(ii) If {Fα } are perverse Jordan–Hölder constituents 5 of F , then SS(F ) = ∪α SS(Fα ).
+(iii) Compatibility with the base field change: Let k ′ /k be any extension of the base
+field, and let Fk′ be the pullback of F to Xk′ := X ⊗k k ′ . Then the closed subsets
+SS(F , X/k)k′ and SS(Fk′ , Xk′ /k ′ ) of (T ∗ X)k′ = T ∗ (Xk′ /k ′ ) coincide.
+1.5. The next apparent weakening of the above notion is useful. We say that F is
+weakly micro-supported on a closed conical subset C of T ∗ X if every C-transversal
+test pair (h, f ) that satisfies the next two extra conditions is F -acyclic:
+- f is a function, i.e., f : U → Y = A1 ;
+- if k is infinite, then h : U → X is an open embedding; if k is finite, then h is the
+composition U = Vk′ := V ⊗k k ′ → V ֒→ X where V is an open subset of X and k ′
+is a finite extension of k.
+    The set C ′ (F ) of all closed conical subsets of T ∗ X on which F is weakly micro-
+supported is a filter6 (the assertion with “weakly micro-supported” replaced by
+“micro-supported” is 1.3(i), and it is not evident). Denote by SS w (F ) its minimal
+element. Explicitly, SS w (F ) is the closure in T ∗ X of the set of all points (x, df (x))
+where x is a closed point of X and f is a function on a Zariski neighborhood7 of x
+which is not locally acyclic relative to F at x.
+    Clearly SS w (F ) ⊂ SS(F ) so 1.3(ii) implies that dim SS w (F ) ≤ dim X; this
+assertion was conjectured by Deligne in [D2]. The next result is proved in 4.9:
+Theorem. One has SS w (F ) = SS(F ).
+1.6. The Radon and Legendre transforms: a reminder. The main tool used in the
+proofs is Brylinski’s geometric Radon transform. We recall the definition and list
+the key properties that we will need. See [B] for details.
+   Let V be a vector space of dimension n + 1, V ∨ its dual. Let P, P∨ be the
+corresponding projective spaces, let Q ֒→ P × P∨ be the incidence correspondence,
+and let p, p∨ : Q ⇒ P, P∨ be the projections. For x ∈ P, x∨ ∈ P∨ we denote by
+Qx , Qx∨ the corresponding fibers (so x is a line in V and Qx is the hyperplane in
+P∨ formed by lines in V ∨ orthogonal to x). For (x, x∨ ) ∈ Q the tangent spaces to
+the fibers Qx , Qx∨ at (x, x∨ ) intersect trivially, so the orthogonal complement to
+                                                              ∗
+T(x,x∨ ) Qx ⊕ T(x,x∨ ) Qx∨ ⊂ T(x,x∨ ) Q is a line λ(x,x∨ ) ⊂ T(x,x ∨ ) Q.
+
+
+1.6.1. We have the Radon transform functors R := p∨      ∗
+                                                      ∗ p [n − 1] : D(P) → D(P )
+                                                                                ∨
+       ∨      ∨∗            ∨                          ∨
+and R := p∗ p [n − 1] : D(P ) → D(P). For K ∈ D(P ) one has:
+(i) R and R∨ (n − 1) (the Tate twist) are (both left and right) adjoint; the cones
+   5 I.e., {F } are irreducible perverse sheaves that can be realized as subquotients of some per-
+             α
+verse sheaf cohomology p Ha F .
+   6 To check that C , C ∈ C ′ (F ) implies C ∩ C ∈ C ′ (F ) notice that if a test pair (h, f ) as in
+                      1   2                   1    2
+1.1 with dim Y = 1 is C1 ∩ C2 -transversal, then locally on U it is either C1 - or C2 -transversal.
+The latter assertion need not be true if dim Y > 1 (consider cones C1 , C2 that are nonzero with
+zero intersection at the generic point of X and (h, f ) = (idX , idX )).
+   7 With modification as above in case k is finite. Indeed, the modification is needed to ensure
+
+that SS w (F ) for F a skyscraper sheaf at x ∈ X equals Tx∗ X.
+                     CONSTRUCTIBLE SHEAVES ARE HOLONOMIC                                       5
+
+of the adjunction maps RR∨ (K)(n − 1) → K, K → R∨ R(K)(n − 1) are locally
+constant.8
+(ii) If K is a perverse sheaf, then the perverse cohomology sheaves p Hi R∨ (K) are
+locally constant for i 6= 0. If K is locally constant, then so is R∨ (K).
+(iii) If K is an irreducible perverse sheaf which is not locally constant, then p H0 R∨ (K)
+has single not locally constant irreducible perverse sheaf in its Jordan–Hölder series.
+                                                                           ∼      ∼
+1.6.2. One has the Legendre transform identifications P (T ∗ P) ← Q → P (T ∗ P∨ )
+compatible with the projections to P and P∨ respectively. The left arrow assigns
+to (x, x∨ ) ∈ Q the point (λx∨ x ) ∈ P (T ∗ P)x that corresponds to the conormal line
+λx∨ x ⊂ Tx∗ P to the hyperplane Qx∨ at x. The right arrow is defined dually.
+                                                          dp             dp∨
+   For (x, x∨ ) ∈ Q consider the embeddings Tx∗ P −→ T(x,x ∗             ∗  ∨
+                                                              ∨ ) Q ←− Tx∨ P . The two
+
+vector subspaces intersect transversally by the line λ(x,x∨ ) , and one has dp(λx∨ x ) =
+                               ∗                                ∗        ∗
+λ(x,x∨ ) = dp∨ (λxx∨ ). Thus T(x,x ∨ ) Q is the direct sum of Tx P and Tx∨ P
+                                                                             ∨
+                                                                               with the
+lines λx x and λxx identified.
+         ∨          ∨
+
+
+Remark. The line subbundle λ of T ∗ Q is a contact structure on Q, and the Legendre
+transforms identify it with the canonical contact structures on the projectivizations
+of the cotangent bundles to P and P∨ .
+1.7. Let us explain how to recover, after a Veronese embedding, the singular support
+of any sheaf on P from the ramification divisor on the Radon transform side. The
+theorems in 1.3, 1.4, and 1.5 are deduced from this.
+   We return to the setting of 1.6. Let i = id : P ֒→ P̃ be the Veronese embedding
+of degree d ≥ 2. Thus P̃ is a projective space of dimension Nd = n+d
+                                                                                
+                                                                              d   − 1 and
+points of P̃∨ are degree d hypersurfaces in P. Let p̃, p̃∨ : Q̃ ⇒ P̃, P̃∨ be the incidence
+correspondence and let R̃, R̃∨ be the Radon transforms.
+   A closed conical subset C of T ∗ P yields the closed conical subset i◦ C of T ∗ P̃; let
+P (i◦ C) ⊂ P (T ∗ P̃) = Q̃ be its projectivization, and let DC be the image of P (i◦ C)
+in P̃∨ .
+   Let F ∈ D(P) be any sheaf. Consider the Radon transform R̃(i∗ F ) ∈ D(P̃∨ ).
+Let DF be the smallest closed subset of P̃∨ such that R̃(i∗ F ) is locally constant on
+the complement P̃∨ r DF .
+Theorem. DF is a divisor. For every its irreducible component Dγ there is a
+unique irreducible closed conical subset Cγ in T ∗ P of dimension n with Dγ = DCγ .
+One has SS(F ) = ∪γ Cγ . The maps p̃∨    γ : P (i◦ Cγ ) → Dγ are generically radicial.
+For k perfect p̃∨
+                γ are birational unless p = 2 when the generic degree can also be 2.
+   The proof of the theorem minus the last assertion is in 4.6 (case d ≥ 3) and 4.7
+(case d = 2); the last assertion (in a more precise form) is checked in 4.13.
+Questions. (i) (Illusie) What would be the Picard–Lefschetz formula — how to
+describe R̃(i∗ F ) on an étale neighborhood of the generic point of Dα ?
+(ii) More generally, if U is the strict Henselization of a variety at the generic point
+of a divisor D, then can one describe explicitly the category of those sheaves on U
+whose singular support is the union of the zero section and a given C ⊂ T ∗ U |DU
+with P (C) radicial over DU ?
+(iii) What would be the theory of microlocal perverse sheaves in the present setting?
+Does the codimension-three conjecture hold?
+   8 Since we live on a projective space this means that the cohomology sheaves come from Spec k.
+6                                        A. BEILINSON
+
+                               2 Some elementary lemmas
+   We collect several simple facts to be used in the proofs of the theorems from §1.
+For this section X is a smooth variety, C is a closed conical subset of T ∗ X, and F
+is a sheaf on X.
+2.1. Lemma. (i) The base of SS w (F ) (see 1.5) equals the support of F .
+(ii) If C ∈ C(F ), then for every C-transversal test pair (h, f ) : X ← U → Y the
+map f is universally locally acyclic relative to h∗ F .
+(iii) F is micro-supported on the zero section of T ∗ X if and only if F is locally
+constant.
+(iv) All sheaves that are micro-supported on C form a thick subcategory of D(X).
+Proof. (i) The support Z of F evidently contains the base B of SS w (F ). Since B
+is a closed subset (see 1.1) it is enough, replacing X by X r B, to show that for
+F 6= 0, one has SS w (F ) 6= ∅, which is clear since the test pair (h, f ) = (idX , 0) as
+in 1.5 is not F -acyclic.
+   (ii) We need to check that local acyclicity of f relative to h∗ F remains true after
+any base change g : Z → Y . First notice that it is enough to consider the case
+of smooth g: Indeed, we can assume that Y and Z are affine and, by a standard
+argument, that the scheme Z has finite type over k. Then g can be presented as
+a composition Z ֒→ Z ′ := AN    Y → Y with the first map being a closed embedding
+and the second one the projection. Then UZ := U ×Y Z is the preimage of Z in
+UZ ′ := U ×Y Z ′ , so the local acyclicity of UZ → Z relative to the pullback of F
+follows from that of UZ ′ → Z ′ , and we are done.
+   Since C ⊃ SS w (F ) we can, by (i), replace U by a neighborhood of the support
+of h∗ F where f is smooth. Now if Z/Y is smooth, then X ← UZ → Z is a
+C-transversal pair, so UZ → Z is locally acyclic relative to the pullback of F .
+   (iii) If F is micro-supported on the zero section of T ∗ X, then the test pair
+(idX , idX ) is F -acyclic so F is locally constant (see 1.1). If F is locally constant,
+then it is micro-supported on the zero section due to local acyclicity property of
+smooth maps (see Example (i) in 1.2).
+   (iv) We need to check that our full subcategory is triangulated and idempotently
+closed. Both assertions follow directly from the definition.                           
+2.2. For the definitions of π ◦ C and r◦ C see 1.2.
+Lemma. (i) If φ : Q → X is C-transversal and C ∈ C(F ), then φ◦ C ∈ C(φ∗ F ).
+(ii) Suppose we have r : X → Z with Z smooth and C ∈ C(F ) with base proper
+over Z. Then r◦ C ∈ C(r∗ F ).
+Proof. (i) is evident. (ii) We need to check that any r◦ C-transversal test pair
+(h′ , f ′ ) : Z ← V → Y is r∗ F -acyclic. Let r′ : XV := X ×Z V → V and h : XV → X
+be the projections. Our C contains by 2.1(i) (since C ⊃ SS w (F )) the image of the
+support of F by the zero section of T ∗ X. Therefore the r◦ C-transversality of h′
+implies that the variety XV is smooth on some neighborhood U of the support of
+h∗ F . The test pair (h|U , f ′ r′ |U ) : X ← U → Y is C-transversal so f ′ r′ |U , hence
+f ′ r′ , is locally acyclic relative to h∗ F . So, since r′ is proper on the support of h∗ F ,
+f ′ is locally acyclic relative to r∗′ h∗ F (see 3.13(i) in §3 below for the details). We
+are done since h′∗ r∗ F = r∗′ h∗ F by proper base change.                                  
+2.3. Let C min (F ) be the subset of minimal elements of C(F ) (see 1.3).9 Since T ∗ X
+    9 Theorem 1.3(i) asserts that C min (F ) has a single element. But we did not prove it yet.
+                    CONSTRUCTIBLE SHEAVES ARE HOLONOMIC                                    7
+
+is Noetherian, every C ∈ C(F ) contains some C ′ ∈ C min (F ).
+
+Lemma. (i) Let V be an open subset of X. If C ∈ C min (F ), then CV ∈ C min (F |V ).
+The map C min (F ) → C min(F |V ), C 7→ CV , is surjective.
+(ii) If π : Q → X is smooth surjective and π ◦ C ∈ C min (π ∗ F ), then C ∈ C min (F ).
+(iii) If C ∈ C min (F ), then the base of C equals the support of F .
+
+Proof. (i) Use the next fact which follows from 1.2(i): If F is micro-supported on
+C and F |V is micro-supported on CV′ , then F is micro-supported on the union of
+CXrV and the closure of CV′ in T ∗ X. (ii) follows from 2.2(i). To prove (iii) notice
+that the base of C lies in the support of F by (i), and we are done by 2.1(i) since
+C ⊃ SS w (F ).                                                                     
+
+2.4. A closed conical subset C of a vector bundle V over a variety S is strict if none
+of its irreducible components lies in the zero section S ֒→ V. The map C 7→ P (C)
+is a bijective correspondence between strict closed conical subsets of V and closed
+subsets of P (V); the inverse map sends a closed subset of P (V) to the cone over it.
+
+Lemma. Suppose X is connected and C ∈ C min (F ). If F vanishes at the generic
+point of X then C is strict; otherwise C is the union of a strict subset (which is
+the cone over P (C)) and the zero section of T ∗ X.
+
+Proof. By 2.3(i) we can replace X by the complement to the image of P (C). Then
+F is locally constant by 2.1(iii) and we are done by 2.3(iii).               
+
+2.5. Let i : X ֒→ P be a closed embedding of smooth varieties.
+
+Lemma. (i) One has SS w (i∗ F ) = i◦ SS w (F ).
+(ii) If the sheaf i∗ F on P has singular support (see 1.3), then F has singular
+support and, if k is infinite, one has SS(i∗ F ) = i◦ SS(F ). If k is finite, then the
+latter assertion is true if we know that for every finite extension k ′ /k the sheaf
+ik′ ∗ Fk′ on Pk′ has singular support.
+
+Proof. (i) follows since (a) a function g on P is locally acyclic relative to i∗ F if and
+only if g|X is locally acyclic relative to F , and (b) for every datum (f, x, ν), where
+f ∈ O(X), x ∈ X is a closed point, and ν ∈ Tx∗ P is such that di(ν) ∈ Tx∗ X equals
+dfx , one can find Zariski locally a function g on P such that g|X = f and dgx = ν.
+    (ii) By 2.3(i) the claim is Zariski local. So we can assume that P is affine and
+there is an étale map χ = (χn , χm−n ) : P → Am = An × Am−n with X = χn−1 (An ).
+Our χ yields a splitting s = sχ : T ∗ X ֒→ T ∗ P |X of di : T ∗ P |X ։ T ∗ X.
+    It also provides a datum (P̃ , φ, ρ) = (P̃χ , φχ , ρχ ) where φ : P̃ → P is an étale map
+                ∼
+with φ−1 (X) → X (so we have X ֒→ P̃ that lifts i) and ρ : P̃ → X is a retraction
+such that dρ|X : T ∗ X → T ∗ P |X equals s. Namely, consider P̃ ′ := P ×An X where
+the maps to An are χn and χn |X ; let φ′ : P̃ ′ → P and ρ′ : P̃ ′ → X be the
+projections. Then φ′−1 (X) = X ×An X is the disjoint union of the diagonal X and
+its complement K. Our P̃ is P̃ ′ r K, φ and ρ are the restrictions of φ′ and ρ′ to P̃ .
+    (a) Let us show that F has singular support. By 2.3(iii) the base of SS(i∗ F )
+lies in X so we have a closed conical subset C := ρ◦ φ◦ SS(i∗ F ) = s−1 (SS(i∗ F )) of
+T ∗ X. Then SS(F ) equals C: Indeed, C ∈ C(F ) by 2.2 since F = ρ∗ φ∗ (i∗ F ), and
+it is the smallest element of C(F ) since for any C ′ ∈ C(F ) one has i◦ C ′ ∈ C(i∗ F )
+by 2.2(ii), so i◦ C ′ ⊃ SS(i∗ F ) and C ′ = ρ◦ φ◦ (i◦ C ′ ) ⊃ C.
+8                                        A. BEILINSON
+
+     (b) Let us prove that SS(i∗ F ) = i◦ SS(F ). By 2.2(ii) one has SS(i∗ F ) ⊂
+                                                                                  ∗
+i◦ SS(F ). By (i) and 2.1(i) our SS(i∗ F ) contains the conormal bundle TX          P re-
+                                                                      w
+stricted to the support of F (recall that SS(i∗ F ) contains SS (i∗ F )). Suppose
+V := i◦ SS(F ) r SS(i∗ F ) 6= ∅. Then we can find x ∈ X and µ ∈ SS(F )x r {0}
+                                                 di
+such that the preimage in Vx of µ by Tx∗ P −→ Tx∗ X is not empty.
+     Suppose k is infinite. Then, replacing χ by gχ for a sufficiently general matrix g
+of type g = idkm + A ∈ GLm (k) ⊂ Aut(Am ), A ∈ Matn,m−n (k) ⊂ Matm,m (k), we
+can ensure10 that µ ∈   / s−1 (SS(i∗ F )x ) which is SS(F )x by (a); contradiction.
+     Suppose k is finite. Consider the base change of our picture to a finite extension
+k ′ /k of degree prime to ℓ, so we have the projection πX : Xk′ → X, etc. Then F
+                                                       ∗
+is naturally a direct summand of πX∗ Fk′ = πX∗ πX        F , so SS(F ) ⊂ SS(πX∗ Fk′ ) ⊂
+                         ◦
+πX◦ SS(Fk′ ) ⊂ πX◦ πX SS(F ) = SS(F ) (see 2.2). Thus SS(F ) = πX◦ SS(Fk′ );
+since SS(Fk′ ) is Gal(k ′ /k)-invariant, one has SS(Fk′ ) = SS(F )k′ . Ditto for sheaves
+on P , so SS(ik′ ∗ Fk′ ) = SS(i∗ F )k′ . An immediate version of the above argument
+for infinite k shows then that for large enough k ′ one has SS(i∗ F )k′ = i◦ SS(F )k′
+hence SS(i∗ F ) = i◦ SS(F ).                                                           
+
+                         3 The upper estimate for dim SS(F )
+3.1. In this section we prove the next weak version of the theorem in 1.3:
+
+Theorem. Every sheaf F on a smooth variety X has singular support. One has
+dim SS(F ) ≤ dim X.
+
+Proof. First notice that it is enough to consider the case when X is a projective
+space P = Pn . Indeed, the theorem for Pn implies that for An by 2.3(i), then for a
+smooth closed subvariety of An by 2.5(ii), then for an arbitrary X by 2.3(i).
+   Now we live on a projective space P. The remaining proof has two steps: first
+we give a concrete description of SS(F ), then, using it, prove the estimate.
+
+3.2. For a map g : Y → Z and a sheaf G on Y we denote by Eg (G) the smallest closed
+subset of Y such that g is universally locally acyclic relative to G on Y r Eg (G). It
+has étale local nature with respect to Y and Z.
+
+Theorem. Every F ∈ D(P) has singular support. Its projectivization P (SS(F )) ⊂
+P (T ∗ P) equals the Legendre transform of Ep (p∨∗ R(F )) ⊂ Q. If F vanishes at the
+generic point of P, then SS(F ) is the cone over P (SS(F )); otherwise SS(F ) is the
+union of this cone and the zero section of T ∗ P.
+
+    The proof is in 3.5; it is based on general lemmas 3.3 and 3.4.
+
+3.3. The Legendre transform 1.6.2 yields a bijective correspondence between closed
+subsets of P (T ∗ P) and P (T ∗ P∨ ). For a closed conical C ⊂ T ∗ P we denote by
+C ∨ ⊂ T ∗ P∨ the cone over the Legendre transform of P (C) ⊂ P (T ∗ P), and by
+C + ⊂ T ∗ P the union of C and the zero section of T ∗ P. We use the same notation
+for P interchanged with P∨ ; thus C = C ∨∨ if C is strict (see 2.4) and C ∨∨+ = C + .
+
+Lemma. A sheaf F ∈ D(P) is micro-supported on C + if and only if its Radon
+transform R(F ) ∈ D(P∨ ) is micro-supported on C ∨+ .
+
+    10 Use the fact that for any ν 6= 0 in An , the set {A(ν), A ∈ Mat                         m−n .
+                                                                      n,m−n (k)} is dense in A
+                    CONSTRUCTIBLE SHEAVES ARE HOLONOMIC                                    9
+
+                                  +                      +
+Proof. Notice that C ∨+ = p∨   ◦
+                            ◦ p (C ) by 1.6.2, so for C      ∈ C(F ) one has C ∨+ ∈
+C(R(F )) by 2.2. The converse comes by interchanging P and P∨ (since C + ∈ C(F )
+amounts to C + ∈ C(R∨ R(F )) by 1.6.1(i) and 2.1(iii),(iv)).                      
+3.4. Let C be any strict conical subset of T ∗ P and let E ⊂ Q be the Legendre
+transform of P (C). Let (h, f ) : P ← U → Y be a test pair on P. Let pU , p∨
+                                                                           U : QU :=
+U ×P Q → U, P∨ be the projections; we have a test pair (p∨               ∨
+                                                           U , f pU ) : P ← Q U → Y
+on P∨ . Set EU := U ×P E ⊂ QU .
+                                                               ∗ ∨
+Lemma. (h, f ) is C-transversal if and only if (p∨
+                                                 U , f pU) is T P -transversal at EU ,
+                ∨                 ∨
+i.e., the map (pU , f pU) : QU → P × Y is smooth at EU (see Example (ii) in 1.2).
+Proof. Pick any geometric point u ∈ U ; set x := h(u), y := f (u). Then, by
+1.6.2, C-transversality of (h, f ) at u means that for every e = (x, x∨ ) ∈ Ex the
+map dhu + dfu : λx∨ x ⊕ Ty∗ Y → Tu∗ U is injective. The latter assertion amounts
+                                            ∨
+to smoothness of (p∨ U , f pU) : QU → P × Y at (u, e) ∈ EU , i.e., to injectivity of
+the map dp∨ U(u,e) + d(f  p  )
+                            U (u,e) : T ∗
+                                        x∨ P ∨
+                                               ⊕ Ty∗ Y → T(u,e)
+                                                          ∗
+                                                                QU . To see this, notice
+      ∗                                    dh       dp
+that T(u,e) QU is the pushout of Tu∗ U ← Tx∗ P → Te∗ Q, hence it is the pushout of
+Tu U ← λx∨ x → Tx∗∨ P∨ (see 1.6.2).
+  ∗
+                                                                                
+3.5. Proof of Theorem 3.2. By 2.4, 1.6.1(i) and 2.1(iii),(iv) we can assume that
+F = R∨ (G), G ∈ D(P∨ ). Let C ⊂ T ∗ P be the cone over the Legendre transform of
+E := Ep (p∨∗ G). By 2.4 we need to show that C + = C ′+ for every C ′ ∈ C min (F ).
+    Let E ′ ⊂ Q be the Legendre transform of P (C ′ ). Then P∨ ← Q r E ′ → P is a
+   ′∨+
+C      -transversal test pair on P∨ by 1.6.2. Now G is micro-supported on C ′∨+ by
+3.3, so, by 2.1(ii), p is universally locally acyclic relative to p∨∗ G on Q r E ′ , i.e.,
+E ⊂ E ′ or C + ⊂ C ′+ . By 2.4 it remains to prove that C + ∈ C(F ).
+    Let (h, f ) : P ← U → Y be a C + -transversal test pair on P. We need to check
+that it is F -acyclic, i.e., f is locally acyclic relative to h∗ F .
+    Consider the test pair (p∨                    ∨
+                                    U , f pU ) : P ← QU → Y from 3.4. One has h F =
+                                                                                      ∗
+  ∗     ∨∗            ∨∗
+h p∗ p G = pU∗ pU G by proper base change. Thus, since pU is proper, it is enough
+to show that f pU is locally acyclic relative to p∨∗ U G (see 3.13(i) below for the details),
+i.e., that (p∨
+             U , f pU ) is G-acyclic. We check this separately (a) on QU r EU , and (b)
+on a Zariski neighborhood of EU :
+    (a) Since p is universally locally acyclic relative to p∨∗ G on Q r E our pU is
+                                                                                 +
+locally acyclic relative to p∨∗    U G on QU r EU . Since f is smooth (for C        contains
+                                                    ∨∗
+the zero), f pU is locally acyclic relative to pU G on QU r EU by [D1] 2.14.
+                                   ∗ ∨
+    (b) By 3.4, (p∨ U , f pU ) is T P -transversal at EU and so, by 1.2, on a neighborhood
+                   ∨
+of EU . Thus (pU , f pU ) is G-acyclic by the lemma in 1.3.                                
+Remark. Let k ′ be any finite extension of k. Consider the base change to k ′ of
+the datum from 3.2. Clearly Epk′ (p∨∗                    ∨∗
+                                      k′ R(Fk′ )) = Ep (p R(F ))k′ . Thus SS(Fk′ ) =
+SS(F )k′ . By 2.5(ii) and 2.3(i) this holds for any smooth X and F ∈ D(X).
+3.6. It remains to prove the dimension estimate from 3.1. By 3.2 it can be rephrased
+as follows (we have interchanged P and P∨ in 3.2 for notational convenience):
+Theorem. For any sheaf G on P one has dim Ep∨ (p∗ G) ≤ n − 1.
+  We will prove a slightly more general result with extra generic parameters (this
+generality is needed for the induction argument). Let us formulate it.
+10                                  A. BEILINSON
+
+3.7. Suppose we have a relative version of the setting of 1.6, so there is an irreducible
+variety S and a vector bundle V on it; let P and P∨ be the projectivizations of V
+and the dual bundle V ∨ , let Q ⊂ P ×S P∨ be the incidence correspondence, and
+p, p∨ : Q ⇒ P, P∨ be the projections.
+Theorem. For every G ∈ D(P) there is a Zariski neighborhood S o of the generic
+point of S such that dim Ep∨ (p∗ G)S o ≤ dim P − 1.
+     The proof (inspired by Deligne’s argument in [D1]) takes the rest of the section.
+Remark. It is enough to prove the theorem with S o an étale neighborhood of the
+generic point (its image in S is then the promised Zariski neighborhood).
+    We fix a closed subset D of P, D 6= P, such that G is locally constant on P r D.
+Since p∨ is smooth, it is universally locally acyclic relative to p∗ G on Q r p−1 (D),
+i.e., Ep∨ (p∗ G) ⊂ p−1 (D).
+    Denote the rank of V by n+1, so dim P = n+dim S. The proof goes by induction
+by n. If n = 0, 1 then p and p∨ are isomorphisms, so the theorem with S o = S
+follows directly from the above inclusion. From now on we assume that n > 1.
+3.8. Let T ⊂ P be an S-family of lines (i.e., the projectivization of a rank 2 subbun-
+dle of V). Set P∨            ∨     ∨
+                 (T ) := {x ∈ P : Qx is transversal to T }; this is an open subset
+                                        ∨
+
+of P (its complement is an S-family of n − 2-planes in P∨ ). One has a smooth
+     ∨
+                                 ∨           ∨                                     o
+affine projection P∨(T ) → T , x 7→ t = t(x ) := Qx ∩ T . For an open subset T of
+                                                     ∨
+
+                                           o     ∨                       ∨
+T we denote by P∨  (T o ) the preimage of T in P(T ) and by Q(T o ) the p -preimage of
+ ∨
+P(T o ) in Q. We say that T is good if T 6⊂ D.
+
+Proposition. For every good T there is an open dense subset T o of T such that
+dim Ep∨ (p∗ G) ∩ Q(T o ) ≤ dim P − 1.
+Proposition implies Theorem 3.7. To prove the theorem it is enough to find, after
+replacing S by an étale neighborhood of its generic point, a collection {Uα } of open
+subsets of P∨ such that dim Ep∨ (p∗ G) ∩ p∨−1 (Uα ) ≤ dim P − 1 and P∨ r ∪Uα is
+finite over S (since due to the last property, one has then dim(Q r ∪ p∨−1 (Uα )) ≤
+dim S + dim Q/P∨ = dim P − 1).
+   Let us construct Uα . We can assume that V has a trivialization such that the
+coordinate axes sections x0 , . . . , xn ∈ P(S) do not lie in D. The S-lines Tij that
+connect xi and xj , i 6= j, are good; let Tijo be the open subsets as in the proposition.
+Shrinking S we can assume that all Tij r Tijo are finite over S. The promised Uα ’s
+                              ∨       ∨                               ∨     ∨
+are P∨(T o ) . (Here the set P r ∪P(T o ) is finite over S since any x ∈ P is uniquely
+         ij                          ij
+determined by the datum of intersections {Qx∨ ∩ Tij }).                                
+     The proof of the proposition is in 3.11; it is is based on the next two lemmas:
+3.9. The first lemma is a general observation; its proof is in 3.12. Suppose we have
+maps of varieties f : X → Z, g : Y → Z, r : X → Y such that f = gr and a sheaf
+K ∈ D(X).
+Lemma. (i) If r is proper, then Eg (r∗ K) ⊂ r(Ef (K)).
+(ii) If, in addition, Ef (K) is finite over Y then Eg (r∗ K) = r(Ef (K)), hence one
+has dim Eg (r∗ K) = dim Ef (K).
+                      CONSTRUCTIBLE SHEAVES ARE HOLONOMIC                                           11
+
+3.10. We return to the setting of 3.8; let T be any S-family of lines and let T o be any
+open subset of T . Consider a commutative diagram of incidence correspondences
+
+                                                    P
+                                      qր          π↑        տp
+                                        p∼                    q∼
+                              P∼
+                               To      ←−        Q∼
+                                                  (T o )    −→         Q(T o )
+(3.10.1)                      rT ↓                 r↓                  ↓ p∨
+                                      p̄(T o )              p̄∨
+                                                              (T o )
+                              P̄T o    ←−        Q̄(T o )   −→         P∨
+                                                                        (T o )
+                                        ց           ↓        ւ
+                                                       o
+                                                   T
+
+defined as follows. Below x̄ is a point of the Grassmannian Gr = Gr(2, V) of lines
+in P, Lx̄ ⊂ P is the corresponding line, t is a point of T o , x ∈ P, x∨ ∈ P∨      (T o ) . A
+              ∼                                                          ∼
+point of PT o is a triple (t, x, x̄) with t, x ∈ Lx̄ . A point of Q(T o ) is a quadruple
+(t, x, x̄, x∨ ) with t, x ∈ Lx̄ ⊂ Qx∨ . A point of P̄T o is a pair (t, x̄) with t ∈ Lx̄ . A
+point of Q̄(T o ) is a triple (t, x̄, x∨ ) with t ∈ Lx̄ ⊂ Qx∨ . The arrows in (3.10.1) are
+the evident projections q((t, x, x̄)) = x, p∼ ((t, x, x̄, x∨ )) = (t, x, x̄), etc.
+Lemma. Suppose T o ⊂ T r D. Then
+                                                                ∼
+(i) q ∼ yields an isomorphism of the closed sets Ep∨ q∼ (π ∗ G) → Ep∨ (p∗ G) ∩ Q(T o ) .
+(ii) Ep∨ q∼ (π ∗ G) is finite over Q̄(T o ) .
+Proof of Lemma. Since p∨ q ∼ and p∨ are smooth maps, one has Ep∨ q∼ (π ∗ G) ⊂
+π −1 (D) and Ep∨ (p∗ G) ⊂ p−1 (D). Now (i) follows since q ∼ is an isomorphism over
+the open subset x 6= t of Q(T o ) which contains p−1 (D) ∩ Q(T o ) . To prove (ii)
+it is enough to check that π −1 (D) is finite over Q̄(T o ) . This comes since r is a
+fibration by projective lines and π −1 (D) is a closed subset of Q∼(T o ) that does not
+contain any fiber of r (indeed, π −1 (D) does not intersect the image of the section
+(t, x̄, x∨ ) 7→ (t, t, x̄, x∨ ) of r).                                               
+3.11. Proof of Proposition 3.8. Our T is good, so we have a nonempty T o as in
+the lemma in 3.10. Set Ḡ := rT ∗ q ∗ G ∈ D(P̄T o ). One has dim Ep∨ (p∗ G) ∩ Q(T o ) =
+dim Ep∨ q∼ (π ∗ G) = dim Ep̄∨(T o ) (r∗ π ∗ G) = dim Ep̄∨(T o ) (p̄∗(T o ) Ḡ). Here the first equality
+comes from (i) of the lemma in 3.10; the second one comes from the lemma in
+3.9 applied to K = π ∗ G, f = p∨ q ∼ , g = p∨             (T o ) (its conditions hold due to (ii) of
+the lemma in 3.10); the last equality comes since r∗ π ∗ G = p̄∗(T o ) Ḡ by the proper
+base change applied to q ∗ G ∈ D(P∼            T o ) (the left commutative square in (3.10.1) is
+Cartesian and rT is a proper map).
+    Now notice that the bottom horizontal line in (3.10.1) is the standard incidence
+correspondence for the T o -family of projective spaces P̄T o restricted to the open
+subset P∨                ∨                          ∨           ∨                ∨
+           (T o ) of P̄T o (the embedding P(T o ) ֒→ P̄T o identifies x with x̄ such that
+                                                                                          ∨
+
+Q̄x̄∨ = p̄(T o ) (p̄∨−1      ∨                          o
+                    (T o ) (x ))). Since dim P̄T /T = n − 1, the theorem in 3.7 is true for
+                                                    o
+
+P̄T o /T o and Ḡ ∈ D(P̄T o ) by the induction hypothesis. Therefore, after shrinking
+T o , we get dim Ep̄∨(T o ) (p̄∗(T o ) Ḡ) ≤ dim P̄T o − 1 = dim P − 1, and we are done.             
+
+3.12. Proof of Lemma 3.9. Recall the definition of acyclicity (see [D1] 2.12). Let
+A(Z) be the collection of pairs (z, h), z is a geometric point of Z, h is a geometric
+12                                          A. BEILINSON
+
+point of the Henselization Zz̃ of Z at z. For f , K as above and (z, h) ∈ A(Z)
+                                         i        κ
+consider the maps of fibers Xz → XZz̃ ← Xh ; we have the nearby cycles complex
+                     ∗
+Ψf (K)(z,h) := i Rκ∗ Kh (this is a complex of étale sheaves on Xz that may not
+be constructible) and the evident map ν : Kz → Ψf (K)(z,h) ; the vanishing cycles
+complex Φf (K)(z,h) is the cone of ν. Then f is locally acyclic relative to K if
+Φf (K)(z,h) vanishes for every (z, h) ∈ A(Z), and f is universally locally acyclic if the
+same vanishing holds for the base change (fZ ′ : XZ ′ → Z ′ , KXZ ′ ) of (f : X → Z, K)
+by every Z ′ /Z.
+   For Z ′ /Z and (z ′ , h′ ) ∈ A(Z ′ ) let S(Z ′ /Z, (z ′ , h′ ), f, K) be the image by Xz′ → X
+of the support of the complex ΦfZ ′ (KXZ ′ )(z′ ,h′ ) . We see that Ef (K) is the closure
+in X of the union of subsets S(Z ′ /Z, (z ′ , h′ ), f, K) for all Z ′ /Z, (z ′ , h′ ) ∈ A(Z ′ ).
+   For g, r as above with r proper one has Φg (r∗ K)(z,h) = Rrz∗ Φf (K)(z,h) by
+the proper base change. The same is true after the base change by every Z ′ /Z.
+Thus S(Z ′ /Z, (z ′ , h′ ), g, r∗ K) ⊂ r(S(Z ′ /Z, (z ′ , h′ ), f, K)) and 3.9(i) follows since r
+is proper.
+   Suppose, in addition, that r is finite on Ef (K). Each Φf (K)(z,h) is supported
+on Ef (K)z . So, by the proper (or rather finite) base change, for every geometric
+point y ∈ Yz one has (Φg (r∗ K)(z,h) )y = ⊕(Φf (K)(z,h) )x where x runs the finite
+set Ef (K)y . Hence the support of Φg (r∗ K)(z,h) equals the rz -image of the sup-
+port of Φf (K)(z,h) . The same is true after the base change by any Z ′ /Z. There-
+fore S(Z ′ /Z, (z ′ , h′ ), g, r∗ K) = r(S(Z ′ /Z, (z ′ , h′ ), f, K)) and 3.9(ii) follows since r is
+proper.                                                                                            
+
+             4. The singular support and the ramification divisor
+    In this section we prove the theorems from §1. The key one is the theorem in
+1.7. Here is an outline of its proof (minus the last assertion):
+    We follow the notation from 1.7. It is enough to treat the case when F is an
+irreducible perverse sheaf. Let Y ⊂ P be its support and let Cγ be the irreducible
+components of C := SS(F ). By 3.1 one has dim C ≤ n = dim P. Then D is
+the image of P (i◦ C) in P̃∨ . The geometry of the Veronese embedding shows that
+the images Dγ of P (i◦ Cγ ) are distinct irreducible components of D and the maps
+P (i◦ Cγ ) → Dγ are generically radicial (so dim P (i◦ Cγ ) = Nd − n − 1 + dim Cγ
+equals dim Dγ ). One of the Cγ ’s is the conormal bundle TY∗ P; it has dimension n,
+so the corresponding Dγ is a hypersurface. Let G be the nonconstant irreducible
+constituent of R̃(F ), see 1.6.1(iii). Then either (a) SS(G) = (i◦ C)∨ , or (b) SS(G) =
+(i◦ C)∨+ (see 3.3). In case (a) the support of G equals D; since it is irreducible, one
+has C = TY∗ P. In case (b) G is the middle extension of an irreducible local system
+at the generic point of P̃, D is its ramification locus, which is a divisor, and so each
+Cγ has dimension n.
+    Below is the detailed story. We begin with preliminary lemmas (see 4.1–4.5).
+4.1. Let X be a smooth variety. For a closed subset Y of X we denote by TY∗ X a
+closed conical subset of T ∗ X defined as follows. If Y is generically smooth,11 i.e.,
+contains a dense open smooth (over k) subscheme UY , then TY∗ X is the closure in
+T ∗ X of the conormal bundle TU∗Y X to UY . Otherwise one can find a finite extension
+k ′ (which we can choose to be purely inseparable) of k such that Yk′ ⊂ Xk′ satisfies
+the above condition over k ′ , so we have TY∗k′ Xk′ ⊂ T ∗ Xk′ = (T ∗ X)k′ , and we define
+     11 Which is always true if the base field k is perfect.
+                       CONSTRUCTIBLE SHEAVES ARE HOLONOMIC                                              13
+
+TY∗ X as the image of TY∗k′ Xk′ by the finite projection T ∗ Xk′ → T ∗ X. The above
+definition does not depend on the choice of k ′ . If X is connected and Y 6= ∅, then
+dim TY∗ X = dim X.
+Lemma. If Y is the support of F ∈ D(X), then TY∗ X ⊂ SS(F ).
+Proof. If Y is generically smooth, then we can shrink UY as above so that F is
+locally constant on it, and the claim follows from 2.1(iii), 2.3(iii), and 2.5(ii). For
+a general Y use Remark in 3.5 to reduce to the generically smooth situation.         
+4.2. Let π : Q → P be a map of varieties; assume that P is irreducible. For a ≥ 2
+                 (a)
+we denote by QP the complement to the union of all pairwise diagonals in the
+a-fold fiber product QaP of Q over P .12 We say that a (not necessary pairwise
+different) closed irreducible subsets Z1 , . . . , Za of Q intersect well relative to π if
+                                                                              (a)
+the dimension of every irreducible component of (Z1 ×P . . . ×P Za ) ∩ QP is equal
+to (Σ dim Zi ) − (a − 1) dim P = dim P − Σ(dim P − dim Zi ).
+   Recall that a generically surjective map Z → T with Z irreducible is small (in
+the Goresky–MacPherson sense) if dim(Z ×T Z r ∆(Z)) < dim Z; here ∆ is the
+diagonal embedding. Notice that such a map is generically radicial over T .
+Lemma. Suppose π : Q → P is proper.
+(i) If Z ⊂ Q intersects well relative to π with itself and dim Z < dim P , then the
+map π|Z : Z → π(P ) is small.
+(ii) Suppose Z1 , Z2 intersect well relative to π, Z1 is generically finite over π(Z1 ),
+and dim Z2 < dim P . Then Z1 ⊂ Z2 if (and only if ) π(Z1 ) ⊂ π(Z2 ).
+Proof. (i) follows since dim(Z ×P Z r ∆(Z)) = dim Z + (dim Z − dim P ). Let us
+check (ii). Since dim(Z1 ×P Z2 r ∆(Z1 ∩ Z2 )) = dim Z1 + (dim Z2 − dim P ) <
+dim Z1 = dim π(Z1 ), the fiber of Z1 ×P Z2 r ∆(Z1 ∩ Z2 ) over the generic point of
+π(Z1 ) is empty. Thus π(Z1 ) ⊂ π(Z2 ) implies that the fiber of Z1 ∩ Z2 over the
+generic point of π(Z1 ) is nonempty. Hence dim(Z1 ∩ Z2 ) ≥ dim π(Z1 ) = dim Z1 ,
+and so Z1 ∩ Z2 = Z1 since Z1 is irreducible, i.e., Z1 ⊂ Z2 .                    
+   We say that a collection S of closed irreducible subsets of Q intersects m-well
+relative to π, m ≥ 2, if every a (not necessarily pairwise different) elements of S,
+where m ≥ a ≥ 2, intersect well relative to π.
+4.3. We return to the situation of 1.7 and follow the notation there. So we consider
+the Veronese embedding i = id : P ֒→ P̃ of degree d ≥ 2, P̃∨ = P (Ṽ ∨ ), Ṽ ∨ =
+Γ(P, O(d)). A closed conical subset C of T ∗ P yields a strict closed conical subset
+                                                             ∼
+i◦ C of T ∗ P̃ (see 2.4), so we have P (i◦ C) ⊂ P (T ∗ P̃) → Q̃ and the projection
+p̃∨                       ∨
+  C : P (i◦ C) ։ DC ⊂ P̃ . If C is irreducible, then so are i◦ C, P (i◦ C), DC .
+    For a k̄-point x of P, where k̄/k is any algebraically closed field, let x(1) be its
+first infinitesimal neighborhood in Pk̄ and let Jx be the vector space of sections of
+O(d) on x(1) . Let ρx : Ṽk̄∨ = Γ(Pk̄ , O(d)) → Jx be the restriction map.
+   Assume that m ≥ 2. Consider the following condition (∗)m,d :
+  For every collection of pairwise distinct points x1 , . . . , xm , the product of the ρxi
+         (m)
+maps 13 ρ(x1 ,... ,xm ) : Ṽk̄∨ → Jx1 × . . . × Jxm is surjective.
+
+   12 So a geometric point of Q   (a)
+                                 P is a collection (q1 , . . . , qa ) of pairwise distinct geometric points
+of Q such that π(q1 ) = . . . = π(qa ).
+   13 In other words, ρ(m)                                                            (1)
+                                    is the restriction map Γ(P, O(d))k̄ → Γ(⊔xi , O(d)).
+                       (x ,... ,x )
+                           1     m
+14                                     A. BEILINSON
+
+     Notice that for a given m condition (∗)m,d is satisfied for large enough d.
+Lemma. (∗)m,d implies that the collection of all subsets {P (i◦ C)}, C is a closed
+conical subset of T ∗ P, intersects m-well relative to p̃∨ : Q̃ → P̃∨ .
+                                                                      (a)
+Proof. (i) Let us describe (P (i◦ C1 ) ×P̃∨ . . . ×P̃∨ P (i◦ Ca )) ∩ Q̃P̃∨ explicitly.
+   Let J be the vector bundle on P with fibers Jx ; we have an evident exact sequence
+of locally free sheaves 0 → Ω1P (d) → J → O(d) → 0. Let P(a) ⊂ Pa be the
+complement to the union of all pairwise diagonals in the product of a copies of
+P and let JPa(a) be the restriction of the exterior product of a copies of J to P(a) .
+                                                                                    (a)
+Consider the map of vector bundles ρ(a) : ṼP∨(a) → JPa(a) whose fibers are ρ(x1 ,... ,xa ) .
+   Since Ci are conical they yield closed conical subsets Ci′ in the OP (d)-twisted
+cotangent bundle T ′∗ P hence in J (see above). The restriction (C1′ × . . . × Ca′ )P(a)
+of the product of Ci′ ’s to P(a) is a Gam -invariant closed subvariety of JPa(a) . Thus
+ρ(a)−1 ((C1′ × . . . × Ca′ )P(a) ) is a closed conical subset of ṼP∨(a) . Its projectivization
+                                                (a)
+equals (P (i◦ C1 ) ×P̃∨ . . . ×P̃∨ P (i◦ Ca )) ∩ Q̃P̃∨ .
+   (ii) Assume (∗)m,d holds and a ≤ m. Then ρ(a) is a surjective morphism of
+vector bundles. The dimension of its kernel is Nd + 1 − a(n + 1). Below we view
+ρ(a) as a smooth surjective map of smooth varieties whose fibers are affine planes
+of dimension Nd + 1 − a(n + 1).
+   All irreducible components of (C1′ ×. . .×Ca′ )P(a) have dimension Σ dim Ci . Hence
+those of ρ(a)−1 ((C1′ × . . . × Ca′ )P(a) ) have dimension Nd + 1 − a(n + 1) + Σ dim Ci =
+Nd + 1 − Σ (n + 1 − dim Ci ) = Nd + 1 − Σ (Nd + 1 − dim i◦ Ci ). Therefore, by (i),
+                                                                          (a)
+all irreducible components of (P (i◦ C1 ) ×P̃∨ . . . ×P̃∨ P (i◦ Ca )) ∩ Q̃P̃∨ have dimension
+dim P̃∨ − Σ (dim P̃∨ − dim P (i◦ Ci )). We are done.                                       
+4.4. For our aims we need the case of m = 2 in 4.3.
+Lemma. Condition (∗)2,d holds for every d ≥ 3.
+Proof. Induction by n. If n = 1, then the assertion is evident. Suppose n > 1. For
+distinct points x1 , x2 of P = Pn , choose a hyperplane H = Pn−1 passing through
+them. Let JxHi be the sections of O(d) on the first infinitesimal neighborhood of xi
+in H. The exact sequence of sheaves 0 → OP (d − 1) → OP (d) → OH (d) → 0 yields
+the short exact sequences 0 → Γ(P, O(d − 1)) → Γ(P, O(d)) → Γ(H, O(d)) → 0
+and 0 → OP (d − 1)xi → Jxi → JxHi → 0. Since the lemma for H is known by the
+induction, we are done by the surjectivity of the restriction map Γ(P, O(d − 1)) →
+O(d − 1)x1 × O(d − 1)x2 .                                                         
+4.5. Assume that d ≥ 3. Combining 4.2–4.4 we get the next result:
+Proposition. (i) If C is any closed conical irreducible subset of T ∗ P of dimension
+≤ n, then the map p̃∨
+                    C : P (i◦ C) → DC is small, hence generically radicial.
+(ii) Let C be any closed conical subset of T ∗ P of dimension ≤ n. If Cγ is an
+irreducible component of C, then Dγ := DCγ is an irreducible component of DC , and
+Cγ 7→ Dγ is a bijective correspondence between the sets of irreducible components
+of C and DC .                                                                      
+   The next observation will not be used in the sequel; the reader can skip it. For
+(x, ν) ∈ P (T ∗ P) let P(x,ν) ⊂ P̃∨ be the linear projective (N − n)-subspace formed
+by all degree d hypersurfaces in P that pass through x ∈ P and have the conormal
+direction ν ∈ P (Tx∗ P) at it.
+                    CONSTRUCTIBLE SHEAVES ARE HOLONOMIC                                     15
+
+Lemma. An irreducible hypersurface D in P̃∨ comes from some irreducible conical
+subset C of dimension n in T ∗ P if and only if D is either the discriminant hyper-
+surface (then C is the zero section of T ∗ P) or D is spanned by all the subspaces
+P(x,ν) as above that lie in D.
+Proof. If D = DC , then D is the union of the subspaces P(x,ν) for (x, ν) ∈ P (C)
+and of the projectivized conormals to P in P̃ at points x of the base of C. If C is
+not the zero section of T ∗ P, i.e., the base of C is not P, then the span of the latter
+subspaces has dimension < N − 1, hence D is spanned by P(x,ν) .
+   Conversely, for an irreducible hypersurface D, consider the closed subspace KD
+of P (T ∗ P) formed by those (x, ν) that P(x,ν) lies in D. If D is spanned by P(x,ν) ,
+then dim KD +(N −n) ≥ dim D = N −1, i.e., dim KD ≥ n−1. Pick any irreducible
+P (C) ⊂ KD of dimension n − 1. Then the hypersurface DC lies in D, so DC = D
+by the irreducibility of D, and we are done.                                          
+4.6. Proof of Theorem 1.7 (except for its last assertion): case d ≥ 3. We follow the
+notation of 1.7.
+    (i) It is enough to prove the theorem when F is an irreducible perverse sheaf:
+Indeed, for any F ∈ D(P) let {Fα } be the (perverse) Jordan–Hölder constituents of
+F , i.e., all irreducible perverse sheaves that occur in some p Hi F . Suppose we know
+the theorem for all Fα ; let us prove it for F . Clearly {i∗ Fα } are the Jordan–Hölder
+constituents of i∗ F . They are not locally constant; let Gα be the single not locally
+constant Jordan–Hölder constituent of R̃(i∗ Fα ), see 1.6.1(iii). Then {Gα } is the
+set of not locally constant Jordan–Hölder constituents of R̃(i∗ F ) by 1.6.1(ii), so
+DF = ∪α DFα .14 This implies all the properties of DF from the theorem.
+    It remains to check that SS(F ) = ∪α SS(Fα ). One has SS(F ) ⊂ ∪α SS(Fα ) by
+2.1(iv). If the inclusion is strict, then SS(F ) does not contain the generic point of
+an irreducible component Cγ of some SS(Fα ). Since Cγ is uniquely determined by
+the corresponding divisor Dγ , we see that the image of (i◦ SS(F ))∨ = SS(i∗ F )∨
+(see 2.5) in P̃∨ does not contain the generic point of Dγ , i.e., R̃(i∗ F ) is locally
+constant there which contradicts DF = ∪α DFα .
+    (ii) For the rest of the proof we assume that our F is an irreducible perverse sheaf
+on P. Set C := SS(F ); by 3.1 this is a closed conical subset of T ∗ P of dimension
+≤ n. Let Cγ be the irreducible components of C. By 2.5 one has i◦ C = SS(i∗ F )
+so, by 2.4 and 3.3, SS(R̃(i∗ F )) equals either (i◦ C)∨ or (i◦ C)∨+ . Thus D = DF
+is the base of (i◦ C)∨ which is DC . By 4.5 the map Cγ 7→ Dγ := DCγ is a 1–1
+correspondence between the irreducible components of C and D, the projection
+p̃∨
+  γ : P (i◦ Cγ ) → Dγ is small, and Cγ is the only closed conical subset of T P of
+                                                                                   ∗
+
+dimension ≤ n such that the DCγ = Dγ . So to prove the theorem it remains to
+check that D is a divisor.
+    (iii) Since F is irreducible its support Y is also irreducible. Then SS(F ) contains
+TY∗ P (see 4.1). Since dim TY∗ P = n, our TY∗ P is an irreducible component of C. Let
+G be the irreducible perverse sheaf subquotient of p H0 R̃(i∗ F ) which is not locally
+constant (see 1.6.1(iii)). Then SS(G) equals either (i◦ C)∨ or (i◦ C)∨+ (see (ii)). So
+the support of G contains Z := DTY∗ P . Since dim P (i◦ TY∗ P) = Nd − 1, 4.5 implies
+that Z is a hypersurface. Since G is irreducible its support is also irreducible, hence
+it equals either Z or P̃∨ .
+   14 We use the fact that on a smooth variety every perverse subquotient of a locally constant
+
+perverse sheaf is locally constant.
+16                                       A. BEILINSON
+
+   (iv) If the support of G equals Z, then D = Z, so it is a divisor. Notice that
+since D is irreducible then so is C (see (ii)), i.e., C = TY∗ P.
+   If the support of G is P̃∨ , then G is the middle extension of a local system Gη at
+the generic point of P̃∨ . Therefore P̃∨ r D is the maximal open subset to which Gη
+extends as a local system, hence D is a divisor (the ramification divisor of Gη ). 
+4.7. Proof of Theorem 1.7 (except for its last assertion): case d = 2. In this section
+i : P ֒→ P̃ is the Veronese embedding of degree 2. We already know that all the
+components Cγ of C := SS(F ) have dimension n. Since DF is the base of (i◦ C)∨
+by 2.5 and 3.3, the theorem follows from 4.2 and the next result:
+Proposition. Let C1 , C2 be any irreducible conical subsets of T ∗ P of dimension
+n. Then the subsets P (i◦ C1 ), P (i◦ C2 ) of P (T ∗ P̃) = Q̃ intersect well relative to p̃∨
+(see 4.2) unless Ci coincide and equal to the conormal bundle TP∗′ P to some linearly
+embedded projective subspace P′ of P of dimension ≥ 1. The projection of P (i◦ TP∗′ P)
+to its image in P̃∨ is generically radicial.
+   To prove the proposition, we need the next lemma. We use the notation from
+4.3 for d = 2. Let x1 , x2 be two distinct k̄-points of P.
+                                (2)
+Lemma. The image of ρ(x1 ,x2 ) : Ṽk̄∨ → Jx1 × Jx2 has codimension 1. Its intersec-
+tion with Tx′∗1 P × Tx′∗2 P is the preimage of the diagonal k̄ ⊂ k̄ × k̄ by the restriction
+map Tx′∗1 P × Tx′∗2 P ։ Tx′∗1 L × Tx′∗2 L = k̄ × k̄ where L = L(x1 , x2 ) is the projective line
+that connects x1 and x2 . Here the latter identification comes since Ω1L (2) = OP1 .
+Proof. The case n = 1 is checked directly; then use the induction argument from
+the proof in 4.4.                                                             
+Proof of Proposition. Let Yi ⊂ P be the base of Ci . Suppose that P (i◦ C1 ) and
+P (i◦ C2 ) do not intersect well relative to p̃∨ .15 A simple modification of the proof
+in 4.3 combined with the codimension 1 assertion from the lemma shows that this
+happens if and only if, for all pairs of distinct points x1 ∈ Y1 , x2 ∈ Y2 , the product
+                                                                              (2)
+                ′
+of the fibers C1x 1
+                        ′
+                    × C2x 2
+                            ⊂ Tx′∗1 P × Tx′∗2 P is contained in the image of ρ(x1 ,x2 ) . Since
+this product is Gm × Gm -invariant, by the lemma, this amounts to the fact that the
+images of Cixi in Tx∗i L(x1 , x2 ) are both equal to 0. Which means that C1x1 ⊂ Tx∗1 P
+lies in the orthogonal complement to the vector subspace F1x1 of Tx1 P generated
+by the tangents at x1 to lines L(x1 , x2 ) for all x2 ∈ Y2 , plus the same condition
+with indices 1 and 2 interchanged. Notice that:
+                                  ⊥                                             ⊥
+(a) One has dim Cixi ≤ dim Fix      i
+                                      and the equality means that Cixi = Fix      i
+                                                                                    .
+(b) One has dim Y2 ≤ dim F1x1 and the equality means that Y2 coincides with the
+linear projective subspace of P spanned by the lines L(x1 , x2 ) for all x2 ∈ Y2 , i.e., Y2
+is a linear projective subspace of P that contains x1 . The same holds with indices
+1 and 2 interchanged.
+    If xi are general enough, then dim Cixi + dim Yi = dim Ci = n. Since dim Fixi +
+        ⊥
+dim Fix  i
+           = n, we can rewrite the inequality in (a) as dim Fixi ≤ dim Yi . Combining
+it with (b) we see that the inequalities in (a) and (b) are equalities. Therefore Yi
+coincide and are equal to a linear projective subspace P′ of P, dim P′ > 0, and Ci
+are both equal to the conormal bundle TP∗′ P.
+
+     15 Notice that this evidently excludes the situation when dim Y
+                                                                       1 = dim Y2 = 0.
+                     CONSTRUCTIBLE SHEAVES ARE HOLONOMIC                                           17
+
+   It remains to check the last assertion of the proposition. A point of P (i◦ TP∗′ P) is
+a pair (x, x̃∨ ), x ∈ P′ , x̃∨ ∈ P̃∨ , such that either Qx̃′ ∨ := Q̃x̃∨ ∩ P′ equals P′ or this is
+a quadric that contains x as a singular point. The projection to P̃∨ is (x, x̃∨ ) 7→ x̃∨ .
+We are done since a generic singular quadric has single singular point.                        
+Remark. For P′ as above the dimension of P (i◦ TP∗′ P) ×P̃∨ P (i◦ TP∗′ P) r ∆(P (i◦ TP∗′ P))
+equals dim P (i◦ TP∗′ P), so the projection of P (i◦ TP∗′ P) to its image in P̃∨ is semi-small.
+4.8. A reminder about pencils. We need a variant of the classical Lefschetz pencils
+story from [Katz]. We are in the setting of 1.7 and follow the notation there. Let
+C be any irreducible closed conical subset of T ∗ P of dimension n; set D := DC .
+    (i) For a line L in P̃∨ set Q̃L := Q̃ ×P̃ L ⊂ Q̃; let πL : Q̃L → L be the projection.
+Let ŨL ⊂ P̃ be the complement to the axis L⊥ of L. The map p̃|Q̃L : Q̃L → P̃ is an
+isomorphism over ŨL so we have the inverse open embedding jL : ŨL ֒→ Q̃L and
+hence f˜L := πL jL : ŨL → L. The map f˜L is smooth; the embedding ŨL ֒→ Q̃L ֒→
+    ∼
+Q̃ → P (T ∗ P̃) sends x̃ ∈ ŨL to the conormal to the fiber of f˜L passing through x̃.
+    (ii) Set UL := i−1 (ŨL ) ⊂ P, fL := f˜L i. Let x be point in UL . Pick a linear
+coordinate t on L regular at fL (x). The composition f˜(L,t) := t(f˜L ) is a function
+on a neighborhood Ũ of i(x) in ŨL , so f(L,t) := f˜(L,t) i is a function on U := i−1 (Ũ ).
+                            ∼                     ∼
+One has P (i◦ C)Ũ ∩ Q̃L ← df˜(L,t) (Ũ ) ∩ i◦ C → df(L,t) (U ) ∩ C.
+    (iii) Pick a hyperplane H ⊂ P that does not contain x. We refer to functions
+                                                ∼
+on P r H as polynomials. Writing OP (d) → OP (dH) we identify Γ(P, OP (d)) with
+the vector space of polynomials of degree ≤ d, so P̃∨ is its projectivization. One
+has f(L,t) = q1 /q2 where q1 , q2 are nonzero polynomials of degree ≤ d such that
+(q1 ), (q2 ) ∈ L ⊂ P̃∨ , t((q1 )) = 0, t((q2 )) = ∞. Conversely, if q1 , q2 are any non-
+proportional nonzero polynomials of degree ≤ d and q2 (x) 6= 0, then q1 /q2 ∈ OPx
+equals f(L,t) for some (L, t) as in (ii).
+    (iv) Consider the closed conical subset (i◦ C)∨ of T ∗ P̃∨ of dimension N with base
+D (see 3.3). Let x̃∨ be a closed point of L ∩ D. Then the embedding L ֒→ P̃∨ is
+(i◦ C)∨ -transversal at x̃∨ if and only if the fiber P (i◦ C)x̃∨ lies in UL . Since UL is
+affine this implies that P (i◦ C) → D is finite hence radicial at x̃∨ .
+4.9. Proof of Theorem 1.5. By 2.5 and 2.3(i) the case of general X is reduced to
+the case X = An then to X = P. So we are in the setting of 1.7, and we use the
+notation from there.
+   (i) Since SS w (F ) ⊂ SS(F ), to prove the equality it is enough to find for every
+component Cγ of C = SS(F ) and its open dense Gm -invariant subset W a datum
+(x, U, f ) where x is a closed point of P, U is a Zariski neighborhood of x in P,16
+and f is a function on U such that df (x) ∈ Wx and φf (F )x 6= 0.
+   (ii) Recall that Dγ := DCγ is a component of the divisor D = DF and the
+map p̃∨ γ : P (i◦ Cγ ) → Dγ is generically radicial. Our W yields an open dense
+subset P (i◦ Cγ )W in P (i◦ Cγ ) defined as the image of W by the correspondence
+       di
+T ∗ P ←− T ∗ P̃|P r {zero section} → P (T ∗ P̃|P ) ⊂ P (T ∗ P̃). Choose an open dense
+subset Dγo of Dγ such that P (i◦ Cγ )o := p̃∨−1γ    (Dγo ) → Dγo is radicial, Dγo does
+not intersect other components of D, the sheaf R̃(i∗ F )|Dγo is locally constant, and
+P (i◦ Cγ )o ⊂ P (i◦ Cγ )W .
+
+   16 Here we assume that k is infinite; otherwise U ⊂ P ′ for a finite extension k ′ of k, see 1.5.
+                                                        k
+18                                     A. BEILINSON
+
+     By Bertini the lines L in P̃∨ that properly intersect Dγ at points of Dγo and such
+that the embedding L ֒→ P̃∨ is (i◦ Cγ )∨ -transversal form a dense open subset of the
+Grassmannian of lines. So one can pick one such L defined over k if k is infinite or
+over a finite extension k ′ of k if k is finite. Pick a point x̃∨ in L ∩ Dγ = L ∩ Dγo and
+let (i(x), x̃∨ ) be its preimage in P (i◦ C)o . Due to the (i◦ Cγ )∨ -transversality, i(x)
+does not lie in the axis of L, i.e., x ∈ UL (see 4.8(iv)). Pick t and a neighborhood
+U ⊂ UL of x as in 4.8(ii), and set f := f(L,t) . Then (x, U, f ) is the promised datum
+from (i). Indeed, df (x) ∈ Wx since P (i◦ Cγ )o ⊂ P (i◦ Cγ )W (see 4.8(ii)). It remains
+to check that φf (F )x 6= 0.
+     (iii) Let Lo be the complement in L to the finite set (D ∩ L) r {x∨ }; set Q̃Lo :=
+Q̃L ×L Lo = Q̃ ×P̃ Lo . Since p̃∨ : Q̃ → P̃∨ is universally locally acyclic relative to
+p̃∗ i∗ F on Q̃ r P (i◦ C), we see that the projection πLo : Q̃Lo → Lo is locally acyclic
+relative to (p̃∗ i∗ F )|Q̃Lo on the complement to {(i(x), x̃∨ )} = Q̃Lo ∩ P (i◦ C). Since
+R̃(i∗ F )|Lo = πLo ∗ ((p̃∗ i∗ F )|Q̃Lo ) by the proper base change and πLo is proper we
+see that φf (F )x is equal to the vanishing cycles of R̃(i∗ F )|L at x∨ . The latter is
+nonzero for R̃(i∗ F )|L is not locally constant at x∨ (which follows since R̃(i∗ F )|Dγo
+is locally constant but R̃(i∗ F ) is not locally constant at Dγo ). We are done.        
+4.10. Proof of the theorems 1.3(ii) and 1.4. Assertions 1.3(ii) and 1.4(iii) for general
+X reduce, using 2.5(ii) and 2.3(i) (or 2.5(i) and 1.5), to the case of X = P. Here
+they follow from the description of SS(F ) of the theorem in 1.7. To check 1.4(ii)
+we can replace, by the theorem in 1.5 (see 4.9), SS by SS w ; now the claim follows
+from perverse t-exactness of functors φf . Finally let us prove 1.4(i). One has
+SS(π ∗ F ) ⊂ π ◦ SS(F ) by 2.2(i). As above, we prove the inverse inclusion with
+SS replaced by SS w . Now (see 1.5) SS w (F ) is the closure of the set of points
+(x, df (x)) ∈ T ∗ X where x ∈ X and f is a function on a neighborhood of x which
+is not locally acyclic relative to F at x (with changes as in loc.cit. for finite k). If
+(x, df (x)) is as above, z ∈ π −1 (x), then f π is not locally acyclic relative to π ∗ F at
+z (since π is smooth) hence (z, d(f π)(z)) ∈ SS w (π ∗ F ). We are done for π ◦ SS(F )
+is the closure of the set of such points (z, d(f π)(z)).17                               
+4.11. A linear algebra lemma. The aim of the rest of the article is to prove the last
+assertion of Theorem 1.7. We assume that the base field k is algebraically closed.
+    Let W be a k-vector space of dimension 2n, ω a symplectic (i.e., alternate non-
+degenerate) form on W . If p (the characteristic of k) equals 2 then let κ be a
+quadratic form on W whose polarization equals ω.
+    A vector subspace L of W is said to be ω-isotropic, resp. κ-isotropic, if ω, resp. κ,
+vanishes on it. Denote by Grω = Grω (W ), resp. Grκ = Grκ (W ), the Grassmanians
+of ω-isotropic, resp. κ-isotropic subspaces of W of dimension n. The Grassmannian
+Grω is irreducible, and Grκ ⊂ Grω has 2 connected components: the subspaces
+Lκ1 , Lκ2 ∈ Grκ lie in the same component if and only if dim Lκ1 /(Lκ1 ∩ Lκ2 ) is even.
+Lemma. Let V be any vector subspace of W of dimension n.
+(i) There is Lω ∈ Grω complementary to V .
+(ii) For p = 2 there is Lκ ∈ Grκ complementary to V .
+(iii) If V is not κ-isotropic, then Lκ ’s as in (ii) occur in both components of Grκ .
+   17 Use the fact that for any subset A ⊂ T ∗ X one has π ◦ A = π ◦ A where ¯ means the closure
+
+(which follows since π is open and dπ : T ∗ X ×X Z → T ∗ Z is a closed embedding).
+                     CONSTRUCTIBLE SHEAVES ARE HOLONOMIC                                19
+
+Proof. (i) Let us construct Lω . Set V0 := V ∩ V ⊥ (here ⊥ is the orthogonal
+complement for ω) and pick V1 ⊂ V complementary to V0 . Pick an ω-isotropic
+V0′ ⊂ V1⊥ such that the ω-pairing between V0 and V0′ is nondegenerate. Set V2 :=
+                                            ∼
+(V ⊕ V0′ )⊥ . Pick an isomorphism g : V1 → V2 such that g ∗ ω|V2 = −ω|V1 (it exists
+since dim V1 = dim V2 and ω is nondegenerate on V2 and V1 ); let G ⊂ V1 ⊕ V2 be
+the graph of g. Set Lω := V0′ ⊕ G.
+   (ii) Pick an Lω as in (i). If it is κ-isotropic we are done. If not then, since ω
+identifies V with the dual to Lω , there is a nonzero v ∈ V such that for l ∈ Lω one
+has κ(l) = ω(v, l). Set Lω       ⊥     ω               ω    ω
+                          0 := v ∩ L , pick any l ∈ L r L0 , and let P be the plane
+generated by v and l. Since ω|P is nondegenerate, κ vanishes on exactly two lines
+in P ; let ℓ be one of these lines that does not contain v. Set Lκ := ℓ ⊕ Lω0.
+   (iii) We construct Lκ1 , Lκ2 as in (ii) such that dim(Lκ1 /Lκ1 ∩ Lκ2 ) = 1 so they
+belong to different components of Grκ . Pick an Lκ as in (ii). Pick v ∈ V such
+that κ(v) 6= 0. Set Lκ0 := v ⊥ ∩ Lκ , pick any l ∈ Lκ r Lκ0 , and let P be the plane
+generated by v and l. Since ω|P is nondegenerate, κ vanishes on exactly two lines
+ℓ1 and ℓ2 in P . Set Lκi := ℓi ⊕ Lκ0 .                                             
+Remark. Lω and Lκ as in the lemma form Zariski open subsets of Grω and Grκ .
+By the lemma, they are dense unless p = 2 and V is κ-isotropic and we deal with
+Grκ : here the closure of our open subset is one of the two components of Grκ .
+4.12. For a smooth variety X, dim X = n, consider the tangent bundle T (T ∗X).
+Let T v (T ∗ X) := T (T ∗ X/X) be its vertical subbundle, so for (x, ν) ∈ T ∗ X one has
+                                              ∼    v
+an evident canonical identification Tx∗ X → T(x,ν)     (T ∗ X), µ 7→ µv . A function f on
+an open subset U of X yields a section df : U → T ∗ X; we denote by d(2) f : T U →
+T (T ∗ X) its differential. So for (x, ν) ∈ T ∗ X, every f with df (x) = ν yields a direct
+                                            ∼
+sum decomposition αf,x : Tx∗ X ⊕ Tx X → T(x,ν) (T ∗ X), αf,x (µ, τ ) := µv + d(2) f (τ ).
+    Recall that T ∗ X is naturally a symplectic manifold, so T (T ∗ X) carries a canon-
+ical symplectic form ω. It vanishes on T v (T ∗ X) and on the image of d(2) f for
+every f . Explicitly, αf,x identifies ω(x,ν) with the standard symplectic form on
+Tx∗ X ⊕ Tx X.
+    If p = 2, then T (T ∗ X) carries a canonical quadratic form κ such that the polar-
+ization of κ equals ω and κ vanishes on the image of d(2) f for every (U, f ) as above.
+Our κ is uniquely defined by these properties; it vanishes on T v (T ∗ X). Explicitly,
+one has κ(αf,x (µ, τ )) = µ(τ ).
+                                                                           v
+Lemma. Let L be a vector subspace of T(x,ν) (T ∗ X) complementary to T(x,ν)  (T ∗ X).
+Then L can be realized as the d(2) f -image of Tx X for some f ∈ OXx , df (x) = ν, if
+(and only if ) L is ω-isotropic for p 6= 2 and L is κ-isotropic for p = 2.
+Proof. We pick local coordinates with x = 0 and identify functions on Tx X with
+polynomial functions of coordinates. Our f is the sum of a linear term equal to ν
+and a quadratic function q. Then d(2) f is the graph of the polarization of q.
+   Our L is the graph of a bilinear function B. The condition of the lemma means
+that B is alternative, and so B is the polarization of some q. We are done.    
+   Let C be an irreducible closed conical subset of T ∗ X of dimension n and let (x, ν)
+be a closed point of Creg . For f ∈ OXx such that (x, ν) is an isolated intersection
+point of C and df (U ),18 let hC, df i(x,ν) be the intersection index of these subvarieties
+at (x, ν) in T ∗ X. Thus hC, df i(x,ν) = 1 means that the intersection is transversal.
+   18 Here U is a neighborhood of x where f is defined.
+20                                         A. BEILINSON
+
+Proposition. 19 (i) One can find f ∈ OXx with hC, df i(x,ν) = 1 if and only if the
+next condition (∗) is not satisfied:
+(∗) p = 2, T(x,ν) C is κ-isotropic, and the rank of the map T(x,ν) C → Tx X is odd.
+(ii) In the situation of (∗) one can find f ∈ OXx with hC, df i(x,ν) = 2.
+Proof. (i) By the lemma one can find f as in (i) if and only if there is an ω-isotropic,
+or κ-isotropic if p = 2, subspace L of T(x,ν) (T ∗ X) complementary to both T(x,ν) C
+          v
+and T(x,ν)    (T ∗ X). Let us try to find such an L.
+     By Remark in 4.11 applied to W = T(x,ν) (T ∗ X), our L always exists unless p = 2
+and T(x,ν) C is κ-isotropic. In the latter situation it exists if and only if T(x,ν) C and
+   v
+T(x,ν)   (T ∗ X) lie in the same component of Grκ , i.e., T(x,ν) C/(T(x,ν) C ∩T(x,ν) v
+                                                                                         (T ∗ X))
+has even dimension. We are done.
+                                                     v
+     (ii) Suppose (∗) holds so T(x,ν) C and T(x,ν)       (T ∗ X) lie in different components of
+Grκ . Then Lκ ’s with dim(Lκ ∩ T(x,ν)       v
+                                                (T ∗ X)) = 0 and with dim(Lκ ∩ T(x,ν) C) = 1
+form dense open subsets of the same component of Grκ . So there is Lκ that satisfies
+both conditions; pick it. Set ℓ := Lκ ∩ T(x,ν) C.
+     Let g1 , . . . , gn ∈ OT ∗ X (x,ν) be local equations of C near (x, ν) so dgi ((x, ν)) form
+a base of the conormal to C at (x, ν). We can assume that dgn ((x, ν)) vanishes on
+Lκ . Then the restriction of {dgi ((x, ν))}i≤n−1 to Lκ is a base of the dual to Lκ /ℓ.
+Since dgn ((x, ν)) vanishes on both Lagrangian subspaces Lκ and T(x,ν) C one has
+dgn ((x, ν)) = ω(τ̃ , ·) for some generator τ̃ of the line ℓ; let τ be its image in Tx X.
+     Consider the set S of f ∈ OXx with df (x) = ν and d(2) f (Tx X) = Lκ ; by the
+lemma it is not empty. For f ∈ S set ri = rf i := gi (df ) ∈ OXx . Then ri (x) = 0,
+{dri (x)}i≤n−1 is a base of τ ⊥ ⊂ Tx∗ X, and drn (x) = 0. Let Z = Zf be the (germ
+of) smooth curve passing through x defined by equations r1 = . . . = rn−1 = 0; its
+tangent line Tx Z ⊂ Tx X is generated by τ .
+     One has hC, df i(x,ν) = dim OXx /Σ OXx ri = dim OZx /OZx rn , so we look for
+f ∈ S with rn |Z having zero of order 2 at x. If f we started with does not fit the
+condition, then we modify it as follows. Pick any a ∈ OXx such that a(x) = 0 and
+τ (a) 6= 0. Then f ′ := f + a3 is what we need. Indeed, df ′ = df + a2 da, so f ′ ∈ S.
+Set ri′ := rf ′ i , Z ′ := Zf ′ , etc. One has dri′ (x) = dri (x) and rn′ equals rn + a2 τ (a)
+modulo the cube of the maximal ideal of OXx . Since Z ′ is tangent to Z at x, rn |Z ′
+has zero of order > 2 at x. So rn′ |Z ′ has zero of order 2; we are done.                      
+4.13. Proof of the last assertion of Theorem 1.7. We are in the setting of 1.7. Let
+C be any irreducible closed conical subset of T ∗ P of dimension n, D := DC .
+Proposition. The map p̃∨                                                              ∨
+                           C : P (i◦ C) → D is birational if p 6= 2. If p = 2, then p̃C
+                                                                                     20
+can also be of generic degree 2. The latter happens if and only if C is κ-isotropic
+and for (x, ν) ∈ Creg the rank of the map T(x,ν) C → Tx P is odd.21
+Example. If C = TY∗ P, then p̃∨
+                              C is not birational if and only if p = 2, dim Y is odd.
+                                                          o
+Proof. We know that p̃∨ C is generically radicial. Let D be a dense open subset
+of Dreg such that p̃C is flat (hence radicial) over it, and the scheme P (i◦ C)o :=
+                    ∨
+
+P (i◦ C)Do is smooth. For a closed point x̃∨ ∈ Do there is a unique x ∈ P with
+
+     19 Inspired by a discussion with Deligne.
+    20 I.e., κ vanishes on T C             ∗
+                                reg ⊂ T (T P).
+    21 The parity of the rank does not depend on the choice of (x, ν) ∈ C
+                                                                               reg : it is odd if and only
+if T(x,ν) C and T v (T ∗ P) lie in the different components of Grκ (T(x,ν) (T ∗ P)).
+                    CONSTRUCTIBLE SHEAVES ARE HOLONOMIC                                         21
+
+(i(x), x̃∨ ) ∈ P (i◦ C) ⊂ Q̃. The scheme-theoretic fiber P (i◦ C)x̃∨ is a finite scheme
+supported at (i(x), x̃∨ ); its order is the generic degree δ of p̃∨C.
+   We use the notation from 4.8. Let L be a line in P̃∨ that intersects D at x̃∨
+transversally and such that L ֒→ P̃∨ is (i◦ C)∨ -transversal at x̃∨ . Then, by 4.8(iv),
+one has x ∈ UL ; choose t and Ũ as in 4.8(ii) so that Ũ does not intersect any
+other critical fiber Q̃y , y ∈ L ∩ D, y 6= x̃∨ . One has P (i◦ C)x̃∨ = P (i◦ C)Ũ ∩ Q̃L =
+df(L,t) (U ) ∩ C (the first equality comes since L intersects Do at x∨ transversally, for
+the second one see 4.8(ii)). Thus δ = hdf(L,t) (U ), Ci(x,ν) since ν := df(L,t) (x) ∈ Creg .
+   Set X := P r H for H as in 4.8(iii); we view it as a vector space with x = 0.
+Due to 4.8(iii) we are reduced to the next assertion: For every ν ∈ Creg x ⊂ Tx∗ X
+one can find f as in the proposition in 4.12 such that f = q1 /q2 where q1 , q2
+are nonzero non-proportional polynomials of degree ≤ d, q2 (x) 6= 0. To check it
+look at the proof in 4.12 (we follow the notation there). Since f with df (x) = ν,
+d(2) f (Tx X) = L, can be chosen to be a quadratic polynomial f = ν + q (see the
+lemma in 4.12), this solves our problem in case (i) of the proposition in 4.12. In
+case (ii) of loc. cit. we look for f such that rf n |Zf has zero of order 2 at x. We start
+with f = ν + q as above. If it does not satisfy the condition, we modify f as follows.
+Pick a linear function a such that τ (a) 6= 0. The cubic polynomial f ′ = ν + q + a3
+is a solution for d ≥ 3. For d = 2 we find a solution f ′′ which is the ratio of a
+quadratic polynomial and a linear one: Namely, we can assume that q|Zf has zero
+of order 2 at x (otherwise replace q by q + a2 ); then our f ′′ is ν + q(1 + a)−1 . 
+
+                                        References
+[B]       J.-L. Brylinski, Transformations canoniques, dualité projective, théorie de Lefschetz,
+          transformations de Fourier et sommes trigonométriques, Astérisque 140–141 (1986),
+          3–134.
+[D1]      P. Deligne, Théorèmes de finitude en cohomologie ℓ-adique, Cohomologie étale (SGA
+          4 12 ), Lect. Notes in Math. 569, Springer-Verlag, 1977, pp. 233–251.
+[D2]      P. Deligne, Notes sur Euler-Poincaré: brouillon projet, manuscript, 2011.
+[D3]      P. Deligne, Letter to the author (July 9, 2015).
+[KS]      M. Kashiwara, P. Schapira, Sheaves on manifolds, Grundlehren der Mathematischen
+          Wissenschaften Vol. 292, Springer-Verlag, Berlin, 1990.
+[Katz]    N. Katz, Pinceaux de Lefschetz: théorème d’existence, Groupes de monodromie en
+          géométrie algébrique (SGA 7 II), Lect. Notes in Math. Vol. 340, Springer-Verlag, 1972,
+          pp. 212–253.
+[S]       T. Saito, The characteristic cycle and the singular support of a constructible sheaf,
+          arXiv:1510.03018 (2015).
+[SKK]     M. Sato, T. Kawai, M. Kashiwara, Microfunctions and pseudo-differential equations,
+          Lecture Notes in Math. Vol. 287, Springer-Verlag, 1973, pp. 265–529.
+

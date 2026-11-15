@@ -1,0 +1,5 @@
+Source: Hyunwoo Lee, Matching statistics in regular hypergraphs and applications.
+https://arxiv.org/abs/2611.17197v1
+The arXiv record links to the arXiv non-exclusive distribution license:
+http://arxiv.org/licenses/nonexclusive-distrib/1.0/
+Original rights remain with their holders. This benchmark does not assign a new license to the source paper. The deliberately modified manuscript is identified as a benchmark derivative.

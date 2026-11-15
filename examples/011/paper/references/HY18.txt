@@ -1,0 +1,1552 @@
+                                                RELATIVE SINGULAR SUPPORT AND THE SEMI-CONTINUITY OF
+                                                       CHARACTERISTIC CYCLES FOR ÉTALE SHEAVES
+
+
+
+
+arXiv:1702.06752v1 [math.AG] 22 Feb 2017
+                                                                                    HAOYU HU AND ENLIN YANG
+
+
+                                                     Abstract. Recently, the singular support and the characteristic cycle of an étale sheaf on a
+                                                     smooth variety over a perfect field are constructed by Beilinson and Saito, respectively. In this
+                                                     article, we extend the singular support to a relative situation. As an application, we prove the
+                                                     generic constancy for singular supports and characteristic cycles of étale sheaves on a smooth
+                                                     fibration. Meanwhile, we show the failure of the lower semi-continuity of characteristic cycles
+                                                     in a higher relative dimension case, which is different from Deligne and Laumon’s result in the
+                                                     relative curve case.
+
+
+
+
+                                                                                              Contents
+                                             1. Introduction                                                                                              1
+                                             2. Notation and conventions                                                                                  5
+                                             3. Radon Transforms and Legendre transforms                                                                  7
+                                             4. Relative singular supports                                                                               11
+                                             5. Existence of relative singular supports                                                                  17
+                                             6. Generic constancy of characteristic cycles                                                               22
+                                             7. Failure of the lower semi-continuity for characteristic cycles                                           27
+                                             References                                                                                                  27
+
+
+
+
+                                                                                          1. Introduction
+                                           1.1. Let Y be a smooth complex algebraic variety of equidimension d, DY the sheaf of differential
+                                           operators on Y and G a holonomic left DY -module. We can associate two geometric invariants
+                                           to G. One is the singular support SSpGq, which is a closed subset of the cotangent bundle T˚ Y
+                                           of equidimension d. The other one is the characteristic cycle CCpGq, which is a cycle of T˚ Y
+                                           supported on SSpGq. They contain important information on the DY -module G. For example,
+                                           assuming that Y is projective over C, we have [Du, Ka83]
+
+                                           (1.1.1)                            χpY, DRY pGqq “ degpT˚Y Y, CCpGqqT˚ Y ,
+
+                                           where χpY, DRY pGqq denotes the Euler-Poincaré characteristic of the de Rham complex DRY pGq “
+                                                             ˚                        ˚
+                                           Ω1Y {C bL
+                                                   DY G and TY Y the zero-section of T Y .
+
+
+
+                                             2000 Mathematics Subject Classification. Primary 14F05; Secondary 14C25.
+                                             Key words and phrases. Semi-continuity, relative singular support, relative characteristic cycle.
+                                                                                                    1
+2                                     HAOYU HU AND ENLIN YANG
+
+
+1.2. It is well known that ℓ-adic étale sheaves are an analogue of algebraic D-modules. Let X be
+a smooth scheme over a field k, ℓ a prime number invertible in k, Λ a finite field of characteristic
+ℓ and K a bounded complex of constructible sheaves of Λ-modules on X. Recently, an important
+breakthrough is achieved by Beilinson. Using a Radon transform method initiated by Brylinski,
+he defined the singular support SSpKq of K and proved the existence of SSpKq [B15]. It is a closed
+conical subset of the cotangent bundle T˚ X. When X is equidimensional, he proved that every
+irreducible component of SSpKq has the same dimension as X (loc. cit.).
+   Assume that k is perfect. Based on Beilinsion’s results, Saito constructed the characteristic
+cycle CCpKq of K as an algebraic cycle of T˚ X supported on SSpKq [Sa16]. The coefficient of each
+component of CCpKq is obtain by the total dimension of the stalk of a vanishing cycles complex
+associated to K. The cycle CCpKq is positive if K is perverse. When X is projective over k, he
+proved the following index formula (loc. cit.)
+(1.2.1)                         χpXk̄ , K|Xk̄ q “ degpT˚X X, CCpKqqT˚ X ,
+where k̄ denotes an algebraic closure of k and T˚X X the zero-section of T˚ X. It is similar to the
+one for D-modules (1.1.1).
+   Assume that X is a connected smooth curve over k and that K is the extension by zero of a
+locally constant and constructible sheaf of Λ-modules on an open dense subset U of X. Then, we
+have
+                                                     ÿ
+(1.2.2)            CCpKq “ ´rkΛ pK|U q ¨ rT˚X Xs ´        dimtotx pKq ¨ rT˚x Xs,
+                                                        xPX´U
+
+where dimtotx pKq denotes the total dimension of K at x (2.9) and T˚x X the fiber T˚ X ˆX x. The
+singular support SSpKq is the reduced closed subscheme of T˚ X where CCpKq is supported. The
+index formula (1.2.1) is the well-known Grothendieck-Ogg-Shafarevich formula [SGA5].
+
+1.3. In the rest of the introduction, let S be an excellent Noetherian scheme, f : X Ñ S a
+separated and smooth morphism of purely relative dimension d, D an effective Cartier divisor of X
+relative to S, U the complement of D in X and j : U Ñ X the canonical injection. For any s P S,
+we denote by s̄ an algebraic geometric point above s and by Xs̄ and Ds̄ the fibers of f : X Ñ S
+and f |D : D Ñ S at s̄. We denote by T˚ pX{Sq the relative cotangent bundle on X with respect
+to S and by T˚X pX{Sq the zero-section of T˚ pX{Sq (2.3). Let ℓ be a prime number invertible in
+S, Λ a finite field of characteristic ℓ, G a locally constant and constructible sheaf of Λ-modules on
+U of constant rank and F “ j! Grds.
+Theorem 1.4 ([L81, 2.1.1, 5.1.1]). Assume that f : X Ñ S has relative dimension d “ 1. In this
+case, f |D : D Ñ S is quasi-finite and flat. Then,
+      (i) There exists a closed subscheme A of T˚ pX{Sq which is open and of purely relative dimen-
+          sion d over S such that, for any algebraic geometricŤ point s̄ of S, we have SSpF |Xs̄ q “
+          pAs̄ qred . (In fact, we take A “ pT˚ pX{Sq ˆX Dq T˚X pX{Sq).
+     (ii) There exists a finite and surjective morphism π : S 1 Ñ S and a cycle B of T˚ ppX ˆS S 1 q{S 1 q
+          supported on A ˆS S 1 such that there exists an open dense subset W 1 of S 1 and, for any
+          algebraic geometric point s̄1 of W 1 , we have CCpF |s̄1 q “ Bs̄1 (2.2);
+    (iii) For any algebraic geometric point s̄1 of S 1 ´ W 1 , the cycle Bs̄1 ´ CCpF |s̄1 q on T˚ Xs̄1 is
+          effective;
+    (iv) Let V be an open dense subset of S. Then, fV : X ˆS V Ñ V is locally acyclic with
+          respect to F |XˆS V if and only if, for any algebraic geometric point s̄1 of V ˆS S 1 , we have
+          CCpF |s̄1 q “ Bs̄1 .
+      RELATIVE SINGULAR SUPPORT AND THE SEMI-CONTINUITY OF CHARACTERISTIC CYCLES                         3
+
+
+   Theorem 1.4 is the semi-continuity property for the Swan conductors of ℓ-adic sheaves on relative
+curves due to Deligne and Laumon. Here, we formulate it in terms of characteristic cycles of ℓ-
+adic sheaves. Saito asked whether the theorem can be generalized to the case where the relative
+dimension d ě 2. In this article, we answered his question for part (i)-(iii) of Theorem 1.4.
+1.5. The main construction of this article is a relative version of singular supports of ℓ-adic
+sheaves which generalizes Beilinson’s one in [B15]. Let Y and Z be two schemes smooth over
+S, g : Y Ñ X and h : Y Ñ Z two S-morphisms, and dg : T˚ pX{Sq ˆX Y Ñ T˚ pY {Sq and
+dh : T˚ pZ{Sq ˆZ Y Ñ T˚ pY {Sq two maps induced by canonical morphisms g ˚ Ω1X{S Ñ Ω1Y {S
+and h˚ Ω1Z{S Ñ Ω1Y {S , respectively. For a closed conical subset C of T˚ pX{Sq, we say that g is
+C-transversal relative to S if pdg ´1 pT˚Y pY {Sqqq X pC ˆX Y q is contained in the zero-section of
+T˚ pX{Sq ˆX Y . We denote by g ˝ C the scheme theoretic image dgpC ˆX Y q in T˚ pY {Sq. For a
+closed conical subset C 1 of T˚ pY {Sq, we say that h is C 1 -transversal relative to S if C 1 X impdhq is
+contained in the zero-section of T˚ pY {Sq. Let K be a bounded complex of constructible sheaves of
+Λ-modules on X. We say that K is micro-supported on a closed conical subset C of T˚ pX{Sq if, for
+any pair of morphisms ph, gq : Z Ð Y Ñ X of schemes smooth over S such that g is C-transversal
+relative to S and that h is g ˝ C-transversal relative to S, the morphism h is locally acyclic relative
+to g ˚ K. If there is a smallest element among closed conical subsets of T˚ pX{Sq on which K is
+micro-supported, we call it the singular support of K relative to S and we denote it by SSpF , X{Sq
+(cf. 4.4).
+   The definition above was firstly introduced by Beilinson when S is spectrum of a field [B15].
+Unlike the existence of singular support in loc. cit., the relative singular support SSpF , X{Sq does
+not exist in general. However, using a Radon transform method similar to Beilinson’s, we obtain
+the following theorem:
+Theorem 1.6 (Theorem 5.4). The relative singular support SSpK, X{Sq exists after replacing S
+by a Zariski open dense subscheme.
+   Let s be a point of S. The similarity of definitions of the singular support and its relative version
+allows us to compare SSpK, X{Sq ˆS s with SSpK|Xs q. We prove the following theorem.
+Theorem 1.7 (Theorem 5.8 and Theorem 5.9). After replacing S by a Zariski open dense subset,
+the relative singular support SSpK, X{Sq is flat over Sred . Moreover, for any point s of S, we have
+(1.7.1)                           pSSpK, X{Sq ˆS sqred “ SSpK|Xs q.
+  Theorem 1.7 implies that, in higher relative dimensional cases, we can take A “ SSpK, X{Sq to
+generalize part (i) of Theorem 1.4, if allowing to shrink S. However, Example 7.2 implies that we
+cannot generalize part (i) in general.
+  Part (ii) of Theorem 1.4 is generalized by the following theorem:
+Theorem 1.8 (Theorem 6.9). There exists a dominant and quasi-finite morphism π : S 1 Ñ S and
+a cycle B on T˚ ppX ˆS S 1 q{S 1 q such that,
+              ř
+     (i) B “ αPI mα rBα s pmα P Qq, where Bα (α P I) is flat over S 1 ;
+    (ii) For any algebraic geometric point t̄ Ñ S 1 , we have
+                                            Bt̄ “ CCpK|Xt̄ q.
+1.9. To prove Theorem 1.8, we may assume that S is integral. We denote by η the generic point
+of S and η̄ an algebraic geometric point above η. The characteristic cycle CCpK|Xη̄ q on T˚ Xη̄
+can be descent to a cycle C on T˚ Xη1 , where η 1 is a finite extension of η. We denote by S 1 the
+integral closure of S in η 1 and put X 1 “ X ˆS S 1 . Let B be a cycle of T˚ pX 1 {S 1 q such that Yη1 “ C.
+4                                      HAOYU HU AND ENLIN YANG
+
+
+Using the semi-continuity of the total dimensions of vanishing cycles complexes due to Saito [Sa16],
+we proved that coefficients of characteristic cycles of K along fibers of f 1 : X 1 Ñ S 1 are locally
+constant. Replacing S 1 by a Zariski open dense subscheme, we obtain Theorem 1.8. In response
+to the notion of relative singular support, we call B the characteristic cycle of K|X 1 relative to S 1 .
+
+1.10. We show that part (iii) of Theorem 1.4 cannot be generalized to a higher relative dimension
+situation by Example 7.3. In other words, it says that the characteristic cycles is no longer lower
+semi-continuous in a higher relative dimension case, which is unlike the relative curve situation
+(part (2) of Theorem 1.4). The main reason of its failure is that, on a higher dimensional scheme,
+the singular support of an ℓ-adic sheaf with wild ramifications is not Lagrangian in general. In
+fact, we find an ℓ-adic sheaf F on a smooth fibration f : X Ñ S such that, for s P S, the family
+of singular supports SSpF |Xs q jumps from non-Lagrangian closed subset of T˚ Xs to Lagrangian
+ones at isolated closed points of S.
+
+1.11. We expect in the future a generalization of part (iv) of Theorem 1.4 to higher dimension
+cases and its relation with vanishing cycles on general bases [O]. If we have a positive answer to
+this generalization, we could obtain that f : X Ñ S is locally acyclic with respect to F in 1.3
+if and only if f : X Ñ S is universally locally acyclic with respect to F . Indeed, we only need
+to show that locally acyclicity implies universally acyclicity by the help of the generalization. To
+show the universally locally acyclicity, it is sufficient to show that the map fn : AnX Ñ AnS induced
+by f : X Ñ S is locally acyclic with respect to F |AnX . If part (iv) of Theorem 1.4 is valid for
+higher dimensional situations, there exists a finite and surjective map π : S 1 Ñ S and a cycle B 1 of
+T˚ ppX ˆS S 1 q{S 1 q such that, for any algebraic geometric point s̄1 of S 1 , we have CCpF |s̄1 q “ Bs̄1 1 .
+We put X 1 “ X ˆS S 1 and we denote by Bn1 the pull-back of B 1 on T˚ pAnX 1 {AnS 1 q. Then, for any
+algebraic geometric point t̄1 of AnS 1 , we have CCpF |t̄1 q “ Bt̄1 1 “ pBn1 qt̄1 . Using the generalization
+of part (iv) of Theorem 1.4 again for F |AnX and fn : AnX Ñ AnS , we obtain that fn : AnX Ñ AnS is
+locally acyclic with respect to F |AnX .
+
+1.12. There have been several works on the generalization of Deligne and Laumon’s semi-continuity
+of Swan conductors. Saito proved a semi-continuity property for the total dimension of the stalk
+of vanishing cycles complexes [Sa16]. It is an essential step to obtain characteristic cycles of ℓ-adic
+sheaves. For an ℓ-adic sheaf on a smooth variety, one can associate a divisor called the total di-
+mension divisor using Abbes and Saito’s non-logarithmic ramification filtration of Galois group of
+local fields [AS02, Sa13]. In [HY], the authors proved the lower semi-continuity for total dimension
+divisors of ℓ-adic sheaves on a smooth fibration.
+   In the theory of D-modules, a local invariant of an algebraic D-module on a smooth complex
+curve called irregularity is an analogue of Swan conductors. Deligne proved the semi-continuity for
+irregularities of relative differential systems on relative curves [De]. After that, André proved the
+same property for general differential systems [An]. We expect a generalization of their works in
+higher relative dimension situations for characteristic cycles of D-modules.
+
+1.13. The article is organized as follows. After notation and geometric preliminaries, we give
+the notion of relative singular support of étale sheaves in §4. We prove the generic existence of
+relative singular support and study its fibers in §5. Based on results in §5, we prove the generic
+constancy of characteristic cycles in §6. Under certain geometric conditions, we also write down a
+proposition in §6 that compares the characteristic cycle and the relative characteristic cycle, which
+is given by Saito. In §7, we provide two examples which shows that part (i) and part (iii) cannot
+be generalized to higher dimensional situations.
+      RELATIVE SINGULAR SUPPORT AND THE SEMI-CONTINUITY OF CHARACTERISTIC CYCLES                          5
+
+
+Acknowledgement. The authors would like to express their gratitude to T. Saito for sharing
+ideas and for inspiring discussion. The authors would also like to thank A. Abbes and O. Gabber
+for their stimulating suggestions. The first author is supported by JSPS postdoctoral fellowship
+and Kakenhi Grant-in-Aid 15F15727 during his stay at the University of Tokyo and the second
+author is partially supported by Alexander von Humboldt Foundation for his research at Universität
+Regensburg and Freie Universität Berlin. Some part of the research was accomplished during their
+visit at IHES. The authors are grateful to these institutions.
+
+                                   2. Notation and conventions
+2.1. Let X be a scheme and E a locally free sheaf of OX -modules of finite rank on X. We call the
+vector bundle of E and denote by VpEq the spectrum of the quasi-coherent OX -algebra SymOX pEq.
+Let E be such a vector bundle on X. We denote by PpEq the projectivization of E. Let C be
+a constructible subset of E. We say that C is conical, if C is invariant under the canonical Gm -
+action on E that fixes the zero-section. For a closed conical subset C of E, we denote by PpCq the
+projectivization of C, which is a closed subset of PpEq. We denote by BpCq the scheme theoretic
+image of C in X by the canonical projection π : E Ñ X and call it the base of C. Observe that
+the canonical map C Ñ BpCq is surjective. We say a conical subset C is strict if each irreducible
+component of C is not contained in the zero-section of E. We have a bijection
+            tstrict closed conical subsets of Eu Ñ tclosed subsets of PpEqu, C ÞÑ PpCq.
+We always take reduced induced subscheme structures on a closed conical subset of a bundle and
+its projectivization.
+
+2.2. Let f : X Ñ S be a morphism of schemes, s a point of S and s̄ Ñ S a geometric point above
+s. We denote by Xs (resp. Xs̄ ) theř fiber X ˆS s (resp. X ˆS s̄). Let tZi uiPI be a finite set of
+closed subschemes
+          ř       of   X   and Z
+                               ř “   i mi rZi s a cycle supported on Z. We denote by Zs (resp. Zs̄ )
+the cycle i mi rpZi qs s (resp. i mi rpZi qs̄ s) on Xs (resp. Xs̄ ).
+
+2.3. Let f : X Ñ S be a smooth morphism of Noetherian schemes. We denote by T˚ pX{Sq the
+vector bundle VppΩ1X{S q_ q on X and call it the relative cotangent bundle on X with respect to
+S. We denote by T˚X pX{Sq the zero-section of T˚ pX{Sq. Let u be a point of X and ū Ñ X a
+geometric point of X above u. We put
+                   T˚u pX{Sq “ T˚ pX{Sq ˆX u and T˚ū pX{Sq “ T˚ pX{Sq ˆX ū.
+  Let g : Y Ñ S be a smooth morphism and f : X Ñ S an S-morphism. Then, we have a
+canonical morphism
+(2.3.1)                             dh : T˚ pX{Sq ˆX Y Ñ T˚ pY {Sq
+induced by the canonical map h˚ Ω1X{S Ñ Ω1Y {S .
+
+2.4. Let f : X Ñ S be a smooth morphism of Noetherian schemes and C a closed conical subset
+of T˚ pX{Sq. Let Y be an S-scheme smooth over S and h : Y Ñ X an S-morphism. We say that
+h : Y Ñ X is C-transversal relative to S at a geometric point ȳ Ñ Y if for every non-zero vector
+µ P Chpȳq “ C ˆX ȳ, the image dhȳ pµq P T˚ȳ pY {Sq is not zero, where dhȳ : T˚ȳ pX{Sq Ñ T˚hpȳq pY {Sq
+is the canonical map. We say that h : Y Ñ X is C-transversal relative to S if it is C-transversal
+relative to S at every geometric point of Y . If h : Y Ñ X is C-transversal relative to S, the
+topological image of C ˆX Y in T˚ pY {Sq by the canonical map dh : T˚ pX{Sq ˆX Y Ñ T˚ pY {Sq
+is closed, by the same argument of [B15, Lemma 1.1]. We put h˝ C “ dhpC ˆX Y q.
+6                                     HAOYU HU AND ENLIN YANG
+
+
+    Let Z be an S-scheme smooth over S and g : X Ñ Z an S-morphism. We say that g : X Ñ Z is
+                                                                                                ˚
+C-transversal relative to S at a geometric point x̄ Ñ X if for every non-zero vector ν P Tgpx̄q    pZ{Sq,
+we have dgx̄ pνq R Cx̄ , where dgx̄ : T˚gpx̄q pZ{Sq Ñ T˚x̄ pX{Sq is the canonical map. We say that
+g : X Ñ Z is C-transversal relative to S if it is C-transversal relative to S at all geometric point of X.
+If the base BpCq of C is proper over Z, we put g˝ C :“ pr1 pdg ´1 pCqq, where pr1 : T˚ pZ{Sq ˆZ X Ñ
+T˚ pZ{Sq denotes the first projection and dg : T˚ pZ{Sq ˆZ X Ñ T˚ pX{Sq is the canonical map. It
+is a closed conical subset of T˚ pX{Sq.
+    When S is spectrum of a field, the definitions above are identical to those in [B15]. In this
+case, we follow the terminologies of loc. cit. and omit "relative to S". We observe that that
+g : X Ñ Z (resp. h : Y Ñ X) is C-transversal relative to S if and only if for every point s P S,
+the fiber gs : Xs Ñ Zs (resp. hs : Ys Ñ Xs ) is Cs -transversal. Similarly to [B15, Lemma 1.1], if
+the map h : Y Ñ X (resp. g : X Ñ Z) is C-transversal relative to S at a geometric point ū Ñ Y
+(resp. x̄ Ñ X), then, there exists a Zariski open neighborhood Y0 of ū (resp. X0 of x̄) such that
+h|Y0 : Y0 Ñ X (resp. g|X0 : X0 Ñ Z) is C-transversal relative to S.
+2.5. Let X be an irreducible excellent Noetherian scheme. We say that X is generically di-
+mensional if, for any open dense subscheme U of X, we have dim X “ dim U . For example, an
+irreducible algebraic variety over a field is generically dimensional. But, the spectrum of an excel-
+lent integral local ring of dimension ě 1 is not. For any irreducible excellent Noetherian scheme
+Y , there exists an open dense subscheme V of Y such that V is generically dimensional. The con-
+dition of generic dimension is preserved by taking open dense subsechemes and irreducible closed
+subschemes.
+2.6. We fix a prime number ℓ and a finite field Λ of characteristic ℓ. Let X be a Noetherian
+scheme over Zr1{ℓs. We denote by DpX, Λq the derived category of complexes of étale sheaves of Λ-
+modules on X and by Dcb pX, Λq its full subcategory consisting of objects bounded with constructible
+cohomologies.
+2.7. Let f : X Ñ S be a morphism of Noetherian schemes over Zr1{ℓs and F an object of
+Dcb pX, Λq. We denote by Ef pF q the smallest closed subset of X such that f : X ´ Ef pF q Ñ
+S is universally locally acyclic with respect to F . Let S 1 be a Noetherian S-scheme. We set
+X 1 “ X ˆS S 1 , set f 1 : X 1 Ñ S 1 the base change of f : X Ñ S and set F 1 “ F |X 1 . We have
+Ef 1 pF 1 q Ď Ef pF q ˆS S 1 .
+2.8. Let X be an irreducible Noetherian scheme over Zr1{ℓs, ξ the generic point of X and F an
+object on Dcb pX, Λq. We denote by C0 pF , Xq the constructible subset
+                                                                  „
+                                C0 pF , Xq “ ts P X ; cosp : Fs̄ Ý
+                                                                 Ñ Fξ̄ u
+of X, where s̄ (resp. ¯
+                      ξ) denotes a geometric point above s (resp. ξ) and cosp is the canonical cospe-
+cialization map. We denote by N C0 pF , Xq the complement of C0 pF , Xq in X and by N CpF , Xq
+the closure of N C0 pF , Xq in X and we call it the non-constant locus of F on X. We always take
+the reduced induced subscheme structure on the non-constant locus.
+2.9. Let K be a complete discrete valuation field, OK its integer ring, F the residue field of OK ,
+K a separable closure of K and GK the Galois group of K over K. We assume that F is perfect
+of characteristic p ą 0. Let M be a finite generated Λ-module with continuous GK -action. The
+total dimension of M is defined by
+                                   dimtotK M “ SwK M ` dimΛ M,
+where SwK M denotes the Swan conductor of M [Se97, 19.3].
+      RELATIVE SINGULAR SUPPORT AND THE SEMI-CONTINUITY OF CHARACTERISTIC CYCLES                        7
+
+
+                      3. Radon Transforms and Legendre transforms
+3.1. We fix an integer n ě 1. We denote by EZ “ An`1    Z    the trivial vector bundle over SpecpZq
+of rank n ` 1, by EZ_ the dual bundle of EZ and by PZ “ PpEZ q (resp. P_                    _
+                                                                                   Z “ PpEZ q) the
+projectivization of EZ (resp. EZ_ ). The universal hyperplane HZ of PZ ˆZ P_   Z is the hypersurface
+defined by the principal Cartier divisor associated to the section
+               id P EndZ pΓpPZ , OPZ p1qqq “ ΓpPZ ˆZ P_     ˚               ˚
+                                                      Z , pr1 pOPZ p1qq b pr2 pOP_
+                                                                                 Z
+                                                                                   p1qqq.
+For any point s P SpecpZq, we have pHZ qs “ tpx, x1 q P Ps ˆs P_     s | x P Hx1 u, where
+                                                                                      `n`d˘ Hx denotes
+                                                                                                1
+
+the hyperplane of Ps associated to x1 P P_  s . Let d be an integer ě 1 and N “          d  . We   denote
+by ErZ “ AN the trivial vector bundle over Z of rank N , by E      r _ the dual bundle of E    rZ and by
+            Z                                                       Z
+r Z “ PpE
+P        rZ q (resp. Pr _ “ PpE
+                              r _ q) the projectivization of ErZ (resp. Er _ q). Let riZ : PZ Ñ P r Z be a
+                        Z       Z                                         Z
+Veronese embedding of degree d. We denote by r     HZ the universal hyperplane of r    PZ ˆ Z r _
+                                                                                              PZ .
+                                                  _ r
+   Let S be a scheme. For any AZ (AZ “ EZ , EZ , EZ , ¨ ¨ ¨ ) above, we simply put A “ AZ ˆZ S. We
+denote by ri : P Ñ P r the base change of riZ : PZ Ñ P rZ and by pr : H Ñ P (resp. pr_ : H Ñ P_ ,
+                   _
+pr : r
+r    HÑr  P and rpr : H  rÑr  _
+                             P ) the canonical projection.
+3.2. We have a canonical injection of locally free sheaves of OPZ -modules
+                                    Ω1PZ {Z p1q Ñ ΓpPZ , OPZ p1qq bZ OPZ
+with the cokernel OPZ p1q. It induced an injection of vector bundles
+                                     VppΩ1PZ {Z q_ p´1qq Ñ EZ_ ˆZ PZ ,
+hence an injection of their projectivizations
+                                        PpT˚ pPZ {Zqq Ñ P_
+                                                         Z ˆ Z PZ ,
+which gives rise to an isomorphism
+                                                              „
+                                         θZ : PpT˚ pPZ {Zqq Ý
+                                                            Ñ HZ .
+Exchange PZ and P_
+                 Z , we obtain an isomorphism
+                                                              „
+                                        θZ_ : PpT˚ pP_
+                                                     Z {Zqq Ý
+                                                            Ñ HZ .
+The maps θZ and θZ_ give rise to isomorphisms
+                                           „                                         „
+                        θ : PpT˚ pP{Sqq Ý
+                                        Ñ H and θ_ : PpT˚ pP_ {Sqq Ý
+                                                                   Ñ H.
+The isomorphisms θZ , θZ_ , θ and θ_ are called Legendre transforms.
+  Let S be a Noetherian scheme and s a point of S. We have
+                                               „
+                               θs : PpT˚ Ps q Ý
+                                              Ñ Hs ,     px, λ̄x,x1 q ÞÑ px, x1 q,
+where px, x1 q denotes a closed point of Hs and λx,x1 denotes the 1-dimensional vector space T˚x Ps
+which is orthogonal to the hyperplane Hx1 Ď Ps associated to x1 P P_                    1
+                                                                       s . For any px, x q P Hs , we
+have canonical injections
+                    dprx : T˚x Ps Ñ T˚px,x1 q Hs ,   and dpr_     ˚ _      ˚
+                                                            x1 : Tx1 Ps Ñ Tpx,x1 q Hs .
+
+The intersection of T˚x Ps and T˚x1 P_     ˚
+                                     s in Tpx,x1 q Hs is a 1-dimensional vector space Lx,x1 and we have
+
+(3.2.1)                            dprx pλx,x1 q “ Lx,x1 “ dpr_
+                                                              x1 pλx1 ,x q.
+Let C be a closed conical subset of T˚ pP{Sq. We denote by C ` the union of C and the zero-section
+of T˚ pP{Sq. The projectivization PpCq of C can be considered as a closed subset of PpT˚ pP_ {Sqq
+by Legnedre transforms. We denote by C _ the strict closed conical subset of T˚ pP_ {Sq associated
+8                                   HAOYU HU AND ENLIN YANG
+
+
+to PpCq. We take the same notation after exchanging P and P_ . Obviously, we have C ` “ C __`
+and, if C is strict, we have C “ C __ . By (3.2.1), we have pr_   ˝  `
+                                                              ˝ pr pC q “ C
+                                                                            _`
+                                                                               .
+Lemma 3.3. Let X and Y be irreducible excellent Noetherian schemes and f : X Ñ Y a dominant
+morphism of finite type. Then, there exists a Zariski open dense subscheme V of Y such that
+XV “ X ˆY V is generically dimensional.
+Proof. After replacing Y by a Zariski open dense subscheme, we may assume that Y is generically
+dimensional. By [EGA IV, II, 6.9.1], we may further assume that fred : Xred Ñ Yred is flat. Let
+η be the generic point of Y . By [EGA IV, III, 9.5.6], we may assume that, for any y P Y , each
+irreducible component Xv has dimension dimkpηq Xη . We have dim X “ dim Y ` dimkpηq Xη . For
+any open dense subscheme U of X, the map f : Ured Ñ Yred is flat. Moreover, for any y P Y ,
+the fiber Uy is empty or each irreducible component of Uy has dimension dimkpηq Xη . Hence,
+dim U “ dim Y ` dimkpηq Xη “ dim X.                                                          
+3.4. ([B15, 4.2]). Let k be a field and we assume that all k-schemes in this section are of finite
+type over Specpkq. Let P be an irreducible k-scheme and π : H Ñ P a morphism of k-schemes.
+                 p2q
+We denote by HP the complement of the diagonal in H ˆP H. We say that two irreducible
+                                                                                       Ş p2q
+closed subschemes Z1 and Z2 of H intersect well relatively to π : H Ñ P if pZ1 ˆP Z2 q HP is
+equidimensional and
+                        ´                    ¯
+                                         p2q
+                    dimk pZ1 ˆP Z2 q X HP      “ dimk Z1 ` dimk Z2 ´ dimk P.
+Let Z be an irreducible k-scheme and g : Z Ñ P a generically surjective morphism. The map
+g : Z Ñ P is called small if dimk ppZ ˆP Zq ´ δpZqq ă dimk Z, where δ : Z Ñ Z ˆP Z denotes the
+diagonal map. A small map is generically radicial.
+   We assume that π : H Ñ P is proper. If irreducible closed subschemes Z1 and Z2 of H intersect
+well relatively to π : H Ñ P , if Z1 is generically finite over πpZ1 q and if dimk Z2 ă dimk P , then
+Z1 Ď Z2 is equivalent to πpZ1 q Ď πpZ2 q ([B15, Lemma 4.2]). If an irreducible closed subscheme
+Z of H intersects well relatively to π : H Ñ P with itself and dimk Z ă dimk P , then the map
+π|Z : Z Ñ πpZq is small and generically radicial (loc. cit.).
+3.5. Let T be an irreducible excellent Noetherian scheme and P an irreducible T -scheme dominant
+and of finite type over T . We assume that P is generically dimensional. Let π : H Ñ P be a
+                                          p2q
+morphism of finite type. We denote by HP the complement of the diagonal in H ˆP H. Let Z1
+and Z2 be irreducible closed subschemes of H which are dominant over T . After replacing T by a
+Zariski open dense subscheme, we may assume that all schemes above are generically dimensional
+(Lemma 3.3). We say that Z1 and Z2 generically intersect well relatively to π : H Ñ P if, after
+                                                                                          Ş p2q
+replacing T by a Zariski open dense subscheme, each irreducible component of pZ1 ˆP Z2 q HP
+is generically dimensional, has same dimension, and
+                           ´                    ¯
+                                            p2q
+                      dim pZ1 ˆP Z2 q X HP        “ dim Z1 ` dim Z2 ´ dim P.
+Let Z be an irreducible excellent Noetherian scheme and g : Z Ñ P a generically surjective
+morphism. We may assume that Z is generically dimensional after replacing T by a Zariski open
+dense subset. The map g : Z Ñ P is called generically small if, after replacing T by a Zariski open
+dense subscheme, we have dimppZ ˆP Zq ´ δpZqq ă dim Z, where δ : Z Ñ Z ˆP Z denotes the
+diagonal map. A generically small map is generically radicial.
+   We assume that π : H Ñ P is proper. Let Z1 and Z2 be irreducible closed subschemes of H
+which are dominant over T . We may assume that Z1 and Z2 are generically dimensional after
+      RELATIVE SINGULAR SUPPORT AND THE SEMI-CONTINUITY OF CHARACTERISTIC CYCLES                        9
+
+
+replacing T by a Zariski open dense subset. If Z1 and Z2 generically intersect well relatively
+to π : H Ñ P , if Z1 is generically finite over πpZ1 q and if dim Z2 ă dim P , then Z1 Ď Z2 is
+equivalent to πpZ1 q Ď πpZ2 q. Let Z be an irreducible closed subscheme of H which is generically
+dimensional and flat over T . If Z generically intersects well relatively to π : H Ñ P with itself and
+dim Z ă dim P , then the map π|Z : Z Ñ πpZq is generically small and generically radicial. Let η
+be the generic point of T . The two assertions above are deduced by using [B15, Lemma 4.2] to the
+generic fiber πη : Hη Ñ Pη ,
+Lemma 3.6. Let T be an irreducible Noetherian schemes, X and Y irreducible T -schemes flat
+and of finite type over T and g : X Ñ Y a surjective and generically radicial T -morphism. For
+any s P T , we denote by tpXs qα uαPIpsq (resp. tpYs qβ uβPJpsq ) the irreducible components of Xs
+(resp. Ys ). Then, there exists an open dense subset W of T such that, for any s P W , the
+map gs : Xs Ñ Ys induces an identity between Ipsq and Jpsq and, for any α P Ipsq, the map
+gs : pXs qα Ñ pYs qα is surjective and generically radicial.
+Proof. Since g : X Ñ Y is of finite type and generically radicial, we have a Cartesian diagram
+                                                    g1
+                                               U         /V
+
+                                              j1    l          j
+                                                          
+                                               X         /Y
+                                                    g
+
+where V is an open dense subset of Y , j : V Ñ Y is the canonical injection and g 1 : U Ñ V is
+surjective and radicial. Hence, U is an open dense subset of X. By [EGA IV, III, 9.6.1], there
+exists an open dense subset W Ď T such that, for any s P W , we have U s “ Xs and V s “ Ys .
+Hence Us (resp. Vs ) contains all generic points of irreducible components of Xs (resp. Ys ). Since,
+for any s P W , gs1 : Us Ñ Vs is surjective and radicial, we have a one-to-one correspondence of the
+generic points of irreducible components of Xs and of Ys , i.e., Ipsq “ Jpsq. For Ş any s P W andŞany
+α P Ipsq, the map gs : pXs qα Ñ pYs qα is generically radicial since gs1 : ppXs qα Us q Ñ ppYs qα Vs q
+is radicial.                                                                                        
+Lemma 3.7. Let T be an irreducible Noetherian scheme, X and Y integral T -schemes dominant
+and of finite type over T , and g : X Ñ Y a T -morphism. We assume that g is dominant, generically
+finite, generically radicial and that the fibers Xt and Yt are geometrically integral for any t P T .
+We denote by ζ (resp. η) the generic points of X (resp. Y ) and, for any geometric point t̄ of T ,
+by ζt̄ (resp. ηt̄ ) the generic points of Xt̄ (resp. Yt̄ ). Then, there exists a Zariski open dense subset
+W of T such that, rζt̄ : ηt̄ s “ rζ : ηs for any geometric point t̄ Ñ W . In particular, if the generic
+point of T is of characteristic 0, then the canonical map gt̄ : Xt̄ Ñ Yt̄ is birational for any t̄ Ñ W .
+Proof. Since g : X Ñ Y is dominant, generically finite and generically radicial, there is an open
+dense subset V of Y such that g 1 : U “ V ˆY X Ñ V is surjective, finite, flat and radicial, where
+g 1 is the base change of g by V ãÑ Y . Let W be an open dense subset of T such that the fiber Vt is
+non-empty for any t P W . Then, for any geometric point t̄ of W , we have ζt̄ “ ηt̄ ˆVt̄ Ut̄ “ ηt̄ ˆV U ,
+hence rζt̄ : ηt̄ s “ rU : V s “ rζ : ηs.
+    When the generic point of T is of characteristic 0, we have rζ : ηs “ 1, i.e., g : V Ñ U is an
+isomorphism.                                                                                          
+Lemma 3.8 (cf. [B15, Lemma 4.3]). We take the notation and assumptions of 3.1, we assume
+that S is an irreducible excellent Noetherian scheme and that the Veronese embedding ri : P Ñ r
+                                                                                              P
+in 3.1 has degree d ě 3. Let C1 and C2 be irreducible closed conical subsets of T˚ pP{Sq which
+10                                    HAOYU HU AND ENLIN YANG
+
+
+                                                                                   r by Legendre
+are dominant over S. We consider Ppri˝ C1 q and Ppri˝ C2 q as closed subschemes of H
+transform (3.2). Then, after replacing S by a Zariski open dense subset, Ppri˝ C1 q and Ppri˝ C2 q
+                                         pr_ : H
+generically intersect well relatively to r     r ÑP
+                                                  r_ .
+
+Proof. We may assume that S is integral. By Lemma 3.3, we may assume that all schemes are
+generically dimensional after shrinking S. By [EGA IV, II, 6.9.1], we may assume that C1 and C2
+are flat over S after shrinking S. Since the canonical morphism dri : T˚ pr P{Sq ˆPr P Ñ T˚ pP{Sq is
+smooth, conical subschemes i˝ C1 and i˝ C2 are flat over S. Hence, Ppi˝ C1 q and Ppri˝ C2 q are flat
+                              r        r                                  r
+over S. Let δr : r
+                 HÑ r H ˆPr_ r
+                             H be the diagonal map and H   r p2q the complement of r
+                                                                                   δp r
+                                                                                     Hq in r
+                                                                                           H ˆPr_ r
+                                                                                                  H.
+                                                              r_
+                                                              P
+Shrinking S again, we may assume that each irreducible component of
+                                    ´                         ¯č
+                                Y “ Ppri˝ C2 q ˆPr_ Ppri˝ C2 q     r p2q
+                                                                   H r_
+                                                                      P
+
+is flat over S. Let η be the generic point of S. There is a one-to-one correspondence between the set
+of irreducible components of Y and that of Yη . By [B15, Lemma 4.3], pPpri˝ C1 qqη and pPpri˝ C2 qqη
+intersect well relatively to r     rη Ñ P
+                             prη : H     r _ . Hence, Yη is equidimensional and we have
+                                           η
+
+(3.8.1)                                                                               r_.
+                 dimkpηq Yη “ dimkpηq pPpri˝ C1 qqη ` dimkpηq pPpri˝ C2 qqη ´ dimkpηq P η
+
+Hence, Y is also equidimensional and (3.8.1) implies that
+                                                                          r_ .
+                          dim Y “ dimpPpri˝ C1 qq ` dimpPpri˝ C2 qq ´ dim P
+                                                                          pr_ : H
+Hence, Ppri˝ C1 q and Ppri˝ C2 q generically intersect well relatively to r     r ÑP
+                                                                                   r_ .                 
+Proposition 3.9 (cf. [B15, Proposition 4.5]). We take the notation and assumptions of 3.1, we
+assume that S is an irreducible generically dimensional excellent Noetherian scheme and that the
+Veronese embedding ri : P Ñ P r in 3.1 has degree d ě 3. Let C be a closed conical subset of T˚ pP{Sq
+such that Cη ‰ H is dominant over S and that dim C ď dim P. Then,
+    (1) If C is irreducible, then the map r pr_ : Ppri˝ Cq Ñ pr
+                                                              r _ pPpri˝ Cqq is generically small after
+        replacing S by a Zariski open dense subscheme.
+    (2) After replacing S by a Zariski open dense subscheme, there is a one-to-one correspondence
+        between the sets of irreducible components of C and pr r _ pPpri˝ Cqq.
+Proof. (1) By Lemma 3.3, we may assume that C and Ppri˝ Cq are generically dimensional after
+shrinking S. We have dim Ppri˝ Cq ď dim S ` N ´ 2. Hence dim Ppri˝ Cq ă dim P.        r After shrinking S,
+                            r          r                                            r _
+the irreducible scheme Ppi˝ Cq Ď H generically intersects well relatively to P with itself (Lemma
+              r _ : Ppri˝ Cq Ñ pr
+3.8). Hence, pr                  r _ pPpri˝ Cqq is generically small, hence generically radicial (cf. 3.5).
+   (2) Let tCv uvPI be set of the irreducible component of C. There is a one-to-one correspondence
+between tCv uvPI and tPpri˝ Cv quvPI . After shrinking S, we may assume that, for each v P I, we have
+pCv qη ‰ H and Ppri˝ Cv q is generically dimensional and that, for each pair v, v 1 P I (v and v 1 can be
+                                                                   r_ (Lemma 3.8). Since Ppri˝ Cv q pv P Iq
+the same), Ppri˝ Cv q and Ppri˝ Cv1 q intersect will relatively to P
+                                              _
+are distinct irreducible subsets of r   H, rpr pPpri˝ Cv qq pv P Iq are distinct irreducible subsets of r
+                                                                                                        P_
+                                                                        r                  _    r
+(3.5). Hence, we have a one-to-one correspondence between tPpi˝ Cv quvPI and t r         pr pPpi˝ Cv qquvPI
+by the projection r pr_ : Hr ÑP  r _ . We obtain (2).                                                    
+3.10. We take the notation and assumptions of 3.1 and we assume that ℓ is invertible in S. We
+define the Radon transform by the functor [Bry]
+                    RS : Dcb pP, Λq Ñ Dcb pP_ , Λq,   RS pF q “ Rpr_    ˚
+                                                                   ˚ ppr F qrn ´ 1s,
+      RELATIVE SINGULAR SUPPORT AND THE SEMI-CONTINUITY OF CHARACTERISTIC CYCLES                    11
+
+
+and we define the dual Radon transform by the functor
+               RS_ : Dcb pP_ , Λq Ñ Dcb pP, Λq,   RS_ pGq “ Rpr˚ ppr_˚ Gqpn ´ 1qrn ´ 1s.
+Since pr : H Ñ P and pr_ : H Ñ P_ are projective and smooth, The functor RS is both left and
+                                                                                      rS and R
+right adjoint to RS_ by Poincaré duality and proper base change theorem. We denote by R      r_
+                                                                                               S
+                                                                                _   r   r    r
+the Radon transform and dual Radon transform for the pair of morphisms p r   pr q : P Ð H Ñ P_ ,
+                                                                          pr, r
+respectively.
+Proposition 3.11 (cf. [B15, 1.6.1]). We take the notation and assumptions of 3.1 and we assume
+that ℓ is invertible in S. Let F be an object of Dcb pP, Λq and G an object of Dcb pP_ , Λq. Then, the
+mapping cone of the adjunction map F Ñ pRS_ ˝ RS qpF q (resp. pRS ˝ RS_ qpGq Ñ G) has locally
+constant cohomologies, after replacing S by a Zariski open dense subset.
+Proof. The proposition is valid when S is spectrum of a field [B15, 1.6.1]. Hence, (1) and (2) still
+hold since we allow shrinking S.                                                                 
+
+Lemma 3.12. Let S and X be irreducible Noetherian schemes and f : X Ñ S a flat morphism
+of finite type with irreducible fibers. We assume that ℓ is invertible in X. Let F be an object of
+Dcb pX, Λq. Then, there exists a Zariski open dense subset V of S such that, for any s P V , we have
+(2.8)
+                                pN CpF , Xq ˆS sqred “ N CpF |Xs , Xs q.
+Proof. We simply put Z0 “ N C0 pF , Xq and put Z “ N CpF , Xq. The canonical map i : Z0 Ñ Z
+is dominant. By [EGA IV, III, 9.6.1], there exists a Zariski open dense subset V of S such that for
+any s P V , the map is : pZ0 qs Ñ Zs is dominant. For any s P V , we have pZ0 qs “ N C0 pF |Xs , Xs q
+and pZ0 qs “ N CpF |Xs , Xs q. Hence, for any s P V , we have
+                                  pZs qred “ pZ0 qs “ N CpF |Xs , Xs q.
+                                                                                                    
+
+                                 4. Relative singular supports
+   In this section, let S be a connected Noetherian scheme, f : X Ñ S a smooth morphism of finite
+type and C a closed conical subset in the relative cotangent bundle T˚ pX{Sq.
+
+4.1. A test pair of X relative to S is a pair of morphisms pg, hq : Y Ð U Ñ X such that U and Y
+are S-schemes smooth and of finite type over S and g : U Ñ Y and h : U Ñ X are S-morphisms.
+We say that pg, hq is C-transversal relative to S if h : U Ñ X is C-transversal relative to S and
+g : U Ñ Y is h˝ C-transversal relative to S.
+   We say that a test pair pg, hq : Y Ð U Ñ X relative to S is weak if it satisfies: (a) Y “ A1S is
+an affine line over S and (b) the morphism h : U Ñ X is
+     ‚ a composition of pr1 : U “ V ˆS S 1 Ñ V and h1 : V Ñ X, where S 1 is finite and étale over
+       S and h1 : V Ñ X is an open immersion, if Sred is a spectrum of a finite field;
+     ‚ an open immersion in other situations.
+
+4.2. In the following of this section, we assume that all schemes are over Zr1{ℓs. Let F be an
+object in Dcb pX, Λq. We say that a test pair pg, hq : Y Ð U Ñ X relative to S is F -acyclic if
+g : U Ñ Y is locally acyclic with respect to h˚ F .
+12                                    HAOYU HU AND ENLIN YANG
+
+
+4.3. We say that F is micro-supported on C relative to S if every C-transversal test pair of X
+relative to S is F -acyclic. We define CpF , X{Sq the set
+        tC 1 Ď T˚ pX{Sq | C 1 is closed conical and F is micro-supported on C 1 relative to Su.
+We will see that CpF , X{Sq is non-empty if f : X Ñ S is universally locally acyclic relative to F
+(cf. Proposition 4.9). We denote by C min pF , X{Sq the set of the minimal elements of CpF , X{Sq.
+   We say that F is weakly micro-supported on C relative to S if every C-transversal weak test pair
+pg, hq relative to S which is C-transversal relative to S is F -acyclic. We define C w pF , X{Sq the set
+     tC 1 Ď T˚ pX{Sq | C 1 is closed conical and F is weakly micro-supported on C 1 relative to Su.
+Note that CpF , X{Sq Ď C w pF , X{Sq. Let C1 and C2 be two elements of C w pF , X{Sq. We choose
+a weak test pair pg, hq of X relative to S which is pC1 X C2 q-transversal relative to S. Then
+g : U Ñ Y is h˝ pC1 X C2 q-transversal relative to S. For each geometric point ū of U , g is either
+h˝ C1 -transversal relative to S at ū or h˝ C2 -transversal relative to S at ū, since T˚ pY {Sq is a
+line bundle on Y . Then, U can be covered by two Zariski open subsets U1 and U2 such that
+g|Ui : Ui Ñ Y is Ci -transversal relative to S pi “ 1, 2q. Since C1 , C2 P C w pF , X{Sq, the map gi
+pi “ 1, 2q is locally acyclic with respect to F , i.e., the map g is locally acyclic with respect to F .
+It implies that the weak test pair pg, hq is F -acyclic. We deduce that C1 X C2 P C w pF , X{Sq. In
+conclusion, the set C w pF , X{Sq has a smallest element if it is non-empty.
+4.4. If CpF , X{Sq has a smallest element, we denote it by SSpF , X{Sq and call it the singular
+support of F relative to S. We call the smallest element of C w pF , X{Sq the weak singular support
+of F relative to S and denote it by SS w pF , X{Sq. If SSpF , X{Sq exists, then SS ω pF , X{Sq Ď
+SSpF , X{Sq.
+   Notice that the relative singular support and the weak relative singular support are invariant
+after taking reduced induced subscheme for S and X.
+Example 4.5. Assume that f “ idX . Then T˚ pX{Xq “ X and the X-test pair pid, idq : X Ð
+X Ñ X is T˚ pX{Xq-transversal relative to X. Hence, for an object F of Dcb pX, Λq, the relative
+singular support SSpF , X{Xq exists if and only if F has locally constant cohomologies.
+Remark 4.6. All definitions above were firstly introduced by Beilinson when S “ Specpkq [B15].
+In this case, we will omit the phase "relative to S" and we abbreviate the notion SSpF , X{Sq
+(resp. SS w pF , X{Sq) by SSpF q (resp. SS w pF q) to fit the notation in loc. cit.. Beilinson proved
+that SSpF q exists, that SSpF q “ SS w pF q and that, when X is equidimensional, SSpF q is of
+equidimension dimk X (loc. cit.).
+Lemma 4.7. Let U and Y be S-schemes smooth and of finite type over S and let h : U Ñ X and
+g : X Ñ Y be S-morphisms.
+    (1) If h : U Ñ X is smooth, then, for any closed conical subset C of T˚ pX{Sq, the morphism
+        h : U Ñ X is C-transversal relative to S. Moreover we have h˝ C “ C ˆX U .
+    (2) If g : X Ñ Y is C-transversal relative to S, then it is smooth on a Zariski neighborhood of
+        the base BpCq.
+Proof. If h is smooth, then dh : T˚ pX{SqˆX U Ñ T˚ pU {Sq is injective. We obtain (1) by definition.
+   Let x be a point of BpCq and x̄ Ñ BpCq a geometric point above x. If g : X Ñ Y is C-transversal
+relative to S, then the canonical map dgx̄ : T˚gpx̄q pY {Sq Ñ T˚x̄ pX{Sq is injective. It is equivalent to
+that the canonical morphism of coherent OX -modules g ˚ Ω1Y {S Ñ Ω1X{S is injective at x. By [Fu,
+2.5.7], we deduce that g is smooth on a Zariski neighborhood of x in X. Hence, we obtain (2). 
+Lemma 4.8. Let pg, hq : Y Ð U Ñ X be a test pair of X relative to S.
+      RELATIVE SINGULAR SUPPORT AND THE SEMI-CONTINUITY OF CHARACTERISTIC CYCLES                        13
+
+
+    (1) Assume that C “ T˚X pX{Sq. Then pg, hq is C-transversal relative to S if and only if g is
+        smooth.
+    (2) Assume that C “ T˚ pX{Sq. Then pg, hq is C-transversal relative to S if and only if the
+        canonical map h ˆ g : U Ñ X ˆS Y is smooth.
+Proof. (1) When h : U Ñ X is C-transversal relative to S, the pull-back h˝ C is the zero-section of
+T˚ pU {Sq. By definition, g : U Ñ Y is h˝ C-transversal relative to S if and only if, for any geometric
+point ū Ñ U , the canonical map dgū : T˚gpūq pY {Sq Ñ T˚ū pU {Sq is injective. It is equivalent to that
+the canonical morphism of OX -modules OU -modules g ˚ Ω1Y {S Ñ Ω1U{S is injective. It equals to
+that g : U Ñ Y is smooth [Fu, 2.5.7].
+   (2) If h ˆ g : U Ñ X ˆS Y is smooth, then h and g are also smooth. By Lemma 4.7(1), the
+morphism h is C-transversal relative to S and h˝ C “ T˚ pX{Sq ˆX U . Since h ˆ g is smooth, the
+canonical morphism
+(4.8.1)                  dph ˆ gq : T˚ ppX ˆS Y q{Sq ˆpXˆS Y q U Ñ T˚ pU {Sq
+is injective. Moreover, the canonical projections pr1 : X ˆS Y Ñ X and pr2 : Y ˆS X Ñ Y induces
+two injections
+                         dpr1 : T˚ pX{Sq ˆX pX ˆS Y q Ñ T˚ ppX ˆS Y q{Sq,
+                          dpr2 : T˚ pY {Sq ˆY pX ˆS Y q Ñ T˚ ppX ˆS Y q{Sq.
+The intersection of the images of dpr1 and dpr2 is contained in the zero-section of T ˚ pX ˆS Y {Sq.
+Combining (4.8.1), it implies that the intersection of the images of dh : T˚ pX{SqˆX U Ñ T˚ pU {Sq
+and dg : T˚ pY {Sq ˆX U Ñ T˚ pU {Sq is contained in the zero section of T˚ pT {Sq. Hence g is h˝ C-
+transversal relative to S, i.e., the test pair pg, hq is C-transversal relative to S.
+    Conversely, we assume that pg, hq is C-transversal relative to S. It implies that dh : T˚ pX{SqˆX
+U Ñ T˚ pU {Sq is injective and that g : U Ñ Y is h˝ C-transversal relative to S. The map dh is
+injective implies that h is smooth. By Lemma 4.7(2), g is also smooth since the base Bph˝ Cq is
+equal to U . Notice that h˝ C “ impdhq. Hence, g : U Ñ Y is h˝ C-transversal relative to S implies
+that the intersection of impdhq and impdgq in T˚ pU {Sq is T˚U pU {Sq. It implies that the canonical
+map
+                         dph ˆ gq : T˚ pX ˆS Y {Xq ˆpXˆS Y q U Ñ T˚ pU {Sq
+is injective, Hence, h ˆ g : U Ñ X ˆS Y is smooth.                                                  
+Proposition 4.9. If f : X Ñ S is universally locally acyclic with respect to F , then T˚ pX{Sq is
+an element of CpF , X{Sq.
+Proof. Let pg, hq : Y Ð U Ñ X be a test pair of X relative to S which is T˚ pX{Sq-transversal
+relative to S. We need to show that it is F -acyclic. Consider the following diagram with Cartesian
+squares
+                                          hˆg              pr1
+                                     U ❍     / X ˆS Y        /X
+                                        ❍❍
+                                          ❍❍
+                                            ❍ pr        l        f
+                                           g ❍❍❍ 2
+                                                ❍#            
+                                                  Y          /S
+Since f : X Ñ S is universally locally acyclic with respect to F , the second projection pr2 is also
+universally locally acyclic with respect to pr˚1 F . By Lemma 4.8(2), the pair pg, hq is T˚ pX{Sq-
+transversal implies that the morphism h ˆ g is smooth. By the smooth base change theorem, the
+composition g “ pr2 ˝ ph ˆ gq is universally locally acyclic relatively to h˚ F , i.e., the pair pg, hq is
+F -acyclic.                                                                                             
+14                                     HAOYU HU AND ENLIN YANG
+
+
+Lemma 4.10. Let tVi uiPI be a Zariski open covering of X. We assume that CpF , X{Sq is non-
+empty. An element C of CpF , X{Sq is minimal if and only if, for any i P I, CVi “ C ˆS Vi is a
+minimal element of CpF , Vi {Sq.
+Proof. We firstly prove the "only if" part. Let C P C min pF , X{Sq and V an open subscheme of X.
+It is easy to see that CV P CpF |V , V {Sq. Let C 1 be a minimal element of CpF |V , V {Sq containedŤ in1
+CV . Let C 1 be the closure of C 1 in T˚ pX{Sq.
+                                          Ť      Then   F is micro-supported on pC   ˆ X
+                                                                                       Ť pX ´  V qq   C
+relative to S. Since pC ˆX pX ´ V qq C 1 Ď C, we have C “ pC ˆX pX ´ V qq C 1 since C is
+minimal. Hence CV “ C 1 is also minimal. For the "if" part, we suppose C 2 is a minimal element
+of CpF , X{Sq contained in C. By the "only if" part, for any i P I, the restriction CV2i “ C 2 ˆS Vi
+is a minimal element of CpF |Vi , Vi {Sq. Since CVi is also minimal, we have CV2i “ CVi , i.e., C 2 “ C.
+                                                                                                      
+Lemma 4.11 (cf. [B15, Lemma 2.1]).
+    (i) We assume that CpF , X{Sq is nonempty. Then the base of SS w pF , X{Sq equals the support
+        of F . Let C 1 be an element of C min pF , X{Sq. Then the base of C 1 equals the support of F .
+   (ii) Assume that F is micro-supported on C relative to S. Then, for every test pair pg, hq :
+        Y Ð U Ñ X relative to S which is C-transversal relative to S, the map g is universally
+        locally acyclic with respect to h˚ F .
+  (iii) The complex F is micro-supported on the zero section of T˚ pX{Sq if and only if each
+        cohomology of F is locally constant on X.
+  (iv) Let F 1 and F 2 be objects of Dcb pX, Λq and F 1 Ñ F Ñ F 1 Ñ a distinguished triangle. If
+        F 1 (resp. F 2 ) is micro-supported on C 1 Ď T˚ pX{Sq (resp. C 2 ) relative to S, then F is
+        micro-supported on C 1 Y C 2 relative to S.
+Proof. (i) Let Z be the support of F , B the base of SS w pF , X{Sq and B 1 the base of C 1 . We have
+SS w pF , X{Sq Ď C 1 and B Ď B 1 . By Lemma 4.10, we have C 1 ˆX pX ´ Zq “ H since F |X´Z “ 0.
+Hence B Ď B 1 Ď Z. We need to show that Z Ď B. Replacing X by X ´ B, we are reduced to show
+                                                                                         r    id
+that SS ω pF , X{Sq is non-empty if F ‰ 0. Consider the test pair pr, idq : A1S Ð       Ý X ÝÑ X, where
+r : X Ñ A1S is a composition of f : X Ñ S and the zero-section i : S Ñ A1S . It is not F -acyclic if
+F ‰ 0.
+    (ii) We need to prove that, after any base change r : Y 1 Ñ Y , the morphism g 1 : U 1 “ U ˆS S 1 Ñ
+Y 1 is locally acyclic with respect to h1˚ F , where h1 : U 1 Ñ X denotes the composition of the
+canonical morphism r1 : U 1 Ñ U and h : U Ñ X. By dévissage, we only need to treat the case
+where r : Y 1 Ñ Y is smooth. We can replace U by a Zariski neighborhood of the support of h˚ F .
+By (i), the support of F is contained in the base of C. Hence, we may assume that h is smooth by
+Lemma 4.7. Then, the composition of the canonical maps r1 : U 1 Ñ U and h : U Ñ X is smooth,
+which implies that h1 “ h ˝ r1 is C-transversal relative to S (Lemma 4.7). Since r : Y 1 Ñ Y is
+smooth, the morphism g : U Ñ Y is h˝ C-transversal relative to S implies that g : U 1 Ñ Y 1 is
+h1˝ C-transversal relative to S. Hence, pg 1 , h1 q is also a test pair of X which is C-transversal relative
+to S. We deduce that g 1 is locally acyclic with respect to h1˚ F .
+    (iii) If F is micro-supported on T˚X pX{Sq relative to S, then the test pair pid, idq : X Ð X Ñ X
+is T˚X pX{Sq-transversal. Hence id : X Ñ X is locally acyclic with respect to F . This implies that
+each cohomology of F is a locally constant sheaf on X.
+    Conversely, If each cohomology of F is a locally constant sheaf on X, then any test pair pg, hq :
+Y Ð U Ñ X, where g is smooth, is F -acyclic. By Lemma 4.8, the sheaf F is micro-supported on
+T˚X pX{Sq relative to S.
+    (iv) If a test pair pg, hq : Y Ð U Ñ X is pC 1 Y C 2 q-transversal relative to S, then pg, hq is
+F -acyclic (resp. F 2 -acyclic) relative to S, i.e., the morphism g : U Ñ Y is locally acyclic with
+  1
+      RELATIVE SINGULAR SUPPORT AND THE SEMI-CONTINUITY OF CHARACTERISTIC CYCLES                        15
+
+
+respect to h˚ F 1 (resp. h˚ F 2 ). Since F 1 Ñ F Ñ F 1 Ñ is a distinguished triangle, the morphism
+g : U Ñ Y is also locally acyclic with respect to h˚ F , i.e., the pair pg, hq is F -acyclic relative to
+S.                                                                                                    
+Lemma 4.12 (cf. [B15, Lemma 2.2]). We assume that C is an element in CpF , X{Sq.
+  (1) Let Y be an S-scheme smooth and of finite type over S and h : Y Ñ X an S-morphism.
+      If h is C-transversal relative to S, then, h˝ C is contained in Cph˚ F , Y {Sq.
+  (2) Let Y be an S-scheme smooth and of finite type over S and h : Y Ñ X an smooth and
+      surjective S-morphism. If h˝ C is contained in C minph˚ F , Y {Sq, then C is contained in
+      C min pF , X{Sq.
+  (3) Let Z be an S-scheme smooth and of finite type over S and g : X Ñ Z an S-morphism. If
+      the base BpCq is proper over Z, then g˝ C is contained in CpRg˚ F , Z{Sq.
+Proof. (1) Let U be a S-scheme smooth and of finite type over S and r : U Ñ Y an S-morphism
+which is h˝ C-transversal relative to S. Since h : Y Ñ X is C-transveral relative to S, the
+composition h ˝ r : U Ñ X is C-transversal relative to S. Hence, a test pair pg, rq : Z Ð U Ñ Y
+relative to S is h˝ C-transversal relative to S implies that the pair pg, h ˝ rq : Z Ð U Ñ X is
+C-transversal relative to S. Since C is an element of CpF , X{Sq, the latter implies that g is locally
+acyclic with respect to r˚ ph˚ F q, i.e., the pair pg, rq is F -acyclic. Hence, h˝ C is contained in
+CpF, X{Sq.
+   (2) Let C 1 be an element in C min pF , X{Sq that is contained in C. Then, by (1), h˝ C 1 is
+contained in Cph˚ F , X{Sq. Since h˝ C is contained in C min ph˚ F , Y {Sq, the inclusion h˝ C 1 Ď h˝ C
+is an identity. Since h is smooth, we have h˝ C “ C ˆX Y and h˝ C 1 “ C 1 ˆX Y (Lemma 4.7).
+Since h is surjective, the equality C ˆX Y “ C 1 ˆX Y implies that C “ C 1 .
+   (3) Let pr, sq : W Ð V Ñ Z be a g˝ C-transversal test pair relative to S. We put X 1 “ V ˆZ X
+and denote by s1 : X 1 Ñ X and g 1 : X 1 Ñ V the canonical projections. Since s : V Ñ Z is
+g˝ C-transversal relative to S, there exists a Zariski open neighborhood U of s´1 pBpg˝ Cqq in V
+which is smooth over Z. Hence U 1 “ U ˆZ X is a Zariski open neighborhood of s1´1 pBpCqq in X 1
+which is smooth over X. We have the following commutative diagram with Cartesian squares
+                                                    j1           s1
+                                              U1         / X1         /X
+
+                                       g 1 |U 1     l       g1   l      g
+                                                   j           s
+                                                                        
+                                              U❇        /V            /Z
+                                                 ❇❇
+                                                   ❇❇
+                                                      ❇     r
+                                                r|U ❇❇! 
+                                                         W
+By Lemma 4.7(1), the restriction s1 |U 1 : U 1 Ñ X is C-transversal relative to S. By definition,
+r|U : U Ñ W is s˝ pg˝ Cq-transversal relative to S implies that r ˝ g 1 |U 1 : U 1 Ñ W is s1˝ C-transversal
+relative to S. Hence, the test pair pr ˝ g 1 |U 1 , s1 |U 1 q : W Ð U 1 Ñ X is C-transversal relative to S.
+Since C is an element of CpF , X{Sq, the map r ˝ g 1 |U 1 is universally locally acyclic with respect to
+ps1 |U 1 q˚ F (Lemma 4.11(2)). Since BpCq contains the support of F (Lemma 4.11(1)), the scheme
+U 1 contains the support of s1˚ F in X 1 . Therefore, r ˝ g 1 is universally locally acyclic with respect
+to s1˚ F . Since the support of s1˚ F , contained in s1´1 pBpCqq is also proper over V , the morphism
+r : V Ñ W is locally acyclic with respect to Rg˚1 ps1˚ F q by proper base change theorem. By the
+                                        „
+same theorem, we have Rg˚1 ps1˚ F q Ý   Ñ s˚ pRg˚ F q. Hence, the test pair pr, sq : W Ð V Ñ Z is
+Rg˚ F -acyclic. In summary, each g˝ C-transversal test pair relative to S is Rg˚ F -acyclic, i.e., Rg˚ F
+is micro-supported on g˝ C relative to S.
+16                                      HAOYU HU AND ENLIN YANG
+
+
+                                                                                                             
+
+Proposition 4.13 (cf. [B15, Lemma 2.5]). Suppose that Sred is not the spectrum of a field. Let P
+be an S-scheme smooth and of finite type over S and i : X Ñ P a closed immersion of S-schemes.
+     (i) If SS w pi˚ F , P {Sq and SS w pF , X{Sq exist, we have
+
+(4.13.1)                            SS w pi˚ F , P {Sq “ i˝ SS w pF , X{Sq.
+
+     (ii) If SSpi˚ F , P {Sq exists, then SSpF , X{Sq also exists. Moreover, after replacing S by a
+          Zariski open dense subscheme, we have
+
+(4.13.2)                             SSpi˚ F , P {Sq “ i˝ SSpF , X{Sq.
+
+  Please confer to [B15, Lemma 2.5] for the case where Sred “ Specpkq is the spectrum of a field.
+We mimic the part of loc. cit. where k has infinite many elements to prove Proposition 4.13.
+
+Proof. (i). Since i : X Ñ P is a closed immersion, a weak test pair pg, hq : A1S Ð U Ñ P relative
+to S is i˚ F -acyclic if and only if pg 1 , h1 q : A1S Ð U ˆP X Ñ X is F -acyclic, where g 1 : U ˆP X Ñ Y
+is the composition of the first projection pr1 : U ˆP X Ñ U and g : U Ñ Y and h1 : U ˆP X Ñ X
+is the base change of h : U Ñ P . It implies that i˝ SS w pF , X{Sq is an element of C w pi˚ F , P {Sq,
+i.e., SS w pi˚ F , P {Sq Ď i˝ SS w pF , X{Sq.
+     Let x be a point of X, α a non-zero vector of T˚x pX{Sq and β a pre-image of α in T˚x pP {Sq.
+Let pu, vq : A1S Ð V Ñ X be a weak test pair of X relative to S, such that V is a Zariski open
+neighborhood of x and that dux “ α. Since P and X are smooth over S, we can find elements
+t1 , ¨ ¨ ¨ , tm P OP,x such that
+                                                                                                              1
+      1. OX,x “ OP,y     ř{ptn`1 , ¨ ¨ ¨ , tm q pn ă mq, and the element a P OX,x induced by u : V Ñ AS
+         writes a “ 1ďjďn si t̄i psi P OS q;
+      2. dt1 b 1, ¨ ¨ ¨ , dtm b 1 is a base of kpxq-vector space T˚x pP {Sq “ Ω1P {S,x bOP,x kpxq and
+         dt1 b 1, ¨ ¨ ¨ , dtn b 1 is a base of kpxq-vector space T˚x pX{Sq “ Ω1X{S,x bOX,x kpxq.
+                                                                              ř               ř
+Notice that da b 1 “ α P T˚x pX{Sq. We can choose an element b “ 1ďjďn sj tj ` n`1ďjďm rj tj P
+OP,x prj P OS q, such that db b 1 “ β. Observe that b̄ “ a P OX,x . The element b induces a weak
+test pair pu1 , v 1 q : A1S Ð V 1 Ñ P , where V 1 is a Zariski neighborhood of x P P and the restriction
+of u1 to V 1 ˆP X coincides with u : V Ñ A1S in a neighborhood of x P X. This fact implies that, if
+α P SSxw pF , X{Sq, any vector β P di´1                                 w
+                                               x pαq is contained in SSx pi˚ F , P {Sq. Hence, we get (4.13.1).
+   (ii). By Lemma 4.10, this is a local problem for the Zariski topology on X. We may assume
+that P is affine over S and that there exists an étale map χ : P Ñ Am               S . Since X is also smooth
+                                                                          n´m
+over S, there is a canonical injection i0 : AnS Ñ Am        S  “ A n
+                                                                   S ˆ  A
+                                                                       S S      induced   by the zero-section of
+ASm´n , such that the following diagram is Cartesian
+
+                                                        i   /P
+(4.13.3)                                         X
+                                               χ0      l          χ
+                                                             
+                                                 AnS        / Am
+                                                              S
+                                                       i0
+
+                                            m´n
+The canonical projection pr : Am     n
+                               S “ AS ˆ S AS     Ñ AnS induces a map χn “ pr ˝ χ : P Ñ AnS and
+also a section s : T pX{Sq ãÑ T pP {Sq ˆP X of the canonical map di : T˚ pP {Sq ˆP X Ñ T˚ pX{Sq.
+                    ˚          ˚
+      RELATIVE SINGULAR SUPPORT AND THE SEMI-CONTINUITY OF CHARACTERISTIC CYCLES                        17
+
+
+Consider the following commutative diagram with Cartesian squares
+                                  δ                 iˆid                  pr2
+                            X         / X ˆ An X           / P ˆ An X           /X
+                                                S                    S
+
+
+                                        pr11         l       pr1         l          χ0
+                                                                                 
+                                           X                   /P               / An
+                                                     i                   χn          S
+
+Since χ0 : X Ñ AnS is étale, the scheme X ˆAnS X is a disjoint union of the diagonal δpXq and
+its complement Y . We denote by Pr the complement of Y in P ˆAnS X and by ρ : Pr Ñ X and
+φ : Pr Ñ P the restriction of pr1 and pr2 on Pr, respectively. We observe that X “ Pr ˆP X, which
+gives a section ĩ : X Ñ Pr of ρ : Pr Ñ X. By Lemma 4.11(i), the base of SSpi˚ F , P {Sq is contained
+in X. Hence, we have a closed conical subset ρ˝ φ˝ SSpi˚ F , P {Sq “ s´1 pSSpi˚ F , P {Sqq of T˚ pX{Sq
+and we denote it by CpF q. Since F “ Rρ˚ φ˚ pi˚ F q, we have CpF q P CpF , X{Sq (Lemma 4.12).
+For any C 1 P CpF , X{Sq, we have i˝ C 1 P Cpi˚ F , P {Sq (loc. cit.). Hence SSpi˚ F , P {Sq Ď i˝ C 1 and
+                            CpF q “ ρ˝ φ˝ SSpi˚ F , P {Sq Ď ρ˝ φ˝ pi˝ C 1 q “ C 1
+Thus, CpF q is the smallest element of CpF , X{Sq, i.e., SSpF , X{Sq “ CpF q. By loc. cit., we have
+SSpi˚ F , P {Sq Ď i˝ SSpF , X{Sq.
+   Let θ : Am       m                           m
+             S Ñ AS be an S-automorphism of AS that satisfies θ ˝ i0 “ i0 . We put χθ “ θ ˝ χ. The
+composition pr ˝ χθ : P Ñ AS induces a section sθ : T˚ pX{Sq Ñ T˚ pP {Sq ˆP X of di : T˚ pX{Sq Ñ
+                             n
+
+T˚ pP {Sq ˆP X. Following the same argument above, we have
+(4.13.4)             s´1
+                      θ pSSpi˚ F , P {Sqq “ SSpF , X{Sq “ s
+                                                            ´1
+                                                               pSSpi˚ F , P {Sqq.
+After shrinking S, we may assume that S is integral and we denote by η the generic point of S.
+To prove (4.13.2), it suffices to show
+(4.13.5)                      SSpi˚ F , P {Sq ˆS η “ i˝ SSpF , X{Sq ˆS η
+The case where supppF q X Xη “ H is trivial and we consider the case where supppF q X Xη ‰ H.
+Since
+                     i˝ SS w pF , X{Sq “ SS w pi˚ F , P {Sq Ď SSpi˚ F , P {Sq,
+the conical set SSpi˚ F , P {Sq contains the restriction of the conormal bundle NX|P to the support of
+i˚ F . If (4.13.5) is false, we can fine a closed point z P Xη and a non-zero vector λ P T˚z pX{Sq, such
+that di´1z pλq contains vectors in pi˝ SSpF , X{Sqqz zpSSpi˚ F , P {Sqqz . Replacing S by a Zariski open
+                                                                                    ´1
+dense subset, we can take a sufficiently general χθ : P Ñ Am    S , such that λ R psθ pSSpi˚ F , P {Sqqqz .
+It contradicts to (4.13.4).                                                                             
+
+                         5. Existence of relative singular supports
+   In this section, let S be a connected Noetherian Zr1{ℓs-scheme. We take the notation and
+assumptions of 3.1 and 3.2.
+Lemma 5.1 (cf. [B15, Lemma 3.3]). Let C be a closed conical subset of T˚ pP{Sq and F an object
+of Dcb pP, Λq. If F is micro-supported on C ` relative to S, then the Radon transform RS pF q is
+micro-supported on C _` relative to S. Conversely, if RS pF q is micro-supported on C _` relative
+to S, then, after replacing S by a Zariski open dense subset, F is micro-supported on C ` relative
+to S.
+18                                   HAOYU HU AND ENLIN YANG
+
+
+Proof. If F is micro-supported on C ` relative to S, then the Radon transform RS pF q is micro-
+supported on pr_    ˝   `
+                ˝ pr pC q “ C
+                               _`
+                                   relative to S (Lemma 4.12).
+  Conversely, if RS pF q is micro-supported on C _` , then the complex pRS_ ˝ RS qpF q is micro-
+supported on pr˝ pr_˝ pC _` q “ C __` “ C ` . After shrinking S, we may assume that the mapping
+cone of the adjunction F Ñ pRS_ ˝ RS qpF q has locally constant cohomologies (Proposition 3.11).
+By Lemma 4.11, F is also micro-supported on C ` relative to S.                                
+Lemma 5.2 (cf. [B15, Lemma 3.4]). Let pg, hq : Y Ð U Ñ P be a test pair of P relative to S. We
+have the following diagram with Cartesian squares (3.2)
+                                              hU         pr_
+(5.2.1)                              HU            /H          / P_
+                                   prU        l     pr
+                                                   
+                                         U         /P
+                                              h
+                                     g
+                                       
+                                      Y
+Let C be a strict closed conical subset of T˚ pP{Sq and E Ď H the image of PpCq in H by Legendre
+transform. Then, the test pair pg, hq is C-transversal relative to S if and only if the test pair
+pg ˝ prU , pr_ ˝ hU q of P_ is T˚ P_ -transversal relative to S at EU “ E ˆP U .
+     In fact, Lemma 5.2 is deduced by [B15, Lemma 3.4] by taking fibers relative to S.
+Theorem 5.3 (cf. [B15, Theorem 3.2]). Let F be an object of Dcb pP, Λq. Then, after replacing S
+by a Zariski open dense subset, the relative singular support SSpF , P{Sq exists and we have
+(5.3.1)                       PpSSpF , P{Sqq “ Epr ppr_˚ RS pF qq Ď H
+by Legendre transform (3.2). Assume that S is irreducible and let η be the generic point of S. If
+supppF |Pη q ‰ Pη , then SSpF , P{Sq is the conical subset of T˚ pP{Sq associated to Epr ppr_˚ RS pF qq.
+If, after shrinking S, we have supppF q “ P, then SSpF , P{Sq is the union of conical subset of
+T˚ pP{Sq associated to Epr ppr_˚ RS pF qq and the zero-section of T˚ pP{Sq after shrinking S again.
+Proof. After shrinking S, we may assume that π : P Ñ S is universally locally acyclic with
+respect to F and that the mapping cone of the adjunction F Ñ pRS_ ˝ RS qpF q has locally constant
+cohomologies (Proposition 3.11). By smooth base change theorem, the composition π _ ˝pr : H Ñ S
+is universally locally acyclic with respect to pr˚ F . By proper base change theorem, the morphism
+π _ : P_ Ñ S is universally locally acyclic with respect to G “ RS pF q. In the following, we replace
+F by RS_ pGq. We simply put E “ Epr ppr_˚ RS pF qq Ď H and we denote by C Ď T˚ pP{Sq the strict
+closed conical set associated to E by Legendre transform. Let C 1 be an element of C min pF , P{Sq
+and E 1 Ď H the Legendre transform of PpC 1 q. To prove the theorem, it is enough to show that
+C ` “ C 1` .
+    By the equality (3.2.1), the test pair ppr, pr_ q : P Ð H ´ E 1 Ñ P_ of P_ is C 1_` -transversal
+relative to S. By Lemma 5.1, the complex F is micro-supported on C 1 relative to S implies that
+the complex G is micro-supported on C 1_` relative to S. Hence, the morphism pr : H ´ E 1 Ñ P is
+universally locally acyclic with respect to pr_˚ G, i.e., we have E Ď E 1 and C ` Ď C 1` .
+    To show C 1` Ď C ` , it suffices to verify that C ` is an element of CpF , P{Sq. Let pg, hq : Y Ð
+U Ñ P be a test pair of P relative to S. We assume that pg, hq is C ` -transversal relative to S. We
+take the notation of diagram (5.2.1) and we put EU “ EˆP U . It is sufficient to show that g : U Ñ Y
+is locally acyclic with respect to h˚ F “ RprU˚ ph˚U ppr_˚ Gqq. Since prU : HU Ñ U is proper, by
+      RELATIVE SINGULAR SUPPORT AND THE SEMI-CONTINUITY OF CHARACTERISTIC CYCLES                     19
+
+
+proper base change theorem, we are reduced to prove that the morphism g ˝ prU : HU Ñ Y is
+locally acyclic with respect to h˚U ppr_˚ Gq. Indeed,
+     (i) By the definition of E, the morphism pr : H ´ E Ñ P is universally locally acyclic with
+         respect to pr_˚ G. Hence prU : HU ´ EU Ñ U is universally locally acyclic with respect
+         to h˚U ppr_˚ Gq. Since pg, hq is C ` -transversal relative to S and C ` contains the zero-
+         section of T˚ pP{Sq, the morphism g : U Ñ Y is smooth. By [SGA4 12 , 2.14], the morphism
+         g ˝ prU : HU Ñ Y is locally acyclic with respect to h˚U ppr_˚ Gq on HU ´ EU .
+    (ii) By Lemma 5.2, the test pair pg ˝ prU , pr_ ˝ hU q of P_ is T˚ P_ -transversal relative to S
+         at EU “ E ˆP U . Notice that π _ : P_ Ñ S is universally locally acyclic with respect to
+         G. By Proposition 4.9, the morphism g ˝ prU : HU Ñ Y is locally acyclic with respect to
+         h˚U ppr_˚ Gq in a neighborhood of EU .
+                                                                                                   
+Theorem 5.4 (cf. [B15, Theorem 1.3]). Let f : X Ñ S be a smooth morphism of finite type and
+F an object of Dcb pX, Λq. Then, after replacing S by a Zariski open dense subscheme, the singular
+support SSpF , X{Sq of F relative to S exists.
+Proof. The case where Sred is the spectrum of a field is done by [B15, Theorem 1.3]. It suffices to
+consider the case where Sred is not the spectrum of a field. By Lemma 4.10, this is a local problem
+for the Zariski topology of X. We may assume that f : X Ñ S is affine. By Proposition 4.13, we
+are reduced to the case where X “ AnS . By Lemma 4.10 again, we are reduced to the case where
+X “ PnS . It is deduced by Theorem 5.3.                                                           
+Proposition 5.5 ([B15, Theorem 3.7]). Suppose that S is an irreducible excellent Noetherian
+scheme. Let G be an object of Dcb pP_ , Λq. Then, after replacing S by a generically dimensional
+Zariski open dense subscheme, we have dim Epr ppr_˚ Gq ď dim P ´ 1.
+  The origin proof of [B15, Theorem 3.7] is for the case where S is an irreducible algebraic variety
+over a field. In fact, the same proof is also valid in our case.
+Corollary 5.6. Suppose that S is an irreducible excellent Noetherian scheme. Let F be an object
+of Dcb pP, Λq. Then, after replacing S by a generically dimensional Zariski open dense subscheme,
+we have
+(5.6.1)                               dim SSpF , P{Sq ď dim P.
+Proof. By Proposition 5.5 (cf. [B15, Theorem 3.7]), after replacing S by a generically dimensional
+Zariski open dense subscheme, we have
+                                dimk Epr ppr_˚ RS pF qq ď dimk P ´ 1,
+i.e., dimk PpSSpF , P{Sqq ď dimk P ´ 1 (Theorem 5.3). Hence we obtain (5.6.1).                       
+Proposition 5.7 (cf. [B15, Theorem 1.7]). Suppose that S is an integral excellent Noetherian
+scheme and that the Veronese embedding ri : P Ñ P    r in 3.1 has degree d ě 3. Let F be an object
+     b                               r   r     r _
+of Dc pP, Λq and we put D “ N CpRS pi˚ F q, P q (2.8). Then, after replacing S by a Zariski open
+dense subset, we have
+     (i) For each irreducible component Dα (α P I) of D, there is a unique irreducible closed
+         conical subset Cα Ď T˚ pP{Sq such that Dα “ pr  r _ pPpri˝ Cα qq and that the projection r
+                                                                                                  pr_ :
+                                                                           Ť
+         Ppri˝ Cα q Ñ Dα is generically radicial. We have SSpF , P{Sq “ αPI Cα .
+    (ii) The closed subscheme D is an effective Cartier divisor of P   r_ relative to S.
+20                                      HAOYU HU AND ENLIN YANG
+
+
+Proof. By Theorem 5.3, we may assume that SSpF , P{Sq and SSpR                    r
+                                                                     rS pri˚ F q, P{Sq exist. We simply
+put C “ SSpF , P{Sq and put C  r “ SSpR rS pri˚ F q, r
+                                                     P {Sq. By Lemma 4.11(iii), we have D “ Bp r
+                                                       _
+                                                                                                    Cq.
+                                   r    r      _       r
+After shrinking S again, we have C “ pi˝ Cq or C “ pi˝ Cq  r   _`
+                                                                   (Proposition 4.13(ii) and Lemma
+5.1). Hence, we get D “ BpCq   r “ prr _ pPpri˝ Cqq. We denote by tCα uαPI the set of irreducible
+components of C. By Lemma 3.3, we may assume that S and each irreducible component of
+dim Ppri˝ Cq are generically dimensional. By Corollary 5.6, we have dim Ppri˝ Cq ď dim P       r _ ´ 1.
+Hence, after shrinking S, the map
+                         pr_ : r
+                          r    HÑr  P_ , Ppri˝ Cα q ÞÑ Dα “ r pr_ pPpri˝ Cα qq
+induces a one-to-one correspondence between the sets of irreducible components of C and D, and
+moreover, rpr_ : Ppri˝ Cα q Ñ Dα is generically small (Proposition 3.9).
+    For any s P S, we denote by ris : Ps Ñ P   r s (resp. r
+                                                          prs : Hr_ Ñ P
+                                                                   s              pr_
+                                                                          r s and r     r_   r_
+                                                                                    s : Hs Ñ Ps ) the fiber
+            r (resp. r                          _
+of ri : P Ñ P           pr : r
+                             H Ñ r
+                               _
+                                    P and pr  r : H  r Ñ r
+                                                       _       _
+                                                             P ) at s, and by R    rs the Radon transform
+                      _    r     r       r _
+for the pair p r   prs q : Ps Ð Hs Ñ Ps . By proper base change theorem, we have the canonical
+              prs , r
+isomorphism
+                                     rS pri˚ F qq|r_ Ý„ r r
+                                   pR             P   ÑR  s pis˚ pF |Ps qq.
+                                                     s
+
+Let η denotes the generic point of S. By Lemma 3.12, we have
+                    Dη “ N CppR  rS pri˚ F qq|r_ , P
+                                                   r _ q “ N CpR                   r_ q.
+                                                               rη priη˚ pF |Pη qq, P
+                                                Pη   η                               η
+
+By [B15, Theorem 1.7], Dη “ N CpR                         r_ q is an effective Cartier divisor of r
+                                      rη priη˚ pF |Pη qq, P                                       P_
+                                                            η                                       η . Since
+                                      r _
+D is a reduced closed subscheme of P containing Dη , after shrinking S, the closed subscheme D
+is an effective Cartier divisor of r
+                                   P_ relative to S.                                                       
+Theorem 5.8. Let S be an excellent Noetherian scheme, f : X Ñ S a smooth morphism of finite
+type and F an object of Dcb pX, Λq. Then, after replacing S by a Zariski open dense subset, for any
+s P S, we have
+(5.8.1)                            SSpF |Xs q “ pSSpF , X{Sq ˆS sqred .
+Proof. By dévissage in the proof of Theorem 5.4, we are reduced to the case where X “ P. We take
+the notation and assumptions of Proposition 5.7 and we assume that S is integral. We also omit the
+subscript "red" in the proof for simplicity. By Theorem 5.3, we may assume that C “ SSpF , P{Sq
+exists. By (5.3.1), for any s P S, we have PpSSpF |Ps qq Ď PpCs q. After shrinking S, we may assume
+that supppF q “ P if and only if, for any s P S, supppF |Ps q “ Ps . Hence, we have SSpF |Ps q Ď Cs
+for any s P S. It implies that Ppris˝ pSSpF |Ps qqq is a closed subset of Ppri˝ Cqs for any s P S. By
+Lemma 3.12, after shrinking S, for any s P S, we have
+                       Ds “ N CppR rS pri˚ F qq|r_ , P          rs pris˚ pF |Ps qq, r
+                                                     r_ q “ N CpR                   P_ q.
+                                                Ps       s                          s
+
+By [B15, Thorem 1.7] (Proposition 5.7 for S “ s),                            pr_
+                                                              the projection r
+                                                                            : Hs
+                                                                                rs Ñ r
+                                                                                     P_s induces a
+surjective map
+(5.8.2)           pr_
+                  r       r                            r r                r_
+                    s : Ppis˝ pSSpF |Ps qqq ։ Ds “ N CpRs pis˚ pF |Ps qq, Ps q.
+
+                                     pr_ : H
+   After shrinking S, the projection r      r ÑP  r _ induces a one-to-one correspondence between
+                                                                                              pr_ :
+the sets of irreducible components tPpri˝ pCα quαPI and tDα uαPI and the canonical surjection r
+Ppri˝ Cα q Ñ Dα is surjective and generically radicial (Proposition 5.7). Hence, after shrinking S,
+we may assume that (Lemma 3.6)
+     (1) For each α P I, the components Ppri˝ Cα q and Dα are flat over S;
+      RELATIVE SINGULAR SUPPORT AND THE SEMI-CONTINUITY OF CHARACTERISTIC CYCLES                          21
+
+
+     (2) For any s P S, the projection pr   r_    r      r_
+                                              s : Hs Ñ Ps induces a one-to-one correspondence between
+         the irreducible components of Ppri˝ Cqs and Ds . We denote by tpPpri˝ Cqs qβ uβPJpsq (resp.
+         tpDs qβ uβPJpsq ) the sets of irreducible components of Ppri˝ Cqs (resp. Ds ). For each β P Jpsq,
+         the canonical projection r   pr_      r
+                                         s : Ppi˝ Cqs qβ Ñ pDs qβ is generically radicial.
+   By (5.8.2) and (2), for any s P S, the closed subset Ppris˝ pSSpF |Ps qqq contains all generic points
+of irreducible components of Ppri˝ Cqs . Hence, for any s P S, we have
+(5.8.3)                               Ppris˝ pSSpF |Ps qqq “ Ppri˝ Cqs .
+                                                                                 r s , (5.8.3) implies that
+Since both ris˝ pSSpF |Ps qq and ris˝ pCs q are strict closed conical subsets of P
+(5.8.4)                                 ris˝ pSSpF |Ps qq “ ris˝ pCs q.
+                rs ˆr Ps Ñ T˚ Ps is a surjective map, (5.8.4) implies that SSpF |Ps q “ Cs .
+Since dris : T˚ P                                                                                         
+                    Ps
+
+  By [EGA IV, II, 6.9.1], we have the following theorem. It implies that part (i) of Theorem 1.4
+can be generalized to higher relative dimension cases if allowing to replace S by a Zariski open
+dense subset.
+Theorem 5.9. Let S be an excellent Noetherian scheme, f : X Ñ S a smooth morphism of finite
+type and F an object of Dcb pX, Λq. Then, after replacing S by a Zariski open dense subset, there
+exists a closed subscheme Z Ď T˚ pX{Sq which is flat over Sred , such that, for any s P S, we have
+                                           SSpF |Xs q “ pZs qred .
+Corollary 5.10. Let X and S be irreducible excellent Noetherian schemes, f : X Ñ S a smooth
+morphism of finite type and F an object of Dcb pX, Λq. Then, after replacing S by a generically
+dimensional Zariski open dense subset, we have X is generically dimensional, SSpF , X{Sq is
+equidimensional and has dimension dim X.
+Proof. It is deduced by Lemma 3.3, Theorem 5.8 and [B15, Theorem 1.3].                                    
+
+Corollary 5.11 (cf. [B15, Theorem 1.5]). Let S be an excellent Noetherian scheme, f : X Ñ S a
+smooth morphism of finite type and F an object of Dcb pX, Λq. Then, after replacing S by a Zariski
+open dense subset, we have
+                                 SS w pF , X{Sq “ SSpF , X{Sq.
+Proof. We may assume that S is irreducible and let η be the generic point of S. We simply put
+B “ SS w pF , X{Sq and put C “ SSpF , X{Sq. It is sufficient to prove that Bη “ Cη . A priori,
+we have B Ď C, hence Bη Ď Cη . Any Bη -transversal weak test pair pg0 , h0 q : A1η Ð U0 Ñ Xη
+can be extended to a B-transversal week test pair pg, hq : A1S Ð U Ñ X relative to S. Hence, any
+Bη -transversal weak test pair is F |Xη -acyclic, i.e., SS w pF |Xη q Ď Bη . By theorem 5.8, we have
+SSpF |Xη q “ Cη . By [B15, Theorem 1.5], we have SS w pF |Xη q “ SSpF |Xη q. In summary, we have
+                              Cη “ SSpF |Xη q “ SS w pF |Xη q Ď Bη Ď Cη .
+                                                                                                          
+Corollary 5.12. Let S and S 1 be excellent Noetherian schemes, f : S 1 Ñ S a dominant morphism,
+f : X Ñ S a smooth morphism of finite type, X 1 “ X ˆS S 1 and F an object of Dcb pX, Λq. Then,
+after replacing S and S 1 by Zariski open dense subsets, we have
+(5.12.1)                      SSpF |X 1 , X 1 {S 1 q “ pSSpF , X{Sq ˆS S 1 qred .
+22                                        HAOYU HU AND ENLIN YANG
+
+
+Proof. We may assume that S and S 1 are irreducible. Let η and η 1 be the generic points of S and
+S 1 , respectively. By [B15, Theorem 1.4] and Theorem 5.8, we have
+         SSpF |X 1 , X 1 {S 1 q ˆS 1 η 1 “ SSpF |η1 q “ pSSpF |η q ˆη η 1 qred “ pSSpF , X{Sq ˆS η 1 qred .
+Then, after shrinking S 1 again, we get (5.12.1).                                                             
+
+                         6. Generic constancy of characteristic cycles
+   In this section, let k be a perfect field of characteristic p ą 0 (p ‰ ℓ). All k-schemes are assumed
+to be of finite type over Specpkq.
+6.1. Let X be a smooth k-scheme of equidimension n, C a closed conical subset of T˚ X and
+f : X Ñ A1k a k-morphism. A closed point v P X is called an at most C-isolated characteristic
+point of f : X Ñ A1k if there is an open neighborhood V Ď X of v such that f : V ´ tvu Ñ A1k is
+C-transversal. A closed point v P X is called a C-isolated characteristic point if v is an at most
+C-isolated characteristic point of f : X Ñ A1k but f : X Ñ A1k is not C-transversal at v.
+   We assume that C Ď T˚ X is of equidimension n. Let tCα uαPI be the set of irreducible compo-
+nents of C. We denote by o the origin of A1k . A base θ P T˚o A1k defines a section θ : X Ñ T˚ A1k ˆA1k X,
+hence a section df ˝ θ : X Ñ T˚ X, where df : T˚ A1k ˆA1k X Ñ T˚ X is the canonical morphism.
+           ř
+Let A “ αPI mα rCα s pmα P Zq be an n-cycle supported on C and v P X an at most C-isolated
+characteristic point of f : X Ñ A1k . Then, there is an open neighborhood V of v in X such that
+the intersection pA, rpdf ˝ θqpW qsq is a 0-cycle supported on a closed point of Tv˚ V . Its degree
+is independent of the choice of the base θ P T˚o A1k and we denote this intersection number by
+pA, df qT˚ X,v .
+6.2. ([Sa16, Theorem 5.9]) Let X be a smooth k-scheme of equidimension n, F an object of
+Dcb pX, Λq and tCα uřαPI the set of irreducible components of SSpF q. Then, there exists a unique
+n-cycle CCpF q “ αPI mα rCα s pmα P Zq of T˚ X supported on SSpF q, satisfying the following
+Milnor type formula (6.2.1):
+   For any étale morphsim g : V Ñ X, any morphism f : V Ñ A1k , any isolated g ˝ SSpF q-
+characteristic point v P V of f : V Ñ A1k and a geometric point v̄ of V above v, we have
+                         ÿ
+(6.2.1)               ´ p´1qi dimtotpRi Φv̄ pg ˚ F , f qq “ pg ˚ CCpF q, df qT˚ V,v ,
+                             i
+
+where RΦv̄ pg ˚ F , f q denotes the stalk at v̄ of the vanishing cycle complex of g ˚ F relative to f ,
+dimtotpRi Φv̄ pg ˚ F , f qq the total dimension of Ri Φv̄ pg ˚ F , f q (2.9) and g ˚ CCpF q the pull-back of
+CCpF q to T˚ V . We call CCpF q the characteristic cycle of F .
+Proposition 6.3 ([Sa16, Lemma 5.11, Lemma 5.13]). Let X be a smooth k-scheme of equidimen-
+sion n and F be an object of Dcb pX, Λq. Then
+    (i) For any étale morphism j : U Ñ X, we have
+                                            j ˚ CCpF q “ CCpj ˚ F q.
+      (ii) For a smooth k-scheme P of equidimension m and a closed immersion h : X Ñ P , we
+           have
+                                       h˝ pCCpF qq “ CCph˚ F q,
+           where h˝ pCCpF qq denotes the push-forward of the cycle p´1qm´n dh˚ pCCpF qq on T˚ P ˆP
+           X to T˚ P .
+     The index formula for ℓ-adic sheaves is the following:
+      RELATIVE SINGULAR SUPPORT AND THE SEMI-CONTINUITY OF CHARACTERISTIC CYCLES                     23
+
+
+Theorem 6.4 ([Sa16, Theorem 7.13]). Let k̄ be an algebraic closure of k, X a smooth and projective
+k-scheme and F an object of Dcb pX, Λq. Then, we have
+(6.4.1)                        χpXk̄ , F |Xk̄ q “ degpCCpF q, T˚X XqT˚ X ,
+where χpXk̄ , F |Xk̄ q denotes the Euler-Poincaré characteristic of F |Xk̄ .
+Example 6.5. Let T be a smooth k-curve, E an effective Cartier divisor of T , T0 the complement
+of E in T , r : T0 Ñ T is the canonical injection and G a locally constant and constructible sheaf of
+Λ-modules on T0 . Then, we have
+                                                        ÿ
+                       CCpr! Gq “ ´rkΛ pGq ¨ rT˚T T s ´    dimtott pGq ¨ rT˚t T s,
+                                                               tPE
+
+where dimtott pGq denotes the total dimension of G at t (2.9). When T is proper, the index formula
+(6.4.1) for r! G is exactly the Grothendieck-Ogg-Shafarevich formula [SGA5].
+6.6. In the following of this section, we assume that all schemes are over Zr1{ℓs. Let
+                                                               g
+                                     D         /X                           /Y
+                                                    ❅❅                     ⑧
+                                                      ❅❅                  ⑧
+                                                        ❅❅              ⑧⑧
+                                                      f ❅❅           ⑧⑧⑧ h
+                                                                  ⑧
+                                                               S
+be a commutative diagram of morphisms of finite type of Noetherian schemes, where g : X Ñ Y
+is smooth, h : Y Ñ S is smooth of relative dimension 1, D is a closed subscheme of X such that
+f |D : D Ñ S is qusai-finite. Denote by U the complement of D in X. Let F be an object of
+Dcb pX, Λq. Assume that f : X Ñ S is locally acyclic with respect to F and that g|U : U Ñ Y is
+locally acyclic with respect to F |U . Let x be a point of D and x̄ a geometric point of X above
+x, s̄ a geometric point of S above s “ f pxq and RΦx̄ pF |Xs̄ , gs̄ q the stalk of the vanishing cycles
+complex of F |Xs̄ relative to gs̄ : Xs̄ Ñ Ys̄ . We define a function ϕF ,g : D Ñ Z by
+                                         ÿ
+(6.6.1)                      ϕF ,g pxq “ p´1qi dimtotpRi Φx̄ pF |Xs̄ , gs̄ qq,
+                                          i
+
+which is independent of the choice of geometric point x̄ of X above x. The following proposition
+is the semi-continuity of total dimensions of vanishing cycles complex.
+Proposition 6.7 ([Sa16, Proposition 2.16]). We take the notation and assumptions of 6.6. Then,
+the function ϕF ,g : D Ñ Z is constructible. If f |D : D Ñ S is étale, the function
+                                                          ÿ
+                              f˚ pϕF ,g q : S Ñ Z, s ÞÑ       ϕF ,g pxq
+                                                                   xPDs̄
+
+is locally constant on S.
+6.8. Let S be an Noetherian scheme,  ř    f : X Ñ S a smooth morphism of finite type and F an
+object of Dcb pX, Λq. A cycle B “ iPI mi rBi s in T˚ pX{Sq is called the characteristic cycle of F
+relative to S if each Bi is open and equidimensional over S and if, for any algebraic geometric point
+s̄ of S, we have
+                                         ÿ
+(6.8.1)                            Bs̄ “    mi rpBi qs̄ s “ CCpF |Xs̄ q
+                                         iPI
+
+We denote by CCpF , X{Sq the characteristic cycle of F on X relative to S. Notice that relative
+characteristic cycles do not always exist.
+24                                         HAOYU HU AND ENLIN YANG
+
+
+Theorem 6.9. Let S be an excellent Noetherian scheme, f : X Ñ S a smooth morphism of
+finite type and F an object of Dcb pX, Λq. Then, there exists a dominant and quasi-finite morphism
+π : S 1 Ñ S such that the relative characteristic cycle CCpF |XˆS S 1 , pX ˆS S 1 q{S 1 q exists.
+     Theorem 6.9 generalizes part (ii) of Theorem 1.4 to higher relative dimensional cases.
+Proof. We may assume that S is affine and integral. By Proposition 6.3, we are reduced to the
+case where X is a projective space over S. We take the notation of 3.1 and 3.2, and we write
+X “ P. By Theorem 5.8, we may assume that the relative singular support C “ SSpF , P{Sq exists
+and that, for any s P S, we have SSpF |Ps q “ pCs qred .
+   Step 1. We denote by Vr the free OS -module Γpr        P, OPr p1qq and by Vr _ the free OS -module
+  r _ , Or_ p1qq. They are of rank N . Let G
+ΓpP                                          r be the Grassmannian of projective line in P    r _ , i.e.,
+         P
+the Grassmannian GrpVr , 2q of projective quotient OS -module of Vr of rank 2. Let D
+                         _                                                 _                r be the
+                  r _   r
+universal line in P ˆS G, i.e., for each s P S,
+                                      !                     ˇ        )
+                                 r s “ px, yq P r
+                                                P_       r ˇ
+                                 D                s ˆs Gs x P L y ,
+
+where Ly Ď P  r_ denotes the projective line associated to y P G       r s . It is isomorphic to the Flag
+               s
+           r _                                               r  _
+variety FlpV , 2, 1q over S characterized by surjections V ։ L2 ։ L1 of projective OS -modules
+where rankOS pL2 q “ 2 and rankOS pL1 q “ 1. Let A      r ĎPr ˆS r  G be the universal axis, i.e., for any
+s P S,                        !                                                 )
+                                                     ˇ
+                        Ar s “ px, yq P P      r s , ˇ x P Hz , for any z P Ly ,
+                                        r s ˆs G
+
+where Hz denotes the hyperplane of P   r s associated to z P P
+                                                             r_ . It is isomorphic to the Flag variety
+                                                               s
+   r                                                      r
+FlpV , N ´ 2, 1q over S characterized by the surjections V ։ L1N ´1 ։ L11 of projective OS -modules
+where rankOS pL1N ´2 q “ N ´ 2 and rankOS pL11 q “ 1. Notice that A  r is of codimensional 2 in P    r
+                                                                                                r ˆS G.
+We denote by ρ : D r Ñr   _
+                         P and τ : D rÑ r  G the canonical projections and by π : P ˆPr r HÑr     _
+                                                                                                P the
+                 r            r     r                         _    r      r _
+composition of i ˆ id : P ˆPr H Ñ H and the projection r    pr : H Ñ P . We have a commutative
+diagram (cf. [Sa16, (5.2)])
+                                              ρ1               τ1
+(6.9.1)                                r o
+                                 P ˆPr H                 r 1
+                                                   pP ˆS Gq                r
+                                                                    / P ˆS G
+
+                                   π           l        π1               pr2
+                                                                     
+                                               ρ               τ
+                                      r_ o
+                                      P               r
+                                                      D                r
+                                                                      /G
+
+where pP ˆS r    Gq1 denotes the blow-up of P ˆS r      G along A r ŞpP ˆS rGq and τ 1 is the canonical
+projection. Due to [Sa16, Lemma 5.2], the left square of (6.9.1) is Cartesian. We put pP ˆS Gq       r ˝“
+         r    r Ş         r
+pP ˆS GqzpA pP ˆS Gqq.
+    Step 2. In the rest of the proof, we simply put C “ SSpF , P{Sq. We denote by tCα uαPI the set
+of irreducible components of C, by C       r (resp. C
+                                                    rα ) the inverse image pdriq´1 pCq (resp. pdriq´1 pCα q)
+              r
+in P ˆPr T˚ pP{Sq                                     r
+                     (resp. pdriq´1 pCα q Ď P ˆPr T˚ pP{Sq),       r (resp. PpC
+                                                             by PpCq             rα q) the projectivization
+of Cr (resp. C  rα ) in P ˆr r                                      r         r                   r
+                            P H by Legendre transform and by D (resp. Dα ) the image πpCq (resp.
+    r        r _
+πpCα q) in P . By [EGA IV, II, 6.9.1], we may assume that, for any α P I, Cα (resp. Cα and D   r        r α)
+is flat over S.
+    Let η be the generic point of S. There exists a point η 1 and finite morphism η 1 Ñ η such that,
+for any α P I, the fiber product Cη1 “ C ˆS η 1 is geometrically irreducible (hence, PpC         rα qη1 and
+pDr α qη1 are also geometrically irreducible). Let S be the normalization of S in η . By Corollary
+                                                        1                                  1
+      RELATIVE SINGULAR SUPPORT AND THE SEMI-CONTINUITY OF CHARACTERISTIC CYCLES                                 25
+
+
+5.12, after replacing S by a Zariski open dense subset of S 1 (we still denote it by S for simplicity),
+we may assume that the relative singular support C exists and that, for any α P I, the generic
+fiber pCα qη is geometrically integral (hence, PpC   rα qη and pD
+                                                                r α qη are also geometrically integral).
+Replacing S again by a Zariski open dense subscheme, we may assume that, for any s P S and
+any α P I, the fibers pCα qs , pD r α qs and PpC
+                                               rα qs are geometrically integral ([EGA IV, III, 9.7.7]),
+and that pCα qs ’s are different from each other ([EGA IV, III, 9.7.8]). Assume that the Veronese
+embedding ri : P Ñ P  r has degree d ě 3. By Lemma 3.6 and Proposition 3.9, we may assume that,
+for any s P S and any α P I, the canonical projection πs : PpC   rα qs Ñ pD  r α qs is generically radicial.
+                          r ∇                                          r  ˝
+   Step 3. Let pP ˆS Gq be the largest open subset of pP ˆS Gq such that the inverse image
+Zp r
+   Cq “ Pp r Cq ˆPˆr rH pP ˆS r  Gq∇ is quasi-finite over rG. Using [Sa16, Lemma 3.10] fiberwisely,
+                      P
+
+we obtain that the complement pP ˆPr HqzPp   r    r is the largest open subset of P ˆr H
+                                                  Cq                                          r where the
+                                                                                            P
+                        _           r
+test pair pπ, pr1 q : P Ð P ˆPr H Ñ P is C-transversal relative to S. Then, pP ˆS Gq∇ zZpCq   r        r is
+the largest open subset of pP ˆS Gq    r ∇ where the test pair pπ ˝ ρ1 , pr1 q : Dr Ð pP ˆS Gq r ∇ Ñ P is
+                                           1        r ∇      r     r
+C-transversal relative to S. Hence, π : pP ˆS Gq zZpCq Ñ D is universally locally acyclic with
+respect to G “ F |pPˆS Gqr ∇ . After shrinking S, we may assume that the canonical projection P Ñ S
+
+is universally locally acyclic with to F , hence, that pr2 : pP ˆS Gq   r ∇ Ñ G    r is universally locally
+acyclic with respect to G.
+   Consider the following commutative diagram
+                                                                      1
+                                    r                  r ∇
+                                               / pP ˆS Gq          π         r
+                                                                            /D
+(6.9.2)                           ZpCq
+                                                        ❍❍                ✂✂
+                                                          ❍❍             ✂
+                                                            ❍❍         ✂✂τ
+                                                          pr2 ❍❍❍     ✂
+                                                                 ❍$ ✂✂
+                                                                   r
+                                                                   G
+By [Sa16, Proposition 2.16] (cf. Proposition 6.7), the function (6.6.1)
+                                               ϕG,π1 : Zp r
+                                                         Cq Ñ Z,
+is constructible. For any α P I, we put ZpC  rα q “ PpC rα q ˆ r pP ˆS r  Gq∇ . Then, there exists an
+                                                               PˆPr H
+open dense subset Z 1 p r        Cq, such that ϕG,π1 is locally constant on Z 1 p r
+                        Cq of Zp r                                               Cq and that, for any
+                         1 r       1 r       r           1 r          1 r     r
+α, β P I, the subsets Z pCα q “ Z pCq X ZpCα q and Z pCβ q “ Z pCq X ZpCβ q are disjoint. Notice
+that the projection ρ1 : pPˆS r
+                              Gq∇ Ñ PˆPr H r is smooth and has geometrically integral fibers. Hence,
+we may assume that, after shrinking S, for any α P I, the scheme Z 1 pC    rα q is irreducible and, for
+                       1 r
+any s P S, the fiber Z pCα qs is non-empty and geometrically irreducible.
+   Step 4. For any α P I, Let ξα (resp. ζα ) be the generic point of PpC  rα q (resp. Dr α ) and ϕα the
+                    1 r
+value of ϕG,π on Z pCα q. We put
+              1
+
+                                              ÿ      ϕα
+(6.9.3)                                B“´                   rCα s.
+                                             αPI
+                                                  rξα : ζα s
+After replacing S by a Zariski open dense subscheme, we may assume that, for any α P I and any
+                      rα qs is non-empty. Let s̄ be an algebraic geometric point of S. For any α P I,
+s P S, the fiber Z 1 pC
+we denote by pξα qs̄ (resp. pζα qs̄ ) the generic point of PpC   rα qs̄ (resp. pD   r α qs̄ ). By [Sa16, Proposition
+5.8, Theorem 5.9], the characteristic cycle CCpF |Ps̄ q is defined by
+                                                 ÿ          ϕα
+(6.9.4)                         CCpF |Ps̄ q “ ´                           rpCα qs̄ s.
+                                                 αPI
+                                                     rpξα qs̄ : pζα qs̄ s
+26                                    HAOYU HU AND ENLIN YANG
+
+
+By Lemma 3.7, for any α P I and any algebraic geometric point s̄ of S, we have
+(6.9.5)                                rξα : ζα s “ rpξα qs̄ : pζα qs̄ s.
+By (6.9.3), (6.9.4) and (6.9.5), we obtain that, for any algebraic geometric point t̄ of S,
+                                             Bt̄ “ CCpF |Pt̄ q.
+Hence, B is the characteristic cycle of F |XˆS S 1 relative to S 1 .                                    
+
+Proposition 6.10 (Saito). We assume that k is algebraically closed. Let T be a connected and
+smooth k-scheme of dimension n, g : Y Ñ T a smooth morphism of finite type and G an object
+of Dcb pY, Λq. Assume that g : Y Ñ T is SSpGq-transversal and that each irreducible component
+of SSpGq is open and equidimensional over T . Then, the relative characteristic cycle CCpG, Y {Sq
+exists, and we have
+(6.10.1)                           CCpG, Y {Sq “ p´1qn θ˚ pCCpGqq,
+where θ : T˚ Y Ñ T˚ pY {T q denotes the projection induced by the canonical map Ω1Y {k Ñ Ω1Y {T .
+Proof. For any closed point t of T , we have the following Cartesian diagram
+                                                     i1t
+                                         T˚ Y o                 T˚ Y ˆY Yt
+                                            θ          l                 θt
+                                                          it
+                                                                     
+                                      T˚ pY {T q o                T˚ Yt
+where it denotes the canonical injection. We may assume that Y is of equidiemension d ` n. Since
+SSpGq is equidimensional over T , for any closed point t of T , the fiber product SSpGq ˆY Yt is of
+equidimension d. Since g : Y Ñ T is SSpGq-transversal, for any closed point t of T , the canonical
+injection ιt : Yt Ñ Y is SSpGq-transversal. Hence, for any closed point t P T , the canonical
+injection ιt : Yt Ñ Y is propoerly SSpGq-transversal ([Sa16, Definition 7.1]). Then, for any closed
+point t in T , we have ([Sa16, Theorem 7.6])
+(6.10.2)                          CCpG|Yt q “ p´1qn θt˚ pi1˚
+                                                          t pCCpGqqq.
+
+The restriction map θ : SSpGq Ñ θpSSpGqq is finite, since g : Y Ñ T is SSpGq-transversal ([Sa16,
+Lemma 3.1]). Then, each irreducible component of θpSSpGqq is also open and equidimensional over
+T . For any closed point t of T , we have an equality of cycles
+(6.10.3)                          θt˚ pi1˚            ˚
+                                        t pCCpGqqq “ it pθ˚ pCCpGqqq.
+
+on T˚ Yt . We put B “ p´1qn θ˚ pCCpGqq. By (6.10.2) and (6.10.3), for any closed point t of T , we
+have
+(6.10.4)                                    CCpG|Yt q “ i˚t B.
+By Theorem 6.9, there exists an integral k-scheme T 1 and a dominant and quasi-finite morphism
+π : T 1 Ñ T such that CCpG|Y ˆT T 1 , pY ˆT T 1 q{T 1 q exists. By (6.10.4) and the definition of relative
+characteristic cycles, we must have
+(6.10.5)                         π 1˚ B “ CCpG|Y ˆT T 1 , pY ˆT T 1 q{T 1 q,
+where π 1 : T˚ pppY ˆT T 1 q{T 1 q Ñ T˚ pY {T q denotes the projection induced by π : T 1 Ñ T . Hence,
+B “ CCpG, Y {T q.                                                                                   
+      RELATIVE SINGULAR SUPPORT AND THE SEMI-CONTINUITY OF CHARACTERISTIC CYCLES                                  27
+
+
+           7. Failure of the lower semi-continuity for characteristic cycles
+7.1. In this section, let k denotes an algebraically closed field of characteristic p ě 3, S “
+Specpkrusq, X “ Specpkrx, y, zsq, D “ pzq, U “ X ´ D and f : X Ñ S the projection associated to
+                                          krus Ñ krx, y, zs,      u ÞÑ x.
+Example 7.2. Let G be a locally constant and constructible sheaf of Λ-modules of rank 1 on U
+associated to the Artin-Schreier covering defined by tp ´ t “ pxyq{z p and we put F “ j! Gr2s. For
+each s P Spkq, we have Xs “ Specpkry, zsq and Us “ Specpkry, z, z ´1sq. The restriction G|Us is
+a locally constant and constructible sheaf of Λ-modules of rank 1 on Us associated to the Artin-
+Schreier covering defined by tp ´ t “ psyq{z p . Notice that G|Us is the constant sheaf ΛUs when
+s “ 0.
+   We have ([Sa15, Example 2.2])
+                                      " ˚        Ť
+                                         TXs Xs Ť Ds ¨ xdzy, if s “ 0,
+                         SSpF |Xs q “
+                                         T˚Xs Xs Ds ¨ xdyy, if s ‰ 0,
+where Ds ¨ xdzy (resp. Ds ¨ xdyy) denotes the sub-line bundle of T˚ Xs ˆXs Ds spanned by the
+section dz (resp. dy). We see that part (i) of Theorem 1.4 cannot be generalized to F .
+Example 7.3. We take the sheaf G in Example 7.2. Let G1 be the constant sheaf ΛU and G2
+the locally constant sheaf of Λ-modules of rank 1 on U associated to the Artin-Schreier covering
+defined by tp ´ t “ y{z p . We put F 1 “ j! pG1 ‘ G2 ‘ Gqr2s. For any closed point s P S, we have
+                                                  ď           ď
+                            SSpF 1 |Xs q “ T˚Xs Xs Ds ¨ xdyy Ds ¨ xdzy.
+We denote by D ¨xdyy (resp. D ¨xdzy) the sub-line bundle of T˚ pX{SqˆX D spanned by the section
+dy (resp. dz). Hence, the closed subset
+                                             ď          ď
+                               A “ T˚X pX{Sq D ¨ xdyy D ¨ xdzy
+of T˚ pX{Sq satisfies part (i) of Theorem 1.4 for F 1 in the higher relative dimension situation.
+However, by [Sa13, Example 3.6], we have
+                             "
+                                3rT˚Xs Xs s ` 2rDs ¨ xdzys ` prDs ¨ xdyys, if s “ 0,
+              CCpF 1 |Xs q “
+                                3rT˚Xs Xs s ` rDs ¨ xdzys ` 2prDs ¨ xdyys, if s ‰ 0.
+It implies that F 1 does not have a lower semi-continuous property at the origin of S. Hence, we
+cannot find a finite and surjective map f : S 1 Ñ S and a cycle B supported on A ˆS S 1 that
+generalize part (iii) of Theorem 1.4 for F 1 .
+
+                                                  References
+[AS02] A. Abbes and T. Saito, Ramification of local fields with imperfect residue fields. Amer. J. Math. 124, (2002),
+     879–920.
+[An] Y. Andre, Structure des connexions méromorphes formelles de plusieurs variables et semi-continuité de
+     l’irrégularité, Invent. Math. 170, (2007), 147–198.
+[B15] A. Beilinson, Constructible sheaves are holonomic. Selecta Math. 22, Issue 4, (2016), 1797–1819.
+[Bry] J.-L. Brylinski, Transformations canoniques, dualité projective, théorie de Lefschetz, transformations de
+     Fourier et sommes trigonométriques, Astérisque 140–141, (1986), 3–134.
+[SGA4 21 ] P. Deligne et al., Cohomologie Étale. Lecture Notes in Math. 569, Springer-Verlag, (1977).
+[De] P. Deligne, Letter to Katz (Dec. 1, 1976), Singularités irrégulières: correspondance et documents, Documents
+     Mathématiques 5, (2007).
+[Du] A. Dubson, Classes caractéristiques des varétés singulières, C. R. Acad. Sci. Paris 287, (1978), 237–240.
+[HY] H. Hu and E. Yang, Semi-continuity for total dimension divisors of étale sheaves, Internat. J. Math. 28, no. 1,
+     (2017), 21 pp.
+28                                       HAOYU HU AND ENLIN YANG
+
+
+[L81] G. Laumon, Semi-continuité du conducteur de Swan (d’après Deligne). Séminaire E.N.S. (1978-1979) Exposé
+     9, Astérisque 82-83, (1981), 173-219.
+[Fu] L. Fu, Etale Cohomology Theory, Nankai Tracts in Mathematics Vol.14, revised Edition, 2015.
+[Ful98] W. Fulton, Intersection theory. Springer-Verlag, Berlin, second edition, 1998.
+[EGA III] A. Grothendieck and J. Dieudonné, Éléments de géométrie algébrique: III Étude cohomologique des
+     faisceaux cohérents. Publ. Math. Inst. Hautes Sci. 11, (1961), 5–167; 17, (1963). 5–91.
+[EGA IV] A. Grothendieck and J. Dieudonné, Éléments de géométrie algébrique: IV Étude locale des schémas et
+     des morphismes de schémas. Publ. Math. Inst. Hautes Sci. 20, (1964), 5–259; 24, (1965), 5–231; 28, (1966),
+     5–255; 32, (1967), 5–361.
+[SGA5] A. Grothendieck et al., Cohomologie ℓ-adique et fonctions L. Séminaire de Géométrie Algébrique du Bois-
+     Marie 1965–1966 (SGA 5). dirigé par A. Grothendieck avec la collaboration de I. Bucur, C. Houzel, L. Illusie,
+     J.-P. Jouanolou et J-P. Serre. Lecture Notes in Mathematics 589, Springer-verlag, Berlin-New York, (1977).
+[Ka83] M. Kashiwara, Systems of microdifferential equations. Progress in Math. 34. Birkhauser, Boston, 1983.
+[O] F. Orgogozo, Modifications et cycles proches sur une base générale. Int. Math. Res. Not. 2006, Art. ID 25315,
+     38 pp.
+[Sa13] T. Saito, Wild ramification and the contangent bundle. J. Algebraic Geometry., Article electronically pub-
+     lished on September 19, 2016.
+[Sa15] T. Saito, Characteristic cycle and the Euler number of a constructible sheaf on a surface. Kodaira Centennial
+     issue of the Journal of Mathematical Sciences, the University of Tokyo, (2015) 22: 387-442.
+[Sa16] T. Saito, The characteristic cycle and the singular support of a constructible sheaf. Invent. Math. Published
+     online 15 July 2016.
+[Se97] J.P. Serre, Linear representations of finite groups. Graduate Texts in Mathematics 42. Springer-Verlag, New
+     York-Heidelberg, 1997.
+
+  Graduate School of Mathematical Sciences, the University of Tokyo, 3-8-1 Komaba Meguro-ku
+Tokyo 153-8914, Japan
+  E-mail address: huhaoyu@ms.u-tokyo.ac.jp, huhaoyu1987@163.com
+
+     Fakultät für Mathematik, Universität Regensburg, 93040 Regensburg, Germany
+     E-mail address: enlin.yang@mathematik.uni-regensburg.de, yangenlin0727@126.com
+

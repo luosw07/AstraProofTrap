@@ -1,0 +1,18 @@
+--- original/main.tex
++++ current/main.tex
+@@ -4337,10 +4337,12 @@
+ 
+ \begin{proof}
+ Fix a sufficiently large prime $p$.
+-From \eqref{eq : GLT}, we know that the restriction of
+-$T_{p^a}$ to $U(\FF_{p^a})$ is an alternating sum of
++From \eqref{eq : GLT}, the restriction of
++$T_p$ to $U(\FF_p)$ admits a realization as an alternating sum of
+ trace functions of lisse sheaves that are mixed with
+-integer weights.
++integer weights, with uniformly bounded total rank.
++Fix any such realization and write $T_{p^a}$ for its trace on
++$U(\FF_{p^a})$, for $a\ge1$.
+ Hence, an application of
+ \cite[Theorem~3.5 and Remark~3.6]{Xu20}
+ with $w=n+r-2$ gives that either
