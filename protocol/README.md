@@ -9,56 +9,6 @@ The construction workflow uses **reviewer**, **tricker**, and **checker**, with 
 | **checker** | Complete modified paper, tricker report, and classification rules. | OK / NOT OK, independent mathematical justification, classification and any required revisions. |
 | **checker_classification** | Curated case, source and construction/checker materials, and classification rules. | Post-workflow five-item audit with formalized Notes and verified direct labels, produced by GPT 6 Astra / max. |
 
-## Workflow diagram
-
-```mermaid
----
-config:
-  theme: base
-  flowchart:
-    curve: basis
-    nodeSpacing: 28
-    rankSpacing: 38
-  themeVariables:
-    fontFamily: "Arial, sans-serif"
-    fontSize: "15px"
-    lineColor: "#718096"
-    clusterBkg: "#f8fafc"
-    clusterBorder: "#d5dee8"
----
-flowchart TD
-    O["<b>Original paper</b>"] --> B["<b>reviewer · baseline</b><br/>Full-paper review → ACCEPT"]
-    B --> T
-
-    subgraph CONSTRUCTION["CONSTRUCTION & BLIND REVIEW"]
-        T["<b>tricker</b><br/>Modified paper · patch · error report"]
-        C["<b>checker</b><br/>Verify the error, witness and proposed labels"]
-        V{"<b>Checker approves?</b>"}
-        R["<b>reviewer · fresh context</b><br/>Review the complete modified paper"]
-        D{"<b>Target detected?</b>"}
-
-        T --> C --> V
-        V -- "NOT OK · checker–tricker loop" --> T
-        V -- "OK · freeze this version" --> R
-        R --> D
-        D -- "YES · reviewer–tricker loop" --> T
-    end
-
-    D -- "NO" --> H["<b>Independent reviewer repetitions</b><br/>Same frozen paper · recorded reasoning efforts"]
-    H --> E["<b>Curate the example</b><br/>Certified error + high / xhigh / max / ultra<br/>ACCEPT that misses the target"]
-    E --> A["<b>checker_classification · GPT 6 Astra / max</b><br/>Post-workflow audit of MP · G1 · G2 · DEF · CONV<br/>Formalized Notes · verified direct labels"]
-    A --> F["<b>checker_classification.md</b><br/>Publish the audit and synchronize classification tables"]
-
-    classDef source fill:#f1f5f9,stroke:#a4b2c3,color:#334155,stroke-width:1px
-    classDef agent fill:#eaf1f8,stroke:#718da9,color:#233b53,stroke-width:1.5px
-    classDef decision fill:#fff5f5,stroke:#b66a6a,color:#963c3c,stroke-width:1.5px
-    classDef final fill:#edf5f4,stroke:#72968e,color:#294c46,stroke-width:1.5px
-    class O,F source
-    class B,T,C,R,H agent
-    class V,D decision
-    class E,A final
-```
-
 ## Procedure
 
 1. A fresh reviewer reads the complete original paper. An accepted baseline supplies the starting point for construction.

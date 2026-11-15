@@ -50,48 +50,48 @@ A fresh [**reviewer**](protocol/reviewer-template.txt) first checks the original
 ---
 config:
   theme: base
-  flowchart:
-    curve: basis
-    nodeSpacing: 28
-    rankSpacing: 38
+  sequence:
+    actorFontWeight: 600
+    noteFontWeight: 600
   themeVariables:
-    fontFamily: "Arial, sans-serif"
-    fontSize: "15px"
-    lineColor: "#718096"
-    clusterBkg: "#f8fafc"
-    clusterBorder: "#d5dee8"
+    primaryColor: "#e8eef5"
+    primaryTextColor: "#243449"
+    primaryBorderColor: "#73859b"
+    secondaryColor: "#f1f5f9"
+    tertiaryColor: "#f8fafc"
+    lineColor: "#64748b"
+    textColor: "#334155"
+    actorBkg: "#e8eef5"
+    actorBorder: "#73859b"
+    actorTextColor: "#243449"
+    actorLineColor: "#94a3b8"
+    signalColor: "#64748b"
+    signalTextColor: "#475569"
+    noteBkgColor: "#fff5f5"
+    noteBorderColor: "#b86464"
+    noteTextColor: "#9b3030"
+    labelBoxBkgColor: "#e8eef5"
+    labelBoxBorderColor: "#73859b"
+    labelTextColor: "#334155"
+    loopTextColor: "#475569"
 ---
-flowchart TD
-    O["<b>Original paper</b>"] --> B["<b>reviewer · baseline</b><br/>Full-paper review → ACCEPT"]
-    B --> T
+sequenceDiagram
+    participant R as reviewer
+    participant T as tricker
+    participant C as checker
 
-    subgraph CONSTRUCTION["CONSTRUCTION & BLIND REVIEW"]
-        T["<b>tricker</b><br/>Modified paper · patch · error report"]
-        C["<b>checker</b><br/>Verify the error, witness and proposed labels"]
-        V{"<b>Checker approves?</b>"}
-        R["<b>reviewer · fresh context</b><br/>Review the complete modified paper"]
-        D{"<b>Target detected?</b>"}
+    Note over R: Review the complete original paper
+    R->>T: Accepted paper + baseline report
 
-        T --> C --> V
-        V -- "NOT OK · checker–tricker loop" --> T
-        V -- "OK · freeze this version" --> R
-        R --> D
-        D -- "YES · reviewer–tricker loop" --> T
+    loop Revise until checker approves
+        T->>C: Modified paper + tricker report + proposed labels
+        C-->>T: OK or specific revision requests
     end
 
-    D -- "NO" --> H["<b>Independent reviewer repetitions</b><br/>Same frozen paper · recorded reasoning efforts"]
-    H --> E["<b>Curate the example</b><br/>Certified error + high / xhigh / max / ultra<br/>ACCEPT that misses the target"]
-    E --> A["<b>checker_classification · GPT 6 Astra / max</b><br/>Post-workflow audit of MP · G1 · G2 · DEF · CONV<br/>Formalized Notes · verified direct labels"]
-    A --> F["<b>checker_classification.md</b><br/>Publish the audit and synchronize classification tables"]
-
-    classDef source fill:#f1f5f9,stroke:#a4b2c3,color:#334155,stroke-width:1px
-    classDef agent fill:#eaf1f8,stroke:#718da9,color:#233b53,stroke-width:1.5px
-    classDef decision fill:#fff5f5,stroke:#b66a6a,color:#963c3c,stroke-width:1.5px
-    classDef final fill:#edf5f4,stroke:#72968e,color:#294c46,stroke-width:1.5px
-    class O,F source
-    class B,T,C,R,H agent
-    class V,D decision
-    class E,A final
+    T->>R: Checked modified paper + reading resources, fresh context
+    R-->>T: Full review + identified error locations
+    Note over R,T: Target found: revise and check again
+    Note over R: Target missed: independent higher-effort repeats
 ```
 
 Reviewers assess the proof **as printed, without supplying missing arguments or strengthening assumptions**. We record the report's **verdict** and **whether it correctly identifies the planted error** separately. An **ACCEPT report that identifies the error counts as a detection**, even if it calls the error minor or repairable.
